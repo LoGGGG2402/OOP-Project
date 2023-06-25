@@ -40,8 +40,7 @@ public abstract class DiSanVanHoa extends Crawler{
             throw new RuntimeException(e);
         }
     }
-    @Override
+
     protected abstract JsonObject getEntity(String url);
-    @Override
     protected abstract Vector<String> getUrl();
 }

@@ -16,7 +16,7 @@ import java.util.Vector;
 public class Dynasty extends VanSu{
     @Override
     protected Vector<String> getUrl() {
-        String urlConnect = baseUrl + "/viet-nam/nien-bieu-lich-su/";
+        String urlConnect = baseUrl + "/viet-nam/nien-bieu-lich-su";
         Vector<String> urls = new Vector<>();
         try {
             System.out.println("Connecting to " + urlConnect);
@@ -80,5 +80,9 @@ public class Dynasty extends VanSu{
         }
 
         return dynasty;
+    }
+
+    public static void main(String[] args) {
+        new Dynasty();
     }
 }

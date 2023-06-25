@@ -1,6 +1,5 @@
 package Crawler.NguoiKeSu;
 
-import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -39,10 +38,8 @@ public class Dynasty extends NguoiKeSu{
             article.select("sup, #toc").remove();
 
             if (article.select(":has(h3), :has(h2)").size() > 0){
-                JsonArray emperor = new JsonArray();
+                JsonObject emperor = new JsonObject();
                 for (Element element : article.select(">h3, >h2")) {
-                    JsonObject emperorObject = new JsonObject();
-
                     // Get name
                     String emperorName = element.text();
 
@@ -56,10 +53,7 @@ public class Dynasty extends NguoiKeSu{
                         nextSibling = nextSibling.nextElementSibling();
                     }
 
-                    emperorObject.addProperty("name", emperorName);
-                    emperorObject.addProperty("description", emperorDescription.toString());
-
-                    emperor.add(emperorObject);
+                    emperor.addProperty(emperorName, emperorDescription.toString());
                 }
                 period.add("emperor", emperor);
             }else {
@@ -98,8 +92,14 @@ public class Dynasty extends NguoiKeSu{
 
             // Get period
             Elements listPeriod = document.select("#content > div.com-content-category-blog.blog > div.com-content-category-blog__items.blog-items.items-leading > div.com-content-category-blog__item.blog-item > div > div > h2 > a");
-            JsonArray periods = new JsonArray();
-            listPeriod.forEach(period -> periods.add(getPeriod(baseUrl+period.attr("href"))));
+            JsonObject periods = new JsonObject();
+            listPeriod.forEach(period -> {
+                JsonObject periodObject = getPeriod(baseUrl+period.attr("href"));
+                periods.add(String.valueOf(periodObject.remove("name")), periodObject);
+            });
+
+
+
             dynasty.add("periods", periods);
 
         } catch (IOException | URISyntaxException e) {
@@ -136,5 +136,9 @@ public class Dynasty extends NguoiKeSu{
         }
 
         return dynastiesUrl;
+    }
+
+    public static void main(String[] args) {
+        new Dynasty();
     }
 }

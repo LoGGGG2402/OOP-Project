@@ -87,5 +87,7 @@ public class Character extends VanSu{
         return entity;
     }
 
-
+    public static void main(String[] args) {
+        new Character();
+    }
 }

@@ -31,7 +31,7 @@ public class Character extends NguoiKeSu{
                 // Get next page url
                 String nextPageUrl = document.select("#content > div.com-content-category-blog.blog > div.com-content-category-blog__navigation.w-100 > div > nav > ul > li:nth-child(13) > a").attr("href");
                 System.out.print("\rCrawling " + figureUrl.size() + " urls");
-                if (nextPageUrl.equals("") || figureUrl.size() >= 10) {
+                if (nextPageUrl.equals("")) {
                     System.out.println("\rCrawling url done");
                     break;
                 }
@@ -62,28 +62,40 @@ public class Character extends NguoiKeSu{
             Element articleBody = document.select("#content > div.com-content-article.item-page > div.com-content-article__body").first();
             assert articleBody != null;
             articleBody.select("sup").remove();
-
-            // Get info
-            Element infoBox = articleBody.select("div.infobox > table > tbody").first();
-            JsonObject properties = new JsonObject();
-            if (infoBox != null) {
-                Elements info = infoBox.select(">tr:has(th)");
-                for (Element element : info) {
-                    String key = element.select(">th").text();
-                    String value = element.select(">td").text();
-                    properties.addProperty(key, value);
+            Elements headings = articleBody.select("h2, h3");
+            if (!headings.isEmpty()) {
+                Element firstHeading = headings.first();
+                assert firstHeading != null;
+                Element nextElement = firstHeading.nextElementSibling();
+                while (nextElement != null) {
+                    Element currentElement = nextElement;
+                    nextElement = currentElement.nextElementSibling();
+                    currentElement.remove();
                 }
             }
+
+            // Get info
+            JsonObject properties = new JsonObject();
+
+            for (Element element : articleBody.select("tr:not(:has(tr))")) {
+                String key = element.select(">th").text();
+                String value = element.select(">td").text();
+                if (key.isEmpty()){
+                    key = element.select(">td:nth-child(1)").text();
+                    value = element.select(">td:nth-child(2)").text();
+                }
+                properties.addProperty(key, value);
+            }
+
             entity.add("properties", properties);
 
             // Get description
-            articleBody.select("sup").remove();
             StringBuilder description = new StringBuilder();
-            articleBody.select("p:not(.lead), h3 ").forEach(element -> description.append(element.text()).append("\n"));
+            articleBody.select("p").forEach(element -> description.append(element.text()).append("\n"));
             entity.addProperty("description", description.toString());
 
             // Get image
-            String image = baseUrl + document.select("#content > div.com-content-article.item-page.page-list-items > div.com-content-article__body > div.infobox > table > tbody > tr > td > img").attr("data-src");
+            String image = baseUrl + document.select("img:nth-child(1)").attr("data-src");
             entity.addProperty("image", image);
 
             System.out.print("\rCrawling " + name + " done");
@@ -92,5 +104,9 @@ public class Character extends NguoiKeSu{
             throw new RuntimeException(e);
         }
         return entity;
+    }
+
+    public static void main(String[] args) {
+        new Character();
     }
 }

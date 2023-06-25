@@ -14,6 +14,4 @@ public abstract class Crawler {
         crawl();
     }
     protected abstract void crawl();
-    protected abstract Vector<String> getUrl();
-    protected abstract JsonObject getEntity(String url);
 }
