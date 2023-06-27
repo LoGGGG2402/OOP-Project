@@ -3,7 +3,6 @@ package Crawler.Wikipedia;
 import Crawler.Crawler;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -33,6 +32,7 @@ public class Dynasty extends Wikipedia {
                 for(Element row:table){
                     dynastyUrl.add(row.select("a").attr("href"));
                 }
+                System.out.println(table);
                 dynastyUrl.remove(dynastyUrl.size()-1);
                 return dynastyUrl;
 
@@ -44,7 +44,7 @@ public class Dynasty extends Wikipedia {
     }
 
     protected JsonObject getEntity(String url) {
-        String baseUrl="https://vi.wikipedia.org";;
+        String baseUrl = "https://vi.wikipedia.org/wiki";
         JsonObject entity = new JsonObject();
         try {
             HttpURLConnection connection = (HttpURLConnection) new URI(baseUrl + url).toURL().openConnection();
@@ -88,5 +88,9 @@ public class Dynasty extends Wikipedia {
             throw new RuntimeException(e);
         }
         return entity;
+    }
+
+    public static void main(String[] args) {
+        new Dynasty();
     }
 }

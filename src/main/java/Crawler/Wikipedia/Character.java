@@ -1,7 +1,5 @@
 package Crawler.Wikipedia;
-import Crawler.Crawler;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
+
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import org.jsoup.Jsoup;
@@ -65,5 +63,9 @@ public class Character extends Wikipedia {
             throw new RuntimeException(e);
         }
         return entity;
+    }
+
+    public static void main(String[] args) {
+        new Character();
     }
 }
