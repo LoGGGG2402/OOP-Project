@@ -4,20 +4,24 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
+import com.sun.jdi.request.EventRequest;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Vector;
 
-public class Event  {
-    protected static JsonArray getEntity(String url) {
+public class Event extends Wikipedia {
+    protected JsonArray getEntities(String url) {
         String baseUrl = "https://vi.wikipedia.org/wiki";
         JsonArray entities = new JsonArray();
         try {
@@ -27,7 +31,7 @@ public class Event  {
 
             Document document = Jsoup.parse(connection.getInputStream(), "UTF-8", baseUrl + url);
             Elements rows=document.select("dl,p");
-
+            System.out.println(document.text());
            for(int i=6;i<rows.size()-1;i++) {
                 if (rows.get(i).tag().toString().equals("p")) {
                     if (!rows.get(i+1).tag().toString().equals("dl")) {
@@ -53,5 +57,30 @@ public class Event  {
             throw new RuntimeException(e);
         }
         return entities;
+    }
+    @Override
+    public void crawl() {
+        JsonArray entities = new JsonArray();
+        entities=getEntities("/Niên_biểu_lịch_sử_Việt_Nam");
+        // Make directory
+        File directory = new File("data/" + this.getClass().getSimpleName());
+        if (!directory.exists()) {
+            if (directory.mkdirs())
+                System.out.println("Directory is created!");
+            else
+                System.out.println("Failed to create directory!");
+        }
+
+
+        // Write to file
+        try {
+            File file = new File("data/" + this.getClass().getSimpleName() + "/" + title + ".json");
+            FileWriter fileWriter = new FileWriter(file);
+            fileWriter.write(entities.toString());
+            fileWriter.flush();
+            fileWriter.close();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

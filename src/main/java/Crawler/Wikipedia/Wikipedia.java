@@ -9,15 +9,18 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Vector;
 public abstract class Wikipedia extends Crawler {
-    protected static final String baseUrl = "https://vi.wikipedia.org/wiki";
+    protected static final String baseUrl = "https://vi.wikipedia.org";
     protected static final String title = "Wikipedia";
 
-    protected void crawl() {
-        Vector<String> characterUrl = getUrl();
-
-        JsonArray character = new JsonArray();
-        characterUrl.forEach(url -> character.add(getEntity(url.charAt(0)=='/'?baseUrl+url:baseUrl+"/" +url)));
-
+    public void crawl() {
+        Vector<String> urls = getUrl();
+        JsonArray entities = new JsonArray();
+        for (String url : urls) {
+            try {
+                entities.add(getEntity(url));
+            }catch (IndexOutOfBoundsException e){
+            }
+        }
         // Make directory
         File directory = new File("data/" + this.getClass().getSimpleName());
         if (!directory.exists()) {
@@ -32,7 +35,7 @@ public abstract class Wikipedia extends Crawler {
         try {
             File file = new File("data/" + this.getClass().getSimpleName() + "/" + title + ".json");
             FileWriter fileWriter = new FileWriter(file);
-            fileWriter.write(character.toString());
+            fileWriter.write(entities.toString());
             fileWriter.flush();
             fileWriter.close();
         } catch (IOException e) {
@@ -40,7 +43,14 @@ public abstract class Wikipedia extends Crawler {
         }
     }
 
-    protected abstract JsonObject getEntity(String url);
+    protected JsonObject getEntity(String url) {
+        return null;
+    }
 
-    protected abstract Vector<String> getUrl();
+    protected Vector<String> getUrl() {
+        return null;
+    }
+    protected JsonArray getEntities(String url) {
+        return null;
+    }
 }

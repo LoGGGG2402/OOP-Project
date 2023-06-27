@@ -9,6 +9,8 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URI;
@@ -16,9 +18,9 @@ import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Festival {
-    protected static JsonArray getEntity(String url) {
-        String baseUrl = "https://vi.wikipedia.org/wiki";
+public class Festival extends Wikipedia {
+    protected JsonArray getEntities(String url) {
+        String baseUrl = "https://vi.wikipedia.org/wiki/";
         JsonArray entity = new JsonArray();
         try {
             HttpURLConnection connection = (HttpURLConnection) new URI(baseUrl + url).toURL().openConnection();
@@ -50,5 +52,30 @@ public class Festival {
             throw new RuntimeException(e);
         }
         return entity;
+    }
+    @Override
+    public void crawl() {
+        JsonArray entities = new JsonArray();
+        entities=getEntities("Lễ_hội_Việt_Nam");
+        // Make directory
+        File directory = new File("data/" + this.getClass().getSimpleName());
+        if (!directory.exists()) {
+            if (directory.mkdirs())
+                System.out.println("Directory is created!");
+            else
+                System.out.println("Failed to create directory!");
+        }
+
+
+        // Write to file
+        try {
+            File file = new File("data/" + this.getClass().getSimpleName() + "/" + title + ".json");
+            FileWriter fileWriter = new FileWriter(file);
+            fileWriter.write(entities.toString());
+            fileWriter.flush();
+            fileWriter.close();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

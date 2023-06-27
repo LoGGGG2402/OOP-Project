@@ -2,6 +2,7 @@ package Crawler.Wikipedia;
 import Crawler.Crawler;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -43,9 +44,10 @@ public class Character extends Wikipedia {
     }
 
     protected JsonObject getEntity(String url) {
+        String baseUrl = "https://vi.wikipedia.org";
         JsonObject entity = new JsonObject();
         try {
-            HttpURLConnection connection = (HttpURLConnection) new URI(url).toURL().openConnection();
+            HttpURLConnection connection = (HttpURLConnection) new URI(baseUrl+url).toURL().openConnection();
             connection.setRequestMethod("GET");
             connection.setReadTimeout(10000);
 
@@ -54,13 +56,13 @@ public class Character extends Wikipedia {
             entity.addProperty("Tên",table.get(0).text());
             table.remove(0);
             for(Element e:table) {
-                    String key = e.select("th").text();
-                    String value=e.select("td").text();
-                    if(!key.equals("") && !key.equals("Thông tin chung")){
+                String key = e.select("th").text();
+                String value=e.select("td").text();
+                if(!key.equals("") && !key.equals("Thông tin chung")){
                     entity.addProperty(key,value);}
             }
-            } catch(IOException | URISyntaxException e){
-                throw new RuntimeException(e);
+        } catch(IOException | URISyntaxException e){
+            throw new RuntimeException(e);
         }
         return entity;
     }
