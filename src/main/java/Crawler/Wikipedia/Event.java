@@ -31,7 +31,7 @@ public class Event  extends Wikipedia{
                     if (!rows.get(i+1).tag().toString().equals("dl")) {
                         JsonObject entity = new JsonObject();
                         entity.addProperty("Thời gian", rows.get(i).select("b").text());
-                        entity.addProperty("Sự Kiện", rows.get(i).text().replace(rows.get(i).select("b").text(), ""));
+                        entity.addProperty("name", rows.get(i).text().replace(rows.get(i).select("b").text(), ""));
                         entities.add(entity);
                     }
                     else {
@@ -56,7 +56,7 @@ public class Event  extends Wikipedia{
     @Override
     public void crawl() {
         JsonArray entities = new JsonArray();
-        entities=getEntities("Lễ_hội_Việt_Nam");
+        entities=getEntities("/niên_biểu_lịch_sử_Việt_Nam");
         // Make directory
         File directory = new File("data/" + this.getClass().getSimpleName());
         if (!directory.exists()) {

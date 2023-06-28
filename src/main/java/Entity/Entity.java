@@ -5,29 +5,21 @@ import org.jsoup.nodes.Element;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Entity {
+public abstract class Entity {
     private String name;
     private String description;
     private Map<String, String> properties = new HashMap<String, String>();
 
-    public Entity(String name, String description) {
+    protected Entity(String name, String description) {
         this.name = name;
         this.description = description;
     }
 
-    public Entity(String name) {
+    protected Entity(String name) {
         this.name = name;
     }
 
-    public Entity(Element element) {
-        this.name = element.attr("name");
-        this.description = element.attr("description");
-        for (Element property : element.select("property")) {
-            properties.put(property.attr("key"), property.attr("value"));
-        }
-    }
-
-    public void addProperty(String key, String value) {
+    protected void addProperty(String key, String value) {
         properties.put(key, value);
     }
 
@@ -54,9 +46,5 @@ public class Entity {
             element.appendChild(property);
         }
         return element;
-    }
-
-    public String toString() {
-        return toElement().toString();
     }
 }
