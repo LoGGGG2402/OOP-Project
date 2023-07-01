@@ -55,7 +55,7 @@ public class Character extends NguoiKeSu{
             Document document = Jsoup.parse(connection.getInputStream(), "UTF-8", url);
 
             // Get name
-            String name = document.select("#content > div.com-content-article.item-page.page-list-items > div:nth-child(3) > h2").text();
+            String name = document.select("#content > div.com-content-article.item-page.page-list-items > div:nth-child(2) > h2").text();
             entity.addProperty("name", name);
 
             // Article body
@@ -98,7 +98,7 @@ public class Character extends NguoiKeSu{
             String image = baseUrl + document.select("img:nth-child(1)").attr("data-src");
             entity.addProperty("image", image);
 
-            System.out.print("\rCrawling " + name + " done");
+            System.out.print("\rCrawling " + url + " done has name " + name);
 
         } catch (IOException | URISyntaxException e) {
             throw new RuntimeException(e);
