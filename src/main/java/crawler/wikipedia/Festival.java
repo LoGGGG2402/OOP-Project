@@ -41,6 +41,8 @@ public class Festival extends Wikipedia {
                 for (int i = 0; i < categoryList.size(); i++) {
                     entity1.addProperty(categoryList.get(i), row.children().get(i).text());
                 }
+                entity1.addProperty("name", entity1.get("Lễ hội truyền thống").getAsString());
+                entity1.remove("Lễ hội truyền thống");
                 entity.add(entity1);
             }
 
