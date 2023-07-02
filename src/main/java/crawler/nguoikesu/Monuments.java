@@ -17,6 +17,7 @@ public class Monuments extends NguoiKeSu{
     protected JsonObject getEntity(String url){
         JsonObject entity = new JsonObject();
         try {
+            System.out.println(url);
             HttpURLConnection connection = (HttpURLConnection) new URI(url).toURL().openConnection();
             connection.setRequestMethod("GET");
             connection.setReadTimeout(10000);
@@ -24,7 +25,7 @@ public class Monuments extends NguoiKeSu{
             Document document = Jsoup.parse(connection.getInputStream(), "UTF-8", url);
 
             // Get name
-            String name = document.select("#content > div.com-content-article.item-page.page-list-items > div:nth-child(3) > h2").text();
+            String name = document.select("#content > div.com-content-article.item-page.page-list-items > div:nth-child(2) > h2").text();
             entity.addProperty("name", name);
 
             // Article body
@@ -64,7 +65,7 @@ public class Monuments extends NguoiKeSu{
             entity.addProperty("description", description.toString());
 
             // Get image
-            String image = baseUrl + document.select("img:nth-child(1)").attr("data-src");
+            String image = BASE_URL + document.select("img:nth-child(1)").attr("data-src");
             entity.addProperty("image", image);
 
             System.out.print("\rCrawling " + name + " done");
@@ -77,7 +78,7 @@ public class Monuments extends NguoiKeSu{
     @Override
     protected Vector<String> getUrl() {
         Vector<String> figureUrl = new Vector<>();
-        String urlConnect = baseUrl + "/di-tich-lich-su";
+        String urlConnect = BASE_URL + "/di-tich-lich-su";
         while (true) {
             try {
                 HttpURLConnection connection = (HttpURLConnection) new URI(urlConnect).toURL().openConnection();
@@ -95,7 +96,7 @@ public class Monuments extends NguoiKeSu{
                 if (nextPageUrl.equals("")) {
                     break;
                 }
-                urlConnect = baseUrl + nextPageUrl;
+                urlConnect = BASE_URL + nextPageUrl;
 
 
             } catch (IOException | URISyntaxException e) {
@@ -103,5 +104,9 @@ public class Monuments extends NguoiKeSu{
             }
         }
         return figureUrl;
+    }
+
+    public static void main(String[] args) {
+        new Monuments();
     }
 }

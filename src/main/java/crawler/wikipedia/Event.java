@@ -13,6 +13,7 @@ import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.util.Vector;
 
 public class Event  extends Wikipedia{
     protected JsonArray getEntities(String url) {
@@ -69,7 +70,7 @@ public class Event  extends Wikipedia{
 
         // Write to file
         try {
-            File file = new File("data/" + this.getClass().getSimpleName() + "/" + title + ".json");
+            File file = new File("data/" + this.getClass().getSimpleName() + "/" + TITLE + ".json");
             FileWriter fileWriter = new FileWriter(file);
             fileWriter.write(entities.toString());
             fileWriter.flush();
@@ -78,6 +79,9 @@ public class Event  extends Wikipedia{
             throw new RuntimeException(e);
         }
     }
+
+
+
     public static void main(String[] args) {
         new Event();
     }

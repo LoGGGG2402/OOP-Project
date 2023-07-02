@@ -13,11 +13,11 @@ public class Monuments extends DiSanVanHoa{
     private Vector<String> listMonuments(String url){
         Vector<String> list = new Vector<>();
         try {
-            HttpURLConnection connection = (HttpURLConnection) new URI(baseUrl + url).toURL().openConnection();
+            HttpURLConnection connection = (HttpURLConnection) new URI(BASE_URL + url).toURL().openConnection();
             connection.setRequestMethod("GET");
             connection.setReadTimeout(10000);
 
-            Document document = org.jsoup.Jsoup.parse(connection.getInputStream(), "UTF-8", baseUrl + url);
+            Document document = org.jsoup.Jsoup.parse(connection.getInputStream(), "UTF-8", BASE_URL + url);
 
             document.select("#main-page > div.page-content > table > tbody > tr > td:nth-child(2) > p > a").forEach(element -> list.add(element.attr("href")));
             System.out.print("\rCrawling: " + url + " - " + list.size() + " monuments");
@@ -28,7 +28,7 @@ public class Monuments extends DiSanVanHoa{
     }
     private Vector<String> monuments(String url){
         Vector<String> list = new Vector<>();
-        String urlConnect = baseUrl + url;
+        String urlConnect = BASE_URL + url;
         while (true) {
             try {
                 HttpURLConnection connection = (HttpURLConnection) new URI(urlConnect).toURL().openConnection();
@@ -49,7 +49,9 @@ public class Monuments extends DiSanVanHoa{
                     break;
                 }
 
-                urlConnect = baseUrl + "/" + nextPageUrl;
+                if (nextPageUrl.isEmpty()) break;
+
+                urlConnect = BASE_URL + "/" + nextPageUrl;
             } catch (IOException | URISyntaxException e) {
                 throw new RuntimeException(e);
             }
@@ -109,5 +111,9 @@ public class Monuments extends DiSanVanHoa{
         list.addAll(monuments("/di-tich-quoc-gia-dac-biet-2936"));
         System.out.print("\rCrawling: " + list.size() + " monuments");
         return list;
+    }
+
+    public static void main(String[] args) {
+        new Monuments();
     }
 }

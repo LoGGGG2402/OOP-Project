@@ -63,7 +63,7 @@ public class Event extends NguoiKeSu{
             entity.addProperty("description", description.toString());
 
             // Get image
-            String image = baseUrl + document.select("img:nth-child(1)").attr("data-src");
+            String image = BASE_URL + document.select("img:nth-child(1)").attr("data-src");
             entity.addProperty("image", image);
 
 
@@ -93,7 +93,7 @@ public class Event extends NguoiKeSu{
                 if (nextPage.equals("")){
                     break;
                 }
-                urlConnect = baseUrl + nextPage;
+                urlConnect = BASE_URL + nextPage;
             } catch (IOException | URISyntaxException e) {
                 throw new RuntimeException(e);
             }

@@ -17,7 +17,7 @@ public class Character extends VanSu{
     @Override
     protected Vector<String> getUrl() {
         Vector<String> characterUrl = new Vector<>();
-        String urlConnect = baseUrl + "/viet-nam/viet-nam-nhan-vat";
+        String urlConnect = BASE_URL + "/viet-nam/viet-nam-nhan-vat";
         while (true) {
             try {
                 HttpURLConnection connection = (HttpURLConnection) new URI(urlConnect).toURL().openConnection();

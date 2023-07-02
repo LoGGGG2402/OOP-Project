@@ -66,6 +66,7 @@ public class Character extends Wikipedia {
         return entity;
     }
 
+
     public static void main(String[] args) {
         new Character();
     }
