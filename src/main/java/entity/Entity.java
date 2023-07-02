@@ -1,12 +1,13 @@
 package entity;
 
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
-public abstract class Entity {
-    private String name;
-    private String description;
-    private Map<String, String> properties = new HashMap<>();
+public abstract class Entity implements Serializable {
+    private final String name;
+    private final String description;
+    private final Map<String, String> properties = new HashMap<>();
 
     protected Entity(String name, String description) {
         this.name = name;
