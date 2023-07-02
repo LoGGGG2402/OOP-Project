@@ -39,7 +39,9 @@ public class Dynasty extends Wikipedia {
             return dynastyUrl;
 
         } catch (IOException | URISyntaxException e) {
-            throw new RuntimeException(e);
+
+            e.printStackTrace();
+            return null;
         }
 
     }
@@ -85,7 +87,7 @@ public class Dynasty extends Wikipedia {
                 }
             }
         } catch(IOException | URISyntaxException e){
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
         return entity;
     }

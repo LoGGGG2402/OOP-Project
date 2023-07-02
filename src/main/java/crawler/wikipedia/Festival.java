@@ -49,7 +49,7 @@ public class Festival extends Wikipedia {
 
 
         } catch(IOException | URISyntaxException e){
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
         return entity;
     }
@@ -75,7 +75,7 @@ public class Festival extends Wikipedia {
             fileWriter.flush();
             fileWriter.close();
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
     }
 

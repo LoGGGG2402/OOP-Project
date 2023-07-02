@@ -68,7 +68,7 @@ public class Event extends NguoiKeSu{
 
 
         } catch (IOException | URISyntaxException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
 
 
@@ -95,7 +95,7 @@ public class Event extends NguoiKeSu{
                 }
                 urlConnect = getBaseUrl() + nextPage;
             } catch (IOException | URISyntaxException e) {
-                throw new RuntimeException(e);
+                e.printStackTrace();
             }
         }
         return urls;

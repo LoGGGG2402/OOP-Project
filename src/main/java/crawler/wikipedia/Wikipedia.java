@@ -41,7 +41,7 @@ public abstract class Wikipedia extends Crawler {
             fileWriter.flush();
             fileWriter.close();
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
     }
     protected JsonArray getEntities(String url) {

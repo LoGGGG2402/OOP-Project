@@ -64,7 +64,7 @@ public class Dynasty extends NguoiKeSu{
 
             System.out.println("      "+name);
         } catch (IOException | URISyntaxException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
 
 
@@ -103,7 +103,7 @@ public class Dynasty extends NguoiKeSu{
             dynasty.add("periods", periods);
 
         } catch (IOException | URISyntaxException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
 
         return dynasty;
@@ -132,7 +132,7 @@ public class Dynasty extends NguoiKeSu{
             System.out.println();
 
         } catch (IOException | URISyntaxException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
 
         return dynastiesUrl;

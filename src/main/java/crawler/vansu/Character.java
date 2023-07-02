@@ -37,7 +37,7 @@ public class Character extends VanSu{
                 }
                 urlConnect = nextPageUrl;
             } catch (IOException | URISyntaxException e) {
-                throw new RuntimeException(e);
+                e.printStackTrace();
             }
         }
         return characterUrl;
@@ -82,7 +82,7 @@ public class Character extends VanSu{
 
 
         } catch (IOException | URISyntaxException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
         return entity;
     }

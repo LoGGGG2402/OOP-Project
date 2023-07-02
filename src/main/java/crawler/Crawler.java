@@ -40,7 +40,7 @@ public abstract class Crawler {
             fileWriter.flush();
             fileWriter.close();
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
     }
     protected abstract Vector<String> getUrl();

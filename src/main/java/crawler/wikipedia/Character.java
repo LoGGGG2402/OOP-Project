@@ -36,7 +36,8 @@ public class Character extends Wikipedia {
 
 
         } catch (IOException | URISyntaxException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
+            return null;
         }
 
     }
@@ -61,7 +62,7 @@ public class Character extends Wikipedia {
                     entity.addProperty(key,value);}
             }
         } catch(IOException | URISyntaxException e){
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
         return entity;
     }

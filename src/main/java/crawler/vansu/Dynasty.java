@@ -29,7 +29,7 @@ public class Dynasty extends VanSu{
             // Get url
             document.select("body > div.ui.container > div > b > a:nth-child(1)").forEach(element -> urls.add(element.attr("href")));
         } catch (IOException | URISyntaxException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
         return urls;
     }
@@ -76,7 +76,7 @@ public class Dynasty extends VanSu{
             }
             dynasty.add("period", periods);
         } catch (URISyntaxException | IOException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
 
         return dynasty;

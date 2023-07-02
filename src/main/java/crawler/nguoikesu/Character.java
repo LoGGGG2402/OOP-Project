@@ -39,7 +39,7 @@ public class Character extends NguoiKeSu{
 
 
             } catch (IOException | URISyntaxException e) {
-                throw new RuntimeException(e);
+                e.printStackTrace();
             }
         }
         return figureUrl;
@@ -101,7 +101,7 @@ public class Character extends NguoiKeSu{
             System.out.print("\rCrawling " + url + " done has name " + name);
 
         } catch (IOException | URISyntaxException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
         return entity;
     }
