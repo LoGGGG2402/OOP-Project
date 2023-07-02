@@ -1,14 +1,9 @@
-package Crawler.DiSanVanHoa;
+package crawler.disanvanhoa;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 
-import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.net.*;
 import java.util.Objects;

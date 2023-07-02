@@ -1,4 +1,4 @@
-package Crawler.NguoiKeSu;
+package crawler.nguoikesu;
 
 import com.google.gson.JsonObject;
 import org.jsoup.Jsoup;
@@ -7,13 +7,14 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.io.IOException;
-import java.net.*;
+import java.net.HttpURLConnection;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.Vector;
 
-public class Event extends NguoiKeSu{
-
+public class Monuments extends NguoiKeSu{
     @Override
-    protected JsonObject getEntity(String url) {
+    protected JsonObject getEntity(String url){
         JsonObject entity = new JsonObject();
         try {
             HttpURLConnection connection = (HttpURLConnection) new URI(url).toURL().openConnection();
@@ -23,7 +24,7 @@ public class Event extends NguoiKeSu{
             Document document = Jsoup.parse(connection.getInputStream(), "UTF-8", url);
 
             // Get name
-            String name = document.select("#content > div.com-content-article.item-page > div.page-header > h1").text();
+            String name = document.select("#content > div.com-content-article.item-page.page-list-items > div:nth-child(3) > h2").text();
             entity.addProperty("name", name);
 
             // Article body
@@ -66,19 +67,18 @@ public class Event extends NguoiKeSu{
             String image = baseUrl + document.select("img:nth-child(1)").attr("data-src");
             entity.addProperty("image", image);
 
+            System.out.print("\rCrawling " + name + " done");
 
         } catch (IOException | URISyntaxException e) {
             throw new RuntimeException(e);
         }
-
-
         return entity;
     }
     @Override
     protected Vector<String> getUrl() {
-        Vector<String> urls = new Vector<>();
-        String urlConnect = "https://nguoikesu.com/tu-lieu/quan-su";
-        while (true){
+        Vector<String> figureUrl = new Vector<>();
+        String urlConnect = baseUrl + "/di-tich-lich-su";
+        while (true) {
             try {
                 HttpURLConnection connection = (HttpURLConnection) new URI(urlConnect).toURL().openConnection();
                 connection.setRequestMethod("GET");
@@ -86,22 +86,22 @@ public class Event extends NguoiKeSu{
 
                 Document document = Jsoup.parse(connection.getInputStream(), "UTF-8", urlConnect);
 
-                document.select("#content > div.com-content-category-blog.blog > div.com-content-category-blog__items.blog-items.items-leading > div > div > div > h2 > a").forEach(element -> urls.add(element.select("a").attr("href")));
+                // Get figure url and name
+                document.select("#content > div.com-tags-tag.tag-category > div.com-tags__items > ul > li > h3 > a").forEach(element -> figureUrl.add(element.select("a").attr("href")));
 
-                String nextPage = document.select("#content > div.com-content-category-blog.blog > div.com-content-category-blog__navigation.w-100 > div > nav > ul > li:nth-child(13) > a").attr("href");
-
-                if (nextPage.equals("")){
+                // Get next page url
+                String nextPageUrl = document.select("#content > div.com-tags-tag.tag-category > div.com-tags-tag__pagination.w-100 > nav > ul > li:nth-child(6) > a").attr("href");
+                System.out.print("\rCrawling " + figureUrl.size() + " urls");
+                if (nextPageUrl.equals("")) {
                     break;
                 }
-                urlConnect = baseUrl + nextPage;
+                urlConnect = baseUrl + nextPageUrl;
+
+
             } catch (IOException | URISyntaxException e) {
                 throw new RuntimeException(e);
             }
         }
-        return urls;
-    }
-
-    public static void main(String[] args) {
-        new Event();
+        return figureUrl;
     }
 }

@@ -1,6 +1,6 @@
-package Crawler.NguoiKeSu;
+package crawler.nguoikesu;
 
-import Crawler.Crawler;
+import crawler.Crawler;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 

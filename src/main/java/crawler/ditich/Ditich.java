@@ -1,6 +1,6 @@
-package Crawler.Ditich;
+package crawler.ditich;
 
-import Crawler.Crawler;
+import crawler.Crawler;
 
 public abstract class Ditich extends Crawler{
 

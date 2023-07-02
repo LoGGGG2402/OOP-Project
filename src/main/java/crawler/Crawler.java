@@ -1,4 +1,4 @@
-package Crawler;
+package crawler;
 
 public abstract class Crawler {
     protected Crawler(){

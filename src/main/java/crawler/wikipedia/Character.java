@@ -1,6 +1,5 @@
-package Crawler.Wikipedia;
+package crawler.wikipedia;
 
-import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -14,33 +13,35 @@ import java.net.URISyntaxException;
 import java.util.Vector;
 public class Character extends Wikipedia {
 
+    @Override
     protected Vector<String> getUrl() {
         Vector<String> characterUrl = new Vector<>();
         String baseUrl = "https://vi.wikipedia.org/wiki";
         String urlConnect = baseUrl + "/Vua_Việt_Nam";
-        while (true) {
-            try {
-                HttpURLConnection connection = (HttpURLConnection) new URI(urlConnect).toURL().openConnection();
-                connection.setRequestMethod("GET");
-                connection.setReadTimeout(10000);
 
-                Document document = Jsoup.parse(connection.getInputStream(), "UTF-8", urlConnect);
-                // Get character url
-                Elements tables = document.select("table[cellpadding = 0] tbody");
-                for(Element table: tables){
-                    Elements rows=table.select("tr[style = height:50px;]");
-                    for(Element row : rows)
-                        characterUrl.add(row.select("td").get(1).select("a").get(0).attr("href"));
-                }
-                return characterUrl;
+        try {
+            HttpURLConnection connection = (HttpURLConnection) new URI(urlConnect).toURL().openConnection();
+            connection.setRequestMethod("GET");
+            connection.setReadTimeout(10000);
 
-
-            } catch (IOException | URISyntaxException e) {
-                throw new RuntimeException(e);
+            Document document = Jsoup.parse(connection.getInputStream(), "UTF-8", urlConnect);
+            // Get character url
+            Elements tables = document.select("table[cellpadding = 0] tbody");
+            for(Element table: tables){
+                Elements rows=table.select("tr[style = height:50px;]");
+                for(Element row : rows)
+                    characterUrl.add(row.select("td").get(1).select("a").get(0).attr("href"));
             }
+            return characterUrl;
+
+
+        } catch (IOException | URISyntaxException e) {
+            throw new RuntimeException(e);
         }
+
     }
 
+    @Override
     protected JsonObject getEntity(String url) {
         String baseUrl = "https://vi.wikipedia.org";
         JsonObject entity = new JsonObject();
@@ -51,7 +52,7 @@ public class Character extends Wikipedia {
 
             Document document = Jsoup.parse(connection.getInputStream(), "UTF-8", url);
             Elements table = document.getElementsByClass("infobox").select("[style=width:22em]>tbody>tr");
-            entity.addProperty("Tên",table.get(0).text());
+            entity.addProperty("name",table.get(0).text());
             table.remove(0);
             for(Element e:table) {
                 String key = e.select("th").text();

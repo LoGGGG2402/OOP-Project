@@ -1,4 +1,4 @@
-package Crawler.NguoiKeSu;
+package crawler.nguoikesu;
 
 import com.google.gson.JsonObject;
 import org.jsoup.Jsoup;

@@ -1,4 +1,4 @@
-package Crawler.VanSu;
+package crawler.vansu;
 
 import com.google.gson.JsonObject;
 import org.jsoup.Jsoup;

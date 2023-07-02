@@ -1,4 +1,4 @@
-package Crawler.Wikipedia;
+package crawler.wikipedia;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;

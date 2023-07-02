@@ -1,6 +1,6 @@
-package Crawler.DiSanVanHoa;
+package crawler.disanvanhoa;
 
-import Crawler.Crawler;
+import crawler.Crawler;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 
