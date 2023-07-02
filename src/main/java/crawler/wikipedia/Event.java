@@ -30,10 +30,10 @@ public class Event extends Wikipedia {
                         JsonObject entity = new JsonObject();
                         JsonObject properties= new JsonObject();
                         properties.addProperty("Thời gian", rows.get(i).select("b").text());
-                        entity.addProperty("Name", rows.get(i).text().replace(rows.get(i).select("b").text(), ""));
-                        entity.add("Properties",properties);
+                        entity.addProperty("name", rows.get(i).text().replace(rows.get(i).select("b").text(), ""));
+                        entity.add("properties",properties);
 
-                            entity.addProperty("Description", getDescription(rows.get(i).text().replace(rows.get(i).select("b").text(), "")));
+                            entity.addProperty("description", getDescription(rows.get(i).text().replace(rows.get(i).select("b").text(), "")));
                         entities.add(entity);
                     }
                     else {
@@ -44,9 +44,9 @@ public class Event extends Wikipedia {
                             JsonObject entity = new JsonObject();
                             JsonObject properties= new JsonObject();
                             properties.addProperty("Thời gian", row1.select("b").text() + " năm " + year);
-                            entity.addProperty("Name", row1.text().replace(row1.select("b").text(), ""));
-                            entity.add("Properties",properties);
-                            entity.addProperty("Description",getDescription( row1.text().replace(row1.select("b").text(), "")));
+                            entity.addProperty("name", row1.text().replace(row1.select("b").text(), ""));
+                            entity.add("properties",properties);
+                            entity.addProperty("description",getDescription( row1.text().replace(row1.select("b").text(), "")));
                             entities.add(entity);
                         }
                     }

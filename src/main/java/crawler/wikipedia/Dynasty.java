@@ -51,7 +51,7 @@ public class Dynasty extends Wikipedia {
             Elements table=document.getElementsByClass("infobox").select("tbody>tr");
 
             List<String> attributes=new ArrayList<>() ;
-            entity.addProperty("Name",table.get(0).text());
+            entity.addProperty("name",table.get(0).text());
             attributes.add("Vị thế");
             attributes.add("Thủ đô");
             attributes.add("Ngôn ngữ thông dụng");
@@ -81,8 +81,8 @@ public class Dynasty extends Wikipedia {
 
                 }
             }
-            entity.add("Properties",properties);
-            entity.addProperty("Description",document.getElementsByClass("mw-parser-output").select("p").first().text());
+            entity.add("properties",properties);
+            entity.addProperty("description",document.getElementsByClass("mw-parser-output").select("p").first().text());
         } catch(IOException | URISyntaxException e){
             throw new RuntimeException(e);
         }

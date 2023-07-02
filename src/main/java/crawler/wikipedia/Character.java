@@ -48,7 +48,7 @@ public class Character extends Wikipedia {
 
             Document document = Jsoup.parse(connection.getInputStream(), "UTF-8", url);
             Elements table = document.getElementsByClass("infobox").select("[style=width:22em]>tbody>tr");
-            entity.addProperty("Name",table.get(0).text());
+            entity.addProperty("name",table.get(0).text());
             table.remove(0);
             JsonObject properties = new JsonObject();
             for(Element e:table) {
@@ -57,8 +57,8 @@ public class Character extends Wikipedia {
                 if(!key.equals("") && !key.equals("Thông tin chung")){
                     properties.addProperty(key,value);}
             }
-            entity.add("Properties",properties);
-            entity.addProperty("Description",document.getElementsByClass("mw-parser-output").select("p").first().text());
+            entity.add("properties",properties);
+            entity.addProperty("description",document.getElementsByClass("mw-parser-output").select("p").first().text());
         } catch(IOException | URISyntaxException e){
             throw new RuntimeException(e);
         }
