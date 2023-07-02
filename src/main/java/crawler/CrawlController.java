@@ -1,13 +1,13 @@
 package crawler;
 
-import crawler.disanvanhoa.Monument;
-
-public class CrawController {
-    private CrawController() {
+public class CrawlController {
+    private CrawlController() {
     }
     public static void crawl() {
         // disanvanhoa
-        new Monument();
+        new crawler.disanvanhoa.Monument();
+        //di tich
+        new crawler.ditich.Monument();
         // nguoikesu
         new crawler.nguoikesu.Character();
         new crawler.nguoikesu.Event();
