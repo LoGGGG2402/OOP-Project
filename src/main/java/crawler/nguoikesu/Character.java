@@ -16,7 +16,7 @@ public class Character extends NguoiKeSu{
     @Override
     protected Vector<String> getUrl() {
         Vector<String> figureUrl = new Vector<>();
-        String urlConnect = BASE_URL + "/nhan-vat";
+        String urlConnect = getBaseUrl() + "/nhan-vat";
         while (true) {
             try {
                 HttpURLConnection connection = (HttpURLConnection) new URI(urlConnect).toURL().openConnection();
@@ -35,7 +35,7 @@ public class Character extends NguoiKeSu{
                     System.out.println("\rCrawling url done");
                     break;
                 }
-                urlConnect = BASE_URL + nextPageUrl;
+                urlConnect = getBaseUrl() + nextPageUrl;
 
 
             } catch (IOException | URISyntaxException e) {
@@ -95,7 +95,7 @@ public class Character extends NguoiKeSu{
             entity.addProperty("description", description.toString());
 
             // Get image
-            String image = BASE_URL + document.select("img:nth-child(1)").attr("data-src");
+            String image = getBaseUrl() + document.select("img:nth-child(1)").attr("data-src");
             entity.addProperty("image", image);
 
             System.out.print("\rCrawling " + url + " done has name " + name);

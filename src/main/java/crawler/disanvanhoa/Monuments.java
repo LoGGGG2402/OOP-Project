@@ -13,11 +13,11 @@ public class Monuments extends DiSanVanHoa{
     private Vector<String> listMonuments(String url){
         Vector<String> list = new Vector<>();
         try {
-            HttpURLConnection connection = (HttpURLConnection) new URI(BASE_URL + url).toURL().openConnection();
+            HttpURLConnection connection = (HttpURLConnection) new URI(getBaseUrl() + url).toURL().openConnection();
             connection.setRequestMethod("GET");
             connection.setReadTimeout(10000);
 
-            Document document = org.jsoup.Jsoup.parse(connection.getInputStream(), "UTF-8", BASE_URL + url);
+            Document document = org.jsoup.Jsoup.parse(connection.getInputStream(), "UTF-8", getBaseUrl() + url);
 
             document.select("#main-page > div.page-content > table > tbody > tr > td:nth-child(2) > p > a").forEach(element -> list.add(element.attr("href")));
             System.out.print("\rCrawling: " + url + " - " + list.size() + " monuments");
@@ -28,7 +28,7 @@ public class Monuments extends DiSanVanHoa{
     }
     private Vector<String> monuments(String url){
         Vector<String> list = new Vector<>();
-        String urlConnect = BASE_URL + url;
+        String urlConnect = getBaseUrl() + url;
         while (true) {
             try {
                 HttpURLConnection connection = (HttpURLConnection) new URI(urlConnect).toURL().openConnection();
@@ -51,7 +51,7 @@ public class Monuments extends DiSanVanHoa{
 
                 if (nextPageUrl.isEmpty()) break;
 
-                urlConnect = BASE_URL + "/" + nextPageUrl;
+                urlConnect = getBaseUrl() + "/" + nextPageUrl;
             } catch (IOException | URISyntaxException e) {
                 throw new RuntimeException(e);
             }

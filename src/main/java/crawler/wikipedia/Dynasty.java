@@ -20,7 +20,7 @@ public class Dynasty extends Wikipedia {
     @Override
     protected Vector<String> getUrl() {
         Vector<String> dynastyUrl = new Vector<>();
-        String urlConnect = BASE_URL + URLEncoder.encode("/Lịch_sử_Việt_Nam", java.nio.charset.StandardCharsets.UTF_8);
+        String urlConnect = getBaseUrl() + URLEncoder.encode("/Lịch_sử_Việt_Nam", java.nio.charset.StandardCharsets.UTF_8);
 
         try {
             HttpURLConnection connection = (HttpURLConnection) new URI(urlConnect).toURL().openConnection();
@@ -47,11 +47,11 @@ public class Dynasty extends Wikipedia {
     protected JsonObject getEntity(String url) {
         JsonObject entity = new JsonObject();
         try {
-            HttpURLConnection connection = (HttpURLConnection) new URI(BASE_URL + url).toURL().openConnection();
+            HttpURLConnection connection = (HttpURLConnection) new URI(getBaseUrl() + url).toURL().openConnection();
             connection.setRequestMethod("GET");
             connection.setReadTimeout(10000);
 
-            Document document = Jsoup.parse(connection.getInputStream(), "UTF-8", BASE_URL + url);
+            Document document = Jsoup.parse(connection.getInputStream(), "UTF-8", getBaseUrl() + url);
             Elements table=document.getElementsByClass("infobox").select("tbody>tr");
             List<String> attributes=new ArrayList<>() ;
             attributes.add("Vị thế");

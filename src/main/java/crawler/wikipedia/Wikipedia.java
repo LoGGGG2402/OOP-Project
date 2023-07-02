@@ -9,8 +9,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Vector;
 public abstract class Wikipedia extends Crawler {
-    protected static final String BASE_URL = "https://vi.wikipedia.org";
-    protected static final String TITLE = "Wikipedia";
+    private static final String BASE_URL = "https://vi.wikipedia.org";
+    private static final String TITLE = "Wikipedia";
 
     @Override
     public void crawl() {
@@ -35,7 +35,7 @@ public abstract class Wikipedia extends Crawler {
 
         // Write to file
         try {
-            File file = new File("data/" + this.getClass().getSimpleName() + "/" + TITLE + ".json");
+            File file = new File("data/" + this.getClass().getSimpleName() + "/" + getTitle() + ".json");
             FileWriter fileWriter = new FileWriter(file);
             fileWriter.write(entities.toString());
             fileWriter.flush();

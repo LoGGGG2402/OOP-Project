@@ -67,7 +67,7 @@ public class Festival extends Wikipedia {
 
         // Write to file
         try {
-            File file = new File("data/" + this.getClass().getSimpleName() + "/" + TITLE + ".json");
+            File file = new File("data/" + this.getClass().getSimpleName() + "/" + getTitle() + ".json");
             FileWriter fileWriter = new FileWriter(file);
             fileWriter.write(entities.toString());
             fileWriter.flush();

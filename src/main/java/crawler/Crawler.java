@@ -12,10 +12,10 @@ public abstract class Crawler {
     private String baseUrl;
     private String title;
     protected Crawler(){
+        init();
         crawl();
     }
     protected void crawl(){
-        init();
         Vector<String> characterUrl = getUrl();
 
         JsonArray character = new JsonArray();
@@ -52,7 +52,6 @@ public abstract class Crawler {
     protected void setTitle(String title){
         this.title = title;
     }
-
     protected String getBaseUrl(){
         return baseUrl;
     }

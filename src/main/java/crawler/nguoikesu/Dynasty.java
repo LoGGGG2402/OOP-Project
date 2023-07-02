@@ -94,7 +94,7 @@ public class Dynasty extends NguoiKeSu{
             Elements listPeriod = document.select("#content > div.com-content-category-blog.blog > div.com-content-category-blog__items.blog-items.items-leading > div.com-content-category-blog__item.blog-item > div > div > h2 > a");
             JsonObject periods = new JsonObject();
             listPeriod.forEach(period -> {
-                JsonObject periodObject = getPeriod(BASE_URL + period.attr("href"));
+                JsonObject periodObject = getPeriod(getBaseUrl() + period.attr("href"));
                 periods.add(String.valueOf(periodObject.remove("name")), periodObject);
             });
 
@@ -110,7 +110,7 @@ public class Dynasty extends NguoiKeSu{
     }
     @Override
     protected Vector<String> getUrl() {
-        String url = BASE_URL + "/dong-lich-su";
+        String url = getBaseUrl() + "/dong-lich-su";
         Vector<String> dynastiesUrl = new Vector<>();
         try {
             HttpURLConnection connection = (HttpURLConnection) new URI(url).toURL().openConnection();

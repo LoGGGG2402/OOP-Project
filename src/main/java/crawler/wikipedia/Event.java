@@ -70,7 +70,7 @@ public class Event  extends Wikipedia{
 
         // Write to file
         try {
-            File file = new File("data/" + this.getClass().getSimpleName() + "/" + TITLE + ".json");
+            File file = new File("data/" + this.getClass().getSimpleName() + "/" + getBaseUrl() + ".json");
             FileWriter fileWriter = new FileWriter(file);
             fileWriter.write(entities.toString());
             fileWriter.flush();

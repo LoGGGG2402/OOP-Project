@@ -65,7 +65,7 @@ public class Monuments extends NguoiKeSu{
             entity.addProperty("description", description.toString());
 
             // Get image
-            String image = BASE_URL + document.select("img:nth-child(1)").attr("data-src");
+            String image = getBaseUrl() + document.select("img:nth-child(1)").attr("data-src");
             entity.addProperty("image", image);
 
             System.out.print("\rCrawling " + name + " done");
@@ -78,7 +78,7 @@ public class Monuments extends NguoiKeSu{
     @Override
     protected Vector<String> getUrl() {
         Vector<String> figureUrl = new Vector<>();
-        String urlConnect = BASE_URL + "/di-tich-lich-su";
+        String urlConnect = getBaseUrl() + "/di-tich-lich-su";
         while (true) {
             try {
                 HttpURLConnection connection = (HttpURLConnection) new URI(urlConnect).toURL().openConnection();
@@ -96,7 +96,7 @@ public class Monuments extends NguoiKeSu{
                 if (nextPageUrl.equals("")) {
                     break;
                 }
-                urlConnect = BASE_URL + nextPageUrl;
+                urlConnect = getBaseUrl() + nextPageUrl;
 
 
             } catch (IOException | URISyntaxException e) {
