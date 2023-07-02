@@ -10,52 +10,48 @@ import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.net.URLEncoder;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
-import java.util.Vector;
+import java.util.*;
 
 public class Dynasty extends Wikipedia {
-    @Override
     protected Vector<String> getUrl() {
         Vector<String> dynastyUrl = new Vector<>();
-        String urlConnect = getBaseUrl() + URLEncoder.encode("/Lịch_sử_Việt_Nam", java.nio.charset.StandardCharsets.UTF_8);
+        String urlConnect = BASE_URL+"/wiki" + "/Lịch_sử_Việt_Nam";
+        while (true) {
+            try {
+                HttpURLConnection connection = (HttpURLConnection) new URI(urlConnect).toURL().openConnection();
+                connection.setRequestMethod("GET");
+                connection.setReadTimeout(10000);
 
-        try {
-            HttpURLConnection connection = (HttpURLConnection) new URI(urlConnect).toURL().openConnection();
-            connection.setRequestMethod("GET");
-            connection.setReadTimeout(10000);
+                Document document = Jsoup.parse(connection.getInputStream(), "UTF-8", urlConnect);
+                // Get character url
+                Elements table=document.getElementsByClass("table toccolours").select("tbody").get(1).select("td");
+                for(Element row:table){
+                    dynastyUrl.add(row.select("a").attr("href"));
+                }
+                dynastyUrl.remove(dynastyUrl.size()-1);
+                return dynastyUrl;
 
-            Document document = Jsoup.parse(connection.getInputStream(), "UTF-8", urlConnect);
-            // Get character url
-            Elements table=document.getElementsByClass("table toccolours").select("tbody").get(1).select("td");
-            for(Element row:table){
-                dynastyUrl.add(row.select("a").attr("href"));
+
+            } catch (IOException | URISyntaxException e) {
+                throw new RuntimeException(e);
             }
-            System.out.println(table);
-            dynastyUrl.remove(dynastyUrl.size()-1);
-
-            return dynastyUrl;
-
-        } catch (IOException | URISyntaxException e) {
-
-            e.printStackTrace();
-            return null;
         }
-
     }
 
     protected JsonObject getEntity(String url) {
+        String baseUrl="https://vi.wikipedia.org";
         JsonObject entity = new JsonObject();
+        JsonObject properties = new JsonObject();
         try {
-            HttpURLConnection connection = (HttpURLConnection) new URI(getBaseUrl() + url).toURL().openConnection();
+            HttpURLConnection connection = (HttpURLConnection) new URI(baseUrl + url).toURL().openConnection();
             connection.setRequestMethod("GET");
             connection.setReadTimeout(10000);
 
-            Document document = Jsoup.parse(connection.getInputStream(), "UTF-8", getBaseUrl() + url);
+            Document document = Jsoup.parse(connection.getInputStream(), "UTF-8", baseUrl + url);
             Elements table=document.getElementsByClass("infobox").select("tbody>tr");
+
             List<String> attributes=new ArrayList<>() ;
+            entity.addProperty("Name",table.get(0).text());
             attributes.add("Vị thế");
             attributes.add("Thủ đô");
             attributes.add("Ngôn ngữ thông dụng");
@@ -68,31 +64,31 @@ public class Dynasty extends Wikipedia {
                     int indexStart=value.indexOf("[");
                     int indexEnd=value.indexOf("]");
                     while (indexStart>=0) {
-                        value = value.substring(0, indexStart) + value.substring(indexEnd+1);
+                        value = value.substring(0, indexStart) + value.substring(indexEnd+1, value.length());
                         indexStart=value.indexOf("[");
                         indexEnd=value.indexOf("]");
                     }
-                    entity.addProperty(key,value);
+                    properties.addProperty(key,value);
                 }
                 else if(row.select("th").text().equals("Hoàng đế")){
-                    row= Objects.requireNonNull(row.nextElementSibling()).nextElementSibling();
+                    row=row.nextElementSibling().nextElementSibling();
                     List<String> kings=new ArrayList<>();
-                    while (true) {
-                        assert row != null;
-                        if (Objects.requireNonNull(row.nextElementSibling()).select("th").text().equals("Lịch sử")) break;
+                    while (!row.nextElementSibling().select("th").text().equals("Lịch sử")) {
                         kings.add(row.select("td").text());
                         row = row.nextElementSibling();
                     }
-                    entity.addProperty("Hoàng đế",kings.toString().substring(1, kings.toString().length()-1));
+                    properties.addProperty("Hoàng đế",kings.toString().substring(1, kings.toString().length()-1));
+
                 }
             }
+            entity.add("Properties",properties);
+            entity.addProperty("Description",document.getElementsByClass("mw-parser-output").select("p").first().text());
         } catch(IOException | URISyntaxException e){
-            e.printStackTrace();
+            throw new RuntimeException(e);
         }
         return entity;
     }
-
-    public static void main(String[] args) {
+    public static void main(String[] args){
         new Dynasty();
     }
 }

@@ -18,14 +18,13 @@ import java.util.List;
 
 public class Festival extends Wikipedia {
     protected JsonArray getEntities(String url) {
-        String baseUrl = "https://vi.wikipedia.org/wiki/";
         JsonArray entity = new JsonArray();
         try {
-            HttpURLConnection connection = (HttpURLConnection) new URI(baseUrl + url).toURL().openConnection();
+            HttpURLConnection connection = (HttpURLConnection) new URI(BASE_URL+"/wiki/" + url).toURL().openConnection();
             connection.setRequestMethod("GET");
             connection.setReadTimeout(10000);
 
-            Document document = Jsoup.parse(connection.getInputStream(), "UTF-8", baseUrl + url);
+            Document document = Jsoup.parse(connection.getInputStream(), "UTF-8", BASE_URL+"/wiki/" + url + url);
             Elements table=document.getElementsByClass("prettytable wikitable").select("tbody>tr");
 
             //get category
@@ -41,18 +40,18 @@ public class Festival extends Wikipedia {
                 for (int i = 0; i < categoryList.size(); i++) {
                     entity1.addProperty(categoryList.get(i), row.children().get(i).text());
                 }
-                entity1.addProperty("name", entity1.get("Lễ hội truyền thống").getAsString());
-                entity1.remove("Lễ hội truyền thống");
+                String subUrl=row.children().get(2).getElementsByTag("a").attr("href");
                 entity.add(entity1);
             }
 
 
 
         } catch(IOException | URISyntaxException e){
-            e.printStackTrace();
+            throw new RuntimeException(e);
         }
         return entity;
     }
+
     @Override
     public void crawl() {
         JsonArray entities = new JsonArray();
@@ -69,17 +68,16 @@ public class Festival extends Wikipedia {
 
         // Write to file
         try {
-            File file = new File("data/" + this.getClass().getSimpleName() + "/" + getTitle() + ".json");
+            File file = new File("data/" + this.getClass().getSimpleName() + "/" + TITLE + ".json");
             FileWriter fileWriter = new FileWriter(file);
             fileWriter.write(entities.toString());
             fileWriter.flush();
             fileWriter.close();
         } catch (IOException e) {
-            e.printStackTrace();
+            throw new RuntimeException(e);
         }
     }
-
-    public static void main(String[] args) {
+    public static void main(String[] args){
         new Festival();
     }
 }
