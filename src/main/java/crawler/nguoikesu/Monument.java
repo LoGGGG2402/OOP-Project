@@ -17,7 +17,6 @@ public class Monument extends NguoiKeSu{
     protected JsonObject getEntity(String url){
         JsonObject entity = new JsonObject();
         try {
-            System.out.println(url);
             HttpURLConnection connection = (HttpURLConnection) new URI(url).toURL().openConnection();
             connection.setRequestMethod("GET");
             connection.setReadTimeout(10000);
@@ -49,10 +48,19 @@ public class Monument extends NguoiKeSu{
 
             for (Element element : articleBody.select("tr:not(:has(tr))")) {
                 String key = element.select(">th").text();
-                String value = element.select(">td").text();
+                String value = "";
+                Element valueElement = element.select(">td").first();
+                if (valueElement != null) {
+                    String replacedText = valueElement.html().replace("<br>", "; ");
+                    value = Jsoup.parse(replacedText).text();
+                }
                 if (key.isEmpty()){
                     key = element.select(">td:nth-child(1)").text();
-                    value = element.select(">td:nth-child(2)").text();
+                    valueElement = element.select(">td:nth-child(2)").first();
+                    if (valueElement != null) {
+                        String replacedText = valueElement.html().replace("<br>", "; ");
+                        value = Jsoup.parse(replacedText).text();
+                    }
                 }
                 properties.addProperty(key, value);
             }
@@ -70,15 +78,16 @@ public class Monument extends NguoiKeSu{
 
             System.out.print("\rCrawling " + name + " done");
 
-        } catch (IOException | URISyntaxException e) {
+        } catch (IOException | URISyntaxException | NullPointerException e) {
             e.printStackTrace();
+            return null;
         }
         return entity;
     }
     @Override
     protected Vector<String> getUrl() {
         Vector<String> figureUrl = new Vector<>();
-        String urlConnect = getBaseUrl() + "/di-tich-lich-su";
+        String urlConnect = getBaseUrl() + "/di-tich-lich-su?types[0]=1";
         while (true) {
             try {
                 HttpURLConnection connection = (HttpURLConnection) new URI(urlConnect).toURL().openConnection();

@@ -36,7 +36,7 @@ public class Monument extends Ditich{
                 }
                 page++;
             } catch (IOException | URISyntaxException e) {
-                throw new RuntimeException(e);
+                e.printStackTrace();
             }
         }
         return figureUrl;

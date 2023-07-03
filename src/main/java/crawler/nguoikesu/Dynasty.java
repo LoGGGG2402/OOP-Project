@@ -38,7 +38,7 @@ public class Dynasty extends NguoiKeSu{
             article.select("sup, #toc").remove();
 
             if (article.select(":has(h3), :has(h2)").size() > 0){
-                JsonObject emperor = new JsonObject();
+                JsonObject properties = new JsonObject();
                 for (Element element : article.select(">h3, >h2")) {
                     // Get name
                     String emperorName = element.text();
@@ -53,9 +53,9 @@ public class Dynasty extends NguoiKeSu{
                         nextSibling = nextSibling.nextElementSibling();
                     }
 
-                    emperor.addProperty(emperorName, emperorDescription.toString());
+                    properties.addProperty(emperorName, emperorDescription.toString());
                 }
-                period.add("emperor", emperor);
+                period.add("properties", properties);
             }else {
                 // Get description
                 String periodDescription = article.select("p:not(.lead)").text();
@@ -102,8 +102,9 @@ public class Dynasty extends NguoiKeSu{
 
             dynasty.add("periods", periods);
 
-        } catch (IOException | URISyntaxException e) {
+        } catch (IOException | URISyntaxException | NullPointerException e) {
             e.printStackTrace();
+            return null;
         }
 
         return dynasty;

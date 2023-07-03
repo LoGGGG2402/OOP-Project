@@ -19,7 +19,17 @@ public abstract class Crawler {
         Vector<String> characterUrl = getUrl();
 
         JsonArray character = new JsonArray();
-        characterUrl.forEach(url -> character.add(getEntity(url.charAt(0)=='/'?baseUrl+url:baseUrl+"/" +url)));
+        characterUrl.forEach(url -> {
+            JsonObject entity;
+            if(url.contains(baseUrl)){
+                entity = getEntity(url);
+            }else {
+                entity = getEntity(url.charAt(0)=='/'?baseUrl+url:baseUrl+"/" +url);
+            }
+            if (entity != null){
+            entity.addProperty("source", getBaseUrl());
+            character.add(entity);}
+        });
         //get class name
 
         // Make directory
@@ -31,14 +41,13 @@ public abstract class Crawler {
                 System.out.println("Failed to create directory!");
         }
 
+        File file = new File("data/" + this.getClass().getSimpleName() + "/" + title + ".json");
 
         // Write to file
-        try {
-            File file = new File("data/" + this.getClass().getSimpleName() + "/" + title + ".json");
-            FileWriter fileWriter = new FileWriter(file);
+        try (FileWriter fileWriter = new FileWriter(file)) {
+
             fileWriter.write(character.toString());
             fileWriter.flush();
-            fileWriter.close();
         } catch (IOException e) {
             e.printStackTrace();
         }

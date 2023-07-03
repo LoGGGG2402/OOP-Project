@@ -1,5 +1,6 @@
 package crawler.wikipedia;
 
+import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -15,7 +16,7 @@ import java.util.*;
 public class Dynasty extends Wikipedia {
     protected Vector<String> getUrl() {
         Vector<String> dynastyUrl = new Vector<>();
-        String urlConnect = BASE_URL+"/wiki" + "/Lịch_sử_Việt_Nam";
+        String urlConnect = getBaseUrl()+"/wiki" + "/Lịch_sử_Việt_Nam";
         while (true) {
             try {
                 HttpURLConnection connection = (HttpURLConnection) new URI(urlConnect).toURL().openConnection();
@@ -33,25 +34,28 @@ public class Dynasty extends Wikipedia {
 
 
             } catch (IOException | URISyntaxException e) {
-                throw new RuntimeException(e);
+                e.printStackTrace();
             }
         }
     }
 
     protected JsonObject getEntity(String url) {
-        String baseUrl="https://vi.wikipedia.org";
         JsonObject entity = new JsonObject();
         JsonObject properties = new JsonObject();
         try {
-            HttpURLConnection connection = (HttpURLConnection) new URI(baseUrl + url).toURL().openConnection();
+            HttpURLConnection connection = (HttpURLConnection) new URI(url).toURL().openConnection();
             connection.setRequestMethod("GET");
             connection.setReadTimeout(10000);
 
-            Document document = Jsoup.parse(connection.getInputStream(), "UTF-8", baseUrl + url);
+            Document document = Jsoup.parse(connection.getInputStream(), "UTF-8", url);
             Elements table=document.getElementsByClass("infobox").select("tbody>tr");
 
             List<String> attributes=new ArrayList<>() ;
-            entity.addProperty("name",table.get(0).text());
+            try {
+                entity.addProperty("name",table.get(0).text());
+            } catch (IndexOutOfBoundsException e) {
+                entity.addProperty("name",document.select("#firstHeading > span").text());
+            }
             attributes.add("Vị thế");
             attributes.add("Thủ đô");
             attributes.add("Ngôn ngữ thông dụng");
@@ -64,7 +68,7 @@ public class Dynasty extends Wikipedia {
                     int indexStart=value.indexOf("[");
                     int indexEnd=value.indexOf("]");
                     while (indexStart>=0) {
-                        value = value.substring(0, indexStart) + value.substring(indexEnd+1, value.length());
+                        value = value.substring(0, indexStart) + value.substring(indexEnd+1);
                         indexStart=value.indexOf("[");
                         indexEnd=value.indexOf("]");
                     }
@@ -82,13 +86,33 @@ public class Dynasty extends Wikipedia {
                 }
             }
             entity.add("properties",properties);
-            entity.addProperty("description",document.getElementsByClass("mw-parser-output").select("p").first().text());
+            entity.addProperty("description",document.select("#mw-content-text > div.mw-parser-output > p").first().text());
         } catch(IOException | URISyntaxException e){
-            throw new RuntimeException(e);
+            e.printStackTrace();
+            return null;
         }
         return entity;
     }
     public static void main(String[] args){
         new Dynasty();
+    }
+
+    @Override
+    protected JsonArray getEntities() {
+        Vector<String> characterUrl = getUrl();
+
+        JsonArray character = new JsonArray();
+        characterUrl.forEach(url -> {
+            JsonObject entity;
+            if(url.contains(getBaseUrl())){
+                entity = getEntity(url);
+            }else {
+                entity = getEntity(url.charAt(0)=='/'?getBaseUrl()+url:getBaseUrl()+"/" +url);
+            }
+            if (entity != null){
+                entity.addProperty("source", getBaseUrl());
+                character.add(entity);}
+        });
+        return character;
     }
 }

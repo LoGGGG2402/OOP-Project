@@ -1,26 +1,30 @@
 package crawler.wikipedia;
 
-import crawler.Crawler;
 import com.google.gson.JsonArray;
-import com.google.gson.JsonObject;
+import crawler.Crawler;
 
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Vector;
-public abstract class Wikipedia extends Crawler {
-    protected static final String BASE_URL = "https://vi.wikipedia.org";
-    protected static final String TITLE = "wikipedia";
 
+public abstract class Wikipedia extends Crawler {
+    private static final String BASE_URL = "https://vi.wikipedia.org";
+    private static final String TITLE = "wikipedia";
+
+    protected void init() {
+        setBaseUrl(BASE_URL);
+        setTitle(TITLE);
+    }
+
+    protected abstract JsonArray getEntities();
+    @Override
     public void crawl() {
-        Vector<String> urls = getUrl();
+        JsonArray entities1 = getEntities();
         JsonArray entities = new JsonArray();
-        for (String url : urls) {
-            try {
-                entities.add(getEntity(url));
-            }catch (IndexOutOfBoundsException e){
-            }
-        }
+        entities1.forEach(entity -> {
+            entity.getAsJsonObject().addProperty("source", getBaseUrl());
+            entities.add(entity);
+        });
         // Make directory
         File directory = new File("data/" + this.getClass().getSimpleName());
         if (!directory.exists()) {
@@ -33,29 +37,14 @@ public abstract class Wikipedia extends Crawler {
 
         // Write to file
         try {
-            File file = new File("data/" + this.getClass().getSimpleName() + "/" + TITLE + ".json");
+            File file = new File("data/" + this.getClass().getSimpleName() + "/" + getTitle() + ".json");
             FileWriter fileWriter = new FileWriter(file);
             fileWriter.write(entities.toString());
             fileWriter.flush();
             fileWriter.close();
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
-    }
-
-    protected JsonObject getEntity(String url) {
-        return null;
-    }
-
-    protected Vector<String> getUrl() {
-        return null;
-    }
-    protected JsonArray getEntities(String url) {
-        return null;
-    }
-    protected void init() {
-        setBaseUrl(BASE_URL);
-        setTitle(TITLE);
     }
 
 }

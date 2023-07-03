@@ -15,16 +15,18 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Vector;
 
 public class Festival extends Wikipedia {
-    protected JsonArray getEntities(String url) {
+    protected JsonArray getEntities() {
+        String url = "/wiki/Lễ_hội_Việt_Nam";
         JsonArray entity = new JsonArray();
         try {
-            HttpURLConnection connection = (HttpURLConnection) new URI(BASE_URL+"/wiki/" + url).toURL().openConnection();
+            HttpURLConnection connection = (HttpURLConnection) new URI(getBaseUrl()+url).toURL().openConnection();
             connection.setRequestMethod("GET");
             connection.setReadTimeout(10000);
 
-            Document document = Jsoup.parse(connection.getInputStream(), "UTF-8", BASE_URL+"/wiki/" + url + url);
+            Document document = Jsoup.parse(connection.getInputStream(), "UTF-8", getBaseUrl()+url);
             Elements table=document.getElementsByClass("prettytable wikitable").select("tbody>tr");
 
             //get category
@@ -40,43 +42,34 @@ public class Festival extends Wikipedia {
                 for (int i = 0; i < categoryList.size(); i++) {
                     entity1.addProperty(categoryList.get(i), row.children().get(i).text());
                 }
-                String subUrl=row.children().get(2).getElementsByTag("a").attr("href");
-                entity.add(entity1);
+                JsonObject entity2 = new JsonObject();
+                entity2.addProperty("name",entity1.get("Lễ hội truyền thống").getAsString());
+                entity1.remove("Lễ hội truyền thống");
+                entity2.add("properties",entity1);
+
+                entity.add(entity2);
             }
 
 
 
         } catch(IOException | URISyntaxException e){
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
         return entity;
     }
 
+
+
     @Override
-    public void crawl() {
-        JsonArray entities = new JsonArray();
-        entities=getEntities("Lễ_hội_Việt_Nam");
-        // Make directory
-        File directory = new File("data/" + this.getClass().getSimpleName());
-        if (!directory.exists()) {
-            if (directory.mkdirs())
-                System.out.println("Directory is created!");
-            else
-                System.out.println("Failed to create directory!");
-        }
-
-
-        // Write to file
-        try {
-            File file = new File("data/" + this.getClass().getSimpleName() + "/" + TITLE + ".json");
-            FileWriter fileWriter = new FileWriter(file);
-            fileWriter.write(entities.toString());
-            fileWriter.flush();
-            fileWriter.close();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+    protected Vector<String> getUrl() {
+        return null;
     }
+
+    @Override
+    protected JsonObject getEntity(String url) {
+        return null;
+    }
+
     public static void main(String[] args){
         new Festival();
     }

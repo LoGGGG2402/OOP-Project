@@ -46,11 +46,30 @@ public class Event extends NguoiKeSu{
             JsonObject properties = new JsonObject();
 
             for (Element element : articleBody.select("tr:not(:has(tr))")) {
-                String key = element.select(">th").text();
-                String value = element.select(">td").text();
+                String key = "";
+                String value = "";
+                Element valueElement = element.select(">td").first();
+                if (valueElement != null) {
+                    String replacedText = valueElement.html().replace("<br>", "; ");
+                    value = Jsoup.parse(replacedText).text();
+                }
+
+                valueElement = element.select(">th").first();
+                if (valueElement != null) {
+                    String replacedText = valueElement.html().replace("<br>", "; ");
+                    key = Jsoup.parse(replacedText).text();
+                }
                 if (key.isEmpty()){
-                    key = element.select(">td:nth-child(1)").text();
-                    value = element.select(">td:nth-child(2)").text();
+                    valueElement = element.select(">td:nth-child(1)").first();
+                    if (valueElement != null) {
+                        String replacedText = valueElement.html().replace("<br>", "; ");
+                        key = Jsoup.parse(replacedText).text();
+                    }
+                    valueElement = element.select(">td:nth-child(2)").first();
+                    if (valueElement != null) {
+                        String replacedText = valueElement.html().replace("<br>", "; ");
+                        value = Jsoup.parse(replacedText).text();
+                    }
                 }
                 properties.addProperty(key, value);
             }
@@ -67,8 +86,9 @@ public class Event extends NguoiKeSu{
             entity.addProperty("image", image);
 
 
-        } catch (IOException | URISyntaxException e) {
+        } catch (IOException | URISyntaxException | NullPointerException e) {
             e.printStackTrace();
+            return null;
         }
 
 

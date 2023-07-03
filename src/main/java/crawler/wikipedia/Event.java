@@ -13,18 +13,20 @@ import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.util.Vector;
 
 public class Event extends Wikipedia {
-    protected JsonArray getEntities(String url) {
+    protected JsonArray getEntities() {
+        String url = "/Niên_biểu_lịch_sử_Việt_Nam";
         JsonArray entities = new JsonArray();
         try {
-            HttpURLConnection connection = (HttpURLConnection) new URI(BASE_URL+"/wiki" + url).toURL().openConnection();
+            HttpURLConnection connection = (HttpURLConnection) new URI(getBaseUrl()+"/wiki" + url).toURL().openConnection();
             connection.setRequestMethod("GET");
             connection.setReadTimeout(10000);
 
-            Document document = Jsoup.parse(connection.getInputStream(), "UTF-8", BASE_URL+"/wiki"  + url);
+            Document document = Jsoup.parse(connection.getInputStream(), "UTF-8", getBaseUrl()+"/wiki"  + url);
             Elements rows=document.select("dl,p");
-           for(int i=6;i<rows.size()-1;i++) {
+            for(int i=6;i<rows.size()-1;i++) {
                 if (rows.get(i).tag().toString().equals("p")) {
                     if (!rows.get(i+1).tag().toString().equals("dl")) {
                         JsonObject entity = new JsonObject();
@@ -59,42 +61,28 @@ public class Event extends Wikipedia {
     }
     public String getDescription(String name){
         try {
-            HttpURLConnection connection = (HttpURLConnection) new URI(BASE_URL+"/wiki/" + name.replace(" ","_")).toURL().openConnection();
+            HttpURLConnection connection = (HttpURLConnection) new URI(getBaseUrl()+"/wiki/" + name.replace(" ","_")).toURL().openConnection();
             connection.setRequestMethod("GET");
             connection.setReadTimeout(10000);
 
-            Document document = Jsoup.parse(connection.getInputStream(), "UTF-8", BASE_URL+"/wiki/"  + name.replace(" ","_"));
-            return document.getElementsByClass("mw-parser-output").select("p").first().text();
+            Document document = Jsoup.parse(connection.getInputStream(), "UTF-8", getBaseUrl()+"/wiki/"  + name.replace(" ","_"));
+            return document.select("#mw-content-text > div.mw-parser-output > p").first().text();
         } catch(IOException | URISyntaxException e){
             System.out.println("Can't find :"+e.getMessage());
         }
         return "";
     }
+
     @Override
-    public void crawl() {
-        JsonArray entities = new JsonArray();
-        entities=getEntities("/Niên_biểu_lịch_sử_Việt_Nam");
-        // Make directory
-        File directory = new File("data/" + this.getClass().getSimpleName());
-        if (!directory.exists()) {
-            if (directory.mkdirs())
-                System.out.println("Directory is created!");
-            else
-                System.out.println("Failed to create directory!");
-        }
-
-
-        // Write to file
-        try {
-            File file = new File("data/" + this.getClass().getSimpleName() + "/" + TITLE + ".json");
-            FileWriter fileWriter = new FileWriter(file);
-            fileWriter.write(entities.toString());
-            fileWriter.flush();
-            fileWriter.close();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+    protected Vector<String> getUrl() {
+        return null;
     }
+
+    @Override
+    protected JsonObject getEntity(String url) {
+        return null;
+    }
+
     public static void main(String[] args){
         new Event();
     }

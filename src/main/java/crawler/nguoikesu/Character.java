@@ -79,10 +79,19 @@ public class Character extends NguoiKeSu{
 
             for (Element element : articleBody.select("tr:not(:has(tr))")) {
                 String key = element.select(">th").text();
-                String value = element.select(">td").text();
+                String value = "";
+                Element valueElement = element.select(">td").first();
+                if (valueElement != null) {
+                    String replacedText = valueElement.html().replace("<br>", "; ");
+                    value = Jsoup.parse(replacedText).text();
+                }
                 if (key.isEmpty()){
                     key = element.select(">td:nth-child(1)").text();
-                    value = element.select(">td:nth-child(2)").text();
+                    valueElement = element.select(">td:nth-child(2)").first();
+                    if (valueElement != null) {
+                        String replacedText = valueElement.html().replace("<br>", "; ");
+                        value = Jsoup.parse(replacedText).text();
+                    }
                 }
                 properties.addProperty(key, value);
             }
@@ -100,8 +109,9 @@ public class Character extends NguoiKeSu{
 
             System.out.print("\rCrawling " + url + " done has name " + name);
 
-        } catch (IOException | URISyntaxException e) {
+        } catch (IOException | URISyntaxException | NullPointerException e) {
             e.printStackTrace();
+            return null;
         }
         return entity;
     }
