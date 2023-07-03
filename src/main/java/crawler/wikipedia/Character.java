@@ -62,10 +62,10 @@ public class Character extends Wikipedia {
             Document document = Jsoup.parse(connection.getInputStream(), "UTF-8", urlConnect);
             // Get character url
 
-            Elements tables = document.select("table[cellpadding = 0] tbody");
-            for(Element table: tables){
-                Elements rows=table.select("tr[style = height:50px;]");
-                for(Element row : rows){
+            Elements tables = document.select("table");
+            for(Element table: tables) {
+                Elements rows = table.select("tbody > tr[style *= height:50px;]");
+                for (Element row : rows) {
                     JsonObject entity = new JsonObject();
                     entity.addProperty("name",row.select("td").get(1).text().replaceAll("\\[.*?\\]", ""));
                     JsonObject properties = new JsonObject();

@@ -24,6 +24,29 @@
     "source": "https://vi.wikipedia.org"
   },
   {
+    "name": "Lạc Long Quân",
+    "description": "",
+    "properties": {
+      "Miếu hiệu": "không có",
+      "Thụy hiệu": "Lạc Long Quân",
+      "Niên hiệu": "không có",
+      "Tên Húy": "Sùng Lãm",
+      "Thế thứ": "Con Kinh Dương Vương",
+      "Trị vì": "2792 TCN - 2525 TCN",
+      "Tiền nhiệm": "Kinh Dương Vương",
+      "Kế nhiệm": "Âu Cơ ; Hùng Lân Vương",
+      "Sinh": "2825 TCN; Xích Quỷ",
+      "Mất": "2524 TCN (300-301 tuổi); Không rõ",
+      "Thê thiếp": "Âu Cơ",
+      "Hậu duệ Hậu duệ": "Hậu duệ Một trăm con, con trưởng là Hùng Vương thứ I",
+      "Tên Thụy hiệu": "Tên Sùng Lãm (崇纜) Thụy hiệu Hùng Hiền Vương[1]",
+      "Triều đại": "Hồng Bàng",
+      "Thân phụ": "Kinh Dương Vương",
+      "Thân mẫu": "Long Mẫu Thần Long"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
     "name": "Hùng Vương thứ nhất",
     "description": "Hùng Vương thứ I là một vị vua truyền thuyết trong lịch sử Việt Nam. Ông là người có công thành lập nước Văn Lang.",
     "properties": {
@@ -45,11 +68,37 @@
     "source": "https://vi.wikipedia.org"
   },
   {
+    "name": "Hùng Vương thứ hai",
+    "description": "Hùng Vương (chữ Hán: 雄王) hay vua Hùng (chữ Nôm: 𤤰雄) là cách gọi dành cho các vị vua nước Văn Lang của người Lạc Việt, tồn tại vào khoảng thế kỷ 7 tới thế kỷ 2 trước công nguyên.",
+    "properties": {
+      "Miếu hiệu": "không có",
+      "Thụy hiệu": "Hùng Hiền Vương",
+      "Niên hiệu": "không có",
+      "Tên Húy": "không rõ",
+      "Thế thứ": "",
+      "Trị vì": "?"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
     "name": "Hùng Vương thứ ba",
     "description": "Hùng Vương (chữ Hán: 雄王) hay vua Hùng (chữ Nôm: 𤤰雄) là cách gọi dành cho các vị vua nước Văn Lang của người Lạc Việt, tồn tại vào khoảng thế kỷ 7 tới thế kỷ 2 trước công nguyên.",
     "properties": {
       "Miếu hiệu": "không có",
       "Thụy hiệu": "Hùng Lân Vương",
+      "Niên hiệu": "không có",
+      "Tên Húy": "không rõ",
+      "Thế thứ": "",
+      "Trị vì": "?"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
+    "name": "Hùng Vương thứ tư",
+    "description": "Hùng Vương (chữ Hán: 雄王) hay vua Hùng (chữ Nôm: 𤤰雄) là cách gọi dành cho các vị vua nước Văn Lang của người Lạc Việt, tồn tại vào khoảng thế kỷ 7 tới thế kỷ 2 trước công nguyên.",
+    "properties": {
+      "Miếu hiệu": "không có",
+      "Thụy hiệu": "Hùng Diệp Vương",
       "Niên hiệu": "không có",
       "Tên Húy": "không rõ",
       "Thế thứ": "",
@@ -66,6 +115,25 @@
       "Tên Húy": "không rõ",
       "Thế thứ": "",
       "Trị vì": "?"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
+    "name": "Hùng Vương thứ sáu",
+    "description": "Hùng Vương thứ VI là một vị vua truyền thuyết của nước Văn Lang trong lịch sử Việt Nam. Tương truyền ông là người đã lãnh đạo người dân Văn Lang chống lại sự tấn công của quân xâm lược Ân.[3]",
+    "properties": {
+      "Miếu hiệu": "không có",
+      "Thụy hiệu": "Thụy hiệu Hùng Vương[2]",
+      "Niên hiệu": "không có",
+      "Tên Húy": "không rõ",
+      "Thế thứ": "",
+      "Trị vì": "1712 – 1632 TCN",
+      "Tiền nhiệm": "Hùng Vương thứ V",
+      "Kế nhiệm": "Hùng Vương thứ VII",
+      "An táng": "Lăng Hùng Vương",
+      "Hậu duệ": "Lang Liêu; 33 Quan lang; 19 Mỵ nương",
+      "Triều đại": "Hồng Bàng",
+      "Thân phụ": "Hùng Vương thứ V"
     },
     "source": "https://vi.wikipedia.org"
   },
@@ -87,6 +155,19 @@
     "source": "https://vi.wikipedia.org"
   },
   {
+    "name": "Hùng Vương thứ tám",
+    "description": "Hùng Vương (chữ Hán: 雄王) hay vua Hùng (chữ Nôm: 𤤰雄) là cách gọi dành cho các vị vua nước Văn Lang của người Lạc Việt, tồn tại vào khoảng thế kỷ 7 tới thế kỷ 2 trước công nguyên.",
+    "properties": {
+      "Miếu hiệu": "không có",
+      "Thụy hiệu": "Hùng Vĩ Vương",
+      "Niên hiệu": "không có",
+      "Tên Húy": "Thừa Vân Lang",
+      "Thế thứ": "",
+      "Trị vì": "?"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
     "name": "Hùng Vương thứ chín",
     "description": "Hùng Vương (chữ Hán: 雄王) hay vua Hùng (chữ Nôm: 𤤰雄) là cách gọi dành cho các vị vua nước Văn Lang của người Lạc Việt, tồn tại vào khoảng thế kỷ 7 tới thế kỷ 2 trước công nguyên.",
     "properties": {
@@ -94,6 +175,19 @@
       "Thụy hiệu": "Hùng Định Vương",
       "Niên hiệu": "không có",
       "Tên Húy": "Quân Lang",
+      "Thế thứ": "",
+      "Trị vì": "?"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
+    "name": "Hùng Vương thứ mười",
+    "description": "Hùng Vương (chữ Hán: 雄王) hay vua Hùng (chữ Nôm: 𤤰雄) là cách gọi dành cho các vị vua nước Văn Lang của người Lạc Việt, tồn tại vào khoảng thế kỷ 7 tới thế kỷ 2 trước công nguyên.",
+    "properties": {
+      "Miếu hiệu": "không có",
+      "Thụy hiệu": "Hùng Uy Vương",
+      "Niên hiệu": "không có",
+      "Tên Húy": "Hùng Hải Lang",
       "Thế thứ": "",
       "Trị vì": "?"
     },
@@ -113,6 +207,19 @@
     "source": "https://vi.wikipedia.org"
   },
   {
+    "name": "Hùng Vương thứ 12",
+    "description": "Hùng Vương (chữ Hán: 雄王) hay vua Hùng (chữ Nôm: 𤤰雄) là cách gọi dành cho các vị vua nước Văn Lang của người Lạc Việt, tồn tại vào khoảng thế kỷ 7 tới thế kỷ 2 trước công nguyên.",
+    "properties": {
+      "Miếu hiệu": "không có",
+      "Thụy hiệu": "Hùng Vũ Vương",
+      "Niên hiệu": "không có",
+      "Tên Húy": "không rõ",
+      "Thế thứ": "",
+      "Trị vì": "?"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
     "name": "Hùng Vương thứ 13",
     "description": "Hùng Vương (chữ Hán: 雄王) hay vua Hùng (chữ Nôm: 𤤰雄) là cách gọi dành cho các vị vua nước Văn Lang của người Lạc Việt, tồn tại vào khoảng thế kỷ 7 tới thế kỷ 2 trước công nguyên.",
     "properties": {
@@ -120,6 +227,19 @@
       "Thụy hiệu": "Hùng Việt Vương",
       "Niên hiệu": "không có",
       "Tên Húy": "Tuấn Lang",
+      "Thế thứ": "",
+      "Trị vì": "?"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
+    "name": "Hùng Vương thứ 14",
+    "description": "Hùng Vương (chữ Hán: 雄王) hay vua Hùng (chữ Nôm: 𤤰雄) là cách gọi dành cho các vị vua nước Văn Lang của người Lạc Việt, tồn tại vào khoảng thế kỷ 7 tới thế kỷ 2 trước công nguyên.",
+    "properties": {
+      "Miếu hiệu": "không có",
+      "Thụy hiệu": "Hùng Anh Vương",
+      "Niên hiệu": "không có",
+      "Tên Húy": "Chân Nhân Lang",
       "Thế thứ": "",
       "Trị vì": "?"
     },
@@ -139,6 +259,23 @@
     "source": "https://vi.wikipedia.org"
   },
   {
+    "name": "Hùng Vương thứ 16",
+    "description": "Hùng Vương thứ XVI là một vị vua truyền thuyết của nước Văn Lang trong lịch sử Việt Nam.",
+    "properties": {
+      "Miếu hiệu": "không có",
+      "Thụy hiệu": "Thụy hiệu Hùng Vương[1]",
+      "Niên hiệu": "không có",
+      "Tên Húy": "Đức Quân Lang",
+      "Thế thứ": "",
+      "Trị vì": "? TCN – ? TCN",
+      "Tiền nhiệm": "Hùng Vương thứ XV",
+      "Kế nhiệm": "Hùng Vương thứ XVII",
+      "Triều đại": "Hồng Bàng",
+      "Thân phụ": "Hùng Vương thứ XV"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
     "name": "Hùng Vương thứ 17",
     "description": "Hùng Vương thứ XVII là một vị vua truyền thuyết của nước Văn Lang trong lịch sử Việt Nam. Tương truyền, vua Hùng thứ XVII có một người con nuôi là Mai An Tiêm, ông tổ trồng dưa ở Việt Nam.",
     "properties": {
@@ -153,6 +290,25 @@
       "Hậu duệ": "20 Quan lang; 15 Mỵ nương; Mai An Tiêm (con nuôi); 1 con gái nuôi",
       "Triều đại": "Hồng Bàng",
       "Thân phụ": "Hùng Vương thứ XV"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
+    "name": "Hùng Vương thứ 18",
+    "description": "Hùng Vương thứ XVIII (~334 - 258 TCN) còn gọi Hùng Duệ Vương, là một vị vua truyền thuyết của nước Văn Lang trong lịch sử Việt Nam và là vị Hùng Vương cuối cùng. Tương truyền Hùng Vương thứ XVIII có hai con rể là Chử Đồng Tử và Sơn Tinh.",
+    "properties": {
+      "Miếu hiệu": "không có",
+      "Thụy hiệu": "Thụy hiệu Hùng Duệ Vương",
+      "Niên hiệu": "không có",
+      "Tên Húy": "không rõ",
+      "Thế thứ": "",
+      "Trị vì": "? – 258 TCN",
+      "Tiền nhiệm": "Hùng Vương thứ XVII",
+      "Kế nhiệm": "Mất nước, An Dương Vương lên ngôi",
+      "Mất": "257 TCN hoặc 208 TCN; Văn Lang",
+      "Hậu duệ Hậu duệ": "Hậu duệ Công chúa Tiên Dung; Công chúa Ngọc Hoa; Công chúa Ngọc Nương; Quan lang kế vị",
+      "Triều đại": "Hồng Bàng",
+      "Thân phụ": "Hùng Vương thứ XVII"
     },
     "source": "https://vi.wikipedia.org"
   },
@@ -192,6 +348,28 @@
     "source": "https://vi.wikipedia.org"
   },
   {
+    "name": "Triệu Vũ Vương",
+    "description": "Triệu Vũ Đế (chữ Hán: 趙武帝, 257 TCN hoặc 235 TCN - 137 TCN), húy Triệu Đà (chữ Hán: 趙佗), là vị vua đầu tiên của nước Nam Việt, án ngữ tại Quảng Đông và miền bắc Việt Nam. Ông vốn là người Trung Quốc, quê ở huyện Chân Định (真定), quận Hằng Sơn (恒山) (ngày nay là huyện Chính Định (正定), tỉnh Hà Bắc), miền Bắc Trung Quốc.[1]",
+    "properties": {
+      "Miếu hiệu": "không có",
+      "Thụy hiệu": "Vũ Vương Vũ Đế",
+      "Niên hiệu": "không có",
+      "Tên Húy": "Triệu Đà",
+      "Thế thứ": "Dòng dõi nước Triệu thời Chiến Quốc, khai sáng triều đại.",
+      "Trị vì": "208 TCN hoặc 205 TCN hoặc 204 - 137 TCN",
+      "Tiền nhiệm": "Sáng lập triều đại",
+      "Kế nhiệm": "Triệu Văn Đế",
+      "Sinh": "257 TCN hoặc 235 TCN; huyện Chân Định (真定), quận Hằng Sơn (恒山), nay là tỉnh Hà Bắc, Trung Quốc",
+      "Mất": "137 TCN (99 hoặc 120 tuổi); Phiên Ngung (nay là thành phố Quảng Châu, tỉnh Quảng Đông, Trung Quốc)",
+      "Phối ngẫu": "?",
+      "Hậu duệ Hậu duệ": "Hậu duệ Trọng Thủy",
+      "Tên húy Tôn hiệu Thụy hiệu": "Tên húy Triệu Đà (趙佗) Tôn hiệu Khai Thiên Thế Đạo Thánh Vũ Thần Triết Hoàng Đế (Nhà Trần) Thụy hiệu Vũ Hoàng đế (武皇帝) Triết Đế",
+      "Triều đại": "Nhà Triệu",
+      "Thân phụ": "Nhâm Ngao"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
     "name": "Triệu Văn Vương",
     "description": "Triệu Văn Đế (趙文帝) hay Triệu Văn Vương (趙文王), húy Triệu Mạt, có khi phiên âm là Triệu Muội (趙眜), còn gọi là Triệu Hồ (趙胡), là vị vua thứ hai nhà Triệu nước Nam Việt, cháu nội của Triệu Đà, lên ngôi năm 137 TCN.",
     "properties": {
@@ -211,6 +389,27 @@
       "Triều đại": "Nhà Triệu",
       "Thân phụ": "Trọng Thủy",
       "Thân mẫu": "Mỵ Châu"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
+    "name": "Triệu Minh Vương",
+    "description": "Triệu Minh Vương (趙明王), húy Triệu Anh Tề (趙嬰齊) là vị vua thứ ba nhà Triệu nước Nam Việt, ở ngôi từ năm 125 TCN đến 113 TCN.",
+    "properties": {
+      "Miếu hiệu": "không có",
+      "Thụy hiệu": "Minh Vương",
+      "Niên hiệu": "không có",
+      "Tên Húy": "Triệu Anh Tề",
+      "Thế thứ": "Con Triệu Hồ",
+      "Trị vì": "125 TCN – 113 TCN",
+      "Tiền nhiệm": "Triệu Văn Đế",
+      "Kế nhiệm": "Triệu Ai Vương",
+      "Mất": "113 TCN; Nam Việt",
+      "Vương hậu Vương hậu": "Vương hậu Cù thị",
+      "Hậu duệ Hậu duệ": "Hậu duệ Triệu Kiến Đức ; Thứ Công (次公) ; Triệu Hưng",
+      "Tên húy": "Tên húy Triệu Anh Tề (趙嬰齊)",
+      "Triều đại": "Nhà Triệu",
+      "Thân phụ": "Triệu Văn Đế"
     },
     "source": "https://vi.wikipedia.org"
   },
@@ -236,6 +435,28 @@
     "source": "https://vi.wikipedia.org"
   },
   {
+    "name": "Triệu Dương Vương",
+    "description": "Triệu Dương Vương (趙陽王), hay Triệu Thuật Dương Vương (趙術陽王), Triệu Vệ Dương Vương (趙衛陽王)[1], tên họ thật là Triệu Kiến Đức (趙建德), trị vì từ năm 112 TCN – 111 TCN, là vị vua cuối cùng của nhà Triệu nước Nam Việt trong lịch sử Việt Nam.",
+    "properties": {
+      "Miếu hiệu": "không có",
+      "Thụy hiệu": "Dương Vương Thuật Dương Vương Vệ Dương vương Vệ Dương hầu",
+      "Niên hiệu": "không có",
+      "Tên Húy": "Triệu Kiến Đức",
+      "Thế thứ": "Con trưởng Triệu Anh Tề, anh Triệu Hưng.",
+      "Trị vì": "112 TCN – 111 TCN",
+      "Nhiếp chính": "Thừa tướng Lữ Gia",
+      "Tiền nhiệm": "Triệu Ai Vương",
+      "Kế nhiệm": "Triều đại diệt vong",
+      "Sinh": "?",
+      "Mất": "111 TCN; Nam Việt",
+      "Tên đầy đủ": "Tên đầy đủ Triệu Kiến Đức (趙建德)",
+      "Triều đại": "Nhà Triệu",
+      "Thân phụ": "Triệu Minh Vương",
+      "Thân mẫu": "người Việt (không rõ tên)"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
     "name": "Trưng Vương",
     "description": "Thời tiền sử",
     "properties": {
@@ -251,6 +472,29 @@
       "Tên đầy đủ Thụy hiệu": "Tên đầy đủ Trưng Trắc (徵側) Thụy hiệu Trưng Thánh vương[1]; (徵聖王); Linh Trinh Nhị phu nhân[2]; (靈貞二夫人); Kính Thắng phu nhân[3]; (敬勝夫人); Kính Thắng Bảo Thuận phu nhân[4]; (敬勝保順夫人)",
       "Thân phụ": "Hùng Định (sau đổi thành Trưng Định)",
       "Thân mẫu": "Man Thiện"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
+    "name": "Lý Nam Đế",
+    "description": "Lý Nam Đế (chữ Hán: 李南帝; 503 – 548), húy là Lý Bí hoặc Lý Bôn (李賁) (xem mục Tên gọi bên dưới), là vị vua đầu tiên của nhà Tiền Lý và nước Vạn Xuân. Ông là 1 trong 14 anh hùng tiêu biểu của dân tộc Việt Nam.[1]",
+    "properties": {
+      "Miếu hiệu": "không có",
+      "Thụy hiệu": "Nam Đế, Nam Việt Đế",
+      "Niên hiệu": "Thiên Đức (544–548)",
+      "Tên Húy": "Lý Bí Lý Bôn (李賁)",
+      "Thế thứ": "Nổi dậy tự lập, khai sáng triều đại",
+      "Trị vì": "544 – 548",
+      "Kế nhiệm": "Triệu Việt Vương",
+      "Sinh": "(503-10-17)17 tháng 10, 503; Giao Châu",
+      "Mất": "13 tháng 4, 548(548-04-13) (44 tuổi); Vạn Xuân",
+      "Thê thiếp": "Hoàng hậu Đỗ Thị Khương",
+      "Húy Niên hiệu Thụy hiệu": "Húy Lý Bí hoặc Lý Bôn (李賁) Niên hiệu Thiên Đức (天徳) Thụy hiệu Nam Việt Hiếu Cao Hoàng Đế (南越孝高皇帝)",
+      "Tước hiệu": "Nam Việt Đế(南越帝)",
+      "Triều đại": "Nhà Tiền Lý",
+      "Thân phụ": "Lý Cạnh hay Lý Toản",
+      "Thân mẫu": "Lê Thị Oánh",
+      "Tôn giáo": "Phật giáo"
     },
     "source": "https://vi.wikipedia.org"
   },
@@ -279,6 +523,26 @@
     "source": "https://vi.wikipedia.org"
   },
   {
+    "name": "Đào Lang Vương",
+    "description": "Lý Thiên Bảo (chữ Hán:李天寶; 499?-555) vua nước Dã Năng (tồn tại phía tây với nhà Tiền Lý) trong lịch sử Việt Nam. Ông tham gia cuộc chiến chống quân Lương giữ nước Vạn Xuân và cát cứ ở Dã Năng thời Triệu Việt Vương.",
+    "properties": {
+      "Miếu hiệu": "không có",
+      "Thụy hiệu": "không có",
+      "Niên hiệu": "không có",
+      "Tên Húy": "Lý Thiên Bảo",
+      "Thế thứ": "Anh trai Lý Nam Đế",
+      "Trị vì": "548 – 555",
+      "Tiền nhiệm": "Sáng lập nước Dã Năng",
+      "Kế nhiệm": "Lý Phật Tử",
+      "Sinh": "499?",
+      "Mất": "555; động Dã Năng",
+      "Tên húy Thụy hiệu": "Tên húy Lý Thiên Bảo Thụy hiệu Đào Lang Vương",
+      "Triều đại": "Nhà Tiền Lý",
+      "Thân phụ": "Lý Toản"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
     "name": "Hậu Lý Nam Đế",
     "description": "Hậu Lý Nam Đế (chữ Hán: 後李南帝; trị vì: 571 – 602) là vua nhà Tiền Lý trong lịch sử Việt Nam. Ông tên thật là Lý Phật Tử (李佛子; 518 – 602), người Thái Bình, phủ Long Hưng (tỉnh Sơn Tây, Hà Nội), là cháu họ của Lý Nam Đế.",
     "properties": {
@@ -300,6 +564,46 @@
     "source": "https://vi.wikipedia.org"
   },
   {
+    "name": "Lý Sư Lợi",
+    "description": "Lý Sư Lợi là vị vua cuối cùng của nhà Tiền Lý, nước Vạn Xuân. Ông là con trai của Hậu Lý Nam Đế Lý Phật Tử. Sau khi Lý Phật Tử bị bắt giải sang Trung Quốc, ông kế vị được vài năm thì bị tướng nhà Tùy đem quân sang đánh bại.",
+    "properties": {
+      "Miếu hiệu": "không có",
+      "Thụy hiệu": "không có",
+      "Niên hiệu": "không có",
+      "Tên Húy": "Lý Sư Lợi",
+      "Thế thứ": "con Hậu Lý Nam Đế",
+      "Trị vì": "602",
+      "Tại vị": "602 - 603",
+      "Tiền nhiệm": "Hậu Lý Nam Đế",
+      "Kế nhiệm": "Triều đại sụp đổ",
+      "Mất": "603; Trung Quốc",
+      "Thân phụ": "Lý Phật Tử (Hậu Lý Nam Đế)"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
+    "name": "Mai Hắc Đế",
+    "description": "Mai Hắc Đế (chữ Hán: 梅黑帝; 670 – 723), tên thật là Mai Thúc Loan (梅叔鸞),[1] là vị vua lãnh đạo cuộc khởi nghĩa chống lại sự chiếm đóng của nhà Đường ở miền Bắc Việt Nam vào đầu thế kỉ thứ 8.[2] Trong lịch sử Việt Nam, ông được xem như một vị anh hùng dân tộc.",
+    "properties": {
+      "Miếu hiệu": "không có",
+      "Thụy hiệu": "Đại Đế, Hắc Đế",
+      "Niên hiệu": "không có",
+      "Tên Húy": "Mai Thúc Loan, (梅叔鸞) Mai Huyền Thành, Mai Lập Thành, Mai Thúc Yên, Mai Phượng.",
+      "Thế thứ": "Con Mai Hoàn, sáng lập triều đại.",
+      "Trị vì": "713",
+      "Lãnh đạo": "713 - 722",
+      "Kế nhiệm": "Mai Thiếu Đế",
+      "Sinh": "670; làng Ngọc Trừng, xã Đông Liệt, huyện Sa Nam, châu Hoan; (nay là xã Nam Thái, huyện Nam Đàn, tỉnh Nghệ An)",
+      "Mất": "19 tháng 10, 723; núi Đụn (xã Vân Diên, huyện Nam Đàn, tỉnh Nghệ An)",
+      "Thê thiếp": "Đinh Ngọc Tô; Phạm Thị Uyển",
+      "Hậu duệ Hậu duệ": "Hậu duệ Mai Thị Cầu; Mai Kỳ Sơn; Mai Thúc Huy",
+      "Tên húy Thụy hiệu": "Tên húy Mai Thúc Loan; Mai Thúc Yên; Mai Lập Thành Thụy hiệu Hắc Đế (黑帝) Đại Hoàng đế (大皇帝)",
+      "Thân phụ": "Mai Hoàn",
+      "Thân mẫu": "Mai An Hoà"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
     "name": "Mai Thiếu Đế",
     "description": "Mai Thiếu Đế (chữ Hán: 梅少帝; ? – 723?) là một vị vua truyền thuyết Việt Nam. Tương truyền, ông là người kế vị vua Mai Hắc Đế trong lịch sử Việt Nam.",
     "properties": {
@@ -315,6 +619,48 @@
       "Mất": "723",
       "Tên húy Thụy hiệu": "Tên húy Mai Thúc Huy (梅叔輝) Thụy hiệu Thiếu Đế",
       "Thân phụ": "Mai Hắc Đế"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
+    "name": "Bạch Đầu Đế",
+    "description": "Mai Kỳ Sơn (chữ Hán: 梅奇山, ? – 723?), thường được gọi là Bạch Đầu đế (白頭帝), là một vị vua truyền thuyết Việt Nam.",
+    "properties": {
+      "Miếu hiệu": "không có",
+      "Thụy hiệu": "không có",
+      "Niên hiệu": "không có",
+      "Tên Húy": "Mai Kỳ Sơn",
+      "Thế thứ": "Con thứ hai Mai Hắc Đế, anh song sinh với Mai Thiếu Đế.",
+      "Trị vì": "723",
+      "Lãnh đạo": "723",
+      "Tiền nhiệm": "Mai Thiếu Đế",
+      "Kế nhiệm": "Bố Cái Đại Vương",
+      "Mất": "7 tháng 12 năm 723",
+      "Tên đầy đủ Tôn hiệu": "Tên đầy đủ Mai Kỳ Sơn (梅奇山) Tôn hiệu Bạch Đầu đế (白頭帝)",
+      "Thân phụ": "Mai Hắc Đế",
+      "Thân mẫu": "Đinh Ngọc Tô"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
+    "name": "Phùng Hưng",
+    "description": "Phùng Hưng[2][3][4] (chữ Hán: 馮興; 746-789[1]/791[5]/802) , là lãnh tụ một cuộc nổi dậy chống lại sự đô hộ của nhà Đường thời Bắc thuộc lần thứ ba (602–905) trong lịch sử Việt Nam.",
+    "properties": {
+      "Miếu hiệu": "không có",
+      "Thụy hiệu": "Thụy hiệu Bố Cái Phu Hựu Chương Tín Sùng Nghĩa Đại vương (布盖孚祐彰信崇義大王) ; Gọi tắt: Bố Cái Đại vương (布盖大王)",
+      "Niên hiệu": "không có",
+      "Tên Húy": "Phùng Hưng (馮興), Phùng Cự Lão",
+      "Thế thứ": "con Phùng Hạp Khanh, thế tập Biên Khố Di Tù Trưởng",
+      "Trị vì": "766",
+      "Ở ngôi": "770– 789[1]/791/802",
+      "Tiền nhiệm": "Không có ; (Bạch Đầu Đế họ Mai)",
+      "Kế nhiệm": "Phùng An",
+      "Sinh": "1 tháng 10, 746/759",
+      "Mất": "31 tháng 12, 789 / 10 tháng 8, 791 / 12 tháng 11,802 (41/30 hoặc 43/31 hoặc 44/43 hoặc 56 tuổi); Việt Nam",
+      "An táng": "30 tháng 3, 804; Giảng Võ, Ba Đình ngày nay",
+      "Hậu duệ": "Phùng An",
+      "Thân phụ": "Phùng Hạp Khanh",
+      "Thân mẫu": "Sử Thục Nương"
     },
     "source": "https://vi.wikipedia.org"
   },
@@ -340,6 +686,25 @@
     "source": "https://vi.wikipedia.org"
   },
   {
+    "name": "Khúc Tiên Chủ",
+    "description": "",
+    "properties": {
+      "Miếu hiệu": "Tiên Chủ",
+      "Thụy hiệu": "Tiên Vương",
+      "Niên hiệu": "không có",
+      "Tên Húy": "Khúc Thừa Dụ (曲承裕)",
+      "Thế thứ": "Mở màn nền tự chủ",
+      "Trị vì": "905 - 907",
+      "Tiền nhiệm": "Độc Cô Tổn",
+      "Kế nhiệm": "Khúc Trung Chủ",
+      "Sinh": "830; Hồng Châu, An Nam (nay là Hải Dương, Việt Nam)",
+      "Mất": "23 tháng 7, 907(907-07-23) (76–77 tuổi); Đại La, Tĩnh Hải quân",
+      "Hậu duệ Hậu duệ": "Hậu duệ Khúc Hạo; Khúc Thị Ngọc",
+      "Tên húy Tôn hiệu": "Tên húy Khúc Thừa Dụ (曲承裕) Tôn hiệu Tiên Chủ (先主)"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
     "name": "Khúc Trung Chủ",
     "description": "Khúc Hạo (chữ Hán: 曲顥; 860 - 917) hoặc Khúc Thừa Hạo, được suy tôn là Khúc Trung Chủ, là con của Khúc Thừa Dụ. Quê hương của cha con Khúc Thừa Dụ, Khúc Hạo nay được cho là làng Cúc Bồ, xã Kiến Quốc, huyện Ninh Giang, tỉnh Hải Dương.[1][2][3]",
     "properties": {
@@ -356,6 +721,25 @@
       "Hậu duệ": "Khúc Thừa Mỹ",
       "Tên thật Miếu hiệu": "Tên thật Khúc Hạo (曲顥) hoặc ; Khúc Thừa Hạo (曲承顥) Miếu hiệu Trung Chủ",
       "Thân phụ": "Khúc Tiên Chủ"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
+    "name": "Khúc Hậu Chủ",
+    "description": "Khúc Thừa Mỹ (chữ Hán: 曲承美; trị vì: 917 – 923 hoặc 917 – 930) là người làng Cúc Bồ đất Hồng Châu (nay là xã Kiến Quốc, huyện Ninh Giang, tỉnh Hải Dương), con của Khúc Hạo (Việt sử lược chép là Khúc Toàn Mỹ, em của Khúc Hạo). Ông là vị Tiết độ sứ thứ ba trong thời kỳ tự chủ của họ Khúc trong lịch sử Việt Nam đầu thế kỷ 10.",
+    "properties": {
+      "Miếu hiệu": "Hậu Chủ",
+      "Thụy hiệu": "Hậu Vương",
+      "Niên hiệu": "không có",
+      "Tên Húy": "Khúc Thừa Mỹ (曲承美) Khúc Toàn Mỹ",
+      "Thế thứ": "Con Khúc Hạo",
+      "Trị vì": "917 – 923 hoặc 930",
+      "Tiền nhiệm": "Khúc Trung Chủ",
+      "Kế nhiệm": "Dương Đình Nghệ",
+      "Sinh": "Trước 900; Hải Dương",
+      "Mất": "931",
+      "Tên thật Miếu hiệu": "Tên thật Khúc Thừa Mỹ (曲承美) Miếu hiệu Hậu Chủ",
+      "Thân phụ": "Khúc Trung Chủ"
     },
     "source": "https://vi.wikipedia.org"
   },
@@ -424,6 +808,26 @@
     "source": "https://vi.wikipedia.org"
   },
   {
+    "name": "Dương Bình Vương",
+    "description": "Dương Tam Kha (chữ Hán: 楊三哥, ? - 980), tức Dương Bình Vương (楊平王), là một vị vua Việt Nam, trị vì từ 944 đến 950, xen giữa triều đại nhà Ngô trong lịch sử Việt Nam.",
+    "properties": {
+      "Miếu hiệu": "không có",
+      "Thụy hiệu": "Trương Dương Công",
+      "Niên hiệu": "không có",
+      "Tên Húy": "Dương Tam Kha, Dương Chủ Tướng, Dương Thiệu Hồng",
+      "Thế thứ": "Con trai Dương Đình Nghệ",
+      "Trị vì": "944",
+      "Tại vị": "944 – 950",
+      "Tiền nhiệm": "Tiền Ngô Vương",
+      "Kế nhiệm": "Hậu Ngô Vương",
+      "Mất": "10 tháng 8 năm 980",
+      "Hậu duệ": "Dương Vân Nga",
+      "Tên húy Thụy hiệu": "Tên húy Dương Tam Kha (楊三哥); Dương Chủ Tướng (楊主將); Dương Thiệu Hồng (楊紹洪) Thụy hiệu Bình vương (平王)",
+      "Thân phụ": "Dương Đình Nghệ"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
     "name": "Thiên Sách Vương",
     "description": "Ngô Xương Ngập (chữ Hán: 吳昌岌; 915? - 954) là một vị vua nhà Ngô, trị vì từ 951 đến 954 cùng với em trai là Ngô Xương Văn. Sử gọi chung đó là thời Hậu Ngô Vương.",
     "properties": {
@@ -445,6 +849,29 @@
     "source": "https://vi.wikipedia.org"
   },
   {
+    "name": "Nam Tấn Vương",
+    "description": "Ngô Xương Văn (chữ Hán: 吳昌文; 934[1] – 965) là một vị vua nhà Ngô trong lịch sử Việt Nam. Ông trị vì từ 950 đến 965, trong đó khoảng từ 951 – 954 ông trị vì cùng với anh trai là Ngô Xương Ngập. Sử gọi chung đó là thời Hậu Ngô Vương.",
+    "properties": {
+      "Miếu hiệu": "không có",
+      "Thụy hiệu": "không có",
+      "Niên hiệu": "không có",
+      "Tên Húy": "Ngô Xương Tấn, Ngô Xương Văn",
+      "Thế thứ": "Con thứ Ngô Quyền",
+      "Trị vì": "950 – 965",
+      "Đồng trị vì": "Thiên Sách Vương",
+      "Tiền nhiệm": "Dương Bình Vương",
+      "Kế nhiệm": "Ngô Xương Xí (sứ quân)",
+      "Sinh": "12 tháng 9, 934",
+      "Mất": "965 (30-31 tuổi)",
+      "Tên húy": "Tên húy Ngô Xương Văn (吳昌文)",
+      "Tước hiệu": "Nam Tấn vương (南晉王)",
+      "Triều đại": "Nhà Ngô",
+      "Thân phụ": "Ngô Quyền",
+      "Thân mẫu": "Dương hậu"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
     "name": "Ngô Sứ Quân",
     "description": "Ngô Xương Xí (chữ Hán: 吳昌熾), còn gọi là Ngô sứ quân (吳使君), được chính sử ghi nhận là một trong những thủ lĩnh thời 12 sứ quân thế kỷ X. Nhiều tài liệu cho biết ông là con trai của Thiên Sách Vương Ngô Xương Ngập, tức là cháu nội của Ngô Tiên chúa Ngô Quyền. Sử không ghi rõ năm sinh và năm mất của Ngô Xương Xí, nhưng căn cứ vào hành trạng của Ngô Xương Ngập thì ông sinh khoảng từ năm 944 đến trước năm 950.",
     "properties": {
@@ -461,6 +888,29 @@
       "Triều đại": "Nhà Ngô",
       "Thân phụ": "Thiên Sách Vương",
       "Thân mẫu": "Phạm Thị Uy Duyên"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
+    "name": "Đinh Tiên Hoàng",
+    "description": "",
+    "properties": {
+      "Miếu hiệu": "không có",
+      "Thụy hiệu": "Tiên Hoàng Đế Đại Thắng Minh Hoàng Đế",
+      "Niên hiệu": "Thái Bình (970-979)",
+      "Tên Húy": "Đinh Bộ Lĩnh, Đinh Hoàn",
+      "Thế thứ": "Sáng lập triều đại; con nuôi Sứ quân Trần Minh Công",
+      "Trị vì": "968 - 979",
+      "Tiền nhiệm": "Sáng lập triều đại",
+      "Kế nhiệm": "Đinh Phế Đế",
+      "Sinh": "22 tháng 3 năm 924; Gia Viễn, Ninh Bình, Tĩnh Hải quân",
+      "Mất": "Tháng 10 năm 979 (55 tuổi); Hoa Lư, Ninh Bình, Đại Cồ Việt",
+      "Hoàng hậu Hoàng hậu": "Hoàng hậu Đan Gia; Trinh Minh; Kiểu Quốc; Cồ Quốc; Ca Ông",
+      "Hậu duệ Hậu duệ": "Hậu duệ Đinh Liễn; Đinh Toàn; Đinh Hạng Lang",
+      "Tên húy Niên hiệu Tôn hiệu Thụy hiệu": "Tên húy Đinh Bộ Lĩnh (丁部領); Đinh Hoàn (丁桓) Niên hiệu Thái Bình 太平 Tôn hiệu Đại Thắng Minh Hoàng đế (大勝明皇帝) Thụy hiệu Tiên Hoàng đế (先皇帝)",
+      "Triều đại": "Nhà Đinh",
+      "Thân phụ": "Đinh Công Trứ",
+      "Thân mẫu": "Đàm Thiềm Nương"
     },
     "source": "https://vi.wikipedia.org"
   },
@@ -488,6 +938,30 @@
     "source": "https://vi.wikipedia.org"
   },
   {
+    "name": "Lê Đại Hành",
+    "description": "Lê Đại Hành (10 tháng 8 năm 941 - 18 tháng 4 năm 1005) là vị Hoàng đế sáng lập nhà Tiền Lê nước Đại Cồ Việt, trị vì nước Đại Cồ Việt trong 24 năm. Ông là 1 trong 14 vị anh hùng tiêu biểu của dân tộc Việt Nam.[2]",
+    "properties": {
+      "Miếu hiệu": "không có",
+      "Thụy hiệu": "Đại Hành Hoàng Đế Minh Càn Ứng Vận Thần Vũ Thăng Bình Chí Nhân Quảng Hiếu Hoàng đế",
+      "Niên hiệu": "Thiên Phúc (980–988) Hưng Thống (989–993) Ứng Thiên (994–1005)",
+      "Tên Húy": "Lê Hoàn",
+      "Thế thứ": "Sáng lập triều đại, Phó vương nhiếp chính thời Đinh Phế Đế",
+      "Trị vì": "tháng 7 năm 980 – 18 tháng 4 năm 1005",
+      "Tiền nhiệm": "Sáng lập triều đại; Đinh Toàn (nhà Đinh)",
+      "Kế nhiệm": "Lê Trung Tông",
+      "Sinh": "10 tháng 8, 941; Tĩnh Hải quân",
+      "Mất": "18 tháng 4, 1005(1005-04-18) (63 tuổi); Hoa Lư, Đại Cồ Việt",
+      "An táng": "Trường Yên (Hoa Lư)",
+      "Hoàng hậu Hoàng hậu": "Hoàng hậu Đại Thắng Minh Hoàng hậu Dương Vân Nga,; Phụng Càn Chí Lý Hoàng hậu,; Thuận Thánh Minh Đạo Hoàng hậu,; Trịnh Quắc Hoàng hậu,; Phạm Hoàng hậu",
+      "Hậu duệ Hậu duệ": "Hậu duệ Lê Long Thâu Lê Long Tích Lê Long Việt Lê Long Đinh Lê Long Đĩnh Lê Long Cân Lê Long Tung Lê Long Tương Lê Long Kính Lê Long Mang Lê Long Đề Lê Thị Phất Ngân",
+      "Tên húy Niên hiệu Tôn hiệu Thụy hiệu": "Tên húy Lê Hoàn (黎桓) Niên hiệu Thiên Phúc (天福 980 - 988) Hưng Thống (興統 989 - 993) Ứng Thiên (應天 994 - 1005) Tôn hiệu Minh Càn Ứng Vận Thần Vũ Thăng Bình Chí Nhân Quảng Hiếu Hoàng đế (明乾應運神武昇平至仁廣孝皇帝) Thụy hiệu Đại Hành Hoàng đế (大行皇帝)",
+      "Triều đại": "Nhà Tiền Lê",
+      "Thân phụ": "Lê Mịch[1]",
+      "Thân mẫu": "Đặng Thị Sen[1]"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
     "name": "Lê Trung Tông",
     "description": "Tiền Lê Trung Tông (chữ Hán: 前黎中宗 983 – 1005) là vị hoàng đế thứ hai của nhà Tiền Lê. Khi vua cha Lê Đại Hành mất, Thái tử Lê Long Việt vâng theo di chiếu nối ngôi nhưng bị anh em tranh chấp ngôi báu trong 8 tháng mới dẹp yên. Khi chính thức lên ngôi được 3 ngày thì bị em là Lê Long Đĩnh sai người đầu độc cướp ngôi vua.",
     "properties": {
@@ -511,6 +985,29 @@
     "source": "https://vi.wikipedia.org"
   },
   {
+    "name": "Lê Ngọa Triều",
+    "description": "Lê Long Đĩnh (chữ Hán: 黎龍鋌 15 tháng 11 năm 986 – 19 tháng 11 năm 1009) là vị hoàng đế cuối cùng của nhà Tiền Lê trong lịch sử Việt Nam. Ông lên ngôi sau khi ám sát người anh trai là Lê Trung Tông để giành ngôi. Ông trị vì được 4 năm, từ năm 1005 đến năm 1009. Cái chết đột ngột của ông ở tuổi 24 dẫn đến việc chấm dứt nhà Tiền Lê, quyền lực rơi vào tay Lý Công Uẩn, người lập ra nhà Lý.",
+    "properties": {
+      "Miếu hiệu": "không có",
+      "Thụy hiệu": "Khai Thiên Ứng Vận Thánh Văn Thần Vũ Tắc Thiên Sùng Đạo Đại Thắng Minh Quang Hiếu Hoàng Đế Ngọa Triều Hoàng Đế",
+      "Niên hiệu": "Ứng Thiên (1005–1007) Cảnh Thụy (1008–1009)",
+      "Tên Húy": "Lê Long Đĩnh,",
+      "Thế thứ": "Con thứ năm Lê Đại Hành",
+      "Trị vì": "1005 – 19 tháng 11 năm 1009",
+      "Tiền nhiệm": "Lê Trung Tông",
+      "Kế nhiệm": "Triều đại sụp đổ ; Lý Thái Tổ (Nhà Lý)",
+      "Sinh": "15 tháng 11, 986; Kinh đô Hoa Lư",
+      "Mất": "19 tháng 11, 1009(1009-11-19) (23 tuổi); Đại Cồ Việt",
+      "Thê thiếp": "Cảm Thánh Hoàng hậu; và một số người vợ khác",
+      "Hậu duệ": "Khai Phong vương Lê Cao Sạ",
+      "Tên húy Niên hiệu Tôn hiệu Thụy hiệu": "Tên húy Lê Long Đĩnh (黎龍鋌) Lê Chí Trung (黎至忠) Niên hiệu Ứng Thiên (應天 1005 - 1007) Cảnh Thụy (景瑞 1008 - 1009) Tôn hiệu Khai Thiên Ứng Vận Thánh Văn Thần Vũ Tắc Thiên Sùng Đạo Đại Thắng Minh Quang Hiếu Hoàng đế (開天應運聖文神武則天崇道大勝明光孝皇帝) Thụy hiệu Ngọa Triều Hoàng đế (臥朝皇帝)",
+      "Triều đại": "Nhà Tiền Lê",
+      "Thân phụ": "Lê Đại Hành",
+      "Thân mẫu": "Quảng Thánh Hoàng thái hậu"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
     "name": "Lý Thái Tổ",
     "description": "Lý Thái Tổ (chữ Hán: 李太祖, 8 tháng 3 năm 974 - 31 tháng 3 năm 1028) là hoàng đế sáng lập ra nhà Lý (hay còn gọi là Hậu Lý để phân biệt với nhà Tiền Lý do Lý Nam Đế sáng lập) trong lịch sử Việt Nam, trị vì từ năm 1009 đến khi qua đời vào năm 1028",
     "properties": {
@@ -529,6 +1026,30 @@
       "Triều đại": "Nhà Lý",
       "Thân phụ": "Hiển Khánh vương",
       "Thân mẫu": "Phạm Thị Ngà",
+      "Tôn giáo": "Phật giáo"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
+    "name": "Lý Thái Tông",
+    "description": "Lý Thái Tông (chữ Hán: 李太宗 29 tháng 7 năm 1000 – 3 tháng 11 năm 1054) là vị hoàng đế thứ hai của triều đại nhà Lý trong lịch sử Việt Nam, cai trị trong 26 năm (1028–1054). Ông được đánh giá là một vị hoàng đế tài giỏi, thời đại của ông, con ông là Lý Thánh Tông, cháu ông là Lý Nhân Tông được xem là thời thịnh vượng của nhà Lý, sử gọi thời kỳ này là Bách niên Thịnh thế (百年盛世).",
+    "properties": {
+      "Miếu hiệu": "Thái Tông",
+      "Thụy hiệu": "Từ Hiếu Hoàng đế",
+      "Niên hiệu": "Thiên Thành (1028–1033), Thông Thụy (1034–1038), Càn Phù Hữu Đạo (1039–1041), Minh Đạo (1042–1043), Thiên Cảm Thánh Vũ (1044–1048), Sùng Hưng Đại Bảo (1049–1054).",
+      "Tên Húy": "Lý Phật Mã, Lý Đức Chính",
+      "Thế thứ": "Con trưởng Lý Thái Tổ",
+      "Trị vì": "1 tháng 4 năm 1028 – ; 3 tháng 11 năm 1054; (26 năm, 216 ngày)",
+      "Tiền nhiệm": "Lý Thái Tổ",
+      "Kế nhiệm": "Lý Thánh Tông",
+      "Sinh": "29 tháng 7, 1000; Hoa Lư, Đại Cồ Việt",
+      "Mất": "3 tháng 11, 1054(1054-11-03) (54 tuổi); Điện Trường Xuân, Thăng Long, Đại Cồ Việt",
+      "An táng": "Thọ Lăng",
+      "Hậu phi Hậu phi": "Hậu phi Linh Cảm Hoàng hậu ; Đinh Hoàng hậu ; Vương Hoàng hậu ; Thiên Cảm Hoàng hậu",
+      "Tên thật Niên hiệu Tôn hiệu Thụy hiệu Miếu hiệu": "Tên thật Lý Phật Mã (李佛瑪) Lý Đức Chính (李德政) Niên hiệu Thiên Thành (天成) (1028- 1033) Thông Thụy (通瑞) (1034 - 1038) Càn Phù Hữu Đạo (乾符有道) (1039 - 1041) Minh Đạo (明道) (1042 - (1043) Thiên Cảm Thánh Vũ (天感聖武) (1044 - (1048) Sùng Hưng Đại Bảo (崇興大寶) (1049 - 1054) Tôn hiệu Khai Thiên Thống Vận Tôn Đạo Quý Đức Thánh Văn Quảng Vũ Sùng Nhân Thượng Thiện Chính Lý Dân An Thần Phù Long Hiện Thể Nguyên Ngự Cực Ức Tuế Công Cao Ứng Chân Bảo Lịch Thông Huyền Chí Áo Hưng Long Đại Địch Thông Minh Từ Hiếu Hoàng đế (開天統運尊道貴德聖文廣武崇仁尚善政理民安神符龍見體元禦極億歲功高應真寶歷通玄至奧興龍大定聰明慈孝皇帝) Thụy hiệu không rõ[1] Miếu hiệu Thái Tông (太宗)",
+      "Triều đại": "Nhà Lý",
+      "Thân phụ": "Lý Thái Tổ",
+      "Thân mẫu": "Linh Hiển Hoàng thái hậu",
       "Tôn giáo": "Phật giáo"
     },
     "source": "https://vi.wikipedia.org"
@@ -559,6 +1080,30 @@
     "source": "https://vi.wikipedia.org"
   },
   {
+    "name": "Lý Nhân Tông",
+    "description": "Lý Nhân Tông (chữ Hán: 李仁宗 22 tháng 2 năm 1066 – 15 tháng 1 năm 1128) là vị hoàng đế thứ tư của nhà Lý trong lịch sử Việt Nam. Ông trị vì Đại Việt từ năm 1072 đến năm 1128, tổng cộng gần 56 năm, cũng là vị vua có thời gian trị vì lâu nhất trong lịch sử phong kiến Việt Nam.",
+    "properties": {
+      "Miếu hiệu": "Nhân Tông",
+      "Thụy hiệu": "Hiếu Từ Thánh Thần Văn Vũ Hoàng Đế",
+      "Niên hiệu": "Thái Ninh (1072–1076), Anh Vũ Chiêu Thắng (1076–1084), Quảng Hựu (1085–1092), Hội Phong (1092–1100), Long Phù (1101–1109), Hội Tường Đại Khánh (1110–1119), Thiên Phù Duệ Vũ (1120–1126), Thiên Phù Khánh Thọ (1127).",
+      "Tên Húy": "Lý Càn Đức",
+      "Thế thứ": "Con trưởng Lý Thánh Tông",
+      "Trị vì": "1 tháng 2 năm 1072 – 15 tháng 1 năm 1128; 55 năm, 348 ngày",
+      "Nhiếp chính": "Thái hậu Linh Nhân ; Lý Đạo Thành; Lý Thường Kiệt",
+      "Tiền nhiệm": "Lý Thánh Tông",
+      "Kế nhiệm": "Lý Thần Tông",
+      "Sinh": "22 tháng 2, 1066; Cung Động Tiên, Thăng Long",
+      "Mất": "15 tháng 1, 1128(1128-01-15) (61 tuổi); Điện Vĩnh Quang, Thăng Long",
+      "An táng": "Lăng Thiên Đức",
+      "Tên húy Niên hiệu Tôn hiệu Thụy hiệu Miếu hiệu": "Tên húy Lý Càn Đức (李乾德) Niên hiệu Thái Ninh (1072-1076); Anh Vũ Chiêu Thắng (1076-1084); Quảng Hựu (1085-1092); Hội Phong (1092-1100); Long Phù (1101-1109); Hội Tường Đại Khánh (1110-1119); Thiên Phù Duệ Vũ (1120-1126); Thiên Phù Khánh Thọ (1127-1127) Tôn hiệu Hiếu Thiên Thể Đạo Thánh Văn Thần Vũ Sùng Nhân Ý Nghĩa Hiếu Từ Thuần Thành Minh Hiếu Hoàng Đế (憲天體道聖文神武崇仁懿義純誠明孝皇帝) Thụy hiệu Hiếu Từ Thánh Thần Văn Vũ Hoàng Đế (孝慈聖神文武皇帝) Miếu hiệu Nhân Tông (仁宗)",
+      "Triều đại": "Nhà Lý",
+      "Thân phụ": "Lý Thánh Tông",
+      "Thân mẫu": "Linh Nhân Hoàng thái hậu",
+      "Tôn giáo": "Phật giáo"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
     "name": "Lý Thần Tông",
     "description": "Lý Thần Tông (chữ Hán: 李神宗 1116 – 31 tháng 10 năm 1138) là vị hoàng đế thứ năm của triều đại nhà Lý nước Đại Việt. Ông trị vì từ năm 1128 đến khi qua đời năm 1138, tổng cộng là 10 năm.",
     "properties": {
@@ -579,6 +1124,30 @@
       "Triều đại": "Nhà Lý",
       "Thân phụ": "Sùng Hiền hầu",
       "Thân mẫu": "Đỗ Phu nhân",
+      "Tôn giáo": "Phật giáo"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
+    "name": "Lý Anh Tông",
+    "description": "Lý Anh Tông (chữ Hán: 李英宗 tháng 4 năm 1136 - 14 tháng 8 năm 1175) là vị hoàng đế thứ sáu của nhà Lý trong lịch sử Việt Nam, trị vì từ năm 1138 tới năm 1175, tổng cộng 37 năm.",
+    "properties": {
+      "Miếu hiệu": "Anh Tông",
+      "Thụy hiệu": "Chí Hiếu Hoàng Đế",
+      "Niên hiệu": "Thiệu Minh (1138–1139), Đại Định (1140–1162), Chính Long Bảo Ứng (1163–1173), Thiên Cảm Chí Bảo (1174–1175)",
+      "Tên Húy": "Lý Thiên Tộ",
+      "Thế thứ": "Con thứ Lý Thần Tông",
+      "Trị vì": "31 tháng 10 năm 1138 – 14 tháng 8 năm 1175; 36 năm, 287 ngày",
+      "Tiền nhiệm": "Lý Thần Tông",
+      "Kế nhiệm": "Lý Cao Tông",
+      "Sinh": "tháng 4 năm 1136; Thăng Long",
+      "Mất": "14 tháng 8 năm 1175; Thăng Long, Đại Việt",
+      "An táng": "Thọ Lăng (寿陵)",
+      "Hoàng hậu": "Chiêu Linh; Linh Đạo",
+      "Tên thật Niên hiệu Tôn hiệu Miếu hiệu": "Tên thật Lý Thiên Tộ (李天祚) Niên hiệu Thiệu Minh 紹明: 1138 - 1139 Đại Định 大定: 1140 - 1162 Chính Long Bảo Ứng 政隆寶應: 1163 - 1173 Thiên Cảm Chí Bảo 天感至寶: 1174 - 1175 Tôn hiệu Thể Thiên Thuận Đạo Duệ Văn Thần Võ Thuần Nhân Hiển Nghĩa Huy Mưu Thánh Trí Ngự Dân Dục Vật Quần Linh Phi Ứng Đại Minh Chí Hiếu Hoàng Đế; (體天順道睿文神武純仁顯義徽謀聖智御民育物群靈丕應大明至孝皇帝) Miếu hiệu Anh Tông (英宗)",
+      "Triều đại": "Nhà Lý",
+      "Thân phụ": "Lý Thần Tông",
+      "Thân mẫu": "Linh Chiếu Thái hậu",
       "Tôn giáo": "Phật giáo"
     },
     "source": "https://vi.wikipedia.org"
@@ -609,6 +1178,26 @@
     "source": "https://vi.wikipedia.org"
   },
   {
+    "name": "Lý Thẩm",
+    "description": "Lý Thầm (李忱) là một vị vua nhà Lý trong lịch sử Việt Nam, tuy nhiên ông không được sử sách xếp vào các vua chính thống.",
+    "properties": {
+      "Miếu hiệu": "không có",
+      "Thụy hiệu": "không có",
+      "Niên hiệu": "không có",
+      "Tên Húy": "Lý Thẩm",
+      "Thế thứ": "Con thứ Lý Cao Tông",
+      "Trị vì": "1209",
+      "Tại vị": "1209 - 1209",
+      "Tiền nhiệm": "Lý Cao Tông",
+      "Kế nhiệm": "Lý Cao Tông",
+      "Mất": "; Việt Nam",
+      "Tên húy": "Tên húy Lý Thẩm",
+      "Triều đại": "Nhà Lý",
+      "Thân phụ": "Lý Cao Tông"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
     "name": "Lý Huệ Tông",
     "description": "Lý Huệ Tông (chữ Hán: 李惠宗; tháng 7 năm 1194 – 3 tháng 9 năm 1226) là vị hoàng đế thứ tám của nhà Lý, cai trị từ năm 1210 đến năm 1224. Ông tên thật là Lý Sảm (李旵) hay Lý Hạo Sảm, sinh tại kinh đô Thăng Long, Đại Việt.",
     "properties": {
@@ -630,6 +1219,29 @@
       "Thân phụ": "Lý Cao Tông",
       "Thân mẫu": "An Toàn hoàng hậu (họ Đàm)",
       "Tôn giáo": "Phật giáo"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
+    "name": "Lý Nguyên Vương",
+    "description": "Lý Nguyên Hoàng (tiếng Trung: 李元皇; ? – 1221), hay Nguyên vương (元王) là một vị vua nhà Lý trong lịch sử Việt Nam[1].",
+    "properties": {
+      "Miếu hiệu": "không có",
+      "Thụy hiệu": "Nguyên Vương Văn Vương",
+      "Niên hiệu": "Càn Ninh (1214–1216)",
+      "Tên Húy": "không rõ",
+      "Thế thứ": "Con thứ Lý Anh Tông",
+      "Trị vì": "1214",
+      "Tiền nhiệm": "Lý Huệ Tông",
+      "Kế nhiệm": "Lý Huệ Tông",
+      "Sinh": "Không biết; Việt Nam",
+      "Mất": "1221; Việt Nam",
+      "An táng": "Không rõ",
+      "Tên húy Niên hiệu Tôn hiệu": "Tên húy Không rõ Niên hiệu Càn Ninh Tôn hiệu Nguyên Hoàng (元皇)",
+      "Tước hiệu": "Huệ Văn vương (惠文王)",
+      "Triều đại": "Nhà Lý",
+      "Thân phụ": "Lý Anh Tông",
+      "Thân mẫu": "Không rõ"
     },
     "source": "https://vi.wikipedia.org"
   },
@@ -662,6 +1274,34 @@
     "source": "https://vi.wikipedia.org"
   },
   {
+    "name": "Trần Thái Tông",
+    "description": "Trần Thái Tông (chữ Hán: 陳太宗 9 tháng 7 năm 1218 – 5 tháng 5 năm 1277), tên khai sinh là Trần Cảnh (陳煚), là vị hoàng đế đầu tiên của Hoàng triều Trần nước Đại Việt. Ông giữ ngôi từ ngày 10 tháng 1 năm 1226 tới ngày 30 tháng 3 năm 1258, sau đó làm Thái thượng hoàng cho đến khi qua đời năm 1277.",
+    "properties": {
+      "Miếu hiệu": "Thái Tông Thiện Hoàng Văn Hoàng",
+      "Thụy hiệu": "Thống Thiên Ngự Cực Long Công Hậu Đức Hiền Công Hựu Thuận Thánh Văn Thần Vũ Hiếu Nguyên Hoàng Đế",
+      "Niên hiệu": "Kiến Trung (1225–1232) Thiên Ứng Chính Bình (1232–1351) Nguyên Phong (1251–1258)",
+      "Tên Húy": "Trần Cảnh Trần Bồ Trần Quang Bỉnh Trần Nhật Cảnh",
+      "Thế thứ": "Sáng lập triều đại, chồng và anh họ Lý Chiêu Hoàng",
+      "Trị vì": "10 tháng 1 năm 1226 – 30 tháng 3 năm 1258; (32 năm, 79 ngày)",
+      "Nhiếp chính": "Trần Thái Tổ; Trần Thủ Độ",
+      "Tiền nhiệm": "Trần Thái Tổ",
+      "Kế nhiệm": "Trần Thánh Tông",
+      "Tại vị": "30 tháng 3 năm 1258 – 05 tháng 05 năm 1277; (19 năm, 36 ngày)",
+      "Sinh": "(1218-07-09)9 tháng 7, 1218; Hương Tức Mặc, Đại Việt",
+      "Mất": "5 tháng 5, 1277(1277-05-05) (58 tuổi); Điện Vạn Thọ, Thăng Long, Đại Việt",
+      "An táng": "Chiêu Lăng (昭陵), phủ Long Hưng, Đại Việt",
+      "Vợ Vợ": "Vợ Chiêu Thánh hoàng hậu; Hiển Từ Thuận Thiên Hoàng hậu; Võ Tuyết Nguyên Phi (武雪原妃); Huệ Túc Phu nhân Hoàng Chu Linh; Cung phi Vũ thị",
+      "Hậu duệ Hậu duệ": "Hậu duệ Trần Thánh Tông ; Trần Quang Khải ; Trần Nhật Duật ; Trần Ích Tắc ; Công chúa Thiều Dương ; Công chúa Thụy Bảo ; Công chúa An Tư ; và nhiều người khác",
+      "Niên hiệu Thụy hiệu Miếu hiệu": "Niên hiệu Kiến Trung (建中 1226-32) Thiên Ứng Chính Bình (天應政平 1232 -51) Nguyên Phong (元豐 1251-58) Thụy hiệu Thống Thiên Ngự Cực Long Công Mậu Đức Hiển Hòa Hựu Thuận Thần Văn Thánh Vũ Nguyên Hiếu Hoàng đế; (統天御極隆功茂德顯和佑順神文聖武元孝皇帝) Miếu hiệu Thái Tông (太宗)",
+      "Tước vị Tước vị": "Tước vị Thiện Hoàng (善皇) Văn Hoàng (文皇) Khải Thiên Lập Cực Chí Nhân Chương Hiếu Hoàng đế (啓天立極至仁彰孝皇帝 1226-37) Thống Thiên Ngự Cực Long Công Hậu Đức Hiền Công Hựu Thuận Thánh Văn Thần Vũ Hiếu Nguyên Hoàng đế (綂天御極隆功厚德顯功佑順聖文神武孝元皇帝 1237-58) Hiển Nghiêu Thánh Thọ Thái Thượng Hoàng đế (顯堯聖壽太上皇帝 1258-77)",
+      "Hoàng tộc": "Hoàng triều Trần",
+      "Thân phụ": "Trần Thừa",
+      "Thân mẫu": "Lê Thị Thái",
+      "Tôn giáo": "Phật giáo Đại thừa"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
     "name": "Trần Thánh Tông",
     "description": "Trần Thánh Tông (chữ Hán: 陳聖宗 12 tháng 10 năm 1240[1] – 3 tháng 7 năm 1290), tên húy Trần Hoảng (陳晃) là vị Hoàng đế thứ hai của nhà Trần nước Đại Việt, trị vì từ ngày 30 tháng 3 năm 1258 đến ngày 8 tháng 11 năm 1278. Sau đó ông làm Thái thượng hoàng từ cuối năm 1278 cho đến khi qua đời năm 1290. Ông thường được sử sách mô tả là một Hoàng đế tài giỏi, giữ vững được cơ nghiệp của triều đại và nền độc lập của quốc gia.[1][2]",
     "properties": {
@@ -686,6 +1326,46 @@
       "Thân phụ": "Trần Thái Tông",
       "Thân mẫu": "Hiển Từ Thuận Thiên Hoàng hậu",
       "Tôn giáo": "Phật giáo Đại thừa"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
+    "name": "Trần Nhân Tông",
+    "description": "Trần Nhân Tông (chữ Hán: 陳仁宗, 7 tháng 12 năm 1258 – 16 tháng 12 năm 1308) tên khai sinh là Trần Khâm (陳昑), tự là Thanh Phúc, là vị vua thứ ba của nhà Trần nước Đại Việt. Vua Trần Nhân Tông trị vì từ ngày 8 tháng 11 năm 1278 đến ngày 16 tháng 4 năm 1293, sau đó làm Thái thượng hoàng cho đến khi qua đời. Trần Nhân Tông được sử Việt đánh giá là một vị Hoàng đế anh minh, đã có nhiều đóng góp cho sự phát triển bền vững của Đại Việt cuối thế kỷ XIII, cũng như việc bảo vệ nền độc lập và mở rộng lãnh thổ đất nước.[1][2] Ngoài ra, Trần Nhân Tông cũng là một thiền sư lớn của Phật giáo Việt Nam thời trung đại.[3] Ông là 1 trong 14 vị anh hùng dân tộc Việt Nam.",
+    "properties": {
+      "Miếu hiệu": "Nhân Tông Hiếu Hoàng",
+      "Thụy hiệu": "Pháp Thiên Sùng Đạo Ứng Thế Hóa Dân Long Từ Hiển Hiệu Thánh Văn Thần Vũ Nguyên Minh Duệ Hiếu Hoàng Đế",
+      "Niên hiệu": "Thiệu Bảo (1278–1285) Trùng Hưng (1285–1293)",
+      "Tên Húy": "Trần Khâm Trần Nhật Tuấn",
+      "Thế thứ": "Con trưởng Trần Thánh Tông",
+      "Trị vì": "8 tháng 11 năm 1278 – ; 16 tháng 4 năm 1293; (14 năm, 159 ngày)",
+      "Thái thượng hoàng": "Trần Thánh Tông (1278-1290)",
+      "Tiền nhiệm": "Trần Thánh Tông",
+      "Kế nhiệm": "Trần Anh Tông",
+      "Tại vị": "16 tháng 4 năm 1293 – 16 tháng 12 năm 1308; (15 năm, 244 ngày)",
+      "Sinh": "Trần Khâm ; (陳昑); 1258",
+      "Mất": "1308",
+      "An táng": "Lăng Quy Đức, phủ Long Hưng, Đại Việt",
+      "Hậu phi Hậu phi": "Hậu phi Khâm Từ Hoàng hậu ; Tuyên Từ Hoàng hậu ; Đệ ngũ Cung phi",
+      "Hậu duệ Hậu duệ": "Hậu duệ Trần Anh Tông Trần Quốc Chẩn Thượng Trân Công chúa Thiên Trân Công chúa Huyền Trân Công chúa",
+      "Tên húy Niên hiệu Thụy hiệu Miếu hiệu": "Tên húy Trần Khâm (陳昑) Niên hiệu Thiệu Bảo (1278–1285) Trùng Hưng (1285–1293) Thụy hiệu Pháp Thiên Sùng Đạo Ứng Thế Hóa Dân Long Từ Hiển Huệ Thánh Văn Thần Võ Nguyên Minh Duệ Hiếu Hoàng Đế; 法天崇道應世化民隆慈顯惠聖文神武元明睿孝皇帝 Miếu hiệu Nhân Tông",
+      "Tước vị": "Hiếu Hoàng (孝皇 1278-93) Pháp Thiên Ngự Cực Anh Liệt Vũ Thánh Minh Nhân Hoàng Đế (法天御極英烈武聖明仁皇帝 1278-93) Hiến Nghiêu Quang Thánh Thái Thượng Hoàng Đế (憲堯光聖太上皇帝 1293-1308)",
+      "Hoàng tộc": "Hoàng triều Trần",
+      "Thân phụ": "Trần Thánh Tông",
+      "Thân mẫu": "Nguyên Thánh Hoàng hậu",
+      "Tôn giáo": "Phật giáo",
+      "Trường phái": "Đại thừa",
+      "Tông phái": "Thiền tông",
+      "Thiền phái": "Thiền phái Trúc Lâm",
+      "Tên khác": "Hương Vân Đại Đầu đà (香雲大頭陀) ; Trúc Lâm Đại Đầu đà (竹林大頭陀) ; Trúc Lâm Đại sĩ (竹林大士)",
+      "Quốc tịch": "Đại Việt",
+      "An nghỉ": "Lăng Quy Đức (phủ Long Hưng); ; Bảo tháp Huệ Quang (chùa Hoa Yên – Yên Tử); ; Chùa Phổ Minh (Thiên Trường)",
+      "Xuất gia": "Hành cung Vũ Lâm, Ninh Bình",
+      "Thầy": "Tuệ Trung Thượng Sĩ",
+      "Môn đồ": "Pháp Loa, Bảo Sát và nhiều người khác",
+      "Tác phẩm": "Xem mục Tác phẩm",
+      "Tấn phong": "Đại Thánh Trần Triều Trúc Lâm Đầu Đà Tĩnh Tuệ Giác Hoàng Điều Ngự Tổ Phật (大聖陳朝竹林頭陀靜慧覺皇調御祖佛)",
+      "Chức vụ": "Tổ thứ 1 Thiền phái Trúc Lâm Yên Tử"
     },
     "source": "https://vi.wikipedia.org"
   },
@@ -718,6 +1398,34 @@
     "source": "https://vi.wikipedia.org"
   },
   {
+    "name": "Trần Minh Tông",
+    "description": "Trần Minh Tông (chữ Hán: 陳明宗 4 tháng 10 năm 1300 – 10 tháng 3 năm 1357) tên thật là Trần Mạnh (陳奣), là vị hoàng đế thứ năm của Hoàng triều Trần nước Đại Việt. Ông giữ ngôi từ ngày 3 tháng 4 năm 1314 đến ngày 15 tháng 3 năm 1329, sau đó làm Thái thượng hoàng đến khi qua đời. Thời kỳ của ông và cha ông được mệnh danh là thời kỳ hưng thịnh của vương triều nhà Trần, được sử gia xưng tụng là Anh Minh Thịnh Thế.",
+    "properties": {
+      "Miếu hiệu": "Minh Tông Ninh Hoàng",
+      "Thụy hiệu": "Chương Nghiêu Văn Triết Hoàng Đế",
+      "Niên hiệu": "Đại Khánh (1314–1323) Khai Thái (1324–1329)",
+      "Tên Húy": "Trần Mạnh Trần Thánh Sinh Trần Nhật Khoáng",
+      "Thế thứ": "Con thứ tư Trần Anh Tông",
+      "Trị vì": "3 tháng 4 năm 1314 – 15 tháng 3 năm 1329; (14 năm, 346 ngày)",
+      "Thái Thượng hoàng": "Trần Anh Tông (1314-1320)",
+      "Tiền nhiệm": "Trần Anh Tông",
+      "Kế nhiệm": "Trần Nghệ Tông",
+      "Tại vị": "15 tháng 3 năm 1329 – 10 tháng 3 năm 1357; (27 năm, 360 ngày)",
+      "Sinh": "(1300-10-04)4 tháng 10, 1300; Thăng Long, Đại Việt",
+      "Mất": "10 tháng 3, 1357(1357-03-10) (56 tuổi); Cung Bảo Nguyên, Thăng Long, Đại Việt",
+      "An táng": "22 tháng 12 năm 1357; ; Mục Lăng, Đại Việt",
+      "Hậu phi Hậu phi": "Hậu phi Hiến Từ Hoàng hậu; Minh Từ Hoàng thái phi; Đôn Từ Hoàng thái phi",
+      "Hậu duệ Hậu duệ": "Hậu duệ Trần Hiến Tông ; Trần Nguyên Trác ; Trần Nghệ Tông ; Trần Dụ Tông ; Trần Duệ Tông ; Thiên Ninh Công chúa ; Huy Ninh công chúa; và nhiều người khác",
+      "Tên húy Tên tự Niên hiệu Thụy hiệu Miếu hiệu": "Tên húy Trần Mạnh (陳奣); Trần Thánh Sinh (陳聖生) Tên tự Trần Nhật Khoáng (陳日爌) Niên hiệu Đại Khánh (1314 – 1323); Khai Thái (1324 – 1329) Thụy hiệu Chương Nghiêu Văn Triết Hoàng Đế (章堯文哲皇帝) Miếu hiệu Minh Tông (明宗)",
+      "Tước vị Tước vị": "Tước vị Ninh Hoàng (寧皇 1314-29) ; Thể Thiên Sùng Hóa Khâm Minh Duệ Hiếu Hoàng Đế (體天崇化欽明睿孝皇帝 1314-29) ; Chương Nghiêu Văn Triết Thái Thượng Hoàng Đế (章堯文哲太上皇帝 1329-57)",
+      "Hoàng tộc": "Hoàng triều Trần",
+      "Thân phụ": "Trần Anh Tông",
+      "Thân mẫu": "Chiêu Từ Hoàng hậu",
+      "Tôn giáo": "Phật giáo Đại thừa"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
     "name": "Trần Hiến Tông",
     "description": "Trần Hiến Tông (chữ Hán: 陳憲宗 17 tháng 5 năm 1319 – 11 tháng 6 năm 1341) là vị hoàng đế thứ sáu của triều đại nhà Trần trong lịch sử Việt Nam, trị vì trong 13 năm (1329 - 1341).",
     "properties": {
@@ -744,6 +1452,31 @@
     "source": "https://vi.wikipedia.org"
   },
   {
+    "name": "Trần Dụ Tông",
+    "description": "Trần Dụ Tông (chữ Hán: 陳裕宗) 22 tháng 11 năm 1336 – 25 tháng 5 năm 1369) là vị hoàng đế thứ 7 của triều đại nhà Trần nước Đại Việt, ở ngôi 28 năm từ năm 1341 đến năm 1369.",
+    "properties": {
+      "Miếu hiệu": "Dụ Tông Dụ Hoàng",
+      "Thụy hiệu": "Thống Thiên Thể Đạo Nhân Minh Quang Hiếu Hoàng đế",
+      "Niên hiệu": "Thiệu Phong (1341–1357) Đại Trị (1358–1369)",
+      "Tên Húy": "Trần Hạo Trần Nhật Khuê",
+      "Thế thứ": "Con thứ mười Trần Minh Tông, dòng hoàng đích tử",
+      "Trị vì": "11 tháng 6 năm 1341 - 25 tháng 5 năm 1369; 27 năm, 348 ngày",
+      "Thái thượng hoàng": "Trần Minh Tông (1329-1357)",
+      "Tiền nhiệm": "Trần Hiến Tông",
+      "Kế nhiệm": "Dương Nhật Lễ",
+      "Sinh": "22 tháng 11 năm 1336",
+      "Mất": "25 tháng 5, 1369(1369-05-25) (32 tuổi); Quang Triều cung, Thăng Long",
+      "An táng": "Tháng 11 năm 1369; Phụ Lăng (阜陵)",
+      "Thê thiếp": "Huy Từ Tá Thánh Hoàng hậu",
+      "Tên húy Niên hiệu Tôn hiệu Thụy hiệu Miếu hiệu": "Tên húy Trần Hạo (陳暭); Trần Nhật Khuê (陳日煃) Niên hiệu Thiệu Phong (紹豐 1341-1357); Đại Trị (大治 1358-1369) Tôn hiệu Dụ Hoàng Thụy hiệu Thống Thiên Thể Đạo Nhân Minh Quang Hiếu Hoàng đế; (統天體道仁明光孝皇帝) Miếu hiệu Dụ Tông (裕宗)",
+      "Triều đại": "Nhà Trần",
+      "Thân phụ": "Trần Minh Tông",
+      "Thân mẫu": "Hiến Từ Hoàng hậu",
+      "Tôn giáo": "Phật giáo"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
     "name": "Đại Định Đế",
     "description": "Dương Nhật Lễ hay còn gọi là Trần Nhật Lễ (chữ Hán: 楊日禮 1349 – 7 tháng 12 năm 1370), tên ngoại giao với Trung Quốc là Trần Nhật Kiên (陳日熞), còn gọi Hôn Đức Công (昏德公), là hoàng đế thứ 8 của Vương triều Trần nước Đại Việt. Ông nguyên là con trai ruột của người họ Dương, được Cung Túc Vương Trần Nguyên Dục – anh vua Trần Dụ Tông nhận làm con nuôi. Trần Dụ Tông không có con nên khi chết có di chiếu truyền ngôi cho Nhật Lễ. Ông lên ngôi, lấy các anh, em khác mẹ của Dụ Tông làm Tể tướng, trị vì từ ngày 15 tháng 6 năm Kỷ Dậu (tức 18 tháng 7 năm 1369) đến ngày 13 tháng 11 năm Canh Tuất (tức 1 tháng 12 năm 1370).",
     "properties": {
@@ -764,6 +1497,32 @@
       "Triều đại": "Nhà Trần",
       "Thân phụ": "Trần Nguyên Dục",
       "Thân mẫu": "Vương mẫu",
+      "Tôn giáo": "Phật giáo"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
+    "name": "Trần Nghệ Tông",
+    "description": "Trần Nghệ Tông (chữ Hán: 陳藝宗) (20 tháng 12 năm 1321 – 6 tháng 1 năm 1395), tên húy là Cung Định Vương Trần Phủ (陳暊) hoặc Trần Thúc Minh (陳叔明), xưng hiệu Nghệ Hoàng (藝皇), tôn hiệu Thể khiên kiến cực thuần hiếu hoàng đế (體天建極純孝皇帝), là vị hoàng đế thứ 9 của nhà Trần nước Đại Việt. Ông giữ ngôi 2 năm (1370–1372), ở ngôi Thái thượng hoàng hơn 20 năm (1372–1394). Do trọng dụng ngoại thích Hồ Quý Ly, ông đã tạo cho Quý Ly cơ hội phát triển thế lực tiến đến giành ngôi nhà Trần sau khi ông qua đời.",
+    "properties": {
+      "Miếu hiệu": "Nghệ Tông Nghệ Hoàng Nghĩa Hoàng",
+      "Thụy hiệu": "Quang Nhiên Anh Triết Hoàng Đế Thể Thiên Kiến Cực Thuần Hiếu Hoàng Đế",
+      "Niên hiệu": "Thiệu Khánh (1370–1372)",
+      "Tên Húy": "Trần Phủ Trần Thúc Minh",
+      "Thế thứ": "Con thứ ba Trần Minh Tông",
+      "Trị vì": "15 tháng 12 năm 1370 – 4 tháng 12 năm 1372 ; (1 năm, 355 ngày)",
+      "Tiền nhiệm": "Trần Minh Tông",
+      "Kế nhiệm": "Trần Thuận Tông",
+      "Tại vị": "4 tháng 12 năm 1372 – 6 tháng 1 năm 1395 ; (24 năm, 33 ngày)",
+      "Sinh": "20 tháng 12 năm 1321",
+      "Mất": "6 tháng 1, 1395(1395-01-06) (73 tuổi); Thăng Long",
+      "An táng": "9 tháng 1, 1395; Nguyên Lăng (沅陵)",
+      "Thê thiếp": "Thục Từ Hoàng hậu",
+      "Hậu duệ Hậu duệ": "Hậu duệ Trần Ngạc ; Giản Định Đế ; Trần Thuận Tông ; Thiên Huy Công chúa",
+      "Tên húy Niên hiệu Tôn hiệu Thụy hiệu Miếu hiệu": "Tên húy Trần Phủ (陳暊); Trần Thúc Minh (陳叔明) Niên hiệu Thiệu Khánh (紹慶 1370 - 1372) Tôn hiệu Nghĩa Hoàng; Nghệ Hoàng Thụy hiệu Quang Nhiên Anh Triết Hoàng Đế 光堯英哲皇帝; (光堯英哲皇帝) Miếu hiệu Nghệ Tông (藝宗)",
+      "Triều đại": "Nhà Trần",
+      "Thân phụ": "Trần Minh Tông",
+      "Thân mẫu": "Minh Từ Quý phi",
       "Tôn giáo": "Phật giáo"
     },
     "source": "https://vi.wikipedia.org"
@@ -795,6 +1554,32 @@
     "source": "https://vi.wikipedia.org"
   },
   {
+    "name": "Trần Phế Đế",
+    "description": "Trần Phế Đế (chữ Hán: 陳廢帝 6 tháng 3 năm 1361 - 6 tháng 12 năm 1388), hiệu Giản Hoàng (簡皇), là vị hoàng đế thứ 11 của nhà Trần nước Đại Việt. Ông ở ngôi từ năm 1377 đến khi bị phế vào năm 1388, tổng cộng hơn 10 năm trị vì.",
+    "properties": {
+      "Miếu hiệu": "Giản Hoàng",
+      "Thụy hiệu": "Phế Đế",
+      "Niên hiệu": "Xương Phù (1377–1388)",
+      "Tên Húy": "Trần Hiện Trần Nhật Vĩ",
+      "Thế thứ": "Con thứ Trần Duệ Tông",
+      "Trị vì": "13 tháng 5 năm 1377 – 6 tháng 12 năm 1388; (11 năm, 207 ngày)",
+      "Thái thượng hoàng": "Trần Nghệ Tông (1372-1395)",
+      "Tiền nhiệm": "Trần Duệ Tông",
+      "Kế nhiệm": "Trần Thuận Tông",
+      "Sinh": "6 tháng 3, 1361; Thăng Long",
+      "Mất": "6 tháng 12, 1388(1388-12-06) (28 tuổi); Thăng Long",
+      "Thê thiếp": "Quang Loan Hoàng hậu",
+      "Hậu duệ": "Thuận Đức Vương",
+      "Tên húy Niên hiệu Tôn hiệu": "Tên húy Trần Hiện (陳晛); Trần Nhật Vĩ (陳日煒) Niên hiệu Xương Phù (昌符) Tôn hiệu Giản Hoàng (1377 - 1388)",
+      "Tước hiệu": "Linh Đức Đại vương (靈德大王)",
+      "Triều đại": "Nhà Trần",
+      "Thân phụ": "Trần Duệ Tông",
+      "Thân mẫu": "Gia Từ Hoàng hậu",
+      "Tôn giáo": "Phật giáo"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
     "name": "Trần Thuận Tông",
     "description": "Trần Thuận Tông (chữ Hán: 陳順宗 1377 – 30 tháng 4 năm 1400) là vị hoàng đế thứ 12 và cũng là hoàng đế áp chót của triều Trần nước Đại Việt. Ông trị vì từ năm 1388 đến khi bị ép nhường ngôi năm 1398.",
     "properties": {
@@ -817,6 +1602,54 @@
       "Triều đại": "Nhà Trần",
       "Thân phụ": "Trần Nghệ Tông",
       "Tôn giáo": "Đạo giáo"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
+    "name": "Trần Thiếu Đế",
+    "description": "vua Trần Thiếu Đế (chữ Hán: 陳少帝; 1396 - ?) là vị Vua thứ 13 và là vị vua cuối cùng của Triều đại nhà Trần trong lịch sử Việt Nam.",
+    "properties": {
+      "Miếu hiệu": "không có",
+      "Thụy hiệu": "Thiếu Đế",
+      "Niên hiệu": "Kiến Tân (1398–1400)",
+      "Tên Húy": "Trần An",
+      "Thế thứ": "Con trưởng Trần Thuận Tông, cháu ngoại Hồ Quý Ly",
+      "Trị vì": "15 tháng 3 năm 1398 – 15 tháng 3 năm 1400; (2 năm, 0 ngày)",
+      "Phụ chính": "Hồ Quý Ly",
+      "Tiền nhiệm": "Trần Thuận Tông",
+      "Kế nhiệm": "Triều đại nhà Trần sụp đổ; Hồ Quý Ly (Nhà Hồ)",
+      "Sinh": "1396",
+      "Mất": "?",
+      "Tên húy Niên hiệu": "Tên húy Trần An (陳) Niên hiệu Kiến Tân (建新)",
+      "Triều đại": "Nhà Trần",
+      "Thân phụ": "Trần Thuận Tông",
+      "Thân mẫu": "Khâm Thánh Hoàng hậu"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
+    "name": "Hồ Quý Ly",
+    "description": "Hồ Quý Ly (chữ Hán: 胡季犛; 1336 – 1407), lấy tên húy Hồ Nhất Nguyên (胡一元), là vị hoàng đế đầu tiên của nhà nước Đại Ngu trong lịch sử Việt Nam. Ông ở ngôi vị Hoàng đế từ năm 1400 đến năm 1401 tự xưng là Quốc Tổ Chương Hoàng (國祖章皇), sau đó giữ ngôi Thái thượng hoàng từ năm 1401 đến năm 1407.",
+    "properties": {
+      "Miếu hiệu": "Quốc Tổ",
+      "Thụy hiệu": "Chương Hoàng",
+      "Niên hiệu": "Thánh Nguyên (1400)",
+      "Tên Húy": "Hồ Quý Ly Hồ Nhất Nguyên Lê Quý Ly Lê Nhất Nguyên",
+      "Thế thứ": "Sáng lập triều đại, phò mã Trần Minh Tông, ông ngoại Trần Thiếu Đế",
+      "Trị vì": "22 tháng 3 năm 1400 - ; 12 tháng 1 năm 1401; 296 ngày",
+      "Tiền nhiệm": "Sáng lập triều đại",
+      "Kế nhiệm": "Hồ Hán Thương",
+      "Sinh": "1336; Thanh Hóa, Đại Việt thời Nhà Trần",
+      "Mất": "28 tháng 9, 1407(1407-09-28) (70–71 tuổi); Quảng Tây, Đại Minh",
+      "An táng": "Trung Quốc",
+      "Thê thiếp": "Thái Từ Hoàng hậu; Mẫn Dương quý phi",
+      "Hậu duệ Hậu duệ": "Hậu duệ Hồ Hán Thương; Hồ Nguyên Trừng; Hồ Thánh Ngâu; Hồ Triết; Hồ Uông",
+      "Tên thật Tên tự Niên hiệu": "Tên thật Lê Quý Ly (黎季犛); Hồ Quý Ly (胡季犛); Hồ Nhất Nguyên (胡一元) Tên tự Lý Nguyên (理元) Niên hiệu Thánh Nguyên (聖元): 1400-1401",
+      "Tước vị": "Khâm đức Hưng liệt Đại vương Phụ chính Cai giáo Hoàng đế Quốc tổ Chương hoàng",
+      "Triều đại": "Nhà Hồ",
+      "Thân phụ": "Lê Quốc Mạo",
+      "Thân mẫu": "Phạm Phu nhân",
+      "Tôn giáo": "Nho giáo"
     },
     "source": "https://vi.wikipedia.org"
   },
@@ -858,6 +1691,28 @@
     "source": "https://vi.wikipedia.org"
   },
   {
+    "name": "Giản Định Đế",
+    "description": "Giản Định Đế (chữ Hán: 簡定帝; 1375 – 1410) là vị hoàng đế khai lập nhà Hậu Trần trong lịch sử Việt Nam. Ông tên thật là Trần Ngỗi (陳頠), sinh tại kinh đô Thăng Long, (nay là Hà Nội). Có tài liệu phiên âm tên ông là Quỹ. Ông ở ngôi từ năm 1407 đến năm 1409, sau đó làm Thái thượng hoàng cho tới khi mất năm 1410.",
+    "properties": {
+      "Miếu hiệu": "không có",
+      "Thụy hiệu": "không có",
+      "Niên hiệu": "Hưng Khánh (1407–1409)",
+      "Tên Húy": "Trần Ngỗi, Trần Quỹ",
+      "Thế thứ": "Con trai thứ Trần Nghệ Tông",
+      "Trị vì": "1407",
+      "Tại vị": "20 tháng 04 năm 1409 – tháng 07 năm 1409",
+      "Đăng quang": "1407",
+      "Tiền nhiệm": "Thái thượng hoàng đầu tiên ; Trần Thuận Tông (nhà Trần); Hồ Quý Ly (nhà Hồ)",
+      "Kế nhiệm": "Thái thượng hoàng Hậu Trần cuối cùng",
+      "Sinh": "1375",
+      "Mất": "1410",
+      "Tên húy Niên hiệu Thụy hiệu": "Tên húy Trần Ngỗi (陳頠) Niên hiệu Hưng Khánh (興慶): 1407—1409 Thụy hiệu Giản Định Hoàng Đế (簡定皇帝)",
+      "Triều đại": "Nhà Hậu Trần",
+      "Thân phụ": "Trần Nghệ Tông"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
     "name": "Trùng Quang Đế",
     "description": "Trùng Quang Đế (chữ Hán: 重光帝 ? – 14 tháng 4 năm 1414[1]) là vị hoàng đế thứ hai và là vị hoàng đế cuối cùng của nhà Hậu Trần, một triều đại được dựng lên ở miền nam Đại Việt để chống lại sự đô hộ của đế quốc Minh sau năm 1407. Ông có tên húy là Trần Quý Khoáng (陳季擴) hay Trần Quý Khoách[2], là cháu nội của Trần Nghệ Tông. Khi chú ông là Giản Định Đế dựng nhà Hậu Trần (1407), ông giữ chức Nhập nội thị trung. Năm 1408, các tướng Đặng Dung và Nguyễn Cảnh Dị bất bình với Giản Định Đế mới vào Nghệ An lập Trần Quý Khoáng lên ngôi vua. Trần Quý Khoáng tôn Giản Định Đế làm Thái thượng hoàng, cùng tiến quân ra bắc đánh Minh, đến năm 1409, Thượng hoàng bị địch bắt giết.",
     "properties": {
@@ -874,6 +1729,49 @@
       "Tên húy Niên hiệu": "Tên húy Trần Quý Khoáng Niên hiệu Trùng Quang (重光 1409-1413)",
       "Hoàng tộc": "Hoàng tộc Trần",
       "Thân phụ": "Trang Định vương Trần Ngạc"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
+    "name": "Trần Cảo",
+    "description": "Trần Cảo (chữ Hán: 陳暠; ?-1428) là một vị vua bù nhìn do thủ lĩnh nghĩa quân Lam Sơn là Lê Lợi lập nên vào cuối thời kỳ Việt Nam nội thuộc triều đại nhà Minh.",
+    "properties": {
+      "Miếu hiệu": "không có",
+      "Thụy hiệu": "không có",
+      "Niên hiệu": "Thiên Khánh (1426-1428)",
+      "Tên Húy": "Trần Cảo, Trần Địch, Trần Cao, Trần Hồ Ông",
+      "Thế thứ": "1426",
+      "Trị vì": "1426 - 1428",
+      "Tiền nhiệm": "Trùng Quang Đế",
+      "Kế nhiệm": "Không có ; Lê Lợi lên ngôi, lập ra nhà Lê sơ",
+      "Mất": "1428",
+      "Tên húy Niên hiệu": "Tên húy Hồ Ông (胡翁) Niên hiệu Thiên Khánh (1426 - 1428)",
+      "Triều đại": "Kỷ thuộc Minh"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
+    "name": "Lê Thái Tổ",
+    "description": "Lê Thái Tổ (chữ Hán: 黎太祖 10 tháng 9 năm 1385[1] – 5 tháng 10 năm 1433), húy danh là Lê Lợi (黎利) là một nhà chính trị, nhà lãnh đạo quân sự, người đã thành lập một đội quân người Việt và lãnh đạo đội quân này chiến đấu chống lại sự chiếm đóng của quân đội nhà Minh từ năm 1418 đến lúc đánh đuổi hoàn toàn quân Minh ra khỏi Đại Việt vào năm 1428 sau đó xây dựng và tái thiết lại đất nước. Ông cũng thành công với các chiến dịch quân sự đánh dẹp các tù trưởng ở biên giới phía Bắc Đại Việt và quân đội Ai Lao bị xúi giục. Ông được coi là anh hùng, vị Hoàng đế huyền thoại của Đại Việt với tài năng quân sự, khả năng cai trị và lòng nhân ái đối với nhân dân.[2][3]",
+    "properties": {
+      "Miếu hiệu": "Thái Tổ Lam Sơn động chủ",
+      "Thụy hiệu": "Thống Thiên Khải Vận Thánh Đức Thần Công Duệ Văn Anh Vũ Khoan Minh Dũng Trí Hoàng Nghĩa Chí Minh Đại Hiếu Cao Hoàng Đế",
+      "Niên hiệu": "Thuận Thiên (1428–1433)",
+      "Tên Húy": "Lê Lợi",
+      "Thế thứ": "Sáng lập triểu đại",
+      "Trị vì": "29 tháng 4 năm 1428 – ; 5 tháng 10 năm 1433; (5 năm, 159 ngày)",
+      "Tiền nhiệm": "Sáng lập triều đại",
+      "Kế nhiệm": "Lê Thái Tông",
+      "Sinh": "10 tháng 9, 1385; Lam Sơn, Thanh Hóa",
+      "Mất": "5 tháng 10, 1433(1433-10-05) (48 tuổi); Đông Kinh, Đại Việt",
+      "An táng": "Vĩnh lăng (永陵), Thanh Hóa",
+      "Thê thiếp": "Cung Từ Cao Hoàng hậu",
+      "Hậu duệ Hậu duệ": "Hậu duệ Quận Ai vương Lê Tư Tề; Lê Thái Tông; Trang Từ Công chúa; Con rể ; Nguyễn Bá Sương",
+      "Tên húy Niên hiệu Thụy hiệu Miếu hiệu": "Tên húy Lê Lợi (黎利) Niên hiệu Thuận Thiên (順天): 1428 - 1433 Thụy hiệu Thống Thiên Khải Vận Thánh Đức Thần Công Duệ Văn Anh Vũ Khoan Minh Dũng Trí Hoàng Nghĩa Chí Minh Đại Hiếu Cao Hoàng đế; (統天啟運聖德神功睿文英武寬明勇智弘義至明大孝高皇帝) Miếu hiệu Thái Tổ (太祖)",
+      "Tước hiệu": "Lam Sơn động chủ (1428 - 1433)",
+      "Triều đại": "Nhà Lê sơ",
+      "Thân phụ": "Lê Khoáng",
+      "Thân mẫu": "Trịnh Ngọc Thương"
     },
     "source": "https://vi.wikipedia.org"
   },
@@ -904,6 +1802,30 @@
     "source": "https://vi.wikipedia.org"
   },
   {
+    "name": "Lê Nhân Tông",
+    "description": "Lê Nhân Tông (chữ Hán: 黎仁宗 27 tháng 5 năm 1441 – 25 tháng 10 năm 1459) tên húy là Lê Bang Cơ (黎邦基), là vị hoàng đế thứ ba của Hoàng triều Lê nước Đại Việt, trị vì trong vòng 17 năm, từ ngày 15 tháng 9 năm 1442 đến khi bị Lê Nghi Dân ám sát vào mùa đông năm 1459.",
+    "properties": {
+      "Miếu hiệu": "Nhân Tông",
+      "Thụy hiệu": "Khâm Văn Nhân Hiếu Tuyên Minh Thông Duệ Tuyên Hoàng Đế",
+      "Niên hiệu": "Thái Hòa (1443–1453) Diên Ninh (1454–1459)",
+      "Tên Húy": "Lê Bang Cơ Lê Cơ Long Lê Tuấn",
+      "Thế thứ": "Con thứ ba Lê Thái Tông",
+      "Trị vì": "15 tháng 9 năm 1442 – ; 25 tháng 10 năm 1459; (17 năm, 40 ngày)",
+      "Nhiếp chính": "Tuyên Từ Hoàng thái hậu",
+      "Tiền nhiệm": "Lê Thái Tông",
+      "Kế nhiệm": "Lê Nghi Dân",
+      "Sinh": "(1441-05-28)28 tháng 5, 1441[1]; Đông Kinh, Đại Việt",
+      "Mất": "25 tháng 10, 1459(1459-10-25) (18 tuổi); Đông Kinh, Đại Việt",
+      "An táng": "Mục Lăng (穆陵)",
+      "Phối ngẫu": "không có",
+      "Tên húy Niên hiệu Thụy hiệu Miếu hiệu": "Tên húy Lê Bang Cơ (黎邦基) Niên hiệu Thái Hòa (太和 1443 - 1453) Diên Ninh (延寧 1454 - 1459) Thụy hiệu Khâm Văn Nhân Hiếu Tuyên Minh Thông Duệ Tuyên Hoàng đế; (欽文仁孝宣明聰睿宣皇帝) Miếu hiệu Nhân Tông (仁宗)",
+      "Triều đại": "Hoàng triều Lê",
+      "Thân phụ": "Lê Thái Tông",
+      "Thân mẫu": "Tuyên Từ Hoàng thái hậu"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
     "name": "Lạng Sơn Vương",
     "description": "Lê Nghi Dân (chữ Hán: 黎宜民 tháng 10 năm 1439[3] – 6 tháng 6 năm 1460), thường được gọi là Lệ Đức hầu (厲德侯), Lạng Sơn vương (諒山王), là vị hoàng đế thứ tư của triều đại Lê sơ trong lịch sử Việt Nam. Ông tiếm vị trong một thời gian ngắn, từ tháng 10 năm 1459 đến khi bị phế truất vào tháng 6 năm 1460, với niên hiệu là Thiên Hưng (天興). Đôi khi, ông cũng được gọi là Thiên Hưng Đế (天興帝).",
     "properties": {
@@ -922,6 +1844,30 @@
       "Triều đại": "Hoàng triều Lê",
       "Thân phụ": "Lê Thái Tông",
       "Thân mẫu": "Dương phi"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
+    "name": "Lê Thánh Tông",
+    "description": "Lê Thánh Tông (chữ Hán: 黎聖宗 25 tháng 8 năm 1442 – 3 tháng 3 năm 1497) là vị Hoàng đế thứ tư trên danh nghĩa và thứ năm trên thực tế của nhà Hậu Lê trong lịch sử Việt Nam (Lê Nghi Dân tạo phản cướp ngôi nên các sử gia thời đó không công nhận là Hoàng đế chính thống), trị vì từ năm 1460 đến khi băng hà vào năm 1497, là vị vua tại vị lâu nhất thời Lê Sơ và lâu thứ hai thời Hậu Lê [sau Lê Hiển Tông với 46 năm (1740 - 1786)]. Thời kỳ của ông đã đánh dấu sự hưng thịnh của triều Hậu Lê nói riêng và chế độ phong kiến Việt Nam nói chung với tên gọi Hồng Đức thịnh trị (洪德盛治).",
+    "properties": {
+      "Miếu hiệu": "Thánh Tông Thiên Nam động chủ",
+      "Thụy hiệu": "Sùng Thiên Quảng Vận Cao Minh Quang Chính Chí Đức Đại Công Thánh Văn Thần Vũ Đạt Hiếu Thuần Hoàng Đế",
+      "Niên hiệu": "Quang Thuận (1460–1469) Hồng Đức (1470–1497)",
+      "Tên Húy": "Lê Tư Thành Lê Hạo",
+      "Thế thứ": "Con thứ tư Lê Thái Tông",
+      "Trị vì": "26 tháng 6 năm 1460 - 3 tháng 3 năm 1497 ; (36 năm, 250 ngày)",
+      "Tiền nhiệm": "Lê Nghi Dân",
+      "Kế nhiệm": "Lê Hiến Tông",
+      "Sinh": "25 tháng 8 năm 1442; Chùa Huy Văn",
+      "Mất": "3 tháng 3 năm 1497 (54 tuổi); Điện Bảo Quang, Đông Kinh",
+      "An táng": "Chiêu lăng (昭陵), Lam Kinh",
+      "Tên húy Niên hiệu Thụy hiệu Miếu hiệu": "Tên húy Lê Tư Thành (黎思誠); Lê Hạo (黎灝) Niên hiệu Quang Thuận (光順; 1460–1469) Hồng Đức (洪德; 1469–1497) Thụy hiệu Sùng Thiên Quảng Vận Cao Minh Quang Chính Chí Đức Đại Công Thánh Văn Thần Vũ Đạt Hiếu Thuần Hoàng đế; (崇天廣運高明光正至德大功聖文神武達孝淳皇帝) Miếu hiệu Thánh Tông (聖宗)",
+      "Tước hiệu": "Thiên Nam Động chủ; (天南洞主)",
+      "Hoàng tộc": "Nhà Lê",
+      "Thân phụ": "Lê Thái Tông",
+      "Thân mẫu": "Ngô Thị Ngọc Dao",
+      "Tôn giáo": "Tân Nho giáo"
     },
     "source": "https://vi.wikipedia.org"
   },
@@ -951,6 +1897,29 @@
     "source": "https://vi.wikipedia.org"
   },
   {
+    "name": "Lê Túc Tông",
+    "description": "Lê Túc Tông (chữ Hán: 黎肅宗 6 tháng 9 năm 1488 – 12 tháng 1 năm 1505) là vị hoàng đế thứ bảy của Hoàng triều Lê nước Đại Việt. Túc Tông chỉ giữ ngôi trong vòng 6 tháng; từ ngày 17 tháng 7 năm 1504 đến khi mất ngày 12 tháng 1 năm 1505 và chỉ dùng một niên hiệu là Thái Trinh.",
+    "properties": {
+      "Miếu hiệu": "Túc Tông Tự Hoàng",
+      "Thụy hiệu": "Chiêu Nghĩa Hiển Nhân Ôn Cung Uyên Mặc Hiếu Doãn Cung Khâm Hoàng Đế",
+      "Niên hiệu": "Thái Trinh (1504)",
+      "Tên Húy": "Lê Thuần",
+      "Thế thứ": "Con thứ ba Lê Hiến Tông",
+      "Trị vì": "17 tháng 7 năm 1504 – ; 12 tháng 1 năm 1505; (179 ngày)",
+      "Tiền nhiệm": "Lê Hiến Tông",
+      "Kế nhiệm": "Lê Uy Mục",
+      "Sinh": "(1488-09-06)6 tháng 9, 1488; Đông Kinh, Đại Việt",
+      "Mất": "12 tháng 1, 1505(1505-01-12) (16 tuổi); Điện Hoàng Cực, Đông Kinh, Đại Việt",
+      "An táng": "Kính lăng (敬陵), Lam Kinh, Đại Việt",
+      "Tên thật Niên hiệu Thụy hiệu Miếu hiệu": "Tên thật Lê Thuần (黎㵮) Niên hiệu Thái Trinh (泰貞) Thụy hiệu Chiêu Nghĩa Hiển Nhân Ôn Cung Uyên Mặc Đôn Hiếu Doãn Cung Khâm Hoàng đế; (昭義顯仁溫恭淵默惇孝允恭欽皇帝) Miếu hiệu Túc Tông (肅宗)",
+      "Tước vị": "Tự Hoàng (嗣皇)",
+      "Hoàng tộc": "Hoàng triều Lê",
+      "Thân phụ": "Lê Hiến Tông",
+      "Thân mẫu": "Trang Thuận Duệ Hoàng hậu"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
     "name": "Lê Uy Mục",
     "description": "Lê Uy Mục (chữ Hán: 黎威穆; 5 tháng 5 năm 1488 – 1 tháng 12 năm 1509), đôi khi còn gọi là Mẫn Lệ công (愍厲公), là vị hoàng đế thứ tám của nhà Lê sơ trong lịch sử Việt Nam. Trong thời gian trị vì của mình, ông chỉ dùng một niên hiệu là Đoan Khánh, ông được xem là một vị hoàng đế tàn bạo và hoang dâm, nổi tiếng là một bạo chúa, người đời gọi là Quỷ vương (鬼王).",
     "properties": {
@@ -971,6 +1940,31 @@
       "Triều đại": "Nhà Lê sơ",
       "Thân phụ": "Lê Hiến Tông",
       "Thân mẫu": "Chiêu Nhân Duệ Hoàng hậu"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
+    "name": "Lê Tương Dực",
+    "description": "Lê Tương Dực (chữ Hán: 黎襄翼 16 tháng 7 năm 1495 – 8 tháng 5 năm 1516) tên thật là Lê Oanh (黎瀠), là vị hoàng đế thứ chín của Hoàng triều Lê sơ nước Đại Việt. Ông cai trị từ năm 1509 đến năm 1516 với niên hiệu Hồng Thuận (洪順), ở ngôi tổng cộng 7 năm.",
+    "properties": {
+      "Miếu hiệu": "Nhân Hải động chủ",
+      "Thụy hiệu": "Tương Dực Đế",
+      "Niên hiệu": "Hồng Thuận (1510–1516)",
+      "Tên Húy": "Lê Oánh Lê Oanh Lê Dinh Lê Trừu",
+      "Thế thứ": "Con Lê Đức Tông, cháu nội Lê Thánh Tông",
+      "Trị vì": "4 tháng 12 năm 1509 - ; 23 tháng 3 năm 1516; 6 năm, 110 ngày",
+      "Tiền nhiệm": "Lê Uy Mục",
+      "Kế nhiệm": "Lê Quang Trị; Lê Chiêu Tông",
+      "Sinh": "16 tháng 7, 1495",
+      "Mất": "8 tháng 5, 1516(1516-05-08) (20 tuổi); hồ Chu Tước, phường Bích Câu, Đông Kinh",
+      "An táng": "Nguyên Lăng (元陵)",
+      "Thê thiếp": "Khâm Đức Hoàng hậu",
+      "Hậu duệ Hậu duệ": "Hậu duệ Bảo Túc công chúa; Công chúa Thọ Nguyên; Công chúa Thọ Kính",
+      "Tên thật Niên hiệu Thụy hiệu Miếu hiệu": "Tên thật Lê Oanh (黎瀠); Lê Trừu (黎晭) Niên hiệu Hồng Thuận (洪順) Thụy hiệu Linh Ẩn vương (靈隱王) Tương Dực đế (襄翼帝) Miếu hiệu Không có",
+      "Tước hiệu": "Nhân Hải động chủ (仁海洞主, 1509 - 1516)",
+      "Hoàng tộc": "Hoàng triều Lê",
+      "Thân phụ": "Lê Tân",
+      "Thân mẫu": "Trịnh Thị Tuyên"
     },
     "source": "https://vi.wikipedia.org"
   },
@@ -996,6 +1990,29 @@
     "source": "https://vi.wikipedia.org"
   },
   {
+    "name": "Lê Chiêu Tông",
+    "description": "Lê Chiêu Tông (chữ Hán: 黎昭宗 18 tháng 11 năm 1506 – 19 tháng 1 năm 1527), tên thật là Lê Y (黎椅), là vị hoàng đế thứ 10 của Hoàng triều Lê nước Đại Việt, ở ngôi từ năm 1516 đến 1522, tổng cộng 7 năm với niên hiệu Quang Thiệu.",
+    "properties": {
+      "Miếu hiệu": "Chiêu Tông",
+      "Thụy hiệu": "Thần Hoàng Đế",
+      "Niên hiệu": "Quang Thiệu (1516-1525)",
+      "Tên Húy": "Lê Y Lê Huệ",
+      "Thế thứ": "Anh họ Lê Quang Trị, chắt Lê Thánh Tông",
+      "Trị vì": "23 tháng 3 năm 1516 - ; 22 tháng 7 năm 1522; (6 năm, 121 ngày)",
+      "Tiền nhiệm": "Lê Tương Dực; Lê Quang Trị",
+      "Kế nhiệm": "Lê Cung Hoàng",
+      "Sinh": "(1506-11-18)18 tháng 11, 1506; Đông Kinh",
+      "Mất": "19 tháng 1, 1527(1527-01-19) (20 tuổi); phường Đông Hà (Hàng Chiếu), Đông Kinh, Đại Việt",
+      "An táng": "Vĩnh Hưng lăng (永興陵)",
+      "Hậu duệ Hậu duệ": "Hậu duệ Lê Trang Tông",
+      "Tên thật Niên hiệu Thụy hiệu Miếu hiệu": "Tên thật Lê Y (黎椅) Niên hiệu Quang Thiệu (光紹) Thụy hiệu Thần Hoàng đế (神皇帝) Miếu hiệu Chiêu Tông (昭宗)",
+      "Hoàng tộc": "Hoàng triều Lê",
+      "Thân phụ": "Lê Minh Tông Lê Sùng",
+      "Thân mẫu": "Trịnh Thị Loan"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
     "name": "Lê Bảng",
     "description": "Lê Bảng(黎榜) là một vị vua nhà Lê sơ trong lịch sử Việt Nam. Do được lập lên ngôi và phế truất trong thời gian loạn lạc ngắn ngủi, ông ít được nhắc tới trong danh sách các vị vua chính thống của Việt Nam.",
     "properties": {
@@ -1009,6 +2026,24 @@
       "Tên húy Niên hiệu": "Tên húy Lê Bảng Niên hiệu Đại Đức (1518 - 1518)",
       "Triều đại": "Nhà Hậu Lê",
       "Thân phụ": "Tĩnh Tu công Lê Lộc"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
+    "name": "Lê Do",
+    "description": "Lê Do (Chữ Hán: 黎槱; Hán Việt: Lê Dữu[1][2] ?-1519) là một vị hoàng đế nhà Lê sơ trong lịch sử Việt Nam. Do được lập lên ngôi và thất bại trong thời gian loạn lạc ngắn ngủi, ông ít được nhắc tới trong danh sách các vị vua chính thống của Việt Nam.",
+    "properties": {
+      "Miếu hiệu": "không có",
+      "Thụy hiệu": "không có",
+      "Niên hiệu": "Thiên Hiến (1519)",
+      "Tên Húy": "Lê Do Lê Dữu",
+      "Thế thứ": "Em cùng mẹ với Lê Bảng",
+      "Trị vì": "1519",
+      "Tại vị": "1519",
+      "Mất": "1519",
+      "Tên húy Niên hiệu": "Tên húy Lê Do Niên hiệu Thiên Hiến (1519)",
+      "Triều đại": "Nhà Hậu Lê",
+      "Thân phụ": "Tĩnh Tu công Lê Lộc?"
     },
     "source": "https://vi.wikipedia.org"
   },
@@ -1038,6 +2073,32 @@
     "source": "https://vi.wikipedia.org"
   },
   {
+    "name": "Mạc Thái Tổ",
+    "description": "Mạc Thái Tổ (chữ Hán: 莫太祖 22 tháng 12, 1483 – 11 tháng 9, 1541) tên húy là Mạc Đăng Dung (莫登庸), là nhà chính trị, hoàng đế sáng lập ra triều Mạc trong lịch sử Việt Nam. Ông đóng vai trò quan trọng trong các sự kiện đánh dẹp các thế lực cát cứ, chống đối triều đình, loại bỏ ảnh hưởng của những người ủng hộ nhà Lê, thành lập nhà Mạc và chống lại những lực lượng trung thành với nhà Lê ở Thanh Hóa.",
+    "properties": {
+      "Miếu hiệu": "Thái Tổ",
+      "Thụy hiệu": "Nhân Minh Cao Hoàng Đế",
+      "Niên hiệu": "Minh Đức (1527–1530)",
+      "Tên Húy": "Mạc Đăng Dung",
+      "Thế thứ": "Cháu 7 đời Mạc Đĩnh Chi, sáng lập triều đại",
+      "Trị vì": "15 tháng 6 năm 1527 - 1530",
+      "Tiền nhiệm": "Sáng lập triều đại",
+      "Kế nhiệm": "Mạc Kính Điển",
+      "Tại vị": "1530 - 1541",
+      "Thời kỳ": "Mạc Thái Tông ; Mạc Hiến Tông",
+      "Sinh": "(1483-12-22)22 tháng 12, 1483 (niên hiệu Hồng Đức thời Lê sơ); làng Cổ Trai, huyện Nghi Dương, phủ Kinh Môn, trấn Hải Dương (nay thuộc thôn Cổ Trai, xã Ngũ Đoan, huyện Kiến Thụy, Hải Phòng)",
+      "Mất": "11 tháng 9, 1541(1541-09-11) (57 tuổi) (niên hiệu Quảng Hòa thời Mạc); Dương Kinh, Đại Việt (nay thuộc xã Ngũ Đoan, huyện Kiến Thụy, Hải Phòng)",
+      "An táng": "An Lăng, Dương Kinh, Đại Việt",
+      "Thê thiếp": "Vũ Thị Ngọc Toàn[1]; Nguyễn Thị Ngọc Tuyền[2]",
+      "Hậu duệ": "Xem danh sách các hoàng tử và công chúa",
+      "Tên húy Niên hiệu Thụy hiệu Miếu hiệu": "Tên húy Mạc Đăng Dung (莫登庸) Niên hiệu Minh Đức (明德) Thụy hiệu Nhân Minh Cao Hoàng đế (仁明高皇帝) Miếu hiệu Thái Tổ (太祖)",
+      "Triều đại": "Nhà Mạc",
+      "Thân phụ": "Mạc Hịch",
+      "Thân mẫu": "Đặng Thị Hiếu"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
     "name": "Mạc Thái Tông",
     "description": "Mạc Thái Tông (chữ Hán: 莫太宗 1500 – 25 tháng 1 năm 1540 / 3 tháng 3 năm 1540) là vị Hoàng đế thứ hai của nhà Mạc trong lịch sử Việt Nam. Ông ở ngôi từ năm 1530 đến 1540, trị vì tổng cộng 10 năm.",
     "properties": {
@@ -1059,6 +2120,29 @@
     "source": "https://vi.wikipedia.org"
   },
   {
+    "name": "Mạc Hiến Tông",
+    "description": "Mạc Hiến Tông (chữ Hán: 莫憲宗 1517 – 1546) là vị hoàng đế thứ ba của nhà Mạc trong lịch sử Việt Nam, ở ngôi từ năm 1540 đến 1546 và chỉ dùng một niên hiệu là Quảng Hoà. Ông tên thật là Mạc Phúc Hải (莫福海), là người xã Cao Đôi, huyện Bình Hà (nay là thôn Long Động, xã Nam Tân, huyện Nam Sách), tỉnh Hải Dương.",
+    "properties": {
+      "Miếu hiệu": "Hiến Tông",
+      "Thụy hiệu": "Hiển Hoàng Đế",
+      "Niên hiệu": "Quảng Hòa (1540–1546)",
+      "Tên Húy": "Mạc Phúc Hải Mạc Đức Nguyên",
+      "Thế thứ": "Con trưởng Mạc Thái Tông",
+      "Trị vì": "1540 – 1546",
+      "Thái thượng hoàng": "Mạc Thái Tổ",
+      "Tiền nhiệm": "Mạc Thái Tông",
+      "Kế nhiệm": "Mạc Tuyên Tông",
+      "Sinh": "1517",
+      "Mất": "1546; Thăng Long, Đại Việt",
+      "Hậu duệ": "Tuyên Tông Mạc Phúc Nguyên(莫宣宗-莫福源) Mạc Phúc Đăng(莫福登)",
+      "Tên thật Niên hiệu Thụy hiệu Miếu hiệu": "Tên thật Mạc Phúc Hải ; (莫福海); Mạc Đức Nguyên Niên hiệu Quảng Hòa: 1540-1546 Thụy hiệu Hiển Hoàng đế (顯皇帝) Miếu hiệu Hiến Tông (憲宗)",
+      "Triều đại": "Nhà Mạc",
+      "Thân phụ": "Mạc Thái Tông",
+      "Thân mẫu": "Phạm Thị"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
     "name": "Mạc Chính Trung",
     "description": "Mạc Chính Trung (chữ Hán: 莫正中; ?-?) là hoàng tử nhà Mạc trong lịch sử Việt Nam. Ông tham gia tranh chấp ngôi báu nhà Mạc giữa thời Nam-Bắc triều và cuối cùng thất bại.",
     "properties": {
@@ -1076,6 +2160,29 @@
       "Tước hiệu": "Hoằng Vương",
       "Triều đại": "Nhà Mạc",
       "Thân phụ": "Mạc Thái Tổ"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
+    "name": "Mạc Tuyên Tông",
+    "description": "Mạc Tuyên Tông (chữ Hán: 莫宣宗 1540 - 1561) tên thật là Mạc Phúc Nguyên (莫福源), là hoàng đế thứ tư nhà Mạc trong lịch sử Việt Nam, ở ngôi từ năm 1546 đến 1561, trị vì 15 năm. Ông là người xã Cao Đôi, huyện Bình Hà (nay là thôn Long Động, xã Nam Tân, huyện Nam Sách), tỉnh Hải Dương.",
+    "properties": {
+      "Miếu hiệu": "Tuyên Tông",
+      "Thụy hiệu": "Anh Nghị Hoàng Đế Duệ Hoàng Đế",
+      "Niên hiệu": "Vĩnh Định (1547) Cảnh Lịch (1548–1553) Quang Bảo (1554–1561)",
+      "Tên Húy": "Mạc Phúc Nguyên",
+      "Thế thứ": "Con Mạc Hiến Tông",
+      "Trị vì": "1546 - 1561",
+      "Nhiếp chính": "Mạc Kính Điển",
+      "Tiền nhiệm": "Mạc Hiến Tông",
+      "Kế nhiệm": "Mạc Mậu Hợp",
+      "Sinh": "1540; Hoàng thành Thăng Long, Đại Việt",
+      "Mất": "(1561-02-18)18 tháng 2, 1561; Thăng Long, Đại Việt",
+      "Hậu duệ": "Mạc Mậu Hợp; Mạc Kính Dụng",
+      "Tên húy Niên hiệu Thụy hiệu Miếu hiệu": "Tên húy Mạc Phúc Nguyên Niên hiệu Vĩnh Định (1547); Cảnh Lịch; (1548-1553); Quang Bảo; (1554-1561) Thụy hiệu Anh Nghị Duệ Hoàng đế (英毅皇帝) Miếu hiệu Tuyên Tông (宣宗)",
+      "Triều đại": "Nhà Mạc",
+      "Thân phụ": "Mạc Hiến Tông",
+      "Thân mẫu": "Vũ Thị"
     },
     "source": "https://vi.wikipedia.org"
   },
@@ -1104,6 +2211,26 @@
     "source": "https://vi.wikipedia.org"
   },
   {
+    "name": "Mạc Cảnh Tông",
+    "description": "Mạc Toàn (chữ Hán: 莫全 1580 – 1593) là vị vua thứ sáu và là vua cuối cùng của nhà Mạc thời kỳ Nam - Bắc triều trong lịch sử Việt Nam.",
+    "properties": {
+      "Miếu hiệu": "Cảnh Tông",
+      "Thụy hiệu": "Khai Thiên Xung Địa An Văn Đoạt Vũ Thành Hoàng Đế",
+      "Niên hiệu": "Vũ An (1592–1592)",
+      "Tên Húy": "Mạc Toàn",
+      "Thế thứ": "Con thứ Mạc Mậu Hợp",
+      "Trị vì": "1592 - 1593",
+      "Tiền nhiệm": "Mạc Mậu Hợp",
+      "Kế nhiệm": "Mạc Mẫn Tông",
+      "Sinh": "1580; Hoàng thành Thăng Long",
+      "Mất": "1593; Bến Thảo Tân, Thăng Long",
+      "Tên húy Niên hiệu Thụy hiệu Miếu hiệu": "Tên húy Mạc Toàn Niên hiệu Vũ An (武安) Thụy hiệu Khai Thiên Xung Địa An Văn Đoạt Vũ Thành Hoàng đế; (开天冲地安文奋武成皇帝) Miếu hiệu Cảnh Tông (景宗)",
+      "Triều đại": "Nhà Mạc",
+      "Thân phụ": "Mạc Mậu Hợp"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
     "name": "Mạc Mẫn Tông",
     "description": "Mạc Kính Chỉ (chữ Hán: 莫敬止 ? - 1593) là vua nhà Mạc thời hậu kỳ, sau khi quân Nam triều chiếm được thành Thăng Long với cái chết của cha con Mạc Mục Tông (Mạc Mậu Hợp) và Mạc Cảnh Tông (Mạc Toàn). Nguyên quán Mạc Kính Chỉ là người xã Cao Đôi, huyện Bình Hà (nay là thôn Long Động, xã Nam Tân, huyện Nam Sách, tỉnh Hải Dương).",
     "properties": {
@@ -1119,6 +2246,27 @@
       "Mất": "1593",
       "Hậu duệ Hậu duệ": "Hậu duệ không rõ",
       "Tên húy Niên hiệu Thụy hiệu Miếu hiệu": "Tên húy Mạc Kính Chỉ (莫敬止) Niên hiệu Bảo Định ; (1592 – 1593); Khang Hựu (1593) Thụy hiệu Hoài Nghị Minh Huấn Trinh Hoàng đế; (坏毅明训贞皇帝) Miếu hiệu Mẫn Tông (闵宗)",
+      "Triều đại": "Nhà Mạc",
+      "Thân phụ": "Mạc Kính Điển"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
+    "name": "Mạc Đại Tông",
+    "description": "Mạc Kính Cung (chữ Hán: 莫敬恭 ? - 1625) là vua nhà Mạc thời hậu kỳ, khi Bắc triều chấm dứt với cái chết của cha con Mạc Mậu Hợp và Mạc Toàn.",
+    "properties": {
+      "Miếu hiệu": "Đại Tông",
+      "Thụy hiệu": "Khởi Thiên Đĩnh Địa Khắc Văn Định Vũ Linh Hoàng Đế",
+      "Niên hiệu": "Càn Thống (1593–1625)",
+      "Tên Húy": "Mạc Kính Cung",
+      "Thế thứ": "Con thứ 7 Mạc Kính Điển",
+      "Trị vì": "1593 – 1625",
+      "Nhiếp chính": "Mạc Ngọc Liễn",
+      "Tiền nhiệm": "Mạc Kính Chỉ",
+      "Kế nhiệm": "Mạc Kính Khoan",
+      "Mất": "1625; Thăng Long, Đại Việt",
+      "Thê thiếp": "Nguyễn Thị Duệ",
+      "Tên húy Niên hiệu Thụy hiệu Miếu hiệu": "Tên húy Mạc Kính Cung ; (莫敬恭) Niên hiệu Càn Thống ; (1593-1625) Thụy hiệu Khởi Thiên Đĩnh Địa Khắc Văn Định Vũ Linh Hoàng đế (không rõ nguồn) Miếu hiệu Đại Tông (代宗) (không rõ nguồn)",
       "Triều đại": "Nhà Mạc",
       "Thân phụ": "Mạc Kính Điển"
     },
@@ -1146,6 +2294,26 @@
     "source": "https://vi.wikipedia.org"
   },
   {
+    "name": "Mạc Minh Tông",
+    "description": "Mạc Kính Vũ (chữ Hán: 莫敬宇) là vua nhà Mạc thứ 10 và là vua Mạc thời hậu kỳ, khi đã rút lên Cao Bằng. Nguyên quán Mạc Kính Vũ là người xã Cao Đôi, huyện Bình Hà (nay là thôn Long Động, xã Nam Tân, huyện Nam Sách, tỉnh Hải Dương).",
+    "properties": {
+      "Miếu hiệu": "Minh Tông",
+      "Thụy hiệu": "Trang Thiên Huệ Địa Cảnh Văn Di Vũ Khai Hoàng Đế",
+      "Niên hiệu": "Thuận Đức (1638–1677)",
+      "Tên Húy": "Mạc Kính Vũ Mạc Kính Hoàn Mạc Kính Diệu",
+      "Thế thứ": "Con Mạc Kính Khoan",
+      "Trị vì": "1638",
+      "Tại vị": "1638 – 1677",
+      "Tiền nhiệm": "Mạc Kính Khoan",
+      "Kế nhiệm": "Mạc Kính Hẻ",
+      "Hậu duệ": "Mạc Kính Hẻ; Mạc Kính Quang",
+      "Tên húy Niên hiệu Thụy hiệu Miếu hiệu": "Tên húy Mạc Kính Vũ; Mạc Kính Hoàn Niên hiệu Thuận Đức ; (1638 – 1677) Thụy hiệu Trang Thiên Huệ Địa Cảnh Văn Di Vũ Khai Hoàng đế Miếu hiệu Minh Tông",
+      "Triều đại": "Nhà Mạc",
+      "Thân phụ": "Mạc Kính Khoan"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
     "name": "Mạc Quý Tông",
     "description": "Mạc Kính Hẻ (莫敬喜), cũng có tên là Mạc Kính Thụy (莫敬瑞) hay Mạc Nguyên Thanh (莫元清), là vị vua (không chính thức) của nhà Mạc thời hậu kỳ trong lịch sử Việt Nam. Nguyên quán Mạc Kính Hẻ là người xã Cao Đôi, huyện Bình Hà (nay là thôn Long Động, xã Nam Tân, huyện Nam Sách, tỉnh Hải Dương). Tuy nhiên, ông không được nhắc đến trong sử sách Việt Nam.[1][2][3]",
     "properties": {
@@ -1163,6 +2331,26 @@
       "Triều đại": "Nhà Mạc",
       "Thân phụ": "Mạc Kính Vũ",
       "Thân mẫu": "không rõ"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
+    "name": "Mạc Đức Tông",
+    "description": "Mạc Kính Quang (莫敬光)[1] hay Mạc Kính Tiêu (莫敬蕭) hoặc Mạc Kính Hoảng (莫敬晃), là vị vua cuối cùng của Nhà Mạc thời hậu kỳ. Nguyên quán Mạc Kính Quang là người xã Cao Đôi, huyện Bình Hà (nay là thôn Long Động, xã Nam Tân, huyện Nam Sách, tỉnh Hải Dương). Tuy nhiên, ông không được nhắc đến trong sử sách Việt Nam.",
+    "properties": {
+      "Miếu hiệu": "Đức Tông",
+      "Thụy hiệu": "Thiên Địa Đại Bảo Văn Vũ Độ Đại Vương",
+      "Niên hiệu": "không có",
+      "Tên Húy": "Mạc Kính Quang Mạc Kính Tiêu Mạc Kính Hoảng",
+      "Thế thứ": "Con Mạc Kính Vũ, em Mạc Nguyên Thanh",
+      "Trị vì": "1681",
+      "Tại vị": "1681 - 1683",
+      "Tiền nhiệm": "Mạc Kính Hẻ",
+      "Kế nhiệm": "Triều đại sụp đổ",
+      "Sinh": "?",
+      "Mất": "1683",
+      "Hậu duệ": "không rõ",
+      "Tên đầy đủ Thụy hiệu Miếu hiệu": "Tên đầy đủ Mạc Kính Quang; Mạc Kính Tiêu; Mạc Kính Hoảng Thụy hiệu Thiên Địa Đại Bảo Văn Vũ Độ Đại vương Miếu hiệu Đức Tông (德宗)"
     },
     "source": "https://vi.wikipedia.org"
   },
@@ -1190,6 +2378,29 @@
     "source": "https://vi.wikipedia.org"
   },
   {
+    "name": "Lê Trung Tông",
+    "description": "Lê Trung Tông (chữ Hán: 黎中宗 1535 - 24 tháng 1 năm 1556) là vị Hoàng đế thứ hai của nhà Lê trung hưng và là thứ 13 của nhà Hậu Lê, ở ngôi từ năm 1548 đến năm 1556, tổng cộng được 8 năm.",
+    "properties": {
+      "Miếu hiệu": "Trung Tông",
+      "Thụy hiệu": "Vũ Hoàng Đế",
+      "Niên hiệu": "Thuận Bình (1548–1556)",
+      "Tên Húy": "Lê Huyên Lê Duy Huyên",
+      "Thế thứ": "Con Lê Trang Tông",
+      "Trị vì": "9 tháng 3 năm 1548 - 24 tháng 1 năm 1556; 7 năm, 321 ngày",
+      "Nhiếp chính": "Trịnh Kiểm (1548-1556)",
+      "Tiền nhiệm": "Lê Trang Tông",
+      "Kế nhiệm": "Lê Anh Tông",
+      "Sinh": "1535",
+      "Mất": "24 tháng 1, 1556; Tây Đô, Thanh Hóa",
+      "An táng": "Diên lăng (延陵)",
+      "Tên thật Niên hiệu Thụy hiệu Miếu hiệu": "Tên thật Lê Huyên (黎暄) Niên hiệu Thuận Bình (顺平) Thụy hiệu Vũ Hoàng đế (武皇帝) Miếu hiệu Trung Tông (中宗)",
+      "Triều đại": "Nhà Lê trung hưng",
+      "Thân phụ": "Lê Trang Tông",
+      "Thân mẫu": "Trinh Thục Dụ Hoàng hậu"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
     "name": "Lê Anh Tông",
     "description": "Lê Anh Tông (chữ Hán: 黎英宗 1532 - 22 tháng 1 năm 1573), tên húy là Lê Duy Bang (黎維邦), là hoàng đế thứ ba của nhà Lê trung hưng và là hoàng đế thứ 14 của nhà Hậu Lê nước Đại Việt. Ông trị vì từ năm 1556 đến năm 1572, tổng cộng 16 năm, trong thời kỳ Nam-Bắc triều.",
     "properties": {
@@ -1208,6 +2419,28 @@
       "Tên thật Niên hiệu Thụy hiệu Miếu hiệu": "Tên thật Lê Duy Bang (黎維邦) Niên hiệu Thiên Hựu (天祐 1557) Chính Trị (正治 1558 - 1571) Hồng Phúc (洪福 1572) Thụy hiệu Tuấn Hoàng đế (峻皇帝) Miếu hiệu Anh Tông (英宗)",
       "Triều đại": "Nhà Lê Trung hưng",
       "Thân phụ": "Lê Duy Khoáng"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
+    "name": "Lê Thế Tông",
+    "description": "Lê Thế Tông (chữ Hán: 黎世宗 1567 - 12 tháng 10 năm 1599), tên húy là Lê Duy Đàm (黎維潭), là vị hoàng đế thứ tư của Hoàng triều Lê - giai đoạn Trung hưng và thứ 15 của triều Hậu Lê nước Đại Việt, ở ngôi từ năm 1573 đến năm 1599. Ông là hoàng đế nhà Lê đầu tiên trở lại nhập chủ Thăng Long sau 66 năm nhà Lê Sơ bị họ Mạc cướp ngôi (1527-1593) và hoàn thành công cuộc trung hưng vương triều.",
+    "properties": {
+      "Miếu hiệu": "Thế Tông",
+      "Thụy hiệu": "Nghị Hoàng Đế",
+      "Niên hiệu": "Gia Thái (1573–1577) Quang Hưng (1578–1599)",
+      "Tên Húy": "Lê Đàm Lê Duy Đàm",
+      "Thế thứ": "Con thứ năm Lê Anh Tông",
+      "Trị vì": "22 tháng 1 năm 1573 - 12 tháng 10 năm 1599; 26 năm, 263 ngày",
+      "Chấp chính": "Trịnh Tùng (1573-1599)",
+      "Tiền nhiệm": "Lê Anh Tông",
+      "Kế nhiệm": "Lê Kính Tông",
+      "Sinh": "1567; Hành cung Vạn Lại",
+      "Mất": "12 tháng 10, 1599; Thăng Long",
+      "An táng": "Hoa Nhạc lăng (華岳陵)",
+      "Tên thật Niên hiệu Thụy hiệu Miếu hiệu": "Tên thật Lê Duy Đàm (黎維潭) Niên hiệu Gia Thái (嘉泰 ; 1573 - 1577) Quang Hưng (光興 1578 - 1599) Thụy hiệu Tích Thuần Cương Chính Dũng Quả Nghị Hoàng đế; (積純剛正勇果毅皇帝) Miếu hiệu Thế Tông (世宗)",
+      "Triều đại": "Nhà Lê Trung hưng",
+      "Thân phụ": "Lê Anh Tông"
     },
     "source": "https://vi.wikipedia.org"
   },
@@ -1231,6 +2464,29 @@
       "Triều đại": "Nhà Lê Trung hưng",
       "Thân phụ": "Lê Thế Tông",
       "Thân mẫu": "Ý Đức Hoàng thái hậu"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
+    "name": "Lê Thần Tông",
+    "description": "Lê Thần Tông (chữ Hán: 黎神宗 1607 – 2 tháng 11 năm 1662) tên húy là Lê Duy Kỳ (黎維祺), là vị hoàng đế thứ sáu của nhà Lê Trung hưng và thứ 17 của nhà Hậu Lê trong lịch sử Việt Nam. Ông cũng là vị Vua Việt Nam duy nhất hai lần lên ngôi, có đến 4 người con đều làm vua và là vị vua Việt Nam đầu tiên lấy vợ phương Tây cũng như là vua có nhiều vợ là người các dân tộc khác.[1][2][3][4]",
+    "properties": {
+      "Miếu hiệu": "Thần Tông",
+      "Thụy hiệu": "Uyên Hoàng Đế",
+      "Niên hiệu": "Vĩnh Tộ (1620––1628) Đức Long (1629–1634) Dương Hoà (1635–1643)",
+      "Tên Húy": "Lê Duy Kỳ",
+      "Thế thứ": "Con trưởng Lê Kính Tông",
+      "Trị vì": "2 tháng 10 năm 1649 – 2 tháng 11 năm 1662; 13 năm, 31 ngày",
+      "Nhiếp chính": "Trịnh Tráng (1649-1657); Trịnh Tạc (1657-1662)",
+      "Tiền nhiệm": "Lê Chân Tông",
+      "Kế nhiệm": "Lê Huyền Tông",
+      "Sinh": "1607; Đông Kinh, Việt Nam",
+      "Mất": "2 tháng 11, 1662; Đông Kinh, Đại Việt",
+      "An táng": "Quần Ngọc lăng (群玉陵), thôn Quần Lai, xã Thọ Diên, huyện Thọ Xuân, tỉnh Thanh Hóa nay là thôn Xuân Tân xã Xuân Hưng huyện Thọ Xuân tỉnh Thanh Hóa",
+      "Tên húy Niên hiệu Thụy hiệu Miếu hiệu": "Tên húy Lê Duy Kỳ (黎維祺) Niên hiệu Vĩnh Tộ (永祚 9/1619 - 1628) Đức Long (德隆 1629 - 1634) Dương Hòa (陽和 1635 - 9/1643) Khánh Đức (慶德 10/1649 - 1652) Thịnh Đức (盛德 1653 - 1657) Vĩnh Thọ (永壽 1658 - 8/1662) Vạn Khánh (萬慶 9/1662) Thụy hiệu Uyên Hoàng đế (淵皇帝) Miếu hiệu Thần Tông (神宗)",
+      "Triều đại": "Nhà Lê Trung hưng",
+      "Thân phụ": "Lê Kính Tông",
+      "Thân mẫu": "Trịnh Thị Ngọc Trinh"
     },
     "source": "https://vi.wikipedia.org"
   },
@@ -1260,6 +2516,29 @@
     "source": "https://vi.wikipedia.org"
   },
   {
+    "name": "Lê Thần Tông",
+    "description": "Lê Thần Tông (chữ Hán: 黎神宗 1607 – 2 tháng 11 năm 1662) tên húy là Lê Duy Kỳ (黎維祺), là vị hoàng đế thứ sáu của nhà Lê Trung hưng và thứ 17 của nhà Hậu Lê trong lịch sử Việt Nam. Ông cũng là vị Vua Việt Nam duy nhất hai lần lên ngôi, có đến 4 người con đều làm vua và là vị vua Việt Nam đầu tiên lấy vợ phương Tây cũng như là vua có nhiều vợ là người các dân tộc khác.[1][2][3][4]",
+    "properties": {
+      "Miếu hiệu": "Thần Tông",
+      "Thụy hiệu": "Uyên Hoàng Đế",
+      "Niên hiệu": "Khánh Đức (1649–1652) Thịnh Đức (1653–1657) Vĩnh Thọ (1658–1661) Vạn Khánh (1662)",
+      "Tên Húy": "Lê Duy Kỳ",
+      "Thế thứ": "Làm vua lần 2",
+      "Trị vì": "2 tháng 10 năm 1649 – 2 tháng 11 năm 1662; 13 năm, 31 ngày",
+      "Nhiếp chính": "Trịnh Tráng (1649-1657); Trịnh Tạc (1657-1662)",
+      "Tiền nhiệm": "Lê Chân Tông",
+      "Kế nhiệm": "Lê Huyền Tông",
+      "Sinh": "1607; Đông Kinh, Việt Nam",
+      "Mất": "2 tháng 11, 1662; Đông Kinh, Đại Việt",
+      "An táng": "Quần Ngọc lăng (群玉陵), thôn Quần Lai, xã Thọ Diên, huyện Thọ Xuân, tỉnh Thanh Hóa nay là thôn Xuân Tân xã Xuân Hưng huyện Thọ Xuân tỉnh Thanh Hóa",
+      "Tên húy Niên hiệu Thụy hiệu Miếu hiệu": "Tên húy Lê Duy Kỳ (黎維祺) Niên hiệu Vĩnh Tộ (永祚 9/1619 - 1628) Đức Long (德隆 1629 - 1634) Dương Hòa (陽和 1635 - 9/1643) Khánh Đức (慶德 10/1649 - 1652) Thịnh Đức (盛德 1653 - 1657) Vĩnh Thọ (永壽 1658 - 8/1662) Vạn Khánh (萬慶 9/1662) Thụy hiệu Uyên Hoàng đế (淵皇帝) Miếu hiệu Thần Tông (神宗)",
+      "Triều đại": "Nhà Lê Trung hưng",
+      "Thân phụ": "Lê Kính Tông",
+      "Thân mẫu": "Trịnh Thị Ngọc Trinh"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
     "name": "Lê Huyền Tông",
     "description": "Lê Huyền Tông (chữ Hán: 黎玄宗 1654 – 16 tháng 11 năm 1671) tên thật là Lê Duy Vũ (黎維禑), tên khác là Lê Duy Hi (黎維禧), là vị Hoàng đế thứ tám của nhà Lê Trung hưng và thứ 19 của triều Hậu Lê trong lịch sử Việt Nam.",
     "properties": {
@@ -1279,6 +2558,29 @@
       "Triều đại": "Nhà Lê Trung hưng",
       "Thân phụ": "Lê Thần Tông",
       "Thân mẫu": "Phạm Thị Ngọc Hậu"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
+    "name": "Lê Gia Tông",
+    "description": "Lê Gia Tông (chữ Hán: 黎嘉宗 1661 – 27 tháng 4 năm 1675), tên húy là Lê Duy Cối (黎維禬, 黎維𥘺)[1] là vị Hoàng đế thứ 9 của nhà Lê Trung hưng và thứ 20 của nhà Hậu Lê trong lịch sử Việt Nam, lên ngôi ngày 19 tháng 11 năm Tân Hợi (1671) khi mới 10 tuổi. Đến ngày 27 tháng 4 năm Ất Mão (1675), vua bị bệnh mất.",
+    "properties": {
+      "Miếu hiệu": "Gia Tông",
+      "Thụy hiệu": "Mỹ Hoàng Đế",
+      "Niên hiệu": "Dương Đức (1672––1673) Đức Nguyên (1674-1675)",
+      "Tên Húy": "Lê Duy Cối Lê Duy Khoái",
+      "Thế thứ": "Con thứ Lê Thần Tông",
+      "Trị vì": "16 tháng 11 năm 1671 - 27 tháng 4 năm 1675; 3 năm, 162 ngày",
+      "Nhiếp chính": "Trịnh Tạc (1671-1675)",
+      "Tiền nhiệm": "Lê Huyền Tông",
+      "Kế nhiệm": "Lê Hy Tông",
+      "Sinh": "1661",
+      "Mất": "27 tháng 4, 1675; Đông Kinh, Đại Việt",
+      "An táng": "Phúc An lăng (福安陵)",
+      "Tên thật Niên hiệu Thụy hiệu Miếu hiệu": "Tên thật Lê Duy Cối (黎維禬) Lê Duy Khoái (黎維𥘺) Niên hiệu Dương Đức (陽德 1672 - 1674) Đức Nguyên (德元 1674 - 1675) Thụy hiệu Khoan Minh Mẫn Đạt Anh Quả Huy Nhu Khắc Nhân Đốc Nghĩa Mỹ Hoàng đế; (寬明敏達英果徽柔克仁篤義美皇帝) Miếu hiệu Gia Tông (嘉宗)",
+      "Triều đại": "Nhà Lê Trung hưng",
+      "Thân phụ": "Lê Thần Tông",
+      "Thân mẫu": "Lê Thị Ngọc Hoàn"
     },
     "source": "https://vi.wikipedia.org"
   },
@@ -1303,6 +2605,30 @@
       "Triều đại": "Nhà Lê Trung hưng",
       "Thân phụ": "Lê Thần Tông",
       "Thân mẫu": "Nguyễn Thị Ngọc Trúc hay Nguyễn Thị Ngọc Tấn"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
+    "name": "Lê Dụ Tông",
+    "description": "Lê Dụ Tông (chữ Hán: 黎裕宗 1679 – 27 tháng 2 năm 1731) là vị Hoàng đế thứ 11 của Nhà Lê Trung hưng và thứ 22 của triều Hậu Lê trong lịch sử Việt Nam. Ông có tên húy là Lê Duy Đường (黎維禟, 黎維禎) – là con trai trưởng của vua Lê Hy Tông.",
+    "properties": {
+      "Miếu hiệu": "Dụ Tông",
+      "Thụy hiệu": "Hòa Hoàng Đế",
+      "Niên hiệu": "Vĩnh Thịnh (1706-1719) Bảo Thái (1720-1729)",
+      "Tên Húy": "Lê Duy Đường Lê Duy Tạo",
+      "Thế thứ": "con trưởng Lê Hy Tông",
+      "Trị vì": "1705 – 20 tháng 4 năm 1729",
+      "Chúa Trịnh": "Trịnh Căn (1705-1709); Trịnh Cương (1709-1729); Trịnh Giang (1729)",
+      "Tiền nhiệm": "Lê Hy Tông",
+      "Kế nhiệm": "Lê Ý Tông",
+      "Tại vị": "20 tháng 4 năm 1729 – 27 tháng 2 năm 1731; (1 năm, 313 ngày)",
+      "Sinh": "1679",
+      "Mất": "27 tháng 2, 1731",
+      "An táng": "Cổ Đô lăng (古都陵), sau dời về Kim Thạch lăng (金石陵)",
+      "Tên thật Niên hiệu Thụy hiệu Miếu hiệu": "Tên thật Lê Duy Đường Niên hiệu Vĩnh Thịnh (永盛 1706 - 1719) Bảo Thái (保泰 1720 - 1729) Thụy hiệu Thuần Chính Huy Nhu Ôn Giản Từ Tường Khoan Huệ Tôn Mẫu Hòa Hoàng đế Miếu hiệu Dụ Tông (裕宗)",
+      "Triều đại": "Nhà Lê Trung hưng",
+      "Thân phụ": "Lê Hy Tông",
+      "Thân mẫu": "không rõ"
     },
     "source": "https://vi.wikipedia.org"
   },
@@ -1332,6 +2658,31 @@
     "source": "https://vi.wikipedia.org"
   },
   {
+    "name": "Lê Thuần Tông",
+    "description": "Lê Thuần Tông (chữ Hán: 黎純宗 16 tháng 3 năm 1699 – 5 tháng 6 năm 1735) là vị Hoàng đế thứ 13 của triều Lê Trung hưng nước Đại Việt, đồng thời là Hoàng đế thứ 24 của nhà Hậu Lê.",
+    "properties": {
+      "Miếu hiệu": "Thuần Tông",
+      "Thụy hiệu": "Giản Hoàng Đế",
+      "Niên hiệu": "Long Đức (1732-1735)",
+      "Tên Húy": "Lê Duy Tường Lê Duy Hỗ",
+      "Thế thứ": "con trưởng Lê Dụ Tông",
+      "Trị vì": "tháng 8 năm 1732 - 5 tháng 6 năm 1735",
+      "Nhiếp chính": "Trịnh Giang (1732-1735)",
+      "Tiền nhiệm": "Lê Phế Đế",
+      "Kế nhiệm": "Lê Ý Tông",
+      "Sinh": "16 tháng 3, 1699; Tử Cấm Thành, Thăng Long",
+      "Mất": "5 tháng 6, 1735; Tử Cấm Thành, Thăng Long",
+      "An táng": "Bình Ngô lăng (平吳陵)",
+      "Thê thiếp": "Nhu Thuận Hoàng hậu",
+      "Hậu duệ Hậu duệ": "Hậu duệ Lê Hiển Tông",
+      "Tên thật Niên hiệu Thụy hiệu Miếu hiệu": "Tên thật Lê Duy Tường Niên hiệu Long Đức (龍德): 1732 - 1735 Thụy hiệu Giản Hoàng Đế Miếu hiệu Thuần Tông",
+      "Triều đại": "Nhà Lê Trung hưng",
+      "Thân phụ": "Lê Dụ Tông",
+      "Thân mẫu": "Cung Phi Trần Thị"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
     "name": "Lê Ý Tông",
     "description": "Lê Ý Tông (chữ Hán: 黎懿宗 29 tháng 3 năm 1719 – 10 tháng 8 năm 1759), tên húy là Lê Duy Thận (黎維祳),[1] là vị Hoàng đế thứ 14 của nhà Lê Trung hưng và thứ 25 của nhà Hậu Lê, đồng thời vua Lê Ý Tông cũng là Thái thượng hoàng cuối cùng trong lịch sử Việt Nam.",
     "properties": {
@@ -1352,6 +2703,30 @@
       "Triều đại": "Nhà Lê Trung hưng",
       "Thân phụ": "Lê Dụ Tông",
       "Thân mẫu": "Cung Phi Nguyễn Thị"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
+    "name": "Lê Hiển Tông",
+    "description": "Trịnh Sâm (1767-1782) Trịnh Cán (1782-1 tháng)",
+    "properties": {
+      "Miếu hiệu": "Hiển Tông",
+      "Thụy hiệu": "Vĩnh Hoàng Đế",
+      "Niên hiệu": "Cảnh Hưng (1740-1786)",
+      "Tên Húy": "Lê Duy Diêu Lê Duy Đào",
+      "Thế thứ": "con trưởng Lê Thuần Tông",
+      "Trị vì": "tháng 5 năm 1740 – 10 tháng 8 năm 1786",
+      "Nhiếp chính": "Trịnh Doanh (1740-1767); Trịnh Sâm (1767-1782) ; Trịnh Cán (1782-1 tháng); Trịnh Tông (1782-1786)",
+      "Tiền nhiệm": "Lê Ý Tông",
+      "Kế nhiệm": "Lê Mẫn Đế",
+      "Sinh": "20 tháng 5, 1717",
+      "Mất": "10 tháng 8, 1786(69 tuổi); Đông Kinh, Đại Việt",
+      "An táng": "Bàn Thạch lăng",
+      "Hậu duệ Hậu duệ": "Hậu duệ Lê Duy Vĩ; Lê Duy Cận; Lê Ngọc Hân; Lê Ngọc Bình; một số người khác tổng cộng 23 người",
+      "Tên húy Niên hiệu Tôn hiệu Thụy hiệu Miếu hiệu": "Tên húy Lê Duy Diêu (黎維祧) Niên hiệu Cảnh Hưng (景興 1740 - 1787) Tôn hiệu Uyên Úy Khâm Cung Nhân Từ Đức Thọ hoàng đế (淵懿欽恭仁慈德壽皇帝) Thụy hiệu Vĩnh Hoàng đế (永皇帝) Miếu hiệu Hiển Tông (顯宗)",
+      "Triều đại": "Nhà Lê Trung hưng",
+      "Thân phụ": "Lê Thuần Tông",
+      "Thân mẫu": "Nhu Thuận Giản Hoàng hậu Đào thị"
     },
     "source": "https://vi.wikipedia.org"
   },
@@ -1380,6 +2755,30 @@
     "source": "https://vi.wikipedia.org"
   },
   {
+    "name": "Trịnh Kiểm",
+    "description": "Trịnh Kiểm (chữ Hán: 鄭檢, 14 tháng 9 năm 1503 – 24 tháng 3 năm 1570), tên thụy Thế Tổ Minh Khang Thái vương (世祖明康太王), là nhà chính trị, quân sự có ảnh hưởng của Đại Việt thời Nam-Bắc triều. Trên danh nghĩa tôn phò các vua Lê trung hưng, ông là nhà lãnh đạo trên thực tế của phe Bắc triều từ năm 1545 tới khi qua đời. Dù tước hiệu cao nhất của ông khi còn sống là Thái quốc công, ông được đời sau truy tôn làm Thế Tổ Minh Khang Thái Vương và được xem là vị chúa đầu tiên của họ Trịnh – gia tộc nắm thực quyền cai trị Đại Việt hơn 200 năm từ giữa thế kỷ 16 đến cuối thế kỷ 18.",
+    "properties": {
+      "Miếu hiệu": "Thế Tổ",
+      "Thụy hiệu": "Minh Khang Thái Vương",
+      "Niên hiệu": "không có",
+      "Tên Húy": "Trịnh Kiểm",
+      "Thế thứ": "con rể Nguyễn Kim",
+      "Trị vì": "1545",
+      "Tại vị": "1545 – 24 tháng 3 năm 1570",
+      "Thời kỳ": "Lê Trang Tông (1533 - 1548) Lê Trung Tông (1548 - 1556) Lê Anh Tông (1556 - 1573)",
+      "Tiền nhiệm": "Sáng lập",
+      "Kế nhiệm": "Trịnh Cối",
+      "Sinh": "14 tháng 9, 1502; Thôn Hổ, xã Vệ Quốc, huyện Yên Định, xứ Thanh Hoa",
+      "Mất": "24 tháng 3, 1570(1570-03-24) (67 tuổi)",
+      "Thê thiếp": "Lại Thị Ngọc Trân; Nguyễn Thị Ngọc Bảo; Trương Thị Ngọc Lãnh",
+      "Tên đầy đủ Thụy hiệu Miếu hiệu": "Tên đầy đủ Trịnh Kiểm (鄭檢) Thụy hiệu Minh Khang Thái Vương (明康太王) Miếu hiệu Thế Tổ (世祖)",
+      "Hoàng tộc": "Chúa Trịnh",
+      "Thân phụ": "Trịnh Lâu",
+      "Thân mẫu": "Hoàng Thị Dốc"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
     "name": "Trịnh Cối",
     "description": "Trịnh Cối (chữ Hán: 鄭檜, ? - 1584) là một nhà chính trị thời chiến tranh Lê-Mạc. Do là con cả của thượng tướng Trịnh Kiểm, ông được cha trao binh quyền trước khi chết. Người em cùng cha khác mẹ của ông - Trịnh Tùng, khởi binh chống lại. Trịnh Cối không kiểm soát được vua Lê, bị kẹp vào giữa quân Mạc và quân Trịnh Tùng, kết quả phải đầu hàng nhà Mạc.",
     "properties": {
@@ -1398,6 +2797,32 @@
       "Tên đầy đủ": "Tên đầy đủ Trịnh Cối (鄭檜)",
       "Tước hiệu": "Tuấn Đức hầu (俊德侯) Trung quốc công (忠國公)[1]",
       "Hoàng tộc": "Chúa Trịnh"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
+    "name": "Bình An Vương",
+    "description": "Trịnh Tùng (chữ Hán: 鄭松, 19 tháng 12 năm 1550 – 17 tháng 7 năm 1623[1]), thụy hiệu Thành Tổ Triết Vương (成祖哲王), là vị chúa chính thức đầu tiên của dòng họ Trịnh dưới thời nhà Lê trung hưng trong lịch sử Việt Nam[2].",
+    "properties": {
+      "Miếu hiệu": "Thành Tổ",
+      "Thụy hiệu": "Triết Vương",
+      "Niên hiệu": "không có",
+      "Tên Húy": "Trịnh Tùng",
+      "Thế thứ": "con thứ Trịnh Kiểm, chúa Trịnh đầu tiên",
+      "Trị vì": "1570",
+      "Tại vị": "tháng 8 năm 1570 – 17 tháng 7 năm 1623",
+      "Thời kỳ": "Lê Anh Tông (1556 - 1573) Lê Thế Tông (1573 - 1599) Lê Kính Tông (1599 - 1619) Lê Thần Tông (1619 - 1643)",
+      "Tiền nhiệm": "Trịnh Cối",
+      "Kế nhiệm": "Trịnh Tráng",
+      "Sinh": "19 tháng 12 năm 1550, huyện Vĩnh Phúc, phủ Thiệu Hóa, trấn Thanh Hóa, Đại Việt",
+      "Mất": "17 tháng 7 năm 1623 (72 tuổi); Thanh Oai, Đông Kinh, Đàng Ngoài, Đại Việt",
+      "Thê thiếp": "Lại Thị Ngọc Nhu; Đặng Thị Ngọc Bảo; Cung phi họ Tô",
+      "Hậu duệ Hậu duệ": "Hậu duệ Trịnh Túc; Trịnh Tráng; Trịnh Xuân; Trịnh Lâm; Trịnh Thị Ngọc Trinh; Tổng cộng 19 con trai và nhiều con gái khác",
+      "Tên đầy đủ Tôn hiệu Thụy hiệu Miếu hiệu": "Tên đầy đủ Trịnh Tùng (鄭松) Tôn hiệu Cung Hoà Khoan Chính Minh Triết Thông Hiển Anh Nghị Cương Đoán Đoạt Vũ Kinh Văn Khuông Quốc Vệ Dân Hùng Tài Vĩ Lược Hậu Công Phong Nghiệp Uy Linh Hiển Ứng Hộ Quốc Thiệu Hựu Thụ Lộc Tích Dận Cẩm Tộ Diên Hy Khải Hữu Hồng Huân Mậu Công Phu Dũng Tạo Mưu Triệu Vũ Di Điển Triệu Tích Thùy Dụ Vĩnh Mệnh Cao Hành Hậu Ân Hiển Mô Quang Tự Vô Nghiệp Tập Khánh Bảo Trị Tạo Hạ Nhuận Vật Thùy Chuẩn Hiến Thiên Phổ Hiến Lược Thao Công Trực Chấp Bính Phù Võng Phụng Thân Pháp Cổ Chấn Lệnh Lãm Quyền Sùng Hy Khai Khánh Phổ Thông Quang Thiên Kế Thiên Xuất Trị Gia Huệ Hồng Ân Triệu Cơ Vĩnh Mệnh Ác Khu Ngự Vũ Khuếch Dung Phấn Đoạt Thực Quốc Ngự Biên Thông Minh Dũng Quyết Thần Vũ Hùng Đoán Tĩnh Nội Ninh Ngoại Chính Trực Trung Hậu Sáng Nghiệp Thùy Thống Thịnh Đức Mậu Công Hoàn Vũ Anh Mô Huy Cung Thần Thánh Thâm Lược Hùng Mô Tuấn Công Mậu Đức Cơ Mệnh Cảnh Quang Yên Mô Hoằng Liệt Thuật Sự Đồ Công Phấn Uy Tạo Vũ Triết Vương Thụy hiệu Triết Vương (哲王) Duệ Vũ Vương Miếu hiệu Thành Tổ (成祖)",
+      "Tước hiệu": "Bình An Vương (平安王)",
+      "Hoàng tộc": "Vương tộc Trịnh",
+      "Thân phụ": "Trịnh Kiểm",
+      "Thân mẫu": "Nguyễn Thị Ngọc Bảo"
     },
     "source": "https://vi.wikipedia.org"
   },
@@ -1427,6 +2852,31 @@
     "source": "https://vi.wikipedia.org"
   },
   {
+    "name": "Tây Định Vương",
+    "description": "Tây Định Vương[1][2] Trịnh Tạc (chữ Hán: 西定王鄭柞, 11 tháng 4 năm 1606 – 24 tháng 9 năm 1682), thụy hiệu Hoằng Tổ Dương vương (弘祖陽王), là vị chúa Trịnh thứ 3 thời Lê Trung hưng, cai trị từ năm 1657 đến 1682. Trịnh Tạc là chúa Trịnh duy nhất chứng kiến cả bảy cuộc xung đột Trịnh-Nguyễn thế kỷ 17 và có công chấm dứt việc cát cứ của họ Mạc ở Cao Bằng, đưa miền Bắc nước Đại Việt bước vào thời thịnh trị.",
+    "properties": {
+      "Miếu hiệu": "Hoằng Tổ",
+      "Thụy hiệu": "Dương Vương",
+      "Niên hiệu": "không có",
+      "Tên Húy": "Trịnh Tạc",
+      "Thế thứ": "con thứ hai Trịnh Tráng",
+      "Trị vì": "1657",
+      "Tại vị": "28 tháng 5 năm 1657 – 24 tháng 9 năm 1682; 25 năm, 119 ngày",
+      "Thời kỳ": "Lê Thần Tông (1649 - 1662) Lê Huyền Tông (1662 - 1671) Lê Gia Tông (1671 - 1675) Lê Hy Tông (1675 - 1705)",
+      "Tiền nhiệm": "Trịnh Tráng",
+      "Kế nhiệm": "Trịnh Căn",
+      "Sinh": "(1606-04-11)11 tháng 4, 1606",
+      "Mất": "24 tháng 9, 1682(1682-09-24) (76 tuổi); Đông Kinh, Đàng Ngoài, Đại Việt",
+      "Thê thiếp": "Vũ Thị Ngọc Lễ; Trịnh Thị Ngọc Lung",
+      "Tên đầy đủ Tôn hiệu Thụy hiệu Miếu hiệu": "Tên đầy đủ Trịnh Tạc (鄭柞) Tôn hiệu Hồng Mô Viễn Lược An Quốc Khôi Cương Chấn Võng Hưng Trị Hùng Độ Anh Uy Quỹ Văn Phấn Vũ Đôn Đại Minh Tác Tuấn Đức Nguy Công Duệ Toán Thần Mưu Cảnh Quang Đại Liệt Tạo Hạ Triệu Cơ Thùy Hưu Siển Phạm Tu Nội Nhương Ngoại Bảo Hòa Trí Trị Dương Vương (大元帥掌國政尚師太父德功仁威明聖西王) Thụy hiệu Dương vương (陽王) Thông Hiến Vương Miếu hiệu Hoằng Tổ (弘祖)",
+      "Tước hiệu": "Tây vương (西王)",
+      "Hoàng tộc": "Chúa Trịnh",
+      "Thân phụ": "Trịnh Tráng",
+      "Thân mẫu": "Trần Thị Ngọc Đài"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
     "name": "Định Nam Vương",
     "description": "Trịnh Căn (chữ Hán: 鄭根, 18 tháng 7 năm 1633[1] - 17 tháng 6 năm 1709), thụy hiệu Chiêu Tổ Khang Vương (昭祖康王), là vị chúa Trịnh thứ 4 dưới thời Lê Trung hưng, trong lịch sử Việt Nam.",
     "properties": {
@@ -1448,6 +2898,31 @@
       "Gia tộc": "Chúa Trịnh",
       "Thân phụ": "Trịnh Tạc",
       "Thân mẫu": "Vũ Thị Ngọc Lễ"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
+    "name": "An Đô Vương",
+    "description": "Trịnh Cương (chữ Hán: 鄭棡, 9 tháng 7 năm 1686 – 20 tháng 12 năm 1729), còn có tên khác là Trịnh Chù[1], thụy hiệu là Hy Tổ Nhân vương (禧祖仁王), là vị chúa Trịnh thứ 5 dưới thời Lê Trung Hưng trong lịch sử Việt Nam.",
+    "properties": {
+      "Miếu hiệu": "Hy Tổ",
+      "Thụy hiệu": "Nhân Vương",
+      "Niên hiệu": "không có",
+      "Tên Húy": "Trịnh Cương",
+      "Thế thứ": "chắt của Trịnh Căn, cháu Trịnh Vịnh, con Trịnh Bính",
+      "Trị vì": "17 tháng 6 năm 1709 – 20 tháng 12 năm 1729; 20 năm, 186 ngày",
+      "Thời kỳ": "Lê Dụ Tông (1705 - 1728) Lê Duy Phường (1729 - 1732)",
+      "Tiền nhiệm": "Trịnh Căn",
+      "Kế nhiệm": "Trịnh Giang",
+      "Sinh": "(1686-07-09)9 tháng 7, 1686; Đông Kinh, Đàng Ngoài, Đại Việt",
+      "Mất": "20 tháng 12, 1729(1729-12-20) (43 tuổi); Đông Kinh, Đàng Ngoài, Đại Việt",
+      "Thê thiếp": "Chính phi Trịnh thị ; Thái phi Vũ Thị Ngọc Nguyên ; Kỳ viên Đặng thị",
+      "Hậu duệ Hậu duệ": "Hậu duệ Xem mục Gia đình",
+      "Tên húy Thụy hiệu Miếu hiệu": "Tên húy Trịnh Cương (鄭棡) Thụy hiệu Nhân Vương (仁王) Miếu hiệu Hy Tổ (禧祖)",
+      "Tước hiệu": "An Đô Vương (安都王)",
+      "Hoàng tộc": "Vương tộc Trịnh",
+      "Thân phụ": "Trịnh Bính",
+      "Thân mẫu": "Trương Thị Ngọc Chử (mẹ sinh); Nguyễn Thị Cảo (nhũ mẫu, mẹ nuôi)"
     },
     "source": "https://vi.wikipedia.org"
   },
@@ -1480,6 +2955,34 @@
     "source": "https://vi.wikipedia.org"
   },
   {
+    "name": "Minh Đô Vương",
+    "description": "Trịnh Doanh (chữ Hán: 鄭楹, 4 tháng 12 năm 1720 – 12 tháng 5 năm 1767), thụy hiệu Nghị Tổ Ân vương (毅祖恩王)[1], là vị chúa Trịnh thứ 7 thời Lê Trung hưng trong lịch sử Việt Nam, ở ngôi từ năm 1740 đến 1767.",
+    "properties": {
+      "Miếu hiệu": "Nghị Tổ",
+      "Thụy hiệu": "Ân Vương",
+      "Niên hiệu": "không có",
+      "Tên Húy": "Trịnh Doanh",
+      "Thế thứ": "con thứ Trịnh Cương, em Trịnh Giang",
+      "Trị vì": "1740",
+      "Tại vị": "tháng 1 năm 1740 – 12 tháng 5 năm 1767",
+      "Thời kỳ": "Lê Ý Tông (1735 - 1740) Lê Hiển Tông (1740 - 1786)",
+      "Tiền nhiệm": "Trịnh Giang",
+      "Kế nhiệm": "Trịnh Sâm",
+      "Sinh": "4 tháng 12 năm 1720; Đông Kinh, Đàng Ngoài, Đại Việt",
+      "Mất": "12 tháng 5 năm 1767; Đông Kinh, Đàng Ngoài, Đại Việt",
+      "An táng": "Núi Chân Tiên",
+      "Thê thiếp": "Nguyễn Thị Ngọc Vinh ; Nguyễn Thị Ngọc Diễm",
+      "Hậu duệ Hậu duệ": "Hậu duệ Thánh Tổ Thịnh vương Trịnh Sâm; Tiên Dung quận chúa, gả cho Thái tử Lê Duy Vĩ; Thụy Quận công Trịnh Lệ",
+      "Thụy hiệu Miếu hiệu": "Thụy hiệu Ân Vương (恩王) Miếu hiệu Nghị Tổ (毅祖)",
+      "Tước hiệu": "Tiết chế quân thủy, quân bộ các xứ, Thái úy, Ân quốc công (1735); Nguyên soái, tổng quốc chính, Minh Đô vương (1740); Thượng sư Thượng phụ Anh Đoán Văn Trị Võ Công Minh Vương (1755)",
+      "Vương tộc": "Chúa Trịnh",
+      "Thân phụ": "Trịnh Cương",
+      "Thân mẫu": "Vũ Thị Ngọc Nguyên",
+      "Tôn giáo": "Nho giáo"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
     "name": "Tĩnh Đô Vương",
     "description": "Trịnh Sâm[1] (chữ Hán: 鄭森, 9 tháng 2 năm 1739 – 13 tháng 9 năm 1782), thụy hiệu Thánh Tổ Thịnh vương (聖祖盛王), là vị chúa thứ 8 của vương tộc Trịnh cầm quyền ở miền Bắc Đại Việt thời nhà Lê trung hưng. Ông nắm quyền cai trị từ năm 1767 đến khi qua đời năm 1782.",
     "properties": {
@@ -1505,6 +3008,29 @@
     "source": "https://vi.wikipedia.org"
   },
   {
+    "name": "Điện Đô Vương",
+    "description": "Sửa đổi cuối: 2405:4803:F916:1C00:BCB7:352E:3053:579C (thảo luận · đóng góp) vào 21 ngày trước. (làm mới)",
+    "properties": {
+      "Miếu hiệu": "không có",
+      "Thụy hiệu": "Xung Mẫn Vương",
+      "Niên hiệu": "không có",
+      "Tên Húy": "Trịnh Cán",
+      "Thế thứ": "con thứ Trịnh Sâm",
+      "Trị vì": "13 tháng 9 năm 1782 – 28 tháng 11 năm 1782; 76 ngày",
+      "Thời vua": "Lê Hiển Tông (1740 - 1786)",
+      "Tiền nhiệm": "Trịnh Sâm",
+      "Kế nhiệm": "Trịnh Tông",
+      "Sinh": "1777",
+      "Mất": "17 tháng 12, 1782(1782-12-17) (5 tuổi); Đông Kinh, Đàng Ngoài, Đại Việt",
+      "Tên thật Thụy hiệu": "Tên thật Trịnh Cán (鄭檊) Thụy hiệu Xung Mẩn vương (沖愍王)",
+      "Tước hiệu": "Điện Đô Vương (奠都王)",
+      "Hoàng tộc": "Chúa Trịnh",
+      "Thân phụ": "Trịnh Sâm",
+      "Thân mẫu": "Tuyên phi Đặng Thị Huệ"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
     "name": "Đoan Nam Vương",
     "description": "Đoan Nam Vương Trịnh Tông (chữ Hán: 鄭棕; 10 tháng 10 năm 1763 - 23 tháng 7 năm 1786), còn có tên khác là Trịnh Khải (鄭楷) là vị chúa Trịnh thứ 10 thời Lê Trung Hưng trong lịch sử Việt Nam, cầm quyền từ năm 1782 tới năm 1786, ở giai đoạn tan rã của tập đoàn phong kiến họ Trịnh.",
     "properties": {
@@ -1525,6 +3051,29 @@
       "Hoàng tộc": "Chúa Trịnh",
       "Thân phụ": "Trịnh Sâm",
       "Thân mẫu": "Dương Thị Ngọc Hoan"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
+    "name": "Án Đô Vương",
+    "description": "Án Đô vương Trịnh Bồng (chữ Hán: 鄭槰; 25 tháng 8 năm 1749 - 13 tháng 2 năm 1791), là vị chúa Trịnh thứ 11 thời Lê Trung hưng và cũng là vị chúa cuối cùng trong lịch sử Việt Nam.",
+    "properties": {
+      "Miếu hiệu": "không có",
+      "Thụy hiệu": "Huệ Định Công",
+      "Niên hiệu": "không có",
+      "Tên Húy": "Trịnh Bồng",
+      "Thế thứ": "con Trịnh Giang, anh họ Trịnh Sâm",
+      "Trị vì": "1786",
+      "Tại vị": "tháng 9 năm 1786 – tháng 9 năm 1787",
+      "Thời kỳ": "Lê Mẫn Đế (1786 – 1789)",
+      "Tiền nhiệm": "Trịnh Khải",
+      "Kế nhiệm": "Chính quyền chúa Trịnh sụp đổ",
+      "Sinh": "25 tháng 8 năm 1749",
+      "Mất": "13 tháng 2, 1791(1791-02-13) (50–51 tuổi); Ai Lao",
+      "Tên thật": "Tên thật Trịnh Bồng (鄭槰)",
+      "Tước hiệu": "Côn Quận Công; Án Đô Vương (晏都王)",
+      "Hoàng tộc": "Chúa Trịnh",
+      "Thân phụ": "Uy Nam Vương Trịnh Giang"
     },
     "source": "https://vi.wikipedia.org"
   },
@@ -1555,6 +3104,30 @@
     "source": "https://vi.wikipedia.org"
   },
   {
+    "name": "Sãi Vương Phật Vương",
+    "description": "Nguyễn Phúc Nguyên (chữ Hán: 阮福源; 16 tháng 8 năm 1563 – 19 tháng 11 năm 1635) hay Nguyễn Hy Tông, Nguyễn Tuyên Tổ, là vị chúa Nguyễn thứ hai của chính quyền Đàng Trong trong lịch sử Việt Nam (ở ngôi từ 1613 đến 1635) sau chúa Tiên Nguyễn Hoàng. Trong thời gian ở ngôi chúa, ông đã xây dựng một vương triều độc lập ở Đàng Trong, từng bước ly khai khỏi chính quyền Lê – Trịnh ở Đàng Ngoài. Ông được dân chúng gọi là chúa Sãi, chúa Bụt hay Phật chúa.",
+    "properties": {
+      "Miếu hiệu": "Tuyên Tổ, Hy Tông",
+      "Thụy hiệu": "Hiển Mô Quang Liệt Ôn Cung Minh Duệ Dực Thiện Tuy Du Hiếu Văn Hoàng Đế",
+      "Niên hiệu": "không có",
+      "Tên Húy": "Nguyễn Phúc Nguyên",
+      "Thế thứ": "con trai thứ sáu Chúa Tiên",
+      "Trị vì": "1613 - 1635",
+      "Tiền nhiệm": "Nguyễn Hoàng",
+      "Kế nhiệm": "Nguyễn Phúc Lan",
+      "Sinh": "(1563-08-16)16 tháng 8, 1563[1]",
+      "Mất": "19 tháng 11, 1635(1635-11-19) (72 tuổi)[1]; Đàng Trong, Đại Việt",
+      "Thê thiếp": "Mạc Thị Giai",
+      "Hậu duệ Hậu duệ": "Hậu duệ Nguyễn Phúc Kỳ; Nguyễn Phúc Lan; Nguyễn Phúc Anh; Và nhiều người khác, tổng cộng có 11 công tử và 4 công nữ",
+      "Tên húy Thụy hiệu Miếu hiệu": "Tên húy Nguyễn Phúc Nguyên (阮福源) Thụy hiệu Hiển Mô Quang Liệt Ôn Cung Minh Duệ Dực Thiện Tuy Du Hiếu Văn Hoàng đế ; (顯謨光烈溫恭明睿翼善綏猷孝文皇帝); Ngắn: Hiếu Văn hoàng đế (孝文皇帝) Miếu hiệu Hy Tông (熙宗) Tuyên Tổ (宣祖)",
+      "Tước vị Tước vị": "Tước vị tước vị Sãi vương, chúa Bụt, Phật chúa Thống lãnh Thủy bộ Chư Dinh kiêm Tổng Nội Ngoại Bình Chương Quân Quốc Trọng Sự Thái bảo Thụy Quận công Đại Đô Thống Trấn Nam Phương Tổng Quốc Chính Dực Thiện Tuy Du Thụy Dương Vương Tuyên Tổ Hiển Mô Quang Liệt Ôn Cung Minh Duệ Dực Thiện Tuy Du Hiếu Văn Vương",
+      "Gia tộc": "Họ Nguyễn Phước",
+      "Thân phụ": "Nguyễn Hoàng",
+      "Thân mẫu": "Gia Dụ Hoàng hậu"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
     "name": "Thượng Vương",
     "description": "Nguyễn Phúc Lan (chữ Hán: 阮福瀾, 13 tháng 8 năm 1601 - 19 tháng 3 năm 1648) hay Nguyễn Thần Tông, là vị chúa Nguyễn thứ ba của chính quyền Đàng Trong trong lịch sử Việt Nam, cai trị từ năm 1635 đến năm 1648. Chúa Phúc Lan kế ngôi cha là Nguyễn Phúc Nguyên, tiếp tục xây dựng cơ đồ họ Nguyễn ở Nam Hà và đánh bại hai đợt tấn công của chúa Trịnh năm 1643, 1648.",
     "properties": {
@@ -1579,6 +3152,31 @@
     "source": "https://vi.wikipedia.org"
   },
   {
+    "name": "Hiền Vương",
+    "description": "Nguyễn Phúc Tần (chữ Hán: 阮福瀕, 18 tháng 7 năm 1620 - 30 tháng 4 năm 1687), hay Nguyễn Thái Tông, tước hiệu Dũng Quận công (勇郡公), và được người trong lãnh thổ gọi là chúa Hiền (主賢), là vị chúa Nguyễn thứ tư của chính quyền Đàng Trong trong lịch sử Việt Nam. Ông ở ngôi từ năm 1648 đến năm 1687, tổng cộng được 40 năm.",
+    "properties": {
+      "Miếu hiệu": "Nghị Tổ, Thái Tông",
+      "Thụy hiệu": "Tuyên Uy Kiến Vũ Anh Minh Trang Chính Thánh Đức Thần Công Hiếu Triết Hoàng Đế",
+      "Niên hiệu": "không có",
+      "Tên Húy": "Nguyễn Phúc Tần Nguyễn Phúc Cần",
+      "Thế thứ": "con trai thứ hai Chúa Thượng",
+      "Trị vì": "1648 - 1687",
+      "Tiền nhiệm": "Nguyễn Phúc Lan",
+      "Kế nhiệm": "Nguyễn Phúc Thái",
+      "Sinh": "(1620-07-18)18 tháng 7, 1620[1]",
+      "Mất": "30 tháng 8, 1687(1687-08-30) (67 tuổi)[1]; Đàng Trong, Đại Việt",
+      "An táng": "Lăng Trường Hưng (長興陵)",
+      "Thê thiếp": "Chu Thị Viên; Tống Thị Đôi",
+      "Hậu duệ Hậu duệ": "Hậu duệ Nguyễn Phúc Diễn; Nguyễn Phúc Thái; Nguyễn Phúc Trân; Nguyễn Phúc Thuần; Nguyễn Phúc Niên; Nguyễn Phúc Nhiễu; Nguyễn Phúc Ngọc Tảo; Hai hoàng nữ khuyết danh",
+      "Tên húy Tôn hiệu Thụy hiệu Miếu hiệu": "Tên húy Nguyễn Phúc Tần (阮福瀕) Tôn hiệu Chúa Hiền (主賢) Thụy hiệu Tuyên Uy Kiến Vũ Anh Minh Trang Thánh Đức Thần Công Hiếu Triết Hoàng đế (宣威建武英明莊正聖德神功孝哲皇帝); Ngắn: Hiếu Triết Hoàng đế (孝哲皇帝) Miếu hiệu Thái Tông (太宗); Nghị Tổ (毅祖)",
+      "Tước vị Tước vị": "Tước vị Tiết chế Thủy bộ Chư dinh kiêm Tổng Nội ngoại Bình chương Quân quốc Trọng sự Thái bảo Dũng Quận công",
+      "Gia tộc": "Họ Nguyễn",
+      "Thân phụ": "Nguyễn Phúc Lan",
+      "Thân mẫu": "Đoàn Quý phi"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
     "name": "Nghĩa Vương",
     "description": "Nguyễn Phúc Thái (chữ Hán: 阮福溙, 1649 - 1691), trước bị gọi nhầm thành Nguyễn Phúc Trăn, là Chúa Nguyễn thứ 5 của chính quyền Đàng Trong trong lịch sử Việt Nam (ở ngôi 1687-1691), nối ngôi Chúa Hiền Nguyễn Phúc Tần.",
     "properties": {
@@ -1599,6 +3197,31 @@
       "Gia tộc": "Họ Nguyễn",
       "Thân phụ": "Nguyễn Phúc Tần",
       "Thân mẫu": "Tống Thị Đôi"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
+    "name": "Minh Vương Quốc Chúa",
+    "description": "Nguyễn Phúc Chu (chữ Hán: 阮福淍, 11 tháng 6 năm 1675 – 1 tháng 6 năm 1725) hay Nguyễn Hiển Tông, là vị chúa Nguyễn thứ sáu của Đàng Trong, vùng đất phía Nam nước Đại Việt thời Lê trung hưng. Ông nối ngôi cha là Nguyễn Phúc Thái và cai trị từ năm từ 1691 đến năm 1725. Trong thời gian cầm quyền, Nguyễn Phúc Chu chăm lo phát triển kinh tế, giáo dục, quân sự, làm quốc gia rất giàu mạnh. Ông cũng mở rộng đáng kể lãnh thổ Đại Việt sau nhiều cuộc chiến với các vương quốc Chiêm Thành và Chân Lạp. Ông còn là một cư sĩ Phật giáo mộ đạo, có nhiều công lao trong việc trùng tu chùa chiền và hỗ trợ truyền bá Phật pháp trong nước.",
+    "properties": {
+      "Miếu hiệu": "Hiển Tông",
+      "Thụy hiệu": "Anh Mô Hùng Lược Thánh Minh Tuyên Đạt Khoan Từ Nhân Thứ Hiếu Minh Hoàng Đế",
+      "Niên hiệu": "không có",
+      "Tên Húy": "Nguyễn Phúc Chu Nguyễn Phúc Tùng",
+      "Thế thứ": "con trưởng Chúa Nghĩa",
+      "Trị vì": "1691 - 1725",
+      "Tiền nhiệm": "Nguyễn Phúc Thái",
+      "Kế nhiệm": "Nguyễn Phúc Chú",
+      "Sinh": "(1675-06-11)11 tháng 6, 1675[1]; Nam Hà, Đại Việt",
+      "Mất": "1 tháng 9, 1725(1725-09-01) (50 tuổi)[1]; Nam Hà, Đại Việt",
+      "Thê thiếp": "Tống Thị Được",
+      "Hậu duệ Hậu duệ": "Hậu duệ Nguyễn Phúc Chú; Nguyễn Phúc Tứ; Nguyễn Phúc Điền; ...Tổng cộng 38 công tử và 4 công nữ",
+      "Tên húy Thụy hiệu Miếu hiệu": "Tên húy Nguyễn Phúc Chu Thụy hiệu Anh Mô Hùng Lược thánh Văn Tuyên Đạt Khoan Từ Nhân Thứ Hiếu Minh Hoàng Đế ; (英謨雄略聖文宣達寬慈仁恕孝明皇帝); Ngắn: Hiếu Minh hoàng đế ; (孝明皇帝) Miếu hiệu Hiển Tông (顯宗)",
+      "Tước vị Tước vị": "Tước vị Tộ Quốc Công Minh vương Đô Nguyên Súy Tổng Quốc Chính Khoan Từ Nhân Thứ Tộ Minh Vương Anh Mô Hùng Lược Thánh Văn Tuyên Đạt Khoan Từ Nhân Thứ Hiếu Minh Vương",
+      "Gia tộc": "Họ Nguyễn",
+      "Thân phụ": "Nguyễn Phúc Thái",
+      "Thân mẫu": "Tống Thị Lĩnh",
+      "Tôn giáo": "Phật giáo"
     },
     "source": "https://vi.wikipedia.org"
   },
@@ -1628,6 +3251,31 @@
     "source": "https://vi.wikipedia.org"
   },
   {
+    "name": "Vũ Vương",
+    "description": "Nguyễn Phúc Khoát (chữ Hán: 阮福濶), hay Nguyễn Thế Tông, húy là Hiểu (chữ Hán: 曉), còn gọi là Chúa Võ, hiệu Vũ vương hay Võ vương[1] (1714–1765) là vị chúa Nguyễn thứ 8 của chính quyền Đàng Trong trong lịch sử Việt Nam, ở ngôi từ năm 1738 đến năm 1765.",
+    "properties": {
+      "Miếu hiệu": "Thế Tông",
+      "Thụy hiệu": "Kiền Cương Uy Đoán Thần Nghị Thánh Du Nhân Từ Duệ Trí Hiếu Vũ Hoàng Đế",
+      "Niên hiệu": "không có",
+      "Tên Húy": "Nguyễn Phúc Khoát Nguyễn Phúc Hiểu",
+      "Thế thứ": "con trưởng Chúa Ninh",
+      "Trị vì": "1738",
+      "Tại vị": "1738 - 1765",
+      "Tiền nhiệm": "Nguyễn Phúc Chú",
+      "Kế nhiệm": "Nguyễn Phúc Thuần",
+      "Sinh": "26 tháng 9 năm 1714",
+      "Mất": "7 tháng 7 năm 1765; Đàng Trong, Đại Việt",
+      "Thê thiếp": "Trương Thị Dung; Trần Thị Xạ; Nguyễn Phúc Ngọc Cầu; và nhiều cung tần khác",
+      "Hậu duệ Hậu duệ": "Hậu duệ 18 công tử; 12 công nữ",
+      "Tên húy Thụy hiệu Miếu hiệu": "Tên húy Nguyễn Phúc Khoát Thụy hiệu Kiền Cương Uy Đoán thần Nghị Thánh Du Nhân Từ Duệ Trí Hiếu Vũ Hoàng đế (乾剛威斷神毅聖猷仁慈睿智孝武皇帝) Miếu hiệu Thế Tông (世宗)",
+      "Tước hiệu": "Vũ vương (武王)",
+      "Gia tộc": "Họ Nguyễn",
+      "Thân phụ": "Nguyễn Phúc Chú",
+      "Thân mẫu": "Trương Thị Thư"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
     "name": "Định Vương",
     "description": "Nguyễn Phúc Thuần (1754 - 1777, ở ngôi 1765 - 1777), hay Nguyễn Duệ Tông, còn có tên khác là Nguyễn Phúc Hân, là người cai trị thứ 9 của chính quyền Chúa Nguyễn ở Đàng Trong vào thời kì Lê Trung hưng trong lịch sử Việt Nam[1]. Sau cái chết của phụ vương, Nguyễn Phúc Thuần được quyền thần Trương Phúc Loan lập làm Vương khi chỉ mới 12 tuổi, và người này sau đó thâu tóm hết chính quyền ở Nam Hà, và làm nhiều việc khiến triều đình Phú Xuân ngày càng lụn bại, suy yếu.",
     "properties": {
@@ -1653,6 +3301,50 @@
     "source": "https://vi.wikipedia.org"
   },
   {
+    "name": "Tân Chính Vương",
+    "description": "Nguyễn Phúc Dương (chữ Hán: 阮福暘; ?- 1777), hiệu Tân Chính vương, là nhà cai trị thứ 10 của chính quyền chúa Nguyễn ở Đàng Trong vào thời kỳ Lê trung hưng trong lịch sử Việt Nam.",
+    "properties": {
+      "Miếu hiệu": "không có",
+      "Thụy hiệu": "Cung Mẫn Anh Đoán Huyền Mặc Vĩ Văn Mục Vương",
+      "Niên hiệu": "không có",
+      "Tên Húy": "Nguyễn Phúc Dương",
+      "Thế thứ": "con Nguyễn Phúc Hiệu, cháu nội Chúa Vũ, em con chú với vua Gia Long",
+      "Trị vì": "1776",
+      "Tại vị": "1776 - 1777",
+      "Đồng trị vì": "Nguyễn Phúc Thuần; Tây Sơn Nguyễn Nhạc",
+      "Tiền nhiệm": "Nguyễn Phúc Thuần",
+      "Kế nhiệm": "Nguyễn Phúc Ánh",
+      "Mất": "1777; Đàng Trong, Đại Việt",
+      "Tên húy Thụy hiệu": "Tên húy Nguyễn Phúc Dương (阮福暘) Thụy hiệu Cung Mẫn Anh Đoán Huyền Mặc Vĩ Văn Mục Vương; (恭敏英斷玄默偉文穆王)",
+      "Vương tộc": "Họ Nguyễn",
+      "Thân phụ": "Nguyễn Phúc Hạo"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
+    "name": "Thái Đức",
+    "description": "Nguyễn Nhạc (阮岳)",
+    "properties": {
+      "Miếu hiệu": "không có",
+      "Thụy hiệu": "Minh Đức Hoàng Đế",
+      "Niên hiệu": "Thái Đức (1778-1788)",
+      "Tên Húy": "Hồ Nhạc Nguyễn Nhạc Nguyễn Văn Nhạc",
+      "Thế thứ": "con trưởng Hồ Phi Phúc, sáng lập triều đại",
+      "Trị vì": "1778 – 1788",
+      "Tiền nhiệm": "Sáng lập triều đại",
+      "Kế nhiệm": "Nguyễn Văn Bảo",
+      "Tại vị": "1789 - 1793",
+      "Sinh": "1743; Bình Định, Đàng Trong, Đại Việt",
+      "Mất": "1793 50 tuổi; Qui Nhơn, Đại Việt",
+      "Thê thiếp": "Trần Thị Huệ Ya Dố Đặng Thị Tuyết",
+      "Hậu duệ Hậu duệ": "Hậu duệ Nguyễn Văn Bảo Nguyễn Thanh Nguyễn Hân Nguyễn Văn Dũng Nguyễn Văn Đức Nguyễn Văn Lương Thọ Hương; và 1 người con gái khác",
+      "Tên thật Niên hiệu Tôn hiệu": "Tên thật Hồ Nhạc (胡岳) Nguyễn Nhạc (阮岳) Nguyễn Văn Nhạc (阮文岳) Niên hiệu Thái Đức (泰德): 1778-1793 Tôn hiệu Minh Đức Hoàng Đế (明德皇帝)",
+      "Triều đại": "Nhà Tây Sơn",
+      "Thân phụ": "Hồ Phi Phúc"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
     "name": "Quang Trung",
     "description": "Nguyễn Huệ (阮惠)",
     "properties": {
@@ -1673,6 +3365,55 @@
       "Tên thật Niên hiệu Thụy hiệu Miếu hiệu": "Tên thật Hồ Thơm (胡𦹳) Nguyễn Huệ (阮惠) Nguyễn Văn Huệ (阮文惠) Nguyễn Quang Bình (阮光平) Niên hiệu Quang Trung (光中) Thụy hiệu Vũ Hoàng đế (武皇帝) Miếu hiệu Thái Tổ (太祖)",
       "Triều đại": "Nhà Tây Sơn",
       "Thân phụ": "Hồ Phi Phúc"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
+    "name": "Nguyễn Quang Toản",
+    "description": "Nguyễn Quang Toản (chữ Hán: 阮光纘, 1783 – 1802), là vị hoàng đế thứ 3 và cuối cùng của Vương triều Tây Sơn trong lịch sử Việt Nam. Ông là con trai của vua Quang Trung (Nguyễn Huệ), lên ngôi sau khi Nguyễn Huệ mất vào tháng 8 năm 1792 khi mới 10 tuổi. Trong thời gian trị vì, ông đã đặt 2 niên hiệu là Cảnh Thịnh và Bảo Hưng.",
+    "properties": {
+      "Miếu hiệu": "không có",
+      "Thụy hiệu": "không có",
+      "Niên hiệu": "Cảnh Thịnh (1792-1801) Bảo Hưng (1801-1802)",
+      "Tên Húy": "Nguyễn Quang Toản Nguyễn Trát",
+      "Thế thứ": "con thứ Quang Trung, con rể Lê Hiển Tông",
+      "Trị vì": "16 tháng 9 năm 1792 – 23 tháng 6 năm 1802; (9 năm, 280 ngày)",
+      "Nhiếp chính": "Thái sư Bùi Đắc Tuyên",
+      "Tiền nhiệm": "Tây Sơn Thái Tổ",
+      "Kế nhiệm": "Triều đại sụp đổ; Gia Long (Nhà Nguyễn)",
+      "Sinh": "1783",
+      "Mất": "1802 (18–19 tuổi); Phú Xuân, Huế",
+      "Thê thiếp": "Lê Ngọc Bình",
+      "Tên húy Niên hiệu": "Tên húy Nguyễn Quang Toản (阮光纘) Niên hiệu Cảnh Thịnh (景盛: 1793 - 1801) Bảo Hưng (寶興: 1801 - 1802)",
+      "Triều đại": "Nhà Tây Sơn",
+      "Thân phụ": "Quang Trung",
+      "Thân mẫu": "Phạm Thị Liên"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
+    "name": "Gia Long",
+    "description": "",
+    "properties": {
+      "Miếu hiệu": "Thế Tổ",
+      "Thụy hiệu": "Khai Thiên Hoằng Đạo Lập Kỷ Thùy Thống Thần Văn Thánh Vũ Tuấn Đức Long Công Chí Nhân Đại Hiếu Cao Hoàng Đế",
+      "Niên hiệu": "Gia Long (1802–1820)",
+      "Tên Húy": "Nguyễn Phúc Ánh Nguyễn Phúc Chủng Nguyễn Phúc Noãn",
+      "Thế thứ": "Sáng lập triều đại. Con thứ ba của Nguyễn Phúc Luân, cháu nội Nguyễn Phúc Khoát, con rể Lê Hiển Tông",
+      "Trị vì": "1802",
+      "Tại vị": "tháng 5 năm 1777 – 23 tháng 6 năm 1802",
+      "Nhiếp chính": "Minh Mạng (1818–1820)",
+      "Tiền nhiệm": "Nguyễn Phúc Dương",
+      "Kế nhiệm": "Kết thúc",
+      "Sinh": "(1762-02-08)8 tháng 2, 1762; Phú Xuân, Đàng Trong, Đại Việt",
+      "Mất": "3 tháng 2, 1820(1820-02-03) (57 tuổi); Hoàng thành Huế",
+      "Phối ngẫu": "Thừa Thiên Cao Hoàng Hậu; Thuận Thiên Cao hoàng hậu; Hơn 100 thê thiếp",
+      "Hậu duệ": "Nguyễn Phúc Cảnh; Nguyễn Phúc Đảm; 13 con trai và 18 con gái khác",
+      "Tên đầy đủ Niên hiệu Tôn hiệu Thụy hiệu Miếu hiệu": "Tên đầy đủ Nguyễn Phúc Ánh (阮福暎) Niên hiệu Gia Long (嘉隆): 1802–1820 Tôn hiệu Đại nguyên súy Nhiếp quốc chính (大元帥攝國政, 1778–1780)[1]; Nguyễn Vương (阮王; 1780–1802)[2] Thụy hiệu Khai thiên Hoằng đạo Lập kỷ Thùy thống Thần văn Thánh võ Tuấn đức Long công Chí nhân Đại hiếu Cao hoàng đế; 開天弘道立紀垂統神文聖武俊德隆功至仁大孝高皇帝 Miếu hiệu Thế Tổ (世祖)",
+      "Hoàng tộc": "Nguyễn Phúc",
+      "Thân phụ": "Nguyễn Phúc Luân",
+      "Thân mẫu": "Nguyễn Thị Hoàn",
+      "Tôn giáo": "Khổng giáo"
     },
     "source": "https://vi.wikipedia.org"
   },
@@ -1704,6 +3445,32 @@
     "source": "https://vi.wikipedia.org"
   },
   {
+    "name": "Thiệu Trị",
+    "description": "Thiệu Trị (chữ Hán: 紹治 16 tháng 6 năm 1807 – 4 tháng 11 năm 1847), húy là Nguyễn Phúc Dung (阮福曧), sau cải thành Nguyễn Phúc Miên Tông (阮福綿宗), là vị hoàng đế thứ ba của nhà Nguyễn nước Đại Nam. Ông kế vị vua cha là Minh Mạng, trị vì từ năm 1841 đến khi qua đời, tổng cộng gần 7 năm, được truy tôn miếu hiệu là Hiến Tổ (憲祖), thụy hiệu Thiệu Thiên Chương Hoàng Đế (紹天章皇帝). Trong thời gian trị vì ông chỉ sử dụng một niên hiệu là Thiệu Trị nên thường được gọi theo tên này.",
+    "properties": {
+      "Miếu hiệu": "Hiến Tổ",
+      "Thụy hiệu": "Thiệu Thiên Long Vận Chí Thiện Thuần Hiếu Khoan Minh Duệ Đoán Văn Trị Vũ Công Thánh Triết Chương Hoàng Đế",
+      "Niên hiệu": "Thiệu Trị (1841–1847)",
+      "Tên Húy": "Nguyễn Phúc Miên Tông Nguyễn Phúc Tuyền Nguyễn Phúc Dung",
+      "Thế thứ": "Con trưởng Minh Mạng",
+      "Trị vì": "11 tháng 2 năm 1841 – ; 4 tháng 11 năm 1847; (6 năm, 235 ngày)",
+      "Tiền nhiệm": "Minh Mạng",
+      "Kế nhiệm": "Tự Đức",
+      "Sinh": "16 tháng 6 năm 1807; Huế, Đại Nam",
+      "Mất": "4 tháng 11, 1847(1847-11-04) (40 tuổi); Huế, Đại Nam",
+      "An táng": "24 tháng 6 năm 1848; Xương Lăng, Huế, Đại Nam",
+      "Hậu phi": "Nghi Thiên Chương Hoàng hậu; cùng nhiều phi tần khác",
+      "Hậu duệ Hậu duệ": "Hậu duệ 64 người, gồm 29 hoàng tử và 35 công chúa",
+      "Tên húy Niên hiệu Thụy hiệu Miếu hiệu": "Tên húy Nguyễn Phúc Miên Tông (阮福綿宗); Nguyễn Phúc Tuyền (阮福暶); Nguyễn Phúc Dung (阮福曧) Niên hiệu Thiệu Trị (紹治): 1841 - 1847 Thụy hiệu Thiệu Thiên Long Vận Chí Thiện Thuần Hiếu Khoan Minh Duệ Đoán Văn Trị Vũ Công Thánh Triết Chương Hoàng đế; 紹天隆運至善純孝寬明睿斷文治武功聖哲章皇帝 Miếu hiệu Hiến Tổ (憲祖)",
+      "Hoàng tộc": "Hoàng triều Nguyễn",
+      "Hoàng gia ca": "Đăng đàn cung",
+      "Thân phụ": "Nguyễn Thánh Tổ Minh Mạng",
+      "Thân mẫu": "Tá Thiên Nhân Hoàng hậu Hồ Thị Hoa",
+      "Tôn giáo": "Nho giáo, Phật giáo"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
     "name": "Tự Đức",
     "description": "Tự Đức (chữ Hán: 嗣德 22 tháng 9 năm 1829 – 19 tháng 7 năm 1883) tên thật là Nguyễn Phúc Hồng Nhậm (阮福洪任), khi lên ngôi đổi thành Nguyễn Phúc Thì (阮福時), là vị hoàng đế thứ tư của triều Nguyễn. Ông là vị vua có thời gian trị vì lâu dài nhất của nhà Nguyễn, trị vì từ năm 1847 đến 1883, ông được truy tôn miếu hiệu là Nguyễn Dực Tông (阮翼宗), thụy hiệu là Thể Thiên Anh Hoàng Đế. Trong suốt thời gian trị vì của mình ông chỉ sử dụng duy nhất một niên hiệu là Tự Đức (嗣德) nên thường được gọi với tên này.",
     "properties": {
@@ -1729,6 +3496,31 @@
     "source": "https://vi.wikipedia.org"
   },
   {
+    "name": "Dục Đức",
+    "description": "Nguyễn Cung Tông (chữ Hán: 阮恭宗 23 tháng 2 năm 1852 – 6 tháng 10 năm 1883), tên thật là Nguyễn Phúc Ưng Ái, sau đổi thành Nguyễn Phúc Ưng Chân (阮福膺禛), là vị hoàng đế thứ năm của triều đại nhà Nguyễn. Ông lên ngôi vua ngày 19 tháng 7 năm 1883[1] nhưng tại vị chỉ được ba ngày, ngắn nhất trong số 13 vị hoàng đế của triều Nguyễn,[2][3][4] được vua Thành Thái truy tôn miếu hiệu là Cung Tông (恭宗), thụy hiệu là Huệ Hoàng đế (惠皇帝). Dục Đức là tên gọi khi ông còn ở Dục Đức Đường.",
+    "properties": {
+      "Miếu hiệu": "Cung Tông",
+      "Thụy hiệu": "Huệ Hoàng Đế",
+      "Niên hiệu": "không có",
+      "Tên Húy": "Nguyễn Phúc Ưng Chân Nguyễn Phúc Ưng Ái",
+      "Thế thứ": "Con thứ Nguyễn Phúc Hồng Y, cháu nội Thiệu Trị, con nuôi Tự Đức",
+      "Trị vì": "20 tháng 7 năm 1883 - ; 23 tháng 7 năm 1883; (3 ngày)",
+      "Tiền nhiệm": "Tự Đức",
+      "Kế nhiệm": "Hiệp Hòa",
+      "Sinh": "23 tháng 2 năm 1852; Huế, Đại Nam",
+      "Mất": "6 tháng 10 năm 1883; Huế, Đại Nam",
+      "An táng": "An Lăng (安陵)",
+      "Thê thiếp": "Từ Minh Huệ Hoàng hậu",
+      "Hậu duệ": "19 người con, bao gồm 11 hoàng tử và 8 công chúa",
+      "Tên húy Thụy hiệu Miếu hiệu": "Tên húy Nguyễn Phúc Ưng Ái; Nguyễn Phúc Ưng Chân (阮福膺禛) Thụy hiệu Huệ Hoàng đế (惠皇帝) Miếu hiệu Cung Tông (恭宗)",
+      "Triều đại": "Nhà Nguyễn",
+      "Hoàng gia ca": "Đăng đàn cung",
+      "Thân phụ": "Nguyễn Phúc Hồng Y",
+      "Thân mẫu": "Trần Thị Nga"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
     "name": "Hiệp Hòa",
     "description": "Hiệp Hòa (chữ Hán: 協和; 1 tháng 11 năm 1847 – 29 tháng 11 năm 1883), húy là Nguyễn Phúc Hồng Dật (阮福洪佚), sau khi lên ngôi đổi thành Nguyễn Phúc Thăng (阮福昇), là vị hoàng đế thứ sáu của triều đại nhà Nguyễn trong lịch sử Việt Nam. Trong khoảng thời gian trị vì ngắn ngủi của mình, ông chỉ sử dụng một niên hiệu là Hiệp Hòa nên thường được gọi theo tên này. Ông không có miếu hiệu, được hậu duệ truy tặng làm Văn Lãng Quận vương (文朗郡王), thụy là Trang Cung (莊恭).Thời gian trị vì của ông Là 4 tháng 10 ngày tổng cộng 130 ngày.",
     "properties": {
@@ -1747,6 +3539,29 @@
       "Triều đại": "Nhà Nguyễn",
       "Thân phụ": "Nguyễn Hiến Tổ Thiệu Trị",
       "Thân mẫu": "Thụy tần Trương Thị Thận"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
+    "name": "Kiến Phúc",
+    "description": "Nguyễn Giản Tông (chữ Hán:阮簡宗; 12 tháng 2 năm 1869 – 31 tháng 7 năm 1884), tên thật là Nguyễn Phúc Ưng Đăng (阮福膺登), là vị hoàng đế thứ bảy của triều đại nhà Nguyễn trong lịch sử Việt Nam. Ông lên ngôi ngày 2 tháng 12 năm 1883, tại vị được 8 tháng thì qua đời, được truy tôn miếu hiệu là Nguyễn Giản Tông (簡宗), thuỵ hiệu Nghị Hoàng Đế (毅皇帝), ông dùng niên hiệu là Kiến Phúc (建福) nên còn được gọi là Kiến Phúc Đế (建福帝). Dưới thời vua Kiến Phúc, vào ngày 6 tháng 6 năm 1884, triều đình Huế đã kí với thực dân Pháp bản Hòa ước Giáp Thân (Hòa ước Patenôtre), có chỉnh lý một số điều so với bản Hòa ước Quý Mùi nhưng về cơ bản vẫn công nhận sự \"bảo hộ\" của Pháp đối với đất nước Việt Nam.",
+    "properties": {
+      "Miếu hiệu": "Giản Tông",
+      "Thụy hiệu": "Thiệu Đức Chí Hiếu Uyên Duệ Nghị Hoàng Đế",
+      "Niên hiệu": "Kiến Phúc (1883-1884)",
+      "Tên Húy": "Nguyễn Phúc Ưng Đăng",
+      "Thế thứ": "Con thứ Nguyễn Phúc Hồng Cai, cháu nội Thiệu Trị",
+      "Trị vì": "2 tháng 12 năm 1883 - ; 31 tháng 7 năm 1884; (242 ngày)",
+      "Tiền nhiệm": "Hiệp Hòa",
+      "Kế nhiệm": "Hàm Nghi",
+      "Sinh": "12 tháng 2 năm 1869; Huế, Đại Nam",
+      "Mất": "31 tháng 7 năm 1884; Huế, Đại Nam",
+      "An táng": "30 tháng 11 năm 1884 Bồi Lăng (陪陵)",
+      "Tên húy Niên hiệu Thụy hiệu Miếu hiệu": "Tên húy Nguyễn Phúc Ưng Đăng (阮福膺登) Niên hiệu Kiến Phúc (建福) Thụy hiệu Thiệu Đức Chí Hiếu Uyên Duệ Nghị Hoàng đế (毅皇帝) Miếu hiệu Giản Tông (簡宗)",
+      "Triều đại": "Nhà Nguyễn",
+      "Hoàng gia ca": "Đăng đàn cung",
+      "Thân phụ": "Nguyễn Phúc Hồng Cai",
+      "Thân mẫu": "Bùi Thị Thanh"
     },
     "source": "https://vi.wikipedia.org"
   },
@@ -1776,6 +3591,32 @@
     "source": "https://vi.wikipedia.org"
   },
   {
+    "name": "Đồng Khánh",
+    "description": "Đồng Khánh Đế (chữ Hán: 同慶 19 tháng 2 năm 1864 – 28 tháng 1 năm 1889), tên húy là Nguyễn Phúc Ưng Thị (阮福膺豉) và Nguyễn Phúc Ưng Đường (阮福膺禟 [1]), lên ngôi lấy tên là Nguyễn Phúc Biện (阮福昪),[2] là vị hoàng đế thứ chín của nhà Nguyễn trong lịch sử Việt Nam, tại vị từ năm 1885 đến 1889.",
+    "properties": {
+      "Miếu hiệu": "Cảnh Tông",
+      "Thụy hiệu": "Hoằng Liệt Thống Thiết Mẫn Huệ Thuần Hoàng Đế",
+      "Niên hiệu": "Đồng Khánh (1885–1889)",
+      "Tên Húy": "Nguyễn Phúc Ưng Kỷ Nguyễn Phúc Ưng Đường Nguyễn Phúc Ưng Thị Nguyễn Phúc Biện Chánh Mông",
+      "Thế thứ": "Con trưởng Nguyễn Phúc Hồng Cai, anh Kiến Phúc và Hàm Nghi",
+      "Trị vì": "19 tháng 9 năm 1885 - ; 28 tháng 1 năm 1889; (3 năm, 131 ngày)",
+      "Tiền nhiệm": "Hàm Nghi",
+      "Kế nhiệm": "Thành Thái",
+      "Sinh": "19 tháng 2 năm 1864; Huế, Đại Nam",
+      "Mất": "28 tháng 1 năm 1889 (24 tuổi); Huế, Đại Nam, Liên bang Đông Dương",
+      "An táng": "18 tháng 04 năm 1889 Tư Lăng (思陵)",
+      "Thê thiếp": "Phụ Thiên Thuần hoàng hậu; Hựu Thiên Thuần hoàng hậu; và nhiều bà phi khác.",
+      "Hậu duệ Hậu duệ": "Hậu duệ 6 hoàng tử và 3 công chúa",
+      "Tên thật Niên hiệu Thụy hiệu Miếu hiệu": "Tên thật Nguyễn Phúc Ưng Kỷ (阮福膺祺) Niên hiệu Đồng Khánh (同慶) Thụy hiệu Phối Thiên Minh Vận Hiếu Đức Nhân Vũ Vĩ Công Hoằng Liệt Thông Triết Mẫn Huệ Thuần Hoàng đế ; (配天明運孝德仁武偉功弘烈聰哲敏惠純皇帝) (1916) Miếu hiệu Cảnh Tông (景宗)",
+      "Triều đại": "Nhà Nguyễn",
+      "Hoàng gia ca": "Đăng đàn cung",
+      "Thân phụ": "Nguyễn Phúc Hồng Cai",
+      "Thân mẫu": "Bùi Thị Thanh",
+      "Tôn giáo": "Phật giáo, Nho giáo"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
     "name": "Thành Thái",
     "description": "Thành Thái (chữ Hán: 成泰 14 tháng 3 năm 1879 – 20 tháng 3 năm 1954), tên khai sinh là Nguyễn Phúc Bửu Lân (阮福寶嶙), là vị hoàng đế thứ 10 của triều đại nhà Nguyễn, tại vị từ 1889 đến 1907.",
     "properties": {
@@ -1801,6 +3642,32 @@
     "source": "https://vi.wikipedia.org"
   },
   {
+    "name": "Duy Tân",
+    "description": "Duy Tân (chữ Hán: 維新 19 tháng 9 năm 1900 – 26 tháng 12 năm 1945), tên khai sinh là Nguyễn Phúc Vĩnh San (阮福永珊), là vị hoàng đế thứ 11 của nhà Nguyễn, ở ngôi từ năm 1907 đến năm 1916, sau vua Thành Thái.",
+    "properties": {
+      "Miếu hiệu": "không có",
+      "Thụy hiệu": "Phế Đế",
+      "Niên hiệu": "Duy Tân (1907–1916)",
+      "Tên Húy": "Nguyễn Phúc Vĩnh San Nguyễn Phúc Hoảng",
+      "Thế thứ": "Con thứ Thành Thái",
+      "Trị vì": "5 tháng 9 năm 1907 - ; 6 tháng 5 năm 1916; (8 năm, 244 ngày)",
+      "Tiền nhiệm": "Thành Thái",
+      "Kế nhiệm": "Khải Định",
+      "Sinh": "19 tháng 9 năm 1900; Huế, Đại Nam, Liên bang Đông Dương",
+      "Mất": "26 tháng 12 năm 1945 (45 tuổi); Châu Phi Xích Đạo thuộc Pháp (nay là Cộng hòa Trung Phi)",
+      "An táng": "Huế, Việt Nam",
+      "Phối ngẫu Phối ngẫu": "Phối ngẫu Mai Thị Vàng; Marie Anne Viale; Fernande Antier; Ernestin Maillot",
+      "Hậu duệ": "Armand Viale; Thérèse; Suzy Vĩnh San; Solange; Georges Vĩnh San; Claude Vĩnh San; Joseph Roger Vĩnh San; Ginette; Andrée Vĩnh San",
+      "Tên húy Niên hiệu": "Tên húy Nguyễn Phúc Vĩnh San (阮福永珊) Niên hiệu Duy Tân (維新: 1907 - 1916)",
+      "Triều đại": "Nhà Nguyễn",
+      "Hoàng gia ca": "Đăng đàn cung",
+      "Thân phụ": "Thành Thái",
+      "Thân mẫu": "Nguyễn Thị Định",
+      "Nghề nghiệp": "Nhà cách mạng"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
     "name": "Khải Định",
     "description": "Khải Định Đế (chữ Hán: 啓定帝; 8 tháng 10 năm 1885 – 6 tháng 11 năm 1925), tên khai sinh Nguyễn Phúc Bửu Đảo (阮福寶嶹), là vị hoàng đế thứ 12 của triều đại nhà Nguyễn trong lịch sử Việt Nam, ở ngôi từ 1916 đến 1925. Ông được truy tôn miếu hiệu là Hoằng Tông (弘宗).",
     "properties": {
@@ -1822,6 +3689,35 @@
       "Hoàng gia ca": "Đăng đàn cung",
       "Thân phụ": "Đồng Khánh",
       "Thân mẫu": "Hựu Thiên Thuần Hoàng hậu"
+    },
+    "source": "https://vi.wikipedia.org"
+  },
+  {
+    "name": "Bảo Đại",
+    "description": "Bảo Đại (chữ Hán: 保大, 22 tháng 10 năm 1913 – 31 tháng 7 năm 1997), tên khai sinh: Nguyễn Phúc Vĩnh Thụy (阮福永瑞), là vị hoàng đế thứ 13 và là vị vua cuối cùng của triều đại nhà Nguyễn, cũng là vị hoàng đế cuối cùng của chế độ quân chủ trong lịch sử Việt Nam.",
+    "properties": {
+      "Miếu hiệu": "không có",
+      "Thụy hiệu": "không có",
+      "Niên hiệu": "Bảo Đại (1925–1945)",
+      "Tên Húy": "Nguyễn Phúc Vĩnh Thụy Nguyễn Phúc Thiển",
+      "Thế thứ": "Con Khải Định",
+      "Trị vì": "9 tháng 3 năm 1945 – 30 tháng 8 năm 1945; (174 ngày)",
+      "Đăng quang": "8 tháng 1 năm 1926",
+      "Tiền nhiệm": "Nguyễn Văn Xuân ; (Thủ tướng Chính phủ Lâm thời)",
+      "Kế nhiệm": "Nguyễn Phan Long",
+      "Tại vị": "28 tháng 4 năm 1922 – 5 tháng 11 năm 1925; (3 năm, 191 ngày)",
+      "Tại nhiệm": "10 tháng 9 năm 1945 – 16 tháng 3 năm 1946; (187 ngày)",
+      "Sinh": "(1913-10-22)22 tháng 10, 1913; Huế, Đại Nam, Liên bang Đông Dương",
+      "Mất": "31 tháng 7, 1997(1997-07-31) (83 tuổi); Val-de-Grâce, Paris, Pháp",
+      "An táng": "06 tháng 8 năm 1997; Nghĩa trang Passy",
+      "Vợ": "Nam Phương hoàng hậu (cưới 1934–1963) Thứ phi Lê Thị Phi Ánh Thứ phi Bùi Mộng Điệp Monique Baudot (cưới 1982–1997)",
+      "Hậu duệ Hậu duệ": "Hậu duệ Thái tử Bảo Long (1936 - 2007) Nguyễn Phúc Phương Mai (1937 - 2021) Nguyễn Phúc Phương Liên (sinh 1938) Nguyễn Phúc Phương Dung (sinh 1942) Nguyễn Phúc Bảo Thắng (1943 - 2017) Nguyễn Phúc Phương Thảo (sinh 1946) Nguyễn Phúc Phương Minh (1949 - 2012) Nguyễn Phúc Bảo Ân (sinh 1951) Nguyễn Phúc Bảo Hoàng (1954 - 1955) Nguyễn Phúc Bảo Sơn (1957 - 1987) Nguyễn Phúc Phương Từ Patrick-Edward Bloch",
+      "Tên húy Niên hiệu": "Tên húy Nguyễn Phúc Vĩnh Thụy (阮福永瑞) Niên hiệu Bảo Đại (保大)",
+      "Triều đại": "Nhà Nguyễn",
+      "Thân phụ": "Khải Định",
+      "Thân mẫu": "Từ Cung Hoàng thái hậu",
+      "Tôn giáo": "Phật giáo ; Công giáo",
+      "Chữ ký": ""
     },
     "source": "https://vi.wikipedia.org"
   }
