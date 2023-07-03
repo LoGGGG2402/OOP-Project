@@ -88,7 +88,4 @@ public class Dynasty extends Wikipedia {
         }
         return entity;
     }
-    public static void main(String[] args){
-        new Dynasty();
-    }
 }

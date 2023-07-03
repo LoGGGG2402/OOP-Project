@@ -17,12 +17,17 @@ public class CrawlController {
         new crawler.vansu.Character();
         new crawler.vansu.Dynasty();
         // wikipedia
-        new crawler.wikipedia.Character();
+        new Character();
         new crawler.wikipedia.Dynasty();
         new crawler.wikipedia.Event();
         new crawler.wikipedia.Festival();
 
 
     }
+    public static void main(String[] args){
+        crawl();
+    }
 
+    private static class Character {
+    }
 }
