@@ -61,6 +61,7 @@ public class Character extends Wikipedia {
 
             Document document = Jsoup.parse(connection.getInputStream(), "UTF-8", urlConnect);
             // Get character url
+
             Elements tables = document.select("table[cellpadding = 0] tbody");
             for(Element table: tables){
                 Elements rows=table.select("tr[style = height:50px;]");
