@@ -35,13 +35,13 @@ public class Character extends Wikipedia {
                 String key = e.select("th").text();
                 Element valueElement = e.select(">td").first();
                 if (valueElement != null) {
-                    String replacedText = valueElement.html().replace("<br>", "; ");
+                    String replacedText = valueElement.html().replace("<br>", "; ").replace("<a", ";<a");
                     String value = Jsoup.parse(replacedText).text();
                     if(!key.equals("") && !key.equals("Thông tin chung")){
                         properties.addProperty(key,value);}
                 }
             }
-            entity.add("properties",properties);
+            entity.add("properties", properties);
         } catch(IOException | URISyntaxException | NullPointerException e){
             System.out.println(url);
             return entity;
