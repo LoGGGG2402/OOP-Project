@@ -27,22 +27,34 @@ public class Character extends Wikipedia {
             connection.setReadTimeout(10000);
 
             Document document = Jsoup.parse(connection.getInputStream(), "UTF-8", url);
-            entity.addProperty("description",document.getElementsByClass("mw-parser-output").select("p").first().text());
+            entity.addProperty("description", document.getElementsByClass("mw-parser-output").select("p").first().text());
 
             Elements table = document.getElementsByClass("infobox").select("[style=width:22em]>tbody>tr");
             JsonObject properties = new JsonObject();
-            for(Element e:table) {
+            for (Element e : table) {
                 String key = e.select("th").text();
                 Element valueElement = e.select(">td").first();
                 if (valueElement != null) {
                     String replacedText = valueElement.html().replace("<br>", "; ");
                     String value = Jsoup.parse(replacedText).text();
-                    if(!key.equals("") && !key.equals("Thông tin chung")){
-                        properties.addProperty(key,value);}
+                    if(key.length()%2==1){
+                        String s1=key.substring(0,(key.length()-1)/2);
+                        if (key.equals(s1+" "+s1)){
+                            key=s1;
+                        }
+                    }
+                    if (value.indexOf(key)==0) {
+                        value=value.replace(key, "");
+                    }
+                    if(value.equals("xem danh sách"))
+                        value="không rõ";
+                    if (!key.equals("") && !key.equals("Thông tin chung") && key.split(" ").length <= 3 ) {
+                        properties.addProperty(key, value);
+                    }
                 }
             }
-            entity.add("properties",properties);
-        } catch(IOException | URISyntaxException | NullPointerException e){
+            entity.add("properties", properties);
+        } catch (IOException | URISyntaxException | NullPointerException e) {
             System.out.println(url);
             return entity;
         }
@@ -50,7 +62,7 @@ public class Character extends Wikipedia {
     }
 
 
-    protected JsonArray getEntities(){
+    protected JsonArray getEntities() {
         JsonArray entities = new JsonArray();
         String urlConnect = getBaseUrl() + "/wiki/Vua_Việt_Nam";
 
@@ -63,19 +75,19 @@ public class Character extends Wikipedia {
             // Get character url
 
             Elements tables = document.select("table");
-            for(Element table: tables) {
+            for (Element table : tables) {
                 Elements rows = table.select("tbody > tr[style *= height:50px;]");
                 for (Element row : rows) {
                     JsonObject entity = new JsonObject();
-                    entity.addProperty("name",row.select("td").get(1).text().replaceAll("\\[.*?\\]", ""));
+                    entity.addProperty("name", row.select("td").get(1).text().replaceAll("\\[.*?\\]", ""));
                     JsonObject properties = new JsonObject();
-                    properties.addProperty("Miếu hiệu",row.select("td").get(2).text().replaceAll("\\[.*?\\]", ""));
-                    properties.addProperty("Thụy hiệu",row.select("td").get(3).text().replaceAll("\\[.*?\\]", ""));
-                    properties.addProperty("Niên hiệu",row.select("td").get(4).text().replaceAll("\\[.*?\\]", ""));
-                    properties.addProperty("Tên Húy",row.select("td").get(5).text().replaceAll("\\[.*?\\]", ""));
-                    properties.addProperty("Thế thứ",row.select("td").get(6).text().replaceAll("\\[.*?\\]", ""));
-                    properties.addProperty("Trị vì",row.select("td").get(7).text().replaceAll("\\[.*?\\]", ""));
-                    JsonObject more = getEntity(getBaseUrl()+row.select("td").get(1).select("a").get(0).attr("href"));
+                    properties.addProperty("Miếu hiệu", row.select("td").get(2).text().replaceAll("\\[.*?\\]", ""));
+                    properties.addProperty("Thụy hiệu", row.select("td").get(3).text().replaceAll("\\[.*?\\]", ""));
+                    properties.addProperty("Niên hiệu", row.select("td").get(4).text().replaceAll("\\[.*?\\]", ""));
+                    properties.addProperty("Tên Húy", row.select("td").get(5).text().replaceAll("\\[.*?\\]", ""));
+                    properties.addProperty("Thế thứ", row.select("td").get(6).text().replaceAll("\\[.*?\\]", ""));
+                    properties.addProperty("Trị vì", row.select("td").get(7).text().replaceAll("\\[.*?\\]", ""));
+                    JsonObject more = getEntity(getBaseUrl() + row.select("td").get(1).select("a").get(0).attr("href"));
 
                     if (more.has("description")) {
                         entity.addProperty("description", more.get("description").getAsString());
@@ -87,7 +99,7 @@ public class Character extends Wikipedia {
                         }
                     }
 
-                    entity.add("properties",properties);
+                    entity.add("properties", properties);
                     entities.add(entity);
 
                 }
