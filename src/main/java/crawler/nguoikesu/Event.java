@@ -1,7 +1,5 @@
 package crawler.nguoikesu;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import com.google.gson.JsonObject;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -9,7 +7,9 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.io.IOException;
-import java.net.*;
+import java.net.HttpURLConnection;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.Vector;
 
 public class Event extends NguoiKeSu{
@@ -93,8 +93,12 @@ public class Event extends NguoiKeSu{
             entity.addProperty("description", description.toString());
 
             // Get image
-            String image = getBaseUrl() + document.select("img:nth-child(1)").attr("data-src");
-            entity.addProperty("image", image);
+            if (document.select("img").first() != null){
+                String image = document.select("img").first().attr("data-src");
+                entity.addProperty("image", getImg(image.contains("http") ? image : (getBaseUrl() + image)));
+            }else {
+                System.out.println(url);
+            }
 
 
         } catch (IOException | URISyntaxException | NullPointerException e) {
@@ -130,100 +134,5 @@ public class Event extends NguoiKeSu{
             }
         }
         return urls;
-    }
-
-    public static void main(String[] args) {
-//        String url = "https://nguoikesu.com/tu-lieu/quan-su/chien-tranh-nguyen-mong-dai-viet-lan-1";
-//
-//        JsonObject entity = new JsonObject();
-//        try {
-//            HttpURLConnection connection = (HttpURLConnection) new URI(url).toURL().openConnection();
-//            connection.setRequestMethod("GET");
-//            connection.setReadTimeout(10000);
-//
-//            Document document = Jsoup.parse(connection.getInputStream(), "UTF-8", url);
-//
-//            // Get name
-//            String name = document.select("#content > div.com-content-article.item-page > div.page-header > h1").text();
-//            entity.addProperty("name", name);
-//
-//            // Article body
-//            Element articleBody = document.select("#content > div.com-content-article.item-page > div.com-content-article__body").first();
-//            assert articleBody != null;
-//            articleBody.select("sup").remove();
-//            Elements headings = articleBody.select("h2, h3");
-//            if (!headings.isEmpty()) {
-//                Element firstHeading = headings.first();
-//                assert firstHeading != null;
-//                Element nextElement = firstHeading.nextElementSibling();
-//                while (nextElement != null) {
-//                    Element currentElement = nextElement;
-//                    nextElement = currentElement.nextElementSibling();
-//                    currentElement.remove();
-//                }
-//            }
-//
-//            // Get info
-//            JsonObject properties = new JsonObject();
-//            for (Element element : articleBody.select("tr:not(:has(tr))")) {
-//                String key = "";
-//                String value = "";
-//
-//                Element valueElement = element.select(">th").first();
-//                if (valueElement != null) {
-//                    String replacedText = valueElement.html().replace("<br>", "; ");
-//                    key = Jsoup.parse(replacedText).text();
-//                }
-//
-//                valueElement = element.select(">td").first();
-//                if (valueElement != null) {
-//                    String replacedText = valueElement.html().replace("<br>", "; ");
-//                    value = Jsoup.parse(replacedText).text();
-//                }
-//
-//                if (key.isEmpty()){
-//                    valueElement = element.select(">td:nth-child(1)").first();
-//                    if (valueElement != null) {
-//                        String replacedText = valueElement.html().replace("<br>", "; ");
-//                        key = Jsoup.parse(replacedText).text();
-//                    }
-//                    valueElement = element.select(">td:nth-child(2)").first();
-//                    if (valueElement != null) {
-//                        String replacedText = valueElement.html().replace("<br>", "; ");
-//                        value = Jsoup.parse(replacedText).text();
-//                    }
-//                }
-//                if (!key.matches(".*[a-zA-Z].*|.*\\d.*") && !value.matches(".*[a-zA-Z].*|.*\\d.*")){
-//                    continue;
-//                }
-//                if (key.equals("")){
-//                    properties.addProperty(value, "");
-//                    continue;
-//                }
-//                properties.addProperty(key, value);
-//
-//            }
-//
-//            entity.add("properties", properties);
-//
-//            Gson gson = new GsonBuilder().setPrettyPrinting().create();
-//
-//            System.out.println(gson.toJson(properties));
-//
-//            // Get description
-//            StringBuilder description = new StringBuilder();
-//            articleBody.select("p").forEach(element -> description.append(element.text()).append("\n"));
-//            entity.addProperty("description", description.toString());
-//
-//            // Get image
-//
-//        } catch (IOException | URISyntaxException | NullPointerException e) {
-//            e.printStackTrace();
-//        }
-
-        new Event();
-
-
-
     }
 }

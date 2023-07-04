@@ -80,8 +80,10 @@ public class Monument extends NguoiKeSu{
             entity.addProperty("description", description.toString());
 
             // Get image
-            String image = getBaseUrl() + document.select("img:nth-child(1)").attr("data-src");
-            entity.addProperty("image", image);
+            if (document.select("img").first() != null){
+                String image = document.select("img").first().attr("data-src");
+                entity.addProperty("image", getImg(image.contains("http") ? image : (getBaseUrl() + image)));
+            }
 
             System.out.print("\rCrawling " + name + " done");
 

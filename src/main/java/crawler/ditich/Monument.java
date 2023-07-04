@@ -22,6 +22,8 @@ public class Monument extends Ditich{
                 HttpURLConnection connection = (HttpURLConnection) new URI(urlConnect.replace("*/*", String.valueOf(page))).toURL().openConnection();
                 connection.setRequestMethod("GET");
                 connection.setReadTimeout(10000);
+                System.out.print("\rCrawling " + figureUrl.size() + " urls");
+
 
                 Document document = Jsoup.parse(connection.getInputStream(), "UTF-8", urlConnect);
 
@@ -36,6 +38,7 @@ public class Monument extends Ditich{
                 }
                 page++;
             } catch (IOException | URISyntaxException e) {
+                System.out.println("Error: " + urlConnect.replace("*/*", String.valueOf(page)));
                 e.printStackTrace();
             }
         }
@@ -69,6 +72,12 @@ public class Monument extends Ditich{
             });
 
             properties.addProperty("địa chỉ", document.select("#block-harvard-content > article > div > section > div > div.hl__library-info__sidebar > div:nth-child(1) > section > div > div > div.hl__contact-info__address > span").text());
+
+            // get image
+            if(document.select("img").first() != null){
+                String image =  document.select("img").first().attr("src");
+                entity.addProperty("image", getImg(image.contains("http") ? image : (getBaseUrl() + image)));
+            }
 
             entity.add("properties", properties);
         } catch (IOException | URISyntaxException e) {

@@ -1,13 +1,17 @@
 package entity;
 
+import com.google.gson.JsonObject;
+
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public abstract class Entity implements Serializable {
     private final String name;
     private String description;
-    private final Map<String, String> properties = new HashMap<>();
+    private final JsonObject properties = new JsonObject();
 
     protected Entity(String name, String description) {
         this.name = name;
@@ -15,7 +19,7 @@ public abstract class Entity implements Serializable {
     }
 
     protected void addProperty(String key, String value) {
-        properties.put(key, value);
+        properties.addProperty(key, value);
     }
 
     public String getName() {
@@ -30,8 +34,21 @@ public abstract class Entity implements Serializable {
         this.description = description;
     }
 
-    public Map<String, String> getProperties() {
+    public JsonObject getProperties() {
         return properties;
+    }
+
+    public List<String> relatedEntity(List<String> charactersNames) {
+        String property = properties.toString();
+        List<String> relatedCharacters = new ArrayList<>();
+
+        for (String character : charactersNames) {
+            if (property.contains(character) || description.contains(character)) {
+                relatedCharacters.add(character);
+            }
+        }
+
+        return relatedCharacters;
     }
 
 }

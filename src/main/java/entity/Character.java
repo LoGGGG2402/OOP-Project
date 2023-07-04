@@ -2,6 +2,7 @@ package entity;
 
 import com.google.gson.JsonObject;
 
+import java.util.List;
 import java.util.Map;
 
 public class Character  extends Entity{
@@ -50,8 +51,8 @@ public class Character  extends Entity{
         }
 
         for (String key: character.getProperties().keySet()){
-            if (!getProperties().containsKey(key)){
-                addProperty(key, character.getProperties().get(key));
+            if (!getProperties().has(key)){
+                addProperty(key, character.getProperties().get(key).getAsString());
             }
         }
     }

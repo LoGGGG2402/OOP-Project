@@ -41,6 +41,12 @@ public class Character extends Wikipedia {
                         properties.addProperty(key,value);}
                 }
             }
+
+            // Get image
+            if (document.select("img").first() != null) {
+                String image = document.select("img").first().attr("src");
+                entity.addProperty("image", getImg(image.contains("http") ? image : getBaseUrl() + image));
+            }
             entity.add("properties", properties);
         } catch(IOException | URISyntaxException | NullPointerException e){
             System.out.println(url);
@@ -88,6 +94,9 @@ public class Character extends Wikipedia {
                     }
 
                     entity.add("properties",properties);
+                    if (more.has("image")) {
+                        entity.addProperty("image", more.get("image").getAsString());
+                    }
                     entities.add(entity);
 
                 }
