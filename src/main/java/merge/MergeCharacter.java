@@ -32,4 +32,6 @@ public class MergeCharacter extends merge.Merge{
         }
     }
 
+    // (?<!\d)\d{3}(?!\d)|\d{4}
+
 }
