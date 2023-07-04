@@ -2,6 +2,8 @@ package entity;
 
 import com.google.gson.JsonObject;
 
+import java.util.Map;
+
 public class Character  extends Entity{
     private String bod;
     private String position;
@@ -14,6 +16,44 @@ public class Character  extends Entity{
 
     public Character(JsonObject jsonObject) {
         super(jsonObject.get("name").getAsString(), jsonObject.has("description") ? jsonObject.get("description").getAsString() : "");
+    }
+
+    public void merge(Character character){
+        if (character.getDescription().trim().length() > getDescription().trim().length()){
+            setDescription(character.getDescription());
+        }
+        if (bod.trim().length() < character.getBod().trim().length()){
+            bod = character.getBod();
+        }
+        if (character.getPosition().trim().length() > position.trim().length()) {
+            position = character.getPosition();
+        }
+
+        if (character.getDad().trim().length() > dad.trim().length()) {
+            dad = character.getDad();
+        }
+
+        if (character.getMom().trim().length() > mom.trim().length()) {
+            mom = character.getMom();
+        }
+
+        if (character.getPartner().trim().length() > partner.trim().length()) {
+            partner = character.getPartner();
+        }
+
+        if (character.getChildren().trim().length() > children.trim().length()) {
+            children = character.getChildren();
+        }
+
+        if (character.getRelatives().trim().length() > relatives.trim().length()) {
+            relatives = character.getRelatives();
+        }
+
+        for (String key: character.getProperties().keySet()){
+            if (!getProperties().containsKey(key)){
+                addProperty(key, character.getProperties().get(key));
+            }
+        }
     }
 
     public String getBod() {

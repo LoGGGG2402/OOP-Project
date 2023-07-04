@@ -6,7 +6,7 @@ import java.util.Map;
 
 public abstract class Entity implements Serializable {
     private final String name;
-    private final String description;
+    private String description;
     private final Map<String, String> properties = new HashMap<>();
 
     protected Entity(String name, String description) {
@@ -24,6 +24,10 @@ public abstract class Entity implements Serializable {
 
     public String getDescription() {
         return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public Map<String, String> getProperties() {
