@@ -62,13 +62,15 @@ public class Monument extends NguoiKeSu{
                         value = Jsoup.parse(replacedText).text();
                     }
                 }
-                if (!key.matches(".*[a-zA-Z].*|.*\\d.*") && !value.matches(".*[a-zA-Z].*|.*\\d.*")){
-                    continue;
-                }
-                if (key.equals("")){
+
+                if (key.equals("") || key.equals(".")){
+                    if (value.equals("") || value.equals(".")){
+                        continue;
+                    }
                     properties.addProperty(value, "");
                     continue;
                 }
+
                 properties.addProperty(key, value);
             }
 

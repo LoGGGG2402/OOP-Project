@@ -22,83 +22,52 @@ public class Character  extends Entity{
     private String partner;
     private String children;
     private String relatives;
-    private String image;
-    private String source;
 
     public Character(JsonObject jsonObject) {
-        super(jsonObject.get("name").getAsString(), jsonObject.has("description") ? jsonObject.get("description").getAsString() : "");
-        image = jsonObject.has("image") &&  !jsonObject.get("image").isJsonNull() ? jsonObject.get("image").getAsString() : null;
-        getPropertiesFromJson(jsonObject);
-        source = jsonObject.get("source").getAsString();
+        super(jsonObject);
     }
 
     public void merge(Character character){
-        if (character.getDescription() != null){
-            if (getDescription() == null){
+        if (character.getDescription() != null && (getDescription() == null || character.getDescription().trim().length() > getDescription().trim().length())) {
                 setDescription(character.getDescription());
-            } else if (character.getDescription().trim().length() > getDescription().trim().length()){
-                setDescription(character.getDescription());
-            }
         }
 
-        if (character.getDob() != null){
-            if (getDob() == null){
+        if (character.getDob() != null && (getDob() == null || character.getDob().trim().length() > getDob().trim().length())) {
                 dob = character.getDob();
-            } else if (character.getDob().trim().length() > getDob().trim().length()){
-                dob = character.getDob();
-            }
+
         }
 
-        if (character.getPosition() != null){
-            if (getPosition() == null){
+
+        if (character.getPosition() != null && (getPosition() == null || character.getPosition().trim().length() > getPosition().trim().length())) {
                 position = character.getPosition();
-            } else if (character.getPosition().trim().length() > getPosition().trim().length()){
-                position = character.getPosition();
-            }
+
         }
 
-        if (character.getDad() != null){
-            if (getDad() == null){
+        if (character.getDad() != null && (getDad() == null || character.getDad().trim().length() > getDad().trim().length())) {
                 dad = character.getDad();
-            } else if (character.getDad().trim().length() > getDad().trim().length()){
-                dad = character.getDad();
-            }
+
         }
 
-        if (character.getMom() != null){
-            if (getMom() == null){
-                mom = character.getMom();
-            } else if (character.getMom().trim().length() > getMom().trim().length()){
-                mom = character.getMom();
-            }
+        if (character.getMom() != null && (getMom() == null || character.getMom().trim().length() > getMom().trim().length())) {
+            mom = character.getMom();
         }
 
-        if (character.getPartner() != null){
-            if (getPartner() == null){
+        if (character.getPartner() != null && (getPartner() == null || character.getPartner().trim().length() > getPartner().trim().length())) {
                 partner = character.getPartner();
-            } else if (character.getPartner().trim().length() > getPartner().trim().length()){
-                partner = character.getPartner();
-            }
         }
 
-        if (character.getChildren() != null){
-            if (getChildren() == null){
+        if (character.getChildren() != null && (getChildren() == null || character.getChildren().trim().length() > getChildren().trim().length())) {
                 children = character.getChildren();
-            } else if (character.getChildren().trim().length() > getChildren().trim().length()){
-                children = character.getChildren();
-            }
+
         }
 
-        if (character.getRelatives() != null){
-            if (getRelatives() == null){
+        if (character.getRelatives() != null && (getRelatives() == null || character.getRelatives().trim().length() > getRelatives().trim().length())) {
                 relatives = character.getRelatives();
-            } else if (character.getRelatives().trim().length() > getRelatives().trim().length()){
-                relatives = character.getRelatives();
-            }
+
         }
 
-        if (character.getImage() != null && image == null) {
-            image = character.getImage();
+        if (character.getImage() != null && getImage() == null) {
+            setImage(character.getImage());
         }
 
         for (String key: character.getProperties().keySet()){
@@ -107,10 +76,11 @@ public class Character  extends Entity{
             }
         }
 
-        source += ", " + character.getSource();
+        setSource(getSource() + " , " + character.getSource());
     }
 
-    private void getPropertiesFromJson(JsonObject jsonObject) {
+    @Override
+    protected void getPropertiesFromJson(JsonObject jsonObject) {
         processDad(jsonObject);
         processMom(jsonObject);
         processPartner(jsonObject);
@@ -161,7 +131,7 @@ public class Character  extends Entity{
                 }
                 else
                 {
-                    pattern = Pattern.compile("sinh\\s+[^)]+");
+                    pattern = Pattern.compile("[\\d?]{0,4}\s?[-–]\s?[\\d?]{0,2}\s?tháng\s[\\d?]{1,2}\s?năm\s[\\d?]{0,4}\s?", Pattern.CANON_EQ);
                     matcher = pattern.matcher(description);
                     if (matcher.find())
                     {
@@ -169,7 +139,7 @@ public class Character  extends Entity{
                     }
                     else
                     {
-                        pattern = Pattern.compile("[\\d?]{0,2} ?tháng [\\d?]{1,2} năm [\\d?]{0,4} ?[-–] [\\d?]{0,2} ?tháng [\\d?]{1,2} năm [\\d?]{0,4} ?");
+                        pattern = Pattern.compile("[\\d?]{0,2} ?tháng [\\d?]{1,2} năm [\\d?]{0,4} ?[-–] [\\d?]{0,2} ?tháng [\\d?]{1,2} năm [\\d?]{0,4} ?", Pattern.CANON_EQ);
                         matcher = pattern.matcher(description);
                         if (matcher.find())
                         {
@@ -181,6 +151,13 @@ public class Character  extends Entity{
                             matcher = pattern.matcher(description);
                             if (matcher.find()){
                                 dob = matcher.group();
+                            }
+                            else {
+                                pattern = Pattern.compile("sinh\\s+[^).]+");
+                                matcher = pattern.matcher(description);
+                                if (matcher.find()) {
+                                    dob = matcher.group();
+                                }
                             }
                         }
                     }
@@ -202,6 +179,19 @@ public class Character  extends Entity{
 
         }
 
+        if (dob != null && this.location != null)
+        {
+            dob = this.location + "," + dob;
+        }
+
+        if (dob != null && dob.contains(";")) {
+            dob = dob.replace(";", "");
+        }
+
+        if (dob != null && dob.matches("\\D+"))
+        {
+            dob = null;
+        }
     }
 
     private void processPostion(JsonObject jsonObject) {
@@ -216,7 +206,7 @@ public class Character  extends Entity{
         //process from Vansu
         if (jsonObject.get("source").getAsString().equals("https://vansu.vn"))
         {
-            Pattern pattern = Pattern.compile("^(.*?)(?=, (?:con|quê|sinh ngày|sinh quán|sinh|tên|cháu|nguyên quán|không rõ))");
+            Pattern pattern = Pattern.compile("^(.*?)(?=, (?:con|quê|sinh ngày|sinh quán|sinh|tên|cháu|nguyên quán|không rõ))", Pattern.CANON_EQ);
             Matcher matcher = pattern.matcher(description);
             if (matcher.find()) {
                 position = matcher.group(1).trim();
@@ -269,8 +259,7 @@ public class Character  extends Entity{
 
             else if (properties.entrySet().isEmpty() || properties.entrySet().size() == 1)
             {
-                String regex = "(?<=là ).*?(?=\\.)";
-                Pattern pattern = Pattern.compile(regex);
+                Pattern pattern = Pattern.compile("(?<=là ).*?(?=\\.)", Pattern.CANON_EQ);
                 Matcher matcher = pattern.matcher(description);
                 if (matcher.find()) {
                     position = matcher.group();
@@ -299,10 +288,8 @@ public class Character  extends Entity{
 
     private void processLocation(JsonObject jsonObject) {
         JsonObject properties = new JsonObject();
-        if (jsonObject.get("source").getAsString().equals("https://vansu.vn") && (properties.has("Tỉnh thành"))) {
-                location = properties.get("Tỉnh thành").getAsString();
-
-
+        if (jsonObject.get("source").getAsString().equals("https://vansu.vn") && (properties.has("Tỉnh thành")) && (!properties.get("Tỉnh thành").getAsString().equals("Không rõ")))
+                {location = properties.get("Tỉnh thành").getAsString();
         }
     }
 
@@ -313,7 +300,7 @@ public class Character  extends Entity{
         if (jsonObject.get("source").getAsString().equals("https://nguoikesu.com")
             || jsonObject.get("source").getAsString().equals("https://vi.wikipedia.org"))
         {
-            Pattern pattern_dad = Pattern.compile("Cha|Thân phụ|Bố");
+            Pattern pattern_dad = Pattern.compile("Cha|Thân phụ|Bố", Pattern.CANON_EQ);
             Matcher matcher_dad;
             for(String fieldName:properties.keySet())
             {
@@ -328,6 +315,10 @@ public class Character  extends Entity{
             dad = null;
         }
 
+        if (dad != null && dad.contains(";")) {
+            dad = dad.replace(";", "");
+        }
+
     }
 
     private void processMom(JsonObject jsonObject) {
@@ -337,7 +328,7 @@ public class Character  extends Entity{
         if (jsonObject.get("source").getAsString().equals("https://nguoikesu.com")
             || jsonObject.get("source").getAsString().equals("https://vi.wikipedia.org"))
         {
-            Pattern pattern_mom = Pattern.compile("Mẹ|Thân mẫu|Cha mẹ");
+            Pattern pattern_mom = Pattern.compile("Mẹ|Thân mẫu|Cha mẹ", Pattern.CANON_EQ);
             Matcher matcher_mom;
             for(String fieldName:properties.keySet())
             {
@@ -352,6 +343,10 @@ public class Character  extends Entity{
         if (mom!= null && mom.replace("?","").trim().equals("")) {
             mom = null;
         }
+
+        if (mom != null && mom.contains(";")) {
+            mom = mom.replace(";", "");
+        }
     }
 
     private void processPartner(JsonObject jsonObject) {
@@ -359,7 +354,7 @@ public class Character  extends Entity{
         //process for Nguoikesu and Wikipedia
         if (jsonObject.get("source").getAsString().equals("https://nguoikesu.com"))
         {
-            Pattern pattern_partner = Pattern.compile("Vợ|Chồng|Phối ngẫu|Thê thiếp|Phu quân|Hoàng hậu|Hậu phi");
+            Pattern pattern_partner = Pattern.compile("Vợ|Chồng|Phối ngẫu|Thê thiếp|Phu quân|Hoàng hậu|Hậu phi", Pattern.CANON_EQ);
             Matcher matcher;
             for(String fieldName:properties.keySet())
             {
@@ -371,21 +366,21 @@ public class Character  extends Entity{
             }
 
             if (properties.has("Hoàng hậu") && (properties.get("Hoàng hậu").getAsString().equals(""))) {
-                    int index = 0;
-                    for (String key : properties.keySet()) {
-                        if (key.equals("Hoàng hậu")) {
-                            break;
-                        }
-                        index++;
+                int index = 0;
+                for (String key : properties.keySet()) {
+                    if (key.equals("Hoàng hậu")) {
+                        break;
                     }
-                    if (index + 1 < properties.keySet().size())
-                    {partner = (String) properties.keySet().toArray()[index + 1];}
+                    index++;
+                }
+                if (index + 1 < properties.keySet().size())
+                {partner = (String) properties.keySet().toArray()[index + 1];}
 
             }
         }
         else if (jsonObject.get("source").getAsString().equals("https://vi.wikipedia.org"))
         {
-            Pattern pattern_partner = Pattern.compile("Vợ|Chồng|Phối ngẫu|Thê thiếp|Phu quân|Hoàng hậu|Hậu phi|Hậu phi Hậu phi");
+            Pattern pattern_partner = Pattern.compile("Vợ|Chồng|Phối ngẫu|Thê thiếp|Phu quân|Hoàng hậu|Hậu phi|Hậu phi Hậu phi", Pattern.CANON_EQ);
             Matcher matcher;
             for(String fieldName:properties.keySet())
             {
@@ -400,13 +395,14 @@ public class Character  extends Entity{
         if (partner!=null && partner.replace("?","").trim().equals("")) {
             partner = null;
         }
+
     }
 
     private void processChildren(JsonObject jsonObject) {
         JsonObject properties = jsonObject.get("properties").getAsJsonObject();
         if (jsonObject.get("source").getAsString().equals("https://nguoikesu.com"))
         {
-            Pattern pattern_children = Pattern.compile("Con cái|Con|Hậu duệ|Hậu duệ Hậu duệ");
+            Pattern pattern_children = Pattern.compile("Con cái|Con|Hậu duệ|Hậu duệ Hậu duệ", Pattern.CANON_EQ);
             Matcher matcher_children;
             for(String fieldName:properties.keySet())
             {
@@ -418,21 +414,21 @@ public class Character  extends Entity{
             }
 
             if (properties.has("Hậu duệ") && (properties.get("Hậu duệ").getAsString().equals(""))) {
-                    int index = 0;
-                    for (String key : properties.keySet()) {
-                        if (key.equals("Hậu duệ")) {
-                            break;
-                        }
-                        index++;
+                int index = 0;
+                for (String key : properties.keySet()) {
+                    if (key.equals("Hậu duệ")) {
+                        break;
                     }
-                    if (index + 1 < properties.keySet().size())
-                        children = (String) properties.keySet().toArray()[index + 1];
+                    index++;
+                }
+                if (index + 1 < properties.keySet().size())
+                    children = (String) properties.keySet().toArray()[index + 1];
 
             }
         }
         else if (jsonObject.get("source").getAsString().equals("https://vi.wikipedia.org"))
         {
-            Pattern pattern_children = Pattern.compile("Con cái|Con|Hậu duệ|Hậu duệ Hậu duệ");
+            Pattern pattern_children = Pattern.compile("Con cái|Con|Hậu duệ|Hậu duệ Hậu duệ", Pattern.CANON_EQ);
             Matcher matcher_children;
             for(String fieldName:properties.keySet())
             {
@@ -448,8 +444,8 @@ public class Character  extends Entity{
     private void processRelatives(JsonObject jsonObject) {
         JsonObject properties = jsonObject.get("properties").getAsJsonObject();
         if (jsonObject.get("source").getAsString().equals("https://vi.wikipedia.org") && (StringUtils.isEmpty(dad) && (properties.has("Tiền nhiệm"))))
-                {
-                    dad = properties.get("Tiền nhiệm").getAsString();
+        {
+            dad = properties.get("Tiền nhiệm").getAsString();
 
 
         }
@@ -474,10 +470,6 @@ public class Character  extends Entity{
         if (children != null)
         {
             relatives += (relatives.equals("") ? "" : "; ") + children;
-        }
-
-        if (relatives.equals("")) {
-            relatives = null;
         }
     }
 
@@ -511,13 +503,6 @@ public class Character  extends Entity{
         return relatives;
     }
 
-    public String getImage() {
-        return image;
-    }
-
-    public String getSource() {
-        return source;
-    }
 
     @Override
     public String toString() {
@@ -527,12 +512,14 @@ public class Character  extends Entity{
                + "\n" + "Dad: " + this.dad
                + "\n" + "Children: " + this.children
                + "\n" + "Relatives: " + this.relatives
-               + "\n" + "Source: " + this.source;
+               + "\n" + "Source: " + this.getSource()
+               + "\n" + "Number of sources: " + this.getSource().split(" , ").length
+               + "\n" + "Description: " + this.getDescription();
     }
 
 
     public static void main(String[] args) throws FileNotFoundException {
-        JsonArray jsonArray = JsonParser.parseReader(new FileReader("data/Character/Người Kể Sử.json")).getAsJsonArray();
+        JsonArray jsonArray = JsonParser.parseReader(new FileReader("data/Character/Văn Sử.json")).getAsJsonArray();
         for (JsonElement jsonElement : jsonArray) {
             if (jsonElement.isJsonNull()) {
                 continue;

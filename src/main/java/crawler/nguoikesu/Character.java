@@ -93,6 +93,12 @@ public class Character extends NguoiKeSu{
                         value = Jsoup.parse(replacedText).text();
                     }
                 }
+                if (key.isEmpty() || key.equals(".")){
+                    if(value.isEmpty() || value.equals(".")){
+                        continue;
+                    }
+                    properties.addProperty(value, "");
+                }
                 properties.addProperty(key, value);
             }
 
@@ -103,7 +109,6 @@ public class Character extends NguoiKeSu{
             articleBody.select("p").forEach(element -> description.append(element.text()).append("\n"));
             entity.addProperty("description", description.toString());
 
-            // Get image
             // Get image
             if (articleBody.select("img").first() != null){
                 String image = articleBody.select("img").first().attr("data-src");

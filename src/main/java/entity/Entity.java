@@ -11,12 +11,23 @@ import java.util.Map;
 public abstract class Entity implements Serializable {
     private final String name;
     private String description;
+    private String image;
+    private String source;
     private final JsonObject properties = new JsonObject();
 
-    protected Entity(String name, String description) {
-        this.name = name;
-        this.description = description;
+    protected Entity(JsonObject jsonObject) {
+        this.name = jsonObject.get("name").getAsString();
+        this.description = jsonObject.has("description") ? jsonObject.get("description").getAsString() : null;
+        this.image = jsonObject.has("image") && !jsonObject.get("image").isJsonNull() ? jsonObject.get("image").getAsString() : null;
+        this.source = jsonObject.has("source") ? jsonObject.get("source").getAsString() : null;
+        if (jsonObject.has("properties")) {
+            JsonObject pro = jsonObject.get("properties").getAsJsonObject();
+            pro.entrySet().forEach(entry -> this.properties.addProperty(entry.getKey(), entry.getValue().getAsString()));
+        }
+        getPropertiesFromJson(jsonObject);
     }
+
+    protected abstract void getPropertiesFromJson(JsonObject jsonObject);
 
     protected void addProperty(String key, String value) {
         properties.addProperty(key, value);
@@ -32,6 +43,22 @@ public abstract class Entity implements Serializable {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
+    public String getSource() {
+        return source;
+    }
+
+    public void setSource(String source) {
+        this.source = source;
     }
 
     public JsonObject getProperties() {

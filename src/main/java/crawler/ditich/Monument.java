@@ -72,7 +72,6 @@ public class Monument extends Ditich{
                     }
                 }
             });
-
             properties.addProperty("địa chỉ", document.select("#block-harvard-content > article > div > section > div > div.hl__library-info__sidebar > div:nth-child(1) > section > div > div > div.hl__contact-info__address > span").text());
 
             // get image

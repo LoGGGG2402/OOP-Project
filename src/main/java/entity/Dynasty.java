@@ -29,6 +29,11 @@ public class Dynasty extends Entity{
     private List<JsonObject> timeLineJson;
 
     public Dynasty(JsonObject jsonObject) {
-        super(jsonObject.get("name").getAsString(), jsonObject.has("description") ? jsonObject.get("description").getAsString() : "");
+        super(jsonObject);
+    }
+
+    @Override
+    protected void getPropertiesFromJson(JsonObject jsonObject) {
+
     }
 }

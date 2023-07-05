@@ -12,6 +12,11 @@ public class Event extends Entity{
     private String time;
     private String location;
     public Event(JsonObject jsonObject) {
-        super(jsonObject.get("name").getAsString(), jsonObject.has("description") ? jsonObject.get("description").getAsString() : "");
+        super(jsonObject);
+    }
+
+    @Override
+    protected void getPropertiesFromJson(JsonObject jsonObject) {
+
     }
 }
