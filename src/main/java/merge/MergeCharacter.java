@@ -2,7 +2,6 @@ package merge;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
 import com.google.gson.stream.JsonReader;
 import entity.Character;
 
@@ -95,10 +94,9 @@ public class MergeCharacter extends merge.Merge{
         }
     }
 
-
     // compare
     private boolean equalCharacter(Character oldChar, Character newChar){
-        return !(!checkDob(oldChar.getBod(), newChar.getBod()) && !checkRealtion(oldChar.getRelatives(), newChar.getRelatives()));
+        return !(!checkDob(oldChar.getDob(), newChar.getDob()) && !checkRealtion(oldChar.getRelatives(), newChar.getRelatives() ) && !checkPosition(oldChar.getPosition(), newChar.getPosition()));
     }
 
     private boolean checkDob(String oldDob, String newDob){
@@ -120,6 +118,12 @@ public class MergeCharacter extends merge.Merge{
     }
 
     private boolean checkRealtion(String oldRelation, String newRelation){
+        if (oldRelation == null && newRelation == null){
+            return true;
+        }
+        if (oldRelation == null || newRelation == null){
+            return false;
+        }
         String[] oldRelations = oldRelation.split(";");
         String[] newRelations = newRelation.split(";");
 
@@ -134,7 +138,7 @@ public class MergeCharacter extends merge.Merge{
         int count = 0;
         for(String oldRelation1 : oldRelations){
             for(String newRelation1 : newRelations){
-                if(oldRelation1.equals(newRelation1)){
+                if(oldRelation1.contains(newRelation1) || newRelation1.contains(oldRelation1)){
                     count++;
                 }
             }
@@ -143,4 +147,7 @@ public class MergeCharacter extends merge.Merge{
         return count >= min((float) oldRelations.length / 3, (float) newRelations.length / 3);
     }
 
+    private boolean checkPosition(String oldPosition, String newPosition){
+        return oldPosition.contains(newPosition) || newPosition.contains(oldPosition);
+    }
 }

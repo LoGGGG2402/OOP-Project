@@ -15,15 +15,13 @@ public class Monument extends Ditich{
     @Override
     protected Vector<String> getUrl() {
         Vector<String> figureUrl = new Vector<>();
-        String urlConnect = getBaseUrl() + "/FrontEnd/DiTich?cpage=*/*&rpage=&corder=&torder=&tpage=2&TEN=&LA_CDT=&LOAI_HINH_XEP_HANG=&XEP_HANG=&DIA_DANH=&TEN_HANG_MUC=&HM_LOAI_HINH_XEP_HANG=&HM_XEP_HANG=&TEN_HIEN_VAT=&HV_LOAI=&namtubo=";
+        String urlConnect = getBaseUrl() + "/FrontEnd/DiTich?cpage=*/*&rpage=&corder=&torder=&tpage=*/*&TEN=&LA_CDT=&LOAI_HINH_XEP_HANG=&XEP_HANG=&DIA_DANH=&TEN_HANG_MUC=&HM_LOAI_HINH_XEP_HANG=&HM_XEP_HANG=&TEN_HIEN_VAT=&HV_LOAI=&namtubo=";
         int page = 1;
         while (true) {
             try {
                 HttpURLConnection connection = (HttpURLConnection) new URI(urlConnect.replace("*/*", String.valueOf(page))).toURL().openConnection();
                 connection.setRequestMethod("GET");
                 connection.setReadTimeout(10000);
-                System.out.print("\rCrawling " + figureUrl.size() + " urls");
-
 
                 Document document = Jsoup.parse(connection.getInputStream(), "UTF-8", urlConnect);
 
@@ -32,7 +30,7 @@ public class Monument extends Ditich{
 
                 // Get next page url
                 String nextPageUrl = document.select("#formDiTichSearchModel > div > section.hl__filter-directory__results > div > div:nth-child(1) > a:nth-child(4)").attr("class");
-                System.out.print("\rCrawling " + figureUrl.size() + " urls");
+                System.out.print("\rCrawling1 " + figureUrl.size() + " urls");
                 if (nextPageUrl.equals("right disabled")) {
                     break;
                 }

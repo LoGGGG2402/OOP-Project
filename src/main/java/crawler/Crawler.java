@@ -107,7 +107,7 @@ public abstract class Crawler {
             return "data/image/" + uniqueFileName;
 
         } catch (IOException | URISyntaxException e) {
-
+            System.out.println("Error: " + url);
             e.printStackTrace();
             return null;
         }

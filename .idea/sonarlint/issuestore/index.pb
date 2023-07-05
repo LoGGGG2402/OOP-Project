@@ -5,12 +5,8 @@ b
 ,src/main/java/crawler/wikipedia/Dynasty.java,e/3/e3d7cfd3ff419f4e9400fd5f238034bc93c9a66a
 V
 &src/main/java/crawler/vansu/VanSu.java,d/1/d12956bdf7e9a686d238dd48590a482536f263d0
-7
-pom.xml,4/4/442292b8a7efeabbe4cc176709b833b1792140ec
 N
 src/main/java/merge/Merge.java,7/e/7ed08064b995d733af9d233e0d96066dec7f4c75
-W
-'src/main/java/merge/MergeCharacter.java,6/a/6a217298040fc7549c63a87c68916d19c3950ce4
 R
 "src/main/java/entity/Festival.java,a/e/ae45632e9c868d6a2fd5bc1f2b4e0e32211c27bb
 R
@@ -21,8 +17,6 @@ M
 src/main/java/UI/display.fxml,8/2/820f9a75f13fc2ff49b58aa15e159bbed4c1bafa
 ^
 .src/main/java/crawler/wikipedia/Wikipedia.java,9/c/9c6f26f95525b0129253c18fcdda5370b06ca88b
-N
-src/main/java/process/hsd.java,7/3/7368a6f1a109f2545213104e0b9dbf22cc2a7843
 \
 ,src/main/java/crawler/nguoikesu/Dynasty.java,7/b/7bd21572e0b1561e7e84062edca1485d7bbed04e
 ^
