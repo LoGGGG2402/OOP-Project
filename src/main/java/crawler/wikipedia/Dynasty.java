@@ -87,6 +87,12 @@ public class Dynasty extends Wikipedia {
             }
             entity.add("properties",properties);
             entity.addProperty("description",document.select("#mw-content-text > div.mw-parser-output > p").first().text());
+
+            // Get image
+            if(document.select("#content").select("img").first() != null){
+                String image = document.select("#content").select("img").first().attr("src");
+                entity.addProperty("image", getImg(image.contains("http")?image:"https:"+image));
+            }
         } catch(IOException | URISyntaxException e){
             e.printStackTrace();
             return null;

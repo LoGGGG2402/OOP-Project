@@ -7,6 +7,7 @@ import java.io.*;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URL;
+import java.net.URLEncoder;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.StandardCopyOption;
@@ -107,7 +108,6 @@ public abstract class Crawler {
             return "data/image/" + uniqueFileName;
 
         } catch (IOException | URISyntaxException e) {
-            System.out.println("Error: " + url);
             e.printStackTrace();
             return null;
         }

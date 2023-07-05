@@ -105,8 +105,8 @@ public class Character extends NguoiKeSu{
 
             // Get image
             // Get image
-            if (document.select("img").first() != null){
-                String image = document.select("img").first().attr("data-src");
+            if (articleBody.select("img").first() != null){
+                String image = articleBody.select("img").first().attr("data-src");
                 entity.addProperty("image", getImg(image.contains("http") ? image : (getBaseUrl() + image)));
             }
 

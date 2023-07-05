@@ -43,8 +43,8 @@ public class Character extends Wikipedia {
             }
 
             // Get image
-            if (document.select("img").first() != null) {
-                String image = document.select("img").first().attr("src");
+            if (document.select("#content").select("img").first() != null) {
+                String image = document.select("#content").select("img").first().attr("src");
                 entity.addProperty("image", getImg(image.contains("http") ? image : getBaseUrl() + image));
             }
             entity.add("properties", properties);

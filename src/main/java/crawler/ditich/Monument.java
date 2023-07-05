@@ -9,6 +9,8 @@ import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 import java.util.Vector;
 
 public class Monument extends Ditich{
@@ -19,6 +21,8 @@ public class Monument extends Ditich{
         int page = 1;
         while (true) {
             try {
+                System.out.print("\rCrawling1 " + figureUrl.size() + " urls");
+                System.out.print("\rCrawling1 " + urlConnect.replace("*/*", String.valueOf(page)));
                 HttpURLConnection connection = (HttpURLConnection) new URI(urlConnect.replace("*/*", String.valueOf(page))).toURL().openConnection();
                 connection.setRequestMethod("GET");
                 connection.setReadTimeout(10000);
@@ -74,6 +78,8 @@ public class Monument extends Ditich{
             // get image
             if(document.select("#block-harvard-content > article > div > section > div > div.hl__library-info__hours > section > div > img").first() != null){
                 String image =  document.select("#block-harvard-content > article > div > section > div > div.hl__library-info__hours > section > div > img").first().attr("src");
+                image = image.replace("\\", "/");
+                image = URLEncoder.encode(image, StandardCharsets.UTF_8).replace("%3A", ":").replace("%2F", "/").replace("%25", "%").replace("%28", "(").replace("%29", ")").replace("+", "%20");
                 entity.addProperty("image", getImg(image.contains("http") ? image : (getBaseUrl() + image)));
             }
 
