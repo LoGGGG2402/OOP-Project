@@ -72,8 +72,8 @@ public class Monument extends Ditich{
             properties.addProperty("địa chỉ", document.select("#block-harvard-content > article > div > section > div > div.hl__library-info__sidebar > div:nth-child(1) > section > div > div > div.hl__contact-info__address > span").text());
 
             // get image
-            if(document.select("img").first() != null){
-                String image =  document.select("img").first().attr("src");
+            if(document.select("#block-harvard-content > article > div > section > div > div.hl__library-info__hours > section > div > img").first() != null){
+                String image =  document.select("#block-harvard-content > article > div > section > div > div.hl__library-info__hours > section > div > img").first().attr("src");
                 entity.addProperty("image", getImg(image.contains("http") ? image : (getBaseUrl() + image)));
             }
 

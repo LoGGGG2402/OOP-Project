@@ -41,13 +41,11 @@ public abstract class Entity implements Serializable {
     public List<String> relatedEntity(List<String> charactersNames) {
         String property = properties.toString();
         List<String> relatedCharacters = new ArrayList<>();
-
         for (String character : charactersNames) {
             if (property.contains(character) || description.contains(character)) {
                 relatedCharacters.add(character);
             }
         }
-
         return relatedCharacters;
     }
 

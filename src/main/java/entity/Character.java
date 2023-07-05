@@ -23,52 +23,82 @@ public class Character  extends Entity{
     private String children;
     private String relatives;
     private String image;
+    private String source;
 
     public Character(JsonObject jsonObject) {
         super(jsonObject.get("name").getAsString(), jsonObject.has("description") ? jsonObject.get("description").getAsString() : "");
-        this.image = jsonObject.has("image") &&  !jsonObject.get("image").isJsonNull() ? jsonObject.get("image").getAsString() : null;
+        image = jsonObject.has("image") &&  !jsonObject.get("image").isJsonNull() ? jsonObject.get("image").getAsString() : null;
         getPropertiesFromJson(jsonObject);
+        source = jsonObject.get("source").getAsString();
     }
 
     public void merge(Character character){
-        if (character.getDescription().trim().length() > getDescription().trim().length()){
-            setDescription(character.getDescription());
+        if (character.getDescription() != null){
+            if (getDescription() == null){
+                setDescription(character.getDescription());
+            } else if (character.getDescription().trim().length() > getDescription().trim().length()){
+                setDescription(character.getDescription());
+            }
         }
 
-        if (character.getDob().trim().length() > dob.trim().length()){
-            dob = character.getDob();
+        if (character.getDob() != null){
+            if (getDob() == null){
+                dob = character.getDob();
+            } else if (character.getDob().trim().length() > getDob().trim().length()){
+                dob = character.getDob();
+            }
         }
 
-        if (character.getPosition().trim().length() > position.trim().length()) {
-            position = character.getPosition();
+        if (character.getPosition() != null){
+            if (getPosition() == null){
+                position = character.getPosition();
+            } else if (character.getPosition().trim().length() > getPosition().trim().length()){
+                position = character.getPosition();
+            }
         }
 
-        if (character.getDad().trim().length() > dad.trim().length()) {
-            dad = character.getDad();
+        if (character.getDad() != null){
+            if (getDad() == null){
+                dad = character.getDad();
+            } else if (character.getDad().trim().length() > getDad().trim().length()){
+                dad = character.getDad();
+            }
         }
 
-        if (character.getMom().trim().length() > mom.trim().length()) {
-            mom = character.getMom();
+        if (character.getMom() != null){
+            if (getMom() == null){
+                mom = character.getMom();
+            } else if (character.getMom().trim().length() > getMom().trim().length()){
+                mom = character.getMom();
+            }
         }
 
-        if (character.getPartner().trim().length() > partner.trim().length()) {
-            partner = character.getPartner();
+        if (character.getPartner() != null){
+            if (getPartner() == null){
+                partner = character.getPartner();
+            } else if (character.getPartner().trim().length() > getPartner().trim().length()){
+                partner = character.getPartner();
+            }
         }
 
-        if (character.getChildren().trim().length() > children.trim().length()) {
-            children = character.getChildren();
+        if (character.getChildren() != null){
+            if (getChildren() == null){
+                children = character.getChildren();
+            } else if (character.getChildren().trim().length() > getChildren().trim().length()){
+                children = character.getChildren();
+            }
         }
 
-        if (character.getRelatives().trim().length() > relatives.trim().length()) {
-            relatives = character.getRelatives();
+        if (character.getRelatives() != null){
+            if (getRelatives() == null){
+                relatives = character.getRelatives();
+            } else if (character.getRelatives().trim().length() > getRelatives().trim().length()){
+                relatives = character.getRelatives();
+            }
         }
 
         if (character.getImage() != null && image == null) {
             image = character.getImage();
-        }
-
-        if (character.getLocation().trim().length() > location.trim().length()) {
-            location = character.getLocation();
         }
 
         for (String key: character.getProperties().keySet()){
@@ -76,6 +106,8 @@ public class Character  extends Entity{
                 addProperty(key, character.getProperties().get(key).getAsString());
             }
         }
+
+        source += ", " + character.getSource();
     }
 
     private void getPropertiesFromJson(JsonObject jsonObject) {
@@ -210,7 +242,6 @@ public class Character  extends Entity{
                         position = key;
                         break;
                     }
-
                     if (key.contains("Chức vụ")) {
                         found = true;
                     }
@@ -484,15 +515,19 @@ public class Character  extends Entity{
         return location;
     }
 
+    public String getSource() {
+        return source;
+    }
+
     @Override
-    public String toString()
-    {
+    public String toString() {
         return "Name: " + this.getName() + "\n" + "DOB: " + this.dob + "\n" + "Location: " + this.location + "\n" + "Position: " + this.position
                + "\n" + "Partner: " + this.partner
                + "\n" + "Mom: " + this.mom
                + "\n" + "Dad: " + this.dad
                + "\n" + "Children: " + this.children
-               + "\n" + "Relatives: " + this.relatives;
+               + "\n" + "Relatives: " + this.relatives
+               + "\n" + "Source: " + this.source;
     }
 
 

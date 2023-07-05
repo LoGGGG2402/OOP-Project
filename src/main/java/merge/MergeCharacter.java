@@ -42,6 +42,10 @@ public class MergeCharacter extends merge.Merge{
             }
         }
         merge();
+        for (Character character: mergedCharacters){
+            System.out.println(character);
+            System.out.println("===================================");
+        }
         writeToFile("data/full/Character");
     }
 
@@ -100,6 +104,13 @@ public class MergeCharacter extends merge.Merge{
     }
 
     private boolean checkDob(String oldDob, String newDob){
+        if (oldDob == null && newDob == null){
+            return true;
+        }
+
+        if (oldDob == null || newDob == null){
+            return false;
+        }
 
         Pattern pattern = Pattern.compile("(?<!\\d)\\d{3}(?!\\d)|\\d{4}");
 
@@ -121,6 +132,7 @@ public class MergeCharacter extends merge.Merge{
         if (oldRelation == null && newRelation == null){
             return true;
         }
+
         if (oldRelation == null || newRelation == null){
             return false;
         }
@@ -148,6 +160,15 @@ public class MergeCharacter extends merge.Merge{
     }
 
     private boolean checkPosition(String oldPosition, String newPosition){
-        return oldPosition.contains(newPosition) || newPosition.contains(oldPosition);
+        if (oldPosition == null && newPosition == null){
+            return true;
+        }
+        String trim = oldPosition.toLowerCase().replaceAll("\\W", "").trim();
+        String trim1 = newPosition.toLowerCase().replaceAll("\\W", "").trim();
+        return trim.contains(trim1) || trim1.contains(trim);
+    }
+
+    public static void main(String[] args) {
+        new MergeCharacter();
     }
 }

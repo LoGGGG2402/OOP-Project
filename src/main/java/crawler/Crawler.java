@@ -132,5 +132,4 @@ public abstract class Crawler {
     protected String getTitle(){
         return title;
     }
-
 }
