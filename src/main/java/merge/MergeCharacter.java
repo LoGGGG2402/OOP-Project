@@ -163,6 +163,9 @@ public class MergeCharacter extends merge.Merge{
         if (oldPosition == null && newPosition == null){
             return true;
         }
+        if (oldPosition == null || newPosition == null){
+            return false;
+        }
         String trim = oldPosition.toLowerCase().replaceAll("\\W", "").trim();
         String trim1 = newPosition.toLowerCase().replaceAll("\\W", "").trim();
         return trim.contains(trim1) || trim1.contains(trim);

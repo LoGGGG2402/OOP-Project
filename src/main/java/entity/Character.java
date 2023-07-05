@@ -475,6 +475,10 @@ public class Character  extends Entity{
         {
             relatives += (relatives.equals("") ? "" : "; ") + children;
         }
+
+        if (relatives.equals("")) {
+            relatives = null;
+        }
     }
 
 
@@ -509,10 +513,6 @@ public class Character  extends Entity{
 
     public String getImage() {
         return image;
-    }
-
-    public String getLocation() {
-        return location;
     }
 
     public String getSource() {
