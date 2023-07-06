@@ -86,8 +86,7 @@ public class Character  extends Entity{
         processPartner(jsonObject);
         processChildren(jsonObject);
         processRelatives(jsonObject);
-        processLocation(jsonObject);
-        processPostion(jsonObject);
+        processPosition(jsonObject);
         processDob(jsonObject);
     }
 
@@ -110,7 +109,7 @@ public class Character  extends Entity{
         //process from Nguoikesu
         else if (jsonObject.get("source").getAsString().equals("https://nguoikesu.com"))
         {
-            if (properties.has("Sinh"))
+            if (properties.has("Sinh") && !properties.get("Sinh").getAsString().matches("\\D+"))
             {
                 if (properties.has("Mất"))
                 {
@@ -124,40 +123,38 @@ public class Character  extends Entity{
             //process property "dob" from property "description"
             else
             {
-                Pattern pattern = Pattern.compile("[\\d?]{1,4}\\s* ?[-–] ?\\s*[\\d?]{4}");
+                Pattern pattern = Pattern.compile("[\\d?]{1,4}\\s* ?[-–] ?\\s*[\\d?]{1,4}(?=[)])");
                 Matcher matcher = pattern.matcher(description);
-                if (matcher.find()) {
+                if (matcher.find() && !matcher.group().matches("\\D+")) {
                     dob = matcher.group();
                 }
                 else
                 {
-                    pattern = Pattern.compile("[\\d?]{0,4}\s?[-–]\s?[\\d?]{0,2}\s?tháng\s[\\d?]{1,2}\s?năm\s[\\d?]{0,4}\s?", Pattern.CANON_EQ);
+                    //pattern = Pattern.compile("sinh\\s+[^)]+");
+                    //pattern = Pattern.compile("[\\d?]{0,4}[ ]?[-–][ ]?[\\d?]{0,2}[ ]?tháng[ ][\\d?]{1,2}[ ]?năm[ ][\\d?]{0,4}[ ]?");
+                    pattern = Pattern.compile("[\\d?]{0,2} ?tháng [\\d?]{1,2} năm [\\d?]{0,4} ?[-–] ?[\\d?]{0,2} ?tháng [\\d?]{1,2} năm [\\d?]{0,4} ?");
                     matcher = pattern.matcher(description);
-                    if (matcher.find())
+                    if (matcher.find() && !matcher.group().matches("\\D+"))
                     {
                         dob = matcher.group();
                     }
                     else
                     {
-                        pattern = Pattern.compile("[\\d?]{0,2} ?tháng [\\d?]{1,2} năm [\\d?]{0,4} ?[-–] [\\d?]{0,2} ?tháng [\\d?]{1,2} năm [\\d?]{0,4} ?", Pattern.CANON_EQ);
+                        //pattern = Pattern.compile("[\\d?]{0,2} ?tháng [\\d?]{1,2} năm [\\d?]{0,4} ?[-–] [\\d?]{0,2} ?tháng [\\d?]{1,2} năm [\\d?]{0,4} ?");
+                        //pattern = Pattern.compile("[\\d?]{0,4}[ ]?[-–][ ]?[\\d?]{0,2}[ ]?tháng[ ][\\d?]{1,2}[ ]?năm[ ][\\d?]{0,4}[ ]?");
+                        pattern = Pattern.compile("[\\d?]{0,4}[ ]?[-–][ ]?[\\d?]{0,2}[ ]?tháng[ ]?[\\d?]{1,2}[ ]?[năm, ]{0,3}[ ][\\d?]{0,4}[ ]?");
                         matcher = pattern.matcher(description);
-                        if (matcher.find())
+                        if (matcher.find() && !matcher.group().matches("\\D+"))
                         {
                             dob = matcher.group();
                         }
                         else
                         {
-                            pattern = Pattern.compile("\\D\\d{3,4}?\\s*-\\s*\\d{3,4}?\\D|-\\s*\\d{3,4}\\D|\\D\\d{3,4}\\s*-");
+                            //pattern = Pattern.compile("[\\d?]{0,4}[ ]?[-–][ ]?[\\d?]{0,2}[ ]?tháng[ ][\\d?]{1,2}[ ]?năm[ ][\\d?]{0,4}[ ]?");
+                            pattern = Pattern.compile("sinh\\s+[^).]+");
                             matcher = pattern.matcher(description);
-                            if (matcher.find()){
+                            if (matcher.find() && !matcher.group().matches("\\D+")) {
                                 dob = matcher.group();
-                            }
-                            else {
-                                pattern = Pattern.compile("sinh\\s+[^).]+");
-                                matcher = pattern.matcher(description);
-                                if (matcher.find()) {
-                                    dob = matcher.group();
-                                }
                             }
                         }
                     }
@@ -167,9 +164,9 @@ public class Character  extends Entity{
         //Process from Wikipedia
         else if (jsonObject.get("source").getAsString().equals("https://vi.wikipedia.org")) {
             //process property "dob"
-            if (properties.has("Sinh") && properties.has("Mất")) {
+            if (properties.has("Sinh") && properties.has("Mất") && !properties.get("Sinh").getAsString().matches("\\D+")) {
                 dob = properties.get("Sinh").getAsString() + " - " + properties.get("Mất").getAsString();
-            } else if (properties.has("Sinh") && !(properties.has("Mất"))) {
+            } else if (properties.has("Sinh") && !(properties.has("Mất")) && !properties.get("Sinh").getAsString().matches("\\D+")) {
                 dob = properties.get("Sinh").getAsString() + " - " + "?";
             } else if (!(properties.has("Sinh")) && properties.has("Mất")) {
                 dob = "?" + " - " + properties.get("Mất").getAsString();
@@ -179,10 +176,14 @@ public class Character  extends Entity{
 
         }
 
-        if (dob != null && this.location != null)
-        {
-            dob = this.location + "," + dob;
+        String location = "";
+        if (jsonObject.get("source").getAsString().equals("https://vansu.vn") && (properties.has("Tỉnh thành"))) {
+            if (!properties.get("Tỉnh thành").getAsString().equals("Không rõ"))
+                location = properties.get("Tỉnh thành").getAsString();
+            dob = location + ", " + dob;
         }
+
+
 
         if (dob != null && dob.contains(";")) {
             dob = dob.replace(";", "");
@@ -194,7 +195,7 @@ public class Character  extends Entity{
         }
     }
 
-    private void processPostion(JsonObject jsonObject) {
+    private void processPosition(JsonObject jsonObject) {
         JsonObject properties = jsonObject.get("properties").getAsJsonObject();
 
         String description = "{}";
@@ -206,7 +207,7 @@ public class Character  extends Entity{
         //process from Vansu
         if (jsonObject.get("source").getAsString().equals("https://vansu.vn"))
         {
-            Pattern pattern = Pattern.compile("^(.*?)(?=, (?:con|quê|sinh ngày|sinh quán|sinh|tên|cháu|nguyên quán|không rõ))", Pattern.CANON_EQ);
+            Pattern pattern = Pattern.compile("^(.*?)(?=, (?:con|quê|sinh ngày|sinh quán|sinh|tên|cháu|nguyên quán|không rõ))");
             Matcher matcher = pattern.matcher(description);
             if (matcher.find()) {
                 position = matcher.group(1).trim();
@@ -257,16 +258,54 @@ public class Character  extends Entity{
                 position = properties.get("Ngành").getAsString();
             }
 
-            else if (properties.entrySet().isEmpty() || properties.entrySet().size() == 1)
+            else if (properties.has("Chức quan cao nhất"))
             {
-                Pattern pattern = Pattern.compile("(?<=là ).*?(?=\\.)", Pattern.CANON_EQ);
+                position = properties.get("Chức quan cao nhất").getAsString();
+            }
+
+
+            //else if (properties.entrySet().isEmpty() || properties.entrySet().size() == 1)
+            else if (StringUtils.isEmpty(position))
+            {
+                String regex = "(?<=là nhà).*?(?=\\.)";
+                Pattern pattern = Pattern.compile(regex);
                 Matcher matcher = pattern.matcher(description);
                 if (matcher.find()) {
-                    position = matcher.group();
+
+                    position = "nhà " + matcher.group();
+                }
+                else if (description.contains("là một"))
+                {
+                    regex = "(?<=là một).*?(?=\\.)";
+                    pattern = Pattern.compile(regex);
+                    matcher = pattern.matcher(description);
+                    if (matcher.find()) {
+
+                        position = matcher.group();
+                    }
+                }
+                else if (jsonObject.get("name").getAsString().equals("Ngô Thì Nhậm"))
+                {
+                    position = "danh sĩ, nhà văn đời hậu Lê–Tây Sơn, người có công lớn trong việc giúp triều Tây Sơn đánh lui quân Thanh";
+                }
+                else if (properties.has("Vua Việt Nam (chi tiết...)"))
+                {
+                    position = "Vua Việt Nam";
+                }
+
+                else
+                {
+                    regex = "(?<=là).*?(?=\\.)";
+                    pattern = Pattern.compile(regex);
+                    matcher = pattern.matcher(description);
+                    if (matcher.find()) {
+                        position = matcher.group();
+                    }
                 }
             }
 
-            else
+
+            else if (StringUtils.isEmpty(position))
             {
                 String temp = (String) properties.keySet().toArray()[1];
                 if (temp.contains("("))
@@ -276,6 +315,7 @@ public class Character  extends Entity{
                     position = temp;
                 }
             }
+
         }
         //process from wikipedia
         else if (jsonObject.get("source").getAsString().equals("https://vi.wikipedia.org"))
@@ -286,13 +326,6 @@ public class Character  extends Entity{
 
     }
 
-    private void processLocation(JsonObject jsonObject) {
-        JsonObject properties = new JsonObject();
-        if (jsonObject.get("source").getAsString().equals("https://vansu.vn") && (properties.has("Tỉnh thành")) && (!properties.get("Tỉnh thành").getAsString().equals("Không rõ")))
-                {location = properties.get("Tỉnh thành").getAsString();
-        }
-    }
-
     private void processDad(JsonObject jsonObject) {
         JsonObject properties = jsonObject.get("properties").getAsJsonObject();
 
@@ -300,7 +333,7 @@ public class Character  extends Entity{
         if (jsonObject.get("source").getAsString().equals("https://nguoikesu.com")
             || jsonObject.get("source").getAsString().equals("https://vi.wikipedia.org"))
         {
-            Pattern pattern_dad = Pattern.compile("Cha|Thân phụ|Bố", Pattern.CANON_EQ);
+            Pattern pattern_dad = Pattern.compile("Cha|Thân phụ|Bố");
             Matcher matcher_dad;
             for(String fieldName:properties.keySet())
             {
@@ -328,7 +361,7 @@ public class Character  extends Entity{
         if (jsonObject.get("source").getAsString().equals("https://nguoikesu.com")
             || jsonObject.get("source").getAsString().equals("https://vi.wikipedia.org"))
         {
-            Pattern pattern_mom = Pattern.compile("Mẹ|Thân mẫu|Cha mẹ", Pattern.CANON_EQ);
+            Pattern pattern_mom = Pattern.compile("Mẹ|Thân mẫu|Cha mẹ");
             Matcher matcher_mom;
             for(String fieldName:properties.keySet())
             {
@@ -354,7 +387,7 @@ public class Character  extends Entity{
         //process for Nguoikesu and Wikipedia
         if (jsonObject.get("source").getAsString().equals("https://nguoikesu.com"))
         {
-            Pattern pattern_partner = Pattern.compile("Vợ|Chồng|Phối ngẫu|Thê thiếp|Phu quân|Hoàng hậu|Hậu phi", Pattern.CANON_EQ);
+            Pattern pattern_partner = Pattern.compile("Vợ|Chồng|Phối ngẫu|Thê thiếp|Phu quân|Hoàng hậu|Hậu phi");
             Matcher matcher;
             for(String fieldName:properties.keySet())
             {
@@ -380,7 +413,7 @@ public class Character  extends Entity{
         }
         else if (jsonObject.get("source").getAsString().equals("https://vi.wikipedia.org"))
         {
-            Pattern pattern_partner = Pattern.compile("Vợ|Chồng|Phối ngẫu|Thê thiếp|Phu quân|Hoàng hậu|Hậu phi|Hậu phi Hậu phi", Pattern.CANON_EQ);
+            Pattern pattern_partner = Pattern.compile("Vợ|Chồng|Phối ngẫu|Thê thiếp|Phu quân|Hoàng hậu|Hậu phi|Hậu phi Hậu phi");
             Matcher matcher;
             for(String fieldName:properties.keySet())
             {
@@ -402,7 +435,7 @@ public class Character  extends Entity{
         JsonObject properties = jsonObject.get("properties").getAsJsonObject();
         if (jsonObject.get("source").getAsString().equals("https://nguoikesu.com"))
         {
-            Pattern pattern_children = Pattern.compile("Con cái|Con|Hậu duệ|Hậu duệ Hậu duệ", Pattern.CANON_EQ);
+            Pattern pattern_children = Pattern.compile("Con cái|Con|Hậu duệ|Hậu duệ Hậu duệ");
             Matcher matcher_children;
             for(String fieldName:properties.keySet())
             {
@@ -428,7 +461,7 @@ public class Character  extends Entity{
         }
         else if (jsonObject.get("source").getAsString().equals("https://vi.wikipedia.org"))
         {
-            Pattern pattern_children = Pattern.compile("Con cái|Con|Hậu duệ|Hậu duệ Hậu duệ", Pattern.CANON_EQ);
+            Pattern pattern_children = Pattern.compile("Con cái|Con|Hậu duệ|Hậu duệ Hậu duệ");
             Matcher matcher_children;
             for(String fieldName:properties.keySet())
             {
@@ -472,7 +505,6 @@ public class Character  extends Entity{
             relatives += (relatives.equals("") ? "" : "; ") + children;
         }
     }
-
 
     // Getters
     public String getDob() {
