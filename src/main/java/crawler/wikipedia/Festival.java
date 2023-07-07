@@ -63,7 +63,7 @@ public class Festival extends Wikipedia {
 
 
 
-        } catch(IOException | URISyntaxException e){
+        } catch(IOException | URISyntaxException | NullPointerException e){
             e.printStackTrace();
         }
         return entity;

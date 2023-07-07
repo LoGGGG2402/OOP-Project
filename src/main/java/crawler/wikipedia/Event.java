@@ -68,7 +68,7 @@ public class Event extends Wikipedia {
                     }
                 }
             }
-        } catch(IOException | URISyntaxException e){
+        } catch(IOException | URISyntaxException | NullPointerException e){
             throw new RuntimeException(e);
         }
         return entities;

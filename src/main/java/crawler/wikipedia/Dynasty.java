@@ -97,7 +97,7 @@ public class Dynasty extends Wikipedia {
             // get allDocuments
             String allDocuments = document.select("#content").text();
             entity.addProperty("allDocument", allDocuments);
-        } catch(IOException | URISyntaxException e){
+        } catch(IOException | URISyntaxException | NullPointerException e){
             e.printStackTrace();
             return null;
         }
