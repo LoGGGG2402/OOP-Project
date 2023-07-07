@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="649.0" prefWidth="636.0" visible="true" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.Controller.governmentController">
+    <children>
+        <ImageView fitHeight="650.0" fitWidth="675.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="false">
+            <image>
+                <Image url="@background4pane.jpg" />
+            </image>
+        </ImageView>
+        <Label fx:id="gName" layoutX="247.0" layoutY="187.0" prefHeight="40.0" prefWidth="143.0" text="Tên triều đại">
+            <font>
+                <Font size="19.0" />
+            </font></Label>
+      <Label fx:id="label1" layoutX="64.0" layoutY="253.0" prefHeight="21.0" prefWidth="109.0" text="Ngày thành lập :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="gdFound" layoutX="321.0" layoutY="253.0" prefHeight="21.0" prefWidth="109.0" text="dateFounded">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="label12" layoutX="64.0" layoutY="290.0" prefHeight="21.0" prefWidth="109.0" text="Ngày kết thúc :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="gdEnd" layoutX="321.0" layoutY="290.0" prefHeight="21.0" prefWidth="109.0" text="dateEnded">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="label121" layoutX="64.0" layoutY="327.0" prefHeight="21.0" prefWidth="109.0" text="Loại">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="gType" layoutX="321.0" layoutY="327.0" prefHeight="21.0" prefWidth="109.0" text="type">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="label1212" layoutX="64.0" layoutY="364.0" prefHeight="21.0" prefWidth="156.0" text="Nhân vật liên quan :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="gFigure" layoutX="321.0" layoutY="364.0" prefHeight="21.0" prefWidth="309.0" wrapText="true">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="label14" layoutX="64.0" layoutY="401.0" prefHeight="21.0" prefWidth="125.0" text="Lễ hội liên quan :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="gFes" layoutX="321.0" layoutY="401.0" prefHeight="21.0" prefWidth="309.0" wrapText="true">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="label122" layoutX="64.0" layoutY="438.0" prefHeight="21.0" prefWidth="109.0" text="Nơi đóng đô :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="gPlace" layoutX="321.0" layoutY="438.0" prefHeight="21.0" prefWidth="309.0" wrapText="true">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="label1214" layoutX="64.0" layoutY="475.0" prefHeight="21.0" prefWidth="143.0" text="Sự kiện liên quan :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="gEvent" layoutX="321.0" layoutY="475.0" prefHeight="21.0" prefWidth="354.0" wrapText="true">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="label121211" layoutX="64.0" layoutY="512.0" prefHeight="21.0" prefWidth="109.0" text="Mô tả chi tiết :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="gDes" alignment="TOP_LEFT" contentDisplay="TEXT_ONLY" layoutX="318.0" layoutY="510.0" prefHeight="140.0" prefWidth="317.0" text="description" wrapText="true">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

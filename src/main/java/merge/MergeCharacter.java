@@ -1,16 +1,14 @@
 package merge;
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
 import com.google.gson.stream.JsonReader;
 import entity.Character;
+import org.apache.commons.lang3.math.NumberUtils;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -43,20 +41,17 @@ public class MergeCharacter extends merge.Merge{
             }
         }
         merge();
-        writeToFile("data/full/Character");
-    }
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
-    private void writeToFile(String path){
-        try(FileOutputStream fileOut = new FileOutputStream(path);
-            ObjectOutputStream objectOut = new ObjectOutputStream(fileOut)) {
-
-
-            objectOut.writeObject(mergedCharacters);
-
-            System.out.println("Danh sách các đối tượng đã được ghi vào tệp tin.");
-        } catch (IOException e) {
-            System.out.println("Đã xảy ra lỗi khi ghi danh sách các đối tượng vào tệp tin.");
-            e.printStackTrace();
+        for (Character character: mergedCharacters){
+//            if(character.getSource().split(",").length > 1){
+//                System.out.println(character.getName());
+//                System.out.println(gson.toJson(character.getProperties()));
+//                System.out.println("====================================");
+//            }
+            if(character.getName().equals("Phan Đình Phùng")){
+                System.out.println(gson.toJson(character.getProperties()));
+            }
         }
     }
 
@@ -67,7 +62,7 @@ public class MergeCharacter extends merge.Merge{
             if(listName.containsKey(name)){
                 boolean equal = false;
                 for (Character ch: listName.get(name)){
-                    if (equalCharacter(ch, character)){
+                    if (equalCharacter(ch, character) && !ch.getSource().contains(character.getSource())){
                         equal = true;
                         // remove old
                         listName.get(name).remove(ch);
@@ -77,8 +72,8 @@ public class MergeCharacter extends merge.Merge{
                         // add new
                         listName.get(name).add(ch);
                         mergedCharacters.add(ch);
-                        break;
-                    }
+                        break;}
+
                 }
                 if (!equal){
                     // add new
@@ -95,33 +90,72 @@ public class MergeCharacter extends merge.Merge{
         }
     }
 
-
     // compare
-    private boolean equalCharacter(Character oldChar, Character newChar){
-        return !(!checkDob(oldChar.getBod(), newChar.getBod()) && !checkRealtion(oldChar.getRelatives(), newChar.getRelatives()));
+    private boolean equalCharacter(Character oldChar, Character newChar) {
+        boolean relativesCheck = checkRealtion(oldChar.getRelatives(), newChar.getRelatives());
+        if(relativesCheck){
+            return true;
+        }
+        boolean dobCheck = checkDob(oldChar.getDob(), newChar.getDob());
+        if (dobCheck && (oldChar.getRelatives() == null || newChar.getRelatives() == null)){
+            return true;
+        }
+
+        boolean positionCheck = checkPosition(oldChar, newChar);
+
+        return true;
     }
 
     private boolean checkDob(String oldDob, String newDob){
+        if (oldDob == null && newDob == null){
+            return false;
+        }
+
+        if (oldDob == null || newDob == null){
+            return true;
+        }
 
         Pattern pattern = Pattern.compile("(?<!\\d)\\d{3}(?!\\d)|\\d{4}");
 
         Matcher matcherOld = pattern.matcher(oldDob);
         Matcher matcherNew = pattern.matcher(newDob);
 
-        while (matcherOld.find() && matcherNew.find()){
-            String oldYear = matcherOld.group();
-            String newYear = matcherNew.group();
-            if(oldYear.equals(newYear)){
-                return true;
+        List<String> oldYears = new ArrayList<>();
+        List<String> newYears = new ArrayList<>();
+
+        while (matcherOld.find()){
+            oldYears.add(matcherOld.group());
+        }
+
+        while (matcherNew.find()){
+            newYears.add(matcherNew.group());
+        }
+
+        for (String oldYear: oldYears){
+            int oldYearInt = Integer.parseInt(oldYear);
+            for (String newYear: newYears){
+                int newYearInt = Integer.parseInt(newYear);
+                if (Math.abs(oldYearInt - newYearInt) <= 2){
+                    return true;
+                }
             }
         }
+
+
 
         return false;
     }
 
     private boolean checkRealtion(String oldRelation, String newRelation){
-        String[] oldRelations = oldRelation.split(";");
-        String[] newRelations = newRelation.split(";");
+        if (oldRelation == null && newRelation == null){
+            return false;
+        }
+
+        if (oldRelation == null || newRelation == null){
+            return true;
+        }
+        String[] oldRelations = ";".split(oldRelation);
+        String[] newRelations = ";".split(newRelation);
 
         // lower case
         for(int i = 0; i < oldRelations.length; i++){
@@ -134,7 +168,7 @@ public class MergeCharacter extends merge.Merge{
         int count = 0;
         for(String oldRelation1 : oldRelations){
             for(String newRelation1 : newRelations){
-                if(oldRelation1.equals(newRelation1)){
+                if(oldRelation1.contains(newRelation1) || newRelation1.contains(oldRelation1)){
                     count++;
                 }
             }
@@ -143,4 +177,104 @@ public class MergeCharacter extends merge.Merge{
         return count >= min((float) oldRelations.length / 3, (float) newRelations.length / 3);
     }
 
+    private boolean checkPosition(Character oldChar, Character newChar){
+        String oldPosition = oldChar.getPosition();
+        String newPosition = newChar.getPosition();
+        if (oldPosition == null && newPosition == null){
+            return false;
+        }
+        if (oldPosition == null || newPosition == null){
+            return false;
+        }
+        String trim = oldPosition.toLowerCase().replaceAll("\\W", "").trim();
+        String trim1 = newPosition.toLowerCase().replaceAll("\\W", "").trim();
+        if(trim.contains(trim1) || trim1.contains(trim)) return true;
+
+        List<String> listOldDynasty = getDynasty(oldPosition);
+        listOldDynasty.addAll(getDynasty(oldChar.getDescription()));
+        List<String> listNewDynasty = getDynasty(newPosition);
+        listNewDynasty.addAll(getDynasty(newChar.getDescription()));
+
+        for (String oldDynasty: listOldDynasty){
+            for (String newDynasty: listNewDynasty){
+                if (oldDynasty.equals(newDynasty)){
+                    return true;
+                }
+            }
+        }
+
+
+        Pattern pattern = Pattern.compile("(đại|thần|tướng|Đại|Thần|Tướng|[A-Z]\\S+)");
+        Matcher matcher = pattern.matcher(oldChar.getPosition());
+
+        int count = 0;
+        while (matcher.find()) {
+            String word = matcher.group(1);
+            if (newChar.getPosition().contains(word)){
+                count++;
+            }
+        }
+
+        return count >= 2;
+    }
+
+    private static List<String> getDynasty(String position){
+        String pos = position;
+        List<String> listDynasty = new ArrayList<>();
+
+        Pattern pattern = Pattern.compile("nhà|đời|thời|vua", Pattern.CANON_EQ);
+        Pattern pattern2 = Pattern.compile("[AĂÂBCDĐEÊGHIKLMNOÔƠPQRSTUƯVXY][^ ]+", Pattern.CANON_EQ);
+
+        int nextSpace = nextIndex(pos);
+
+        StringBuilder dynasty = new StringBuilder();
+
+        boolean found = false;
+
+
+        while (nextSpace != -1){
+            String nextWord = pos.substring(0, nextSpace);
+            if (found){
+                if (pattern2.matcher(nextWord.trim()).matches()){
+                    dynasty.append(nextWord).append(" ");
+                }
+                else {
+                    if (!dynasty.isEmpty())
+                        listDynasty.add(dynasty.toString().trim().replace(")", "").replace("-", ""));
+                    dynasty = new StringBuilder();
+                    found = false;
+                }
+            }
+            if (pattern.matcher(nextWord).matches()){
+                found = true;
+            }
+            pos = pos.substring(nextSpace + 1);
+            nextSpace = nextIndex(pos);
+        }
+        return listDynasty;
+    }
+
+    private static int nextIndex(String pos){
+        if (pos.contains(",") && pos.contains(".") && pos.contains(" ")){
+            return NumberUtils.min(pos.indexOf(" "), pos.indexOf(","), pos.indexOf("."));
+        } else if (pos.contains(",") && pos.contains(" ")){
+            return NumberUtils.min(pos.indexOf(" "), pos.indexOf(","));
+        } else if (pos.contains(".") && pos.contains(" ")){
+            return NumberUtils.min(pos.indexOf(" "), pos.indexOf("."));
+        } else if (pos.contains(",") && pos.contains(".")){
+            return NumberUtils.min(pos.indexOf(","), pos.indexOf("."));
+        } else if (pos.contains(",")){
+            return pos.indexOf(",");
+        } else if (pos.contains(".")){
+            return pos.indexOf(".");
+        } else {
+            return pos.indexOf(" ");
+        }
+    }
+
+
+
+    public static void main(String[] args) {
+        new MergeCharacter();
+    }
 }

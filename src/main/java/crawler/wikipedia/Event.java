@@ -7,8 +7,6 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URI;
@@ -35,7 +33,15 @@ public class Event extends Wikipedia {
                         entity.addProperty("name", rows.get(i).text().replace(rows.get(i).select("b").text(), ""));
                         entity.add("properties",properties);
 
-                            entity.addProperty("description", getDescription(rows.get(i).text().replace(rows.get(i).select("b").text(), "")));
+                        JsonObject moreInfo = getMoreInfo(rows.get(i).text().replace(rows.get(i).select("b").text(), ""));
+                        if (moreInfo.has("description"))
+                            entity.addProperty("description", moreInfo.get("description").getAsString());
+
+                        if (moreInfo.has("image"))
+                            entity.addProperty("image", moreInfo.get("image").getAsString());
+
+                        if (moreInfo.has("allDocument"))
+                            entity.addProperty("allDocument", moreInfo.get("allDocument").getAsString());
                         entities.add(entity);
                     }
                     else {
@@ -48,7 +54,15 @@ public class Event extends Wikipedia {
                             properties.addProperty("Thời gian", row1.select("b").text() + " năm " + year);
                             entity.addProperty("name", row1.text().replace(row1.select("b").text(), ""));
                             entity.add("properties",properties);
-                            entity.addProperty("description",getDescription( row1.text().replace(row1.select("b").text(), "")));
+                            JsonObject moreInfo = getMoreInfo(rows.get(i).text().replace(rows.get(i).select("b").text(), ""));
+                            if (moreInfo.has("description"))
+                                entity.addProperty("description", moreInfo.get("description").getAsString());
+
+                            if (moreInfo.has("image"))
+                                entity.addProperty("image", moreInfo.get("image").getAsString());
+
+                            if (moreInfo.has("allDocument"))
+                                entity.addProperty("allDocument", moreInfo.get("allDocument").getAsString());
                             entities.add(entity);
                         }
                     }
@@ -59,23 +73,33 @@ public class Event extends Wikipedia {
         }
         return entities;
     }
-    public String getDescription(String name){
+    public JsonObject getMoreInfo(String name){
+        JsonObject moreInfo = new JsonObject();
         try {
             HttpURLConnection connection = (HttpURLConnection) new URI(getBaseUrl()+"/wiki/" + name.replace(" ","_")).toURL().openConnection();
             connection.setRequestMethod("GET");
             connection.setReadTimeout(10000);
 
             Document document = Jsoup.parse(connection.getInputStream(), "UTF-8", getBaseUrl()+"/wiki/"  + name.replace(" ","_"));
-            return document.select("#mw-content-text > div.mw-parser-output > p").first().text();
-        } catch(IOException | URISyntaxException e){
+
+            moreInfo.addProperty("description", document.select("#mw-content-text > div.mw-parser-output > p").first().text());
+            if(document.select("#content").select("img").first() != null){
+                String image = document.select("#content").select("img").first().attr("src");
+                moreInfo.addProperty("image", getImg(image.contains("http")?image:"https:"+image));
+            }
+
+            // get allDocuments
+            String allDocuments = document.select("#content").text();
+            moreInfo.addProperty("allDocument", allDocuments);
+        } catch(IOException | URISyntaxException | NullPointerException e){
             System.out.println("Can't find :"+e.getMessage());
         }
-        return "";
+        return moreInfo;
     }
 
     @Override
     protected Vector<String> getUrl() {
-        return null;
+        return new  Vector<> ();
     }
 
     @Override

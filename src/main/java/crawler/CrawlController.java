@@ -4,10 +4,10 @@ public class CrawlController {
     private CrawlController() {
     }
     public static void crawl() {
-        // disanvanhoa
-        new crawler.disanvanhoa.Monument();
         //di tich
         new crawler.ditich.Monument();
+        // disanvanhoa
+        new crawler.disanvanhoa.Monument();
         // nguoikesu
         new crawler.nguoikesu.Character();
         new crawler.nguoikesu.Event();

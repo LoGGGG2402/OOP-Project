@@ -6,9 +6,12 @@ public class Festival extends Entity{
     private String date;
     private String location;
     private String relatedCharacter;
-
     public Festival(JsonObject jsonObject) {
-        super(jsonObject.get("name").getAsString(), jsonObject.has("description") ? jsonObject.get("description").getAsString() : "");
+        super(jsonObject);
+    }
+
+    @Override
+    protected void getPropertiesFromJson(JsonObject jsonObject) {
 
     }
 

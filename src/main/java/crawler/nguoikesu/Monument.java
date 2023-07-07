@@ -62,13 +62,21 @@ public class Monument extends NguoiKeSu{
                         value = Jsoup.parse(replacedText).text();
                     }
                 }
-                if (!key.matches(".*[a-zA-Z].*|.*\\d.*") && !value.matches(".*[a-zA-Z].*|.*\\d.*")){
-                    continue;
-                }
-                if (key.equals("")){
+
+                if (key.equals("") || key.equals(".")){
+                    if (value.equals("") || value.equals(".")){
+                        continue;
+                    }
                     properties.addProperty(value, "");
                     continue;
                 }
+
+                // Get all document
+                String allDocument = document.select("#content > div.com-content-article.item-page.page-list-items > div.com-content-article__body").text();
+                entity.addProperty("allDocument", allDocument);
+
+
+
                 properties.addProperty(key, value);
             }
 
@@ -80,8 +88,14 @@ public class Monument extends NguoiKeSu{
             entity.addProperty("description", description.toString());
 
             // Get image
-            String image = getBaseUrl() + document.select("img:nth-child(1)").attr("data-src");
-            entity.addProperty("image", image);
+            if (articleBody.select("img").first() != null){
+                String image = articleBody.select("img").first().attr("data-src");
+                entity.addProperty("image", getImg(image.contains("http") ? image : (getBaseUrl() + image)));
+            }
+
+            // Get all document
+            String allDocument = document.select("#content > div.com-content-article.item-page.page-list-items > div.com-content-article__body").text();
+            entity.addProperty("allDocument", allDocument);
 
             System.out.print("\rCrawling " + name + " done");
 

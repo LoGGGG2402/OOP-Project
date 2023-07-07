@@ -93,6 +93,12 @@ public class Character extends NguoiKeSu{
                         value = Jsoup.parse(replacedText).text();
                     }
                 }
+                if (key.isEmpty() || key.equals(".")){
+                    if(value.isEmpty() || value.equals(".")){
+                        continue;
+                    }
+                    properties.addProperty(value, "");
+                }
                 properties.addProperty(key, value);
             }
 
@@ -104,8 +110,14 @@ public class Character extends NguoiKeSu{
             entity.addProperty("description", description.toString());
 
             // Get image
-            String image = getBaseUrl() + document.select("img:nth-child(1)").attr("data-src");
-            entity.addProperty("image", image);
+            if (articleBody.select("img").first() != null){
+                String image = articleBody.select("img").first().attr("data-src");
+                entity.addProperty("image", getImg(image.contains("http") ? image : (getBaseUrl() + image)));
+            }
+
+            // Get all document
+            String allDocument = document.select("#content > div.com-content-article.item-page.page-list-items > div.com-content-article__body").text();
+            entity.addProperty("allDocument", allDocument);
 
             System.out.print("\rCrawling " + url + " done has name " + name);
 
