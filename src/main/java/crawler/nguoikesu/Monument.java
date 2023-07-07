@@ -71,6 +71,12 @@ public class Monument extends NguoiKeSu{
                     continue;
                 }
 
+                // Get all document
+                String allDocument = document.select("#content > div.com-content-article.item-page.page-list-items > div.com-content-article__body").text();
+                entity.addProperty("allDocument", allDocument);
+
+
+
                 properties.addProperty(key, value);
             }
 
@@ -86,6 +92,10 @@ public class Monument extends NguoiKeSu{
                 String image = articleBody.select("img").first().attr("data-src");
                 entity.addProperty("image", getImg(image.contains("http") ? image : (getBaseUrl() + image)));
             }
+
+            // Get all document
+            String allDocument = document.select("#content > div.com-content-article.item-page.page-list-items > div.com-content-article__body").text();
+            entity.addProperty("allDocument", allDocument);
 
             System.out.print("\rCrawling " + name + " done");
 

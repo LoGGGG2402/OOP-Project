@@ -96,9 +96,12 @@ public class Event extends NguoiKeSu{
             if (articleBody.select("img").first() != null){
                 String image = articleBody.select("img").first().attr("data-src");
                 entity.addProperty("image", getImg(image.contains("http") ? image : (getBaseUrl() + image)));
-            }else {
-                System.out.println(url);
             }
+
+            // get document
+            // Get all document
+            String allDocument = document.select("#content > div.com-content-article.item-page.page-list-items > div.com-content-article__body").text();
+            entity.addProperty("allDocument", allDocument);
 
 
         } catch (IOException | URISyntaxException | NullPointerException e) {

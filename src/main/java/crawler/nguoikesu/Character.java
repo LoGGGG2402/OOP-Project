@@ -115,6 +115,10 @@ public class Character extends NguoiKeSu{
                 entity.addProperty("image", getImg(image.contains("http") ? image : (getBaseUrl() + image)));
             }
 
+            // Get all document
+            String allDocument = document.select("#content > div.com-content-article.item-page.page-list-items > div.com-content-article__body").text();
+            entity.addProperty("allDocument", allDocument);
+
             System.out.print("\rCrawling " + url + " done has name " + name);
 
         } catch (IOException | URISyntaxException | NullPointerException e) {

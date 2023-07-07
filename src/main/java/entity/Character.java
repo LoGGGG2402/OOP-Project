@@ -16,7 +16,6 @@ import java.util.regex.Pattern;
 public class Character  extends Entity{
     private String dob;
     private String position;
-    private String location;
     private String dad;
     private String mom;
     private String partner;
@@ -207,7 +206,7 @@ public class Character  extends Entity{
         //process from Vansu
         if (jsonObject.get("source").getAsString().equals("https://vansu.vn"))
         {
-            Pattern pattern = Pattern.compile("^(.*?)(?=, (?:con|quê|sinh ngày|sinh quán|sinh|tên|cháu|nguyên quán|không rõ))");
+            Pattern pattern = Pattern.compile("^(.*?)(?=, (?:con|quê|sinh ngày|sinh quán|sinh|tên|cháu|nguyên quán|không rõ))", Pattern.CANON_EQ);
             Matcher matcher = pattern.matcher(description);
             if (matcher.find()) {
                 position = matcher.group(1).trim();
@@ -333,7 +332,7 @@ public class Character  extends Entity{
         if (jsonObject.get("source").getAsString().equals("https://nguoikesu.com")
             || jsonObject.get("source").getAsString().equals("https://vi.wikipedia.org"))
         {
-            Pattern pattern_dad = Pattern.compile("Cha|Thân phụ|Bố");
+            Pattern pattern_dad = Pattern.compile("Cha|Thân phụ|Bố", Pattern.CANON_EQ);
             Matcher matcher_dad;
             for(String fieldName:properties.keySet())
             {
@@ -361,7 +360,7 @@ public class Character  extends Entity{
         if (jsonObject.get("source").getAsString().equals("https://nguoikesu.com")
             || jsonObject.get("source").getAsString().equals("https://vi.wikipedia.org"))
         {
-            Pattern pattern_mom = Pattern.compile("Mẹ|Thân mẫu|Cha mẹ");
+            Pattern pattern_mom = Pattern.compile("Mẹ|Thân mẫu|Cha mẹ", Pattern.CANON_EQ);
             Matcher matcher_mom;
             for(String fieldName:properties.keySet())
             {
@@ -435,7 +434,7 @@ public class Character  extends Entity{
         JsonObject properties = jsonObject.get("properties").getAsJsonObject();
         if (jsonObject.get("source").getAsString().equals("https://nguoikesu.com"))
         {
-            Pattern pattern_children = Pattern.compile("Con cái|Con|Hậu duệ|Hậu duệ Hậu duệ");
+            Pattern pattern_children = Pattern.compile("Con cái|Con|Hậu duệ|Hậu duệ Hậu duệ", Pattern.CANON_EQ);
             Matcher matcher_children;
             for(String fieldName:properties.keySet())
             {
@@ -461,7 +460,7 @@ public class Character  extends Entity{
         }
         else if (jsonObject.get("source").getAsString().equals("https://vi.wikipedia.org"))
         {
-            Pattern pattern_children = Pattern.compile("Con cái|Con|Hậu duệ|Hậu duệ Hậu duệ");
+            Pattern pattern_children = Pattern.compile("Con cái|Con|Hậu duệ|Hậu duệ Hậu duệ", Pattern.CANON_EQ);
             Matcher matcher_children;
             for(String fieldName:properties.keySet())
             {
@@ -538,7 +537,7 @@ public class Character  extends Entity{
 
     @Override
     public String toString() {
-        return "Name: " + this.getName() + "\n" + "DOB: " + this.dob + "\n" + "Location: " + this.location + "\n" + "Position: " + this.position
+        return "Name: " + this.getName() + "\n" + "DOB: " + this.dob + "\n" + "Position: " + this.position
                + "\n" + "Partner: " + this.partner
                + "\n" + "Mom: " + this.mom
                + "\n" + "Dad: " + this.dad

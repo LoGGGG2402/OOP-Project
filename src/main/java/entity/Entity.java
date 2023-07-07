@@ -69,6 +69,9 @@ public abstract class Entity implements Serializable {
         String property = properties.toString();
         List<String> relatedCharacters = new ArrayList<>();
         for (String character : charactersNames) {
+            if (name.equals(character)) {
+                continue;
+            }
             if (property.contains(character) || description.contains(character)) {
                 relatedCharacters.add(character);
             }

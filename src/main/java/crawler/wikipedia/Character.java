@@ -48,6 +48,11 @@ public class Character extends Wikipedia {
                 entity.addProperty("image", getImg(image.contains("https:") ? image : "https:" + image));
             }
             entity.add("properties", properties);
+
+            // get allDocuments
+            String allDocuments = document.select("#content").text();
+            entity.addProperty("allDocument", allDocuments);
+
         } catch(IOException | URISyntaxException | NullPointerException e){
             System.out.println(url);
             return entity;

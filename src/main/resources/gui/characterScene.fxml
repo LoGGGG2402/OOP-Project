@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="655.0" prefWidth="734.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.Controller.characterController">
+    <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="850.0" prefWidth="710.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+            <children>
+                <ImageView fitHeight="860.0" fitWidth="734.0" layoutX="-3.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="false">
+                    <image>
+                        <Image url="@background4pane.jpg" />
+                    </image>
+                </ImageView>
+                <Label fx:id="chrName" layoutX="244.0" layoutY="71.0" prefHeight="40.0" prefWidth="470.0" text="Tên nhân vật ">
+                    <font>
+                        <Font size="19.0" />
+                    </font></Label>
+                <Label fx:id="label1" layoutX="64.0" layoutY="292.0" prefHeight="21.0" prefWidth="143.0" text="Năm sinh - mất :">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Label>
+                <Label fx:id="chrDOB" alignment="TOP_LEFT" layoutX="321.0" layoutY="292.0" prefHeight="63.0" prefWidth="388.0">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Label>
+                <Label fx:id="label12" layoutX="64.0" layoutY="670.0" prefHeight="13.0" prefWidth="109.0" text="Con cái :">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Label>
+                <Label fx:id="chrChild" layoutX="321.0" layoutY="670.0" prefHeight="21.0" prefWidth="315.0">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Label>
+                <Label fx:id="label121" layoutX="67.0" layoutY="412.0" prefHeight="13.0" prefWidth="109.0" text="Vợ/Chồng :">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Label>
+                <Label fx:id="chrWife" alignment="TOP_LEFT" layoutX="211.0" layoutY="407.0" prefHeight="24.0" prefWidth="391.0">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Label>
+                <Label fx:id="label1212" layoutX="65.0" layoutY="463.0" prefHeight="13.0" prefWidth="109.0" text="Cha :">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Label>
+                <Label fx:id="chrDad" layoutX="182.0" layoutY="464.0" prefHeight="13.0" prefWidth="388.0">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Label>
+                <Label fx:id="label14" layoutX="72.0" layoutY="514.0" prefHeight="21.0" prefWidth="125.0" text="Mẹ :">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Label>
+                <Label fx:id="chrMom" alignment="TOP_LEFT" layoutX="183.0" layoutY="512.0" prefHeight="25.0" prefWidth="387.0">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Label>
+                <Label fx:id="chrLocation" alignment="TOP_LEFT" layoutX="321.0" layoutY="481.0" prefHeight="61.0" prefWidth="391.0">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Label>
+                <Label fx:id="label1214" layoutX="64.0" layoutY="733.0" prefHeight="21.0" prefWidth="261.0" text="Liên kết với các nhân vật liên quan :">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Label>
+            <ScrollPane layoutX="32.0" layoutY="111.0" prefHeight="170.0" prefWidth="628.0">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                            <Label fx:id="chrDes" alignment="TOP_LEFT" prefHeight="73.0" prefWidth="545.0" text="description" wrapText="true">
+                                <font>
+                                    <Font size="15.0" />
+                                </font>
+                            </Label>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </ScrollPane>
+                <Label fx:id="chrRel" alignment="TOP_LEFT" layoutX="321.0" layoutY="733.0" prefHeight="64.0" prefWidth="293.0" wrapText="true">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Label>
+                <Label layoutX="64.0" layoutY="355.0" text="Chức vụ">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Label>
+                <Label fx:id="chrPos" alignment="TOP_LEFT" layoutX="321.0" layoutY="355.0" prefHeight="65.0" prefWidth="389.0" wrapText="true">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Label>
+                <Label layoutX="64.0" layoutY="796.0" prefHeight="21.0" prefWidth="143.0" text="Nguồn">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Label>
+                <Label fx:id="chrSource" layoutX="321.0" layoutY="796.0" prefHeight="21.0" prefWidth="297.0">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Label>
+            <ImageView fx:id="chrImage" fitHeight="141.0" fitWidth="324.0" layoutX="205.0" pickOnBounds="true" preserveRatio="true" />
+
+            </children>
+
+        </AnchorPane>
+    </content>
+</ScrollPane>

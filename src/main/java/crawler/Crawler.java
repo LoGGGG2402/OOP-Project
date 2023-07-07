@@ -7,7 +7,6 @@ import java.io.*;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URL;
-import java.net.URLEncoder;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.StandardCopyOption;
@@ -26,43 +25,42 @@ public abstract class Crawler {
     }
     protected void crawl(){
         Vector<String> characterUrl = getUrl();
-
-        ExecutorService executorService = Executors.newFixedThreadPool(30);
-        List<Future<JsonObject>> futures = new ArrayList<>();
-
-        characterUrl.forEach(url -> {
-            Callable<JsonObject> callable = () -> {
-                JsonObject entity;
-                if (url.contains(baseUrl)) {
-                    entity = getEntity(url);
-                } else {
-                    entity = getEntity(url.charAt(0) == '/' ? baseUrl + url : baseUrl + "/" + url);
-                }
-                if (entity != null) {
-                    entity.addProperty("source", getBaseUrl());
-                }
-                return entity;
-            };
-            futures.add(executorService.submit(callable));
-        });
-
-
-        executorService.shutdown();
-
         JsonArray character = new JsonArray();
-        for (Future<JsonObject> future : futures) {
-            try {
-                JsonObject entity = future.get();
-                if (entity != null) {
-                    character.add(entity);
+
+        try(ExecutorService executorService = Executors.newFixedThreadPool(30)) {
+            List<Future<JsonObject>> futures = new ArrayList<>();
+
+            characterUrl.forEach(url -> {
+                Callable<JsonObject> callable = () -> {
+                    JsonObject entity;
+                    if (url.contains(baseUrl)) {
+                        entity = getEntity(url);
+                    } else {
+                        entity = getEntity(url.charAt(0) == '/' ? baseUrl + url : baseUrl + "/" + url);
+                    }
+                    if (entity != null) {
+                        entity.addProperty("source", getBaseUrl());
+                    }
+                    return entity;
+                };
+                futures.add(executorService.submit(callable));
+            });
+
+
+            executorService.shutdown();
+
+            for (Future<JsonObject> future : futures) {
+                try {
+                    JsonObject entity = future.get();
+                    if (entity != null) {
+                        character.add(entity);
+                    }
+                } catch (InterruptedException | ExecutionException e) {
+                    Thread.currentThread().interrupt();
+                    e.printStackTrace();
                 }
-            } catch (InterruptedException | ExecutionException e) {
-                e.printStackTrace();
             }
         }
-        //get class name
-
-        // Make directory
         File directory = new File("data/" + this.getClass().getSimpleName());
         if (!directory.exists()) {
             if (directory.mkdirs())
@@ -94,7 +92,7 @@ public abstract class Crawler {
 
             try (InputStream in = new BufferedInputStream(imageUrl.openStream())) {
                 // Create the destination directory if it doesn't exist
-                Path directoryPath = Path.of("data/image");
+                Path directoryPath = Path.of("src/main/resources/gui/image");
                 Files.createDirectories(directoryPath);
 
                 // Copy the image to the destination path
@@ -105,7 +103,7 @@ public abstract class Crawler {
                 e.printStackTrace();
                 return null;
             }
-            return "data/image/" + uniqueFileName;
+            return "image/" + uniqueFileName;
 
         } catch (IOException | URISyntaxException e) {
             e.printStackTrace();

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<AnchorPane fx:id="detailPane" prefHeight="649.0" prefWidth="636.0" visible="true" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.Controller.placeController">
+    <children>
+        <ImageView fitHeight="649.0" fitWidth="636.0" pickOnBounds="true" preserveRatio="false">
+            <image>
+                <Image url="@background4pane.jpg" />
+            </image>
+        </ImageView>
+        <Label fx:id="pName" layoutX="247.0" layoutY="187.0" prefHeight="40.0" prefWidth="385.0" text="Tên địa danh">
+            <font>
+                <Font size="19.0" />
+            </font></Label>
+      <Label fx:id="label1" layoutX="64.0" layoutY="253.0" prefHeight="13.0" prefWidth="109.0" text="Địa hình :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="pType" layoutX="321.0" layoutY="253.0" prefHeight="21.0" prefWidth="316.0" text="type">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="label2" layoutX="64.0" layoutY="290.0" prefHeight="21.0" prefWidth="159.0" text="Nhân vật liên quan :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="pFigure" layoutX="321.0" layoutY="290.0" prefHeight="21.0" prefWidth="316.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="label121" layoutX="64.0" layoutY="327.0" prefHeight="21.0" prefWidth="143.0" text="Lễ hội liên quan :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="pFestival" layoutX="321.0" layoutY="327.0" prefHeight="21.0" prefWidth="316.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="label1212" layoutX="64.0" layoutY="364.0" prefHeight="21.0" prefWidth="159.0" text="Sự kiện liên quan :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="pEvent" layoutX="321.0" layoutY="364.0" prefHeight="21.0" prefWidth="316.0" wrapText="true">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="label14" layoutX="64.0" layoutY="401.0" prefHeight="21.0" prefWidth="176.0" text="Triều đại liên quan :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="pGovernments" layoutX="321.0" layoutY="401.0" prefHeight="21.0" prefWidth="316.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="label122" layoutX="64.0" layoutY="438.0" prefHeight="13.0" prefWidth="109.0" text="Mô tả chi tiết :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="pDes" layoutX="321.0" layoutY="438.0" prefHeight="21.0" prefWidth="316.0" text="description">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+
+    </children>
+</AnchorPane>

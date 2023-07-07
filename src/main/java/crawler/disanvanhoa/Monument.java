@@ -90,9 +90,13 @@ public class Monument extends DiSanVanHoa{
 
             // get image
             if (document.select("#main-page > div.page-content").select("img").first() != null){
-                String image = document.select("#main-page > div.page-content").select("img").first().attr("data-src");
+                String image = document.select("#main-page > div.page-content").select("img").first().attr("src");
                 entity.addProperty("image", getImg(image.contains("http") ? image : (getBaseUrl() + image)));
             }
+
+            // get allDocuments
+            String allDocument = document.select("#main-page > div.page-content").text();
+            entity.addProperty("allDocument", allDocument);
 
         } catch (IOException | URISyntaxException e) {
             return null;
