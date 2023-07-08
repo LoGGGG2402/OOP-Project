@@ -1,6 +1,6 @@
-package gui.Controller;
+package gui.controller;
 
-import gui.Entity.Place;
+import entity.Monument;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
@@ -8,7 +8,7 @@ import javafx.scene.control.Label;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class placeController implements Initializable {
+public class MonumentController implements Initializable {
     @FXML
     public Label pName;
     @FXML
@@ -28,9 +28,9 @@ public class placeController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
     }
-    public void setLabel(Place place) {
+    public void setLabel(Monument place) {
         pName.setText(place.getName());
-        pType.setText(place.getPlType());
+
         pDes.setText(place.getDescription());
     }
 

@@ -34,14 +34,11 @@ public abstract class Wikipedia extends Crawler {
                 System.out.println("Failed to create directory!");
         }
 
-
+        File file = new File("data/" + this.getClass().getSimpleName() + "/" + getTitle() + ".json");
         // Write to file
-        try {
-            File file = new File("data/" + this.getClass().getSimpleName() + "/" + getTitle() + ".json");
-            FileWriter fileWriter = new FileWriter(file);
+        try(FileWriter fileWriter = new FileWriter(file);) {
             fileWriter.write(entities.toString());
             fileWriter.flush();
-            fileWriter.close();
         } catch (IOException e) {
             e.printStackTrace();
         }

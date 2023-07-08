@@ -15,6 +15,11 @@ public class Festival extends Entity{
 
     }
 
+    @Override
+    public Entity merge(Entity entity) {
+        return null;
+    }
+
     public String getDate() {
         return date;
     }

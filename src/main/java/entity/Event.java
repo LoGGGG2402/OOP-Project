@@ -19,4 +19,10 @@ public class Event extends Entity{
     protected void getPropertiesFromJson(JsonObject jsonObject) {
 
     }
+
+    @Override
+    public Entity merge(Entity entity) {
+
+        return null;
+    }
 }

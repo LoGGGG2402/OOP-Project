@@ -1,17 +1,8 @@
-package gui.Controller;
+package gui.controller;
 
-import gui.Entity.*;
 import entity.Character;
-import entity.Entity;
+import entity.*;
 import gui.FxmlLoader;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
-import gui.Entity.Event;
-import gui.Entity.Festival;
-import gui.Entity.Government;
-import gui.Entity.Place;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
@@ -26,11 +17,13 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
+import process.Process;
 
 import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.net.URL;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.ResourceBundle;
 
 public class mainController implements Initializable {
     @FXML
@@ -50,26 +43,16 @@ public class mainController implements Initializable {
     private Button backButton;
     ObservableList<Entity> selectedList = FXCollections.observableArrayList();
 
-    public ObservableList<Character> createCharList() throws FileNotFoundException {
-        JsonArray jsonArray = JsonParser.parseReader(new FileReader("data/Character/Người Kể Sử.json")).getAsJsonArray();
-        ObservableList<Character> characters = FXCollections.observableArrayList();
-        for (JsonElement jsonElement : jsonArray) {
-            if (jsonElement.isJsonNull()) {
-                continue;
-            }
-            JsonObject jsonObject = jsonElement.getAsJsonObject();
-            Character character = new Character(jsonObject);
-            characters.add(character);
-        }
-        return characters;
-    }
-    ObservableList<Place> monument = FXCollections.observableArrayList(
+    Process process = new Process();
+
+
+    ObservableList<Monument> monument = FXCollections.observableArrayList(
 
     );
     ObservableList<Festival> festival = FXCollections.observableArrayList(
 
     );
-    ObservableList<Government> governments = FXCollections.observableArrayList(
+    ObservableList<Dynasty> governments = FXCollections.observableArrayList(
     );
     ObservableList<Event> events = FXCollections.observableArrayList(
 
@@ -104,13 +87,8 @@ public class mainController implements Initializable {
                     return true;
                 }
                 String searchKeyWord = newValue.toLowerCase();
-                if (entity.getName().toLowerCase().indexOf(searchKeyWord) > -1) {
-                    return true;
-                } else if (entity.getDescription().toLowerCase().indexOf(searchKeyWord) > -1) {
-                    return true;
-                } else {
-                    return false;
-                }
+                return entity.getName().toLowerCase().contains(searchKeyWord);
+                        //entity.getDescription() != null && entity.getDescription().toLowerCase().contains(searchKeyWord);
             });
         });
         SortedList<Entity> sortedList = new SortedList<>(filteredList);
@@ -120,7 +98,7 @@ public class mainController implements Initializable {
 
     @FXML
     void showCharacterList(ActionEvent event) throws FileNotFoundException {
-        ObservableList<Character> characters = createCharList();
+        ObservableList<Character> characters = process.getCharacters();
         // Tạo danh sách muốn hiển thị
         selectedList.clear();
         selectedList.addAll(characters);
@@ -201,12 +179,7 @@ public class mainController implements Initializable {
         Hyperlink itemToHyperlink = new Hyperlink(keyword);
         itemToHyperlink.setOnAction(event -> {
             //ObservableList<Entity> govCheck = FXCollections.observableArrayList(governments);
-            ObservableList<Entity> chrCheck = null;
-            try {
-                chrCheck = FXCollections.observableArrayList(createCharList());
-            } catch (FileNotFoundException e) {
-                throw new RuntimeException(e);
-            }
+            ObservableList<Entity> chrCheck = FXCollections.observableArrayList(process.getCharacters());
             /*
             ObservableList<Entity> monuCheck = FXCollections.observableArrayList(monument);
             ObservableList<Entity> fesCheck = FXCollections.observableArrayList(festival);
@@ -267,7 +240,7 @@ public class mainController implements Initializable {
     }
     public void handleClickedEvent(Entity handleEntity) throws FileNotFoundException {
         //ObservableList<Entity> govCheck = FXCollections.observableArrayList(governments);
-        ObservableList<Entity> chrCheck = FXCollections.observableArrayList(createCharList());
+        ObservableList<Entity> chrCheck = FXCollections.observableArrayList(process.getCharacters());
         /*
         ObservableList<Entity> monuCheck = FXCollections.observableArrayList(monument);
         ObservableList<Entity> fesCheck = FXCollections.observableArrayList(festival);
@@ -279,9 +252,8 @@ public class mainController implements Initializable {
             Character handleCharacter = (Character) handleEntity;
             AnchorPane anchorPane = (AnchorPane) view.getContent();
             Label chrRelLabel = (Label) anchorPane.lookup("#chrRel");
-            List<String> nameList = getStringList();
 
-            List<String> charRel = new ArrayList<>(handleCharacter.relatedEntity(nameList));
+            List<String> charRel = new ArrayList<>(handleCharacter.relatedEntity(process.getCharacterNames()));
             if (charRel.size() == 0 ) {
                 chrRelLabel.setText("Không có");
             } else {
@@ -370,17 +342,7 @@ public class mainController implements Initializable {
     public void showMenu(ActionEvent actionEvent) {
         Character clone = new Character(null);
         FxmlLoader object = new FxmlLoader();
-        /*Pane view = object.getPane("menuScene",clone);
-        mainBorder.setCenter(view);*/
         searchBar.setVisible(false);
 
-    }
-    public List<String> getStringList() throws FileNotFoundException {
-        ObservableList<Character> charList = createCharList();
-        List<String> stringList = new ArrayList<>();
-        charList.forEach(character -> {
-            stringList.add(character.getName());
-        });
-        return stringList;
     }
 }

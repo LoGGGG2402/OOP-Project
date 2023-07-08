@@ -26,7 +26,8 @@ public class Character  extends Entity{
         super(jsonObject);
     }
 
-    public void merge(Character character){
+    public Entity merge(Entity entity){
+        Character character = (Character) entity;
         if (character.getDescription() != null && (getDescription() == null || character.getDescription().trim().length() > getDescription().trim().length())) {
                 setDescription(character.getDescription());
         }
@@ -76,6 +77,7 @@ public class Character  extends Entity{
         }
 
         setSource(getSource() + " , " + character.getSource());
+        return this;
     }
 
     @Override
@@ -131,7 +133,7 @@ public class Character  extends Entity{
                 {
                     //pattern = Pattern.compile("sinh\\s+[^)]+");
                     //pattern = Pattern.compile("[\\d?]{0,4}[ ]?[-–][ ]?[\\d?]{0,2}[ ]?tháng[ ][\\d?]{1,2}[ ]?năm[ ][\\d?]{0,4}[ ]?");
-                    pattern = Pattern.compile("[\\d?]{0,2} ?tháng [\\d?]{1,2} năm [\\d?]{0,4} ?[-–] ?[\\d?]{0,2} ?tháng [\\d?]{1,2} năm [\\d?]{0,4} ?");
+                    pattern = Pattern.compile("[\\d?]{0,2} ?tháng [\\d?]{1,2} năm [\\d?]{0,4} ?[-–] ?[\\d?]{0,2} ?tháng [\\d?]{1,2} năm [\\d?]{0,4} ?", Pattern.CANON_EQ);
                     matcher = pattern.matcher(description);
                     if (matcher.find() && !matcher.group().matches("\\D+"))
                     {

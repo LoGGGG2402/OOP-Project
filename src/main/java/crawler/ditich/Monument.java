@@ -54,7 +54,7 @@ public class Monument extends Ditich{
             connection.setRequestMethod("GET");
             connection.setReadTimeout(10000);
 
-            Document document = org.jsoup.Jsoup.parse(connection.getInputStream(), "UTF-8", url);
+            Document document = Jsoup.parse(connection.getInputStream(), "UTF-8", url);
 
             // Get name
             String name = document.select("#block-harvard-content > article > div > section > div > div.hl__library-info__features > section > h2").text();

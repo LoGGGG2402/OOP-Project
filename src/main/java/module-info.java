@@ -13,8 +13,6 @@ module gui {
     opens entity to javafx.base;
     opens gui to javafx.fxml;
     exports gui;
-    exports gui.Controller;
-    opens gui.Controller to javafx.fxml;
-    exports gui.Entity;
-    opens gui.Entity to javafx.fxml;
+    exports gui.controller;
+    opens gui.controller to javafx.fxml;
 }

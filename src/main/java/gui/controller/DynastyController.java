@@ -1,6 +1,6 @@
-package gui.Controller;
+package gui.controller;
 
-import gui.Entity.Government;
+import entity.Dynasty;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class governmentController implements Initializable {
+public class DynastyController implements Initializable {
     @FXML
     public Label gdEnd;
     @FXML
@@ -36,14 +36,11 @@ public class governmentController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
     }
-    public void setLabel(Government government) throws IOException {
+    public void setLabel(Dynasty government) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/gui/mainScene.fxml"));
         Parent root = loader.load();
         mainController mainController = loader.getController();
         gName.setText(government.getName());
-        gdFound.setText(government.getGovDateFounded());
-        gdEnd.setText(government.getGovDateEnded());
-        gType.setText(government.getGovType());
         gDes.setText(government.getDescription());
     }
 

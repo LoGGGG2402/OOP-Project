@@ -1,91 +1,58 @@
 package merge;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonElement;
-import com.google.gson.stream.JsonReader;
+
 import entity.Character;
+import entity.Entity;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import org.apache.commons.lang3.math.NumberUtils;
 
-import java.io.*;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import static org.apache.jena.ext.com.google.common.primitives.Floats.min;
 
-public class MergeCharacter extends merge.Merge{
-    ArrayList<Character> characters = new ArrayList<>();
+public class CharacterList extends EntityList{
+    Map<String, List<Character>> listHashMap;
 
-    ArrayList<Character> mergedCharacters = new ArrayList<>();
+    public CharacterList() {
+        super("data/Character");
+    }
 
-    Map<String, List<Character>> listName = new HashMap<>();
-
-    public MergeCharacter() {
-        String path = "data/Character";
-        File folder = new File(path);
-        File[] listOfFiles = folder.listFiles();
-        assert listOfFiles != null;
-        for (File file : listOfFiles) {
-            if (file.isFile()) {
-                try(FileReader fileReader = new FileReader(file)) {
-                    JsonArray jsonArray = new Gson().fromJson(new JsonReader(fileReader), JsonArray.class);
-
-                    for (JsonElement element: jsonArray){
-                        Character character = new Character(element.getAsJsonObject());
-                        characters.add(character);
-                    }
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-        merge();
-        Gson gson = new GsonBuilder().setPrettyPrinting().create();
-
-        for (Character character: mergedCharacters){
-//            if(character.getSource().split(",").length > 1){
-//                System.out.println(character.getName());
-//                System.out.println(gson.toJson(character.getProperties()));
-//                System.out.println("====================================");
-//            }
-            if(character.getName().equals("Phan Đình Phùng")){
-                System.out.println(gson.toJson(character.getProperties()));
-            }
-        }
+    protected void init(){
+        listHashMap = new HashMap<>();
     }
 
     // merge
-    public void merge(){
-        for(Character character: characters){
+    @Override
+    protected void merge(){
+        for(Entity entity: getBaseEntities()){
+            Character character = (Character) entity;
             String name = character.getName();
-            if(listName.containsKey(name)){
+            if(listHashMap.containsKey(name)){
                 boolean equal = false;
-                for (Character ch: listName.get(name)){
+                for (Character ch: listHashMap.get(name)){
                     if (equalCharacter(ch, character) && !ch.getSource().contains(character.getSource())){
                         equal = true;
-                        // remove old
-                        listName.get(name).remove(ch);
-                        mergedCharacters.remove(ch);
-                        // merge new old
-                        ch.merge(character);
-                        // add new
-                        listName.get(name).add(ch);
-                        mergedCharacters.add(ch);
+                        System.out.println("equal : " + character.getName());
+                        mergeEntity(ch, character);
                         break;}
-
                 }
                 if (!equal){
                     // add new
-                    listName.get(name).add(character);
-                    mergedCharacters.add(character);
+                    System.out.println("not equal : " + character.getName());
+                    listHashMap.get(name).add(character);
+                    addEntity(character);
                 }
             } else {
                 List<Character> list = new ArrayList<>();
                 list.add(character);
                 // add new
-                listName.put(name, list);
-                mergedCharacters.add(character);
+                listHashMap.put(name, list);
+                addEntity(character);
             }
         }
     }
@@ -100,10 +67,7 @@ public class MergeCharacter extends merge.Merge{
         if (dobCheck && (oldChar.getRelatives() == null || newChar.getRelatives() == null)){
             return true;
         }
-
-        boolean positionCheck = checkPosition(oldChar, newChar);
-
-        return true;
+        return checkPosition(oldChar, newChar);
     }
 
     private boolean checkDob(String oldDob, String newDob){
@@ -204,7 +168,7 @@ public class MergeCharacter extends merge.Merge{
         }
 
 
-        Pattern pattern = Pattern.compile("(đại|thần|tướng|Đại|Thần|Tướng|[A-Z]\\S+)");
+        Pattern pattern = Pattern.compile("(đại|thần|tướng|[A-Z]\\S+)", Pattern.CANON_EQ);
         Matcher matcher = pattern.matcher(oldChar.getPosition());
 
         int count = 0;
@@ -272,9 +236,15 @@ public class MergeCharacter extends merge.Merge{
         }
     }
 
-
+    public ObservableList<Character> getCharacterList() {
+        ObservableList<Character> list = FXCollections.observableArrayList();
+        for (Entity character : getEntities()) {
+            list.add((Character) character);
+        }
+        return list;
+    }
 
     public static void main(String[] args) {
-        new MergeCharacter();
+        new CharacterList().getEntities().forEach(System.out::println);
     }
 }

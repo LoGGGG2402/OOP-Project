@@ -1,6 +1,6 @@
-package gui.Controller;
+package gui.controller;
 
-import gui.Entity.Event;
+import entity.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
@@ -8,7 +8,7 @@ import javafx.scene.control.Label;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class eventController implements Initializable {
+public class EventController implements Initializable {
     @FXML
     private Label eName;
 
@@ -26,7 +26,6 @@ public class eventController implements Initializable {
     public void setLabel(Event event) {
         eName.setText(event.getName());
         eDes.setText(event.getDescription());
-        eTime.setText(event.getEvTime());
 
     }
 

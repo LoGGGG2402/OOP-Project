@@ -1,7 +1,7 @@
 package gui;
 
 import entity.Character;
-import gui.Controller.characterController;
+import gui.controller.CharacterController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.ScrollPane;
 
@@ -20,7 +20,7 @@ public class FxmlLoader {
                 controller.setLabel((Government) entity);
             }*/
             if (filename.equals("characterScene")) {
-                characterController controller = loader.getController();
+                CharacterController controller = loader.getController();
                 //System.out.println(((Character) entity).getRelatives().isBlank());
                 controller.setLabel((Character) entity);
             }
@@ -30,11 +30,11 @@ public class FxmlLoader {
                 controller.setLabel((Festival) entity);
             }
             if (filename.equals("placeScene")) {
-                placeController controller = loader.getController();
+                DynastyController controller = loader.getController();
                 controller.setLabel((Place) entity);
             }
             if (filename.equals("eventScene")) {
-                eventController controller = loader.getController();
+                EventController controller = loader.getController();
                 controller.setLabel((Event) entity);
             }
             */

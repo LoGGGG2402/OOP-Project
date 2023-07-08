@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" styleClass="anchor" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.Controller.mainController">
+<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" styleClass="anchor" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller.mainController">
    <children>
       <BorderPane fx:id="mainBorder" prefHeight="775.0" prefWidth="946.0">
          <ImageView fitHeight="779.0" fitWidth="947.0" pickOnBounds="true" preserveRatio="false">

@@ -36,4 +36,9 @@ public class Dynasty extends Entity{
     protected void getPropertiesFromJson(JsonObject jsonObject) {
 
     }
+
+    @Override
+    public Entity merge(Entity entity) {
+        return null;
+    }
 }
