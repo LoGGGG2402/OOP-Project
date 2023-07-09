@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
+import merge.EntityList;
 
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -34,9 +35,9 @@ public class Dynasty extends Entity{
     private String founder;
     private String language;
     private String capital;
-    private ArrayList<String> kings = new ArrayList<>();
+    private ArrayList<String> kings;
 
-    private List<JsonObject> timeLineJson = new ArrayList<>();
+    private List<JsonObject> timeLineJson;
 
     public Dynasty(JsonObject jsonObject) {
         super(jsonObject);
@@ -82,11 +83,22 @@ public class Dynasty extends Entity{
         setSource(getSource() + ", " + dynasty.getSource());
 
         for (String king : dynasty.getKings()) {
+            String kingName = king.replace("\"", "");
             boolean isExist = false;
             for (String king2 : kings) {
-                if (king2.contains(king) || king.contains(king2)) {
-                    isExist = true;
-                    break;
+                String kingName2 = king2.replace("\"", "");
+                List<String> reaKingName = EntityList.getForeName(kingName);
+                List<String> reaKingName2 = EntityList.getForeName(kingName2);
+                for (String name : reaKingName) {
+                    for (String name2 : reaKingName2) {
+                        if (name.equals(name2)) {
+                            isExist = true;
+                            break;
+                        }
+                    }
+                    if (isExist) {
+                        break;
+                    }
                 }
             }
             if (!isExist) {
@@ -307,7 +319,6 @@ public class Dynasty extends Entity{
         timeLineJson = new ArrayList<>();
         if (jsonObject.get("source").getAsString().contains("https://nguoikesu.com"))
         {
-            Gson gson = new GsonBuilder().setPrettyPrinting().create();
             JsonObject periods = jsonObject.get("periods").getAsJsonObject();
             for(String periodName : periods.keySet())
             {
@@ -326,7 +337,6 @@ public class Dynasty extends Entity{
                     }
                     period.addProperty("description", description.toString());
                 }
-                System.out.println(gson.toJson(period));
                 timeLineJson.add(period);
             }
         }
@@ -342,7 +352,7 @@ public class Dynasty extends Entity{
     }
     public String toString()
     {
-        return getName()+ "\\n" + timeLineJson.toString();
+        return getName()+ "\\n" + getKings();
     }
     public static void main(String[] args) throws FileNotFoundException {
 
