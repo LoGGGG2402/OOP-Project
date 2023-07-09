@@ -47,11 +47,6 @@ public class mainController implements Initializable {
     ObservableList<Entity> selectedList = FXCollections.observableArrayList();
 
     Process process = new Process();
-
-
-    ObservableList<Monument> monument = FXCollections.observableArrayList(
-
-    );
     ObservableList<Dynasty> governments = FXCollections.observableArrayList(
     );
 
@@ -139,6 +134,21 @@ public class mainController implements Initializable {
         backButton.setVisible(false);
         search(event);
     }
+    @FXML
+    public void showMonumentList(ActionEvent event) {
+        ObservableList<Monument> monuments = process.getMonuments();
+        selectedList.clear();
+        selectedList.addAll(monuments);
+        // Hiển thị danh sách lên ListView
+        nameCol.setCellValueFactory(new PropertyValueFactory<Entity, String>("name"));
+        desCol.setCellValueFactory(new PropertyValueFactory<Entity, String>("description"));
+        tableView.setItems(selectedList);
+        tableViewAction();
+        searchBar.setVisible(true);
+        mainBorder.setCenter(tableView);
+        backButton.setVisible(false);
+        search(event);
+    }
     /*
     @FXML
     public void showDynastyList(ActionEvent event) {
@@ -154,20 +164,7 @@ public class mainController implements Initializable {
         search(event);
     }
 
-    @FXML
-    public void showMonumentList(ActionEvent event) {
-        selectedList.clear();
-        selectedList.addAll(monument);
-        // Hiển thị danh sách lên ListView
-        nameCol.setCellValueFactory(new PropertyValueFactory<Entity, String>("name"));
-        desCol.setCellValueFactory(new PropertyValueFactory<Entity, String>("description"));
-        tableView.setItems(selectedList);
-        tableViewAction();
-        searchBar.setVisible(true);
-        mainBorder.setCenter(tableView);
-        backButton.setVisible(false);
-        search(event);
-    }
+
 */
 
 
@@ -239,7 +236,10 @@ public class mainController implements Initializable {
             return "Festival";
         } else if (entity instanceof Event) {
             return "Event";
-        } else {
+        } else if (entity instanceof Monument) {
+            return "Monument";
+        }
+        else {
             System.out.println("entity không thuộc kiểu dữ liệu được định nghĩa");
         }
         /*
@@ -307,6 +307,14 @@ public class mainController implements Initializable {
             backButton.setVisible(true);
             return;
         }
+        if (checkEntityInList(handleEntity).equals("Monument")) {
+            PaneLoader object = new PaneLoader();
+            ScrollPane view = object.getPane("monumentScene",handleEntity);
+            mainBorder.setCenter(view);
+            searchBar.setVisible(false);
+            backButton.setVisible(true);
+            return;
+        }
 /*
         if (checkEntityInList(checkedName, govCheck)) {
             FxmlLoader object = new FxmlLoader();
@@ -325,22 +333,7 @@ public class mainController implements Initializable {
             setHyperLinkForList(gEvent ,handleGovernment.getGovEvents());
         }
 
-        if (checkEntityInList(checkedName,monuCheck)) {
-            FxmlLoader object = new FxmlLoader();
-            Pane view = object.getPane("placeScene",handleEntity);
-            mainBorder.setCenter(view);
-            searchBar.setVisible(false);
-            backButton.setVisible(true);
-            Place handlePlace = (Place) handleEntity;
-            Label pFigLabel = (Label) view.lookup("#pFigure");
-            setHyperLinkForList(pFigLabel ,handlePlace.getPlFigures());
-            Label pFestivalLabel = (Label) view.lookup("#pFestival");
-            setHyperLinkForList(pFestivalLabel ,handlePlace.getPlFestivals());
-            Label pGovernmentsLabel = (Label) view.lookup("#pGovernments");
-            setHyperLinkForList(pGovernmentsLabel ,handlePlace.getPlGovernments());
-            Label pEventLabel = (Label) view.lookup("#pEvent");
-            setHyperLinkForList(pEventLabel ,handlePlace.getPlEvents());
-        }
+
         */
     }
     public void setHyperLinkForList(Label handleLabel ,List<String> handleList){
@@ -367,7 +360,7 @@ public class mainController implements Initializable {
         Pane menu = loader.getMenu();
         mainBorder.setCenter(menu);
         searchBar.setVisible(false);
-        backButton.setVisible(true);
+
 
     }
 }

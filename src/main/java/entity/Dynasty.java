@@ -317,16 +317,7 @@ public class Dynasty extends Entity{
                 "Kings: " + kings.toString();
     }
     public static void main(String[] args) throws FileNotFoundException {
-        JsonArray jsonArray = JsonParser.parseReader(new FileReader("D:\\CODE JAVA\\OOP-Project-main\\data\\Dynasty\\wikipedia.json")).getAsJsonArray();
-        for (JsonElement jsonElement : jsonArray) {
-            if (jsonElement.isJsonNull()) {
-                continue;
-            }
-            JsonObject jsonObject = jsonElement.getAsJsonObject();
-            Dynasty dynasty = new Dynasty(jsonObject);
-            System.out.println(dynasty);
-            System.out.println("-------------------------------------------------");
-        }
+
 
     }
     }

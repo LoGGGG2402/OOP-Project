@@ -103,17 +103,16 @@ public class Monument extends Entity{
                 + "type: " + type + "\n";
     }
 
+    public String getLocation() {
+        return location;
+    }
+
+    public String getType() {
+        return type;
+    }
+
     public static void main(String[] args) throws FileNotFoundException {
-        JsonArray jsonArray = JsonParser.parseReader(new FileReader("D:\\CODE JAVA\\OOP-Project-main\\data\\Monument\\Người Kể Sử.json")).getAsJsonArray();
-        for (JsonElement jsonElement : jsonArray) {
-            if (jsonElement.isJsonNull()) {
-                continue;
-            }
-            JsonObject jsonObject = jsonElement.getAsJsonObject();
-            Monument monument = new Monument(jsonObject);
-            System.out.println(monument.toString());
-            System.out.println("-------------------------------------------------");
-        }
+
 
     }
 }

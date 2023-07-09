@@ -88,7 +88,7 @@
                         <Font name="Arial Bold" size="20.0" />
                      </font>
                   </Button>
-                  <Button fx:id="monumentButton" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="47.0" prefWidth="160.0" style="-fx-background-color: #f7ab54" text="Di Tích" textFill="WHITE">
+                  <Button fx:id="monumentButton" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#showMonumentList" prefHeight="47.0" prefWidth="160.0" style="-fx-background-color: #f7ab54" text="Di Tích" textFill="WHITE">
                      <graphic>
                         <ImageView>
                            <Image url="@monument.png" />
