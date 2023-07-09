@@ -42,6 +42,7 @@ public class Event extends Wikipedia {
 
                         if (moreInfo.has("allDocument"))
                             entity.addProperty("allDocument", moreInfo.get("allDocument").getAsString());
+                        entity.addProperty("source", getBaseUrl());
                         entities.add(entity);
                     }
                     else {
@@ -63,7 +64,9 @@ public class Event extends Wikipedia {
 
                             if (moreInfo.has("allDocument"))
                                 entity.addProperty("allDocument", moreInfo.get("allDocument").getAsString());
+                            entity.addProperty("source", getBaseUrl());
                             entities.add(entity);
+
                         }
                     }
                 }

@@ -9,7 +9,6 @@ import entity.Character;
 import entity.Entity;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import org.apache.commons.lang3.math.NumberUtils;
 
 import java.io.File;
 import java.io.FileReader;
@@ -86,7 +85,6 @@ public abstract class EntityList {
 
     protected void mergeEntity(Entity oldEntity, Entity newEntity) {
         entities.set(entities.indexOf(oldEntity), oldEntity.merge(newEntity));
-        System.out.println(oldEntity.merge(newEntity));
     }
 
     public List<Entity> getEntities() {
@@ -118,6 +116,36 @@ public abstract class EntityList {
             }
         }
         return null;
+    }
+
+
+    public static List<String> getForeName(String text) {
+        List<String> foreNames = new ArrayList<>();
+        text = text.trim();
+
+        text = text.replace(", ", " a ").replace(".", "").replace(";", "").replace(":", "").replace("?", "").replace("!", "").replace(" - ", "-").replace("-", " - ");
+
+        String[] words = text.split(" ");
+        StringBuilder stringBuilder = new StringBuilder();
+
+
+        for (int i = 0; i < words.length; i++) {
+            if (java.lang.Character.isUpperCase(words[i].charAt(0))) {
+                stringBuilder.append(words[i]);
+                stringBuilder.append(" ");
+            } else {
+                if (stringBuilder.length() > 0) {
+                    foreNames.add(stringBuilder.toString().trim());
+                    stringBuilder = new StringBuilder();
+                }
+            }
+            if (i == words.length - 1 && stringBuilder.length() > 0) {
+                foreNames.add(stringBuilder.toString().trim());
+            }
+        }
+
+
+        return foreNames;
     }
 
     protected boolean matchYear(String year, String year2, int tolerance) {
