@@ -1,7 +1,5 @@
 package merge;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import entity.Dynasty;
 import entity.Entity;
 
@@ -44,7 +42,9 @@ public class DynastyList extends EntityList{
                 .replace("I", "thứ nhất").replace("oà", "òa").trim().toLowerCase();
 
         if (oldName.contains(newName) || newName.contains(oldName)) {
-            return true;
+            if (oldDynasty.getFounder() == null || newDynasty.getFounder() == null) {
+                return true;
+            }
         }
 
         if (oldDynasty.getFounder() == null || newDynasty.getFounder() == null) {
@@ -72,10 +72,9 @@ public class DynastyList extends EntityList{
 
     public static void main(String[] args) {
         DynastyList dynastyList = new DynastyList();
-        Gson gson = new GsonBuilder().setPrettyPrinting().create();
-        for (Entity entity: dynastyList.getEntities()) {
-            Dynasty dynasty = (Dynasty) entity;
-            System.out.println(gson.toJson(dynasty));
-        }
+//        for (Entity entity: dynastyList.getEntities()) {
+//            Dynasty dynasty = (Dynasty) entity;
+//            System.out.println(dynasty);
+//        }
     }
 }
