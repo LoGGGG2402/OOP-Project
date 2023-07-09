@@ -68,8 +68,65 @@ public class Event extends Entity{
 
     @Override
     public Entity merge(Entity entity) {
+        Event event = (Event) entity;
+        if (event.getDescription() != null && (getDescription() == null || event.getDescription().trim().length() > getDescription().trim().length()))
+        {
+            setDescription(event.getDescription());
+        }
 
-        return null;
+        if (event.getTime() != null && (getTime() == null || event.getTime().trim().length() > getTime().trim().length()))
+        {
+            time = event.getTime();
+        }
+
+        if (event.getLocation() != null && (getLocation() == null || event.getLocation().trim().length() > getLocation().trim().length()))
+        {
+            location = event.getLocation();
+        }
+
+        if (event.getReason() != null && (getReason() == null || event.getReason().trim().length() > getReason().trim().length()))
+        {
+            reason = event.getReason();
+        }
+
+        if (event.getResult() != null && (getResult() == null || event.getResult().trim().length() > getResult().trim().length()))
+        {
+            result = event.getResult();
+        }
+
+        if (event.getBelligerents() != null && (getBelligerents() == null || event.getBelligerents().trim().length() > getTime().trim().length()))
+        {
+            belligerents = event.getBelligerents();
+        }
+
+        if (event.getCommanders() != null && (getCommanders() == null || event.getCommanders().trim().length() > getTime().trim().length()))
+        {
+            commanders = event.getCommanders();
+        }
+
+        if (event.getStrength() != null && (getStrength() == null || event.getStrength().trim().length() > getTime().trim().length()))
+        {
+            strength = event.getStrength();
+        }
+
+        if (event.getLosses() != null && (getLosses() == null || event.getLosses().trim().length() > getTime().trim().length()))
+        {
+            losses = event.getLosses();
+        }
+
+        if (event.getImage() != null && getImage() == null)
+        {
+            setImage(event.getImage());
+        }
+
+        for (String key: event.getProperties().keySet()){
+            if (!getProperties().has(key)){
+                addProperty(key, event.getProperties().get(key).getAsString());
+            }
+        }
+
+        setSource(getSource() + " , " + event.getSource());
+        return this;
     }
 
     private void processTime(JsonObject jsonObject)
