@@ -136,7 +136,7 @@ public class Dynasty extends Entity{
         {
             String nameAttr = jsonObject.get("name").getAsString();
             JsonObject properties = jsonObject.get("properties").getAsJsonObject();
-            if (nameAttr.contains("Trưng Nữ Vương") || nameAttr.contains("An Dương Vương"))
+            if (nameAttr.contains("Trưng Nữ vương") || nameAttr.contains("An Dương vương"))
             {
                 founder = nameAttr;
             }
