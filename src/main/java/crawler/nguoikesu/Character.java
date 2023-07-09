@@ -121,6 +121,10 @@ public class Character extends NguoiKeSu{
 
             System.out.print("\rCrawling " + url + " done has name " + name);
 
+            //
+            if (entity.get("name").getAsString().contains("nhà ") || entity.get("name").getAsString().contains("Nhà ")){
+                return null;
+            }
         } catch (IOException | URISyntaxException | NullPointerException e) {
             e.printStackTrace();
             return null;

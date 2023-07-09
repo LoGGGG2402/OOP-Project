@@ -261,17 +261,11 @@ public class Event extends Entity{
     public String toString()
     {
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
-        String s1 = "name='" + getName() + '\'' +
-                ", time='" + time + '\'' +
-                ", location='" + location + '\'' +
-                ", reason='" + reason + '\'' +
-                ", result='" + result + '\'' +
-                ", belligerents='" + belligerents + '\'' +
-                ", commanders='" + commanders + '\'' +
-                ", strength='" + strength + '\'' +
-                ", losses='" + losses + '\'' +
+        String s1 = "name='" + getName() + '\n' +
+                ", time='" + time + '\n' +
+                ", location='" + location + '\n' +
                 '}';
 
-        return gson.toJson(s1);
+        return s1;
     }
 }

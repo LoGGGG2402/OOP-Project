@@ -86,6 +86,7 @@ public abstract class EntityList {
 
     protected void mergeEntity(Entity oldEntity, Entity newEntity) {
         entities.set(entities.indexOf(oldEntity), oldEntity.merge(newEntity));
+        System.out.println(oldEntity.merge(newEntity));
     }
 
     public List<Entity> getEntities() {

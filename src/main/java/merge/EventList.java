@@ -13,10 +13,6 @@ import java.util.regex.Pattern;
 public class EventList extends EntityList{
     public EventList() {
         super("data/Event");
-        for (Entity entity: getEntities()){
-            Event event = (Event) entity;
-            System.out.println(event);
-        }
     }
 
     @Override
@@ -30,6 +26,7 @@ public class EventList extends EntityList{
             boolean found = false;
             for (Entity entity1: getEntities()){
                 if (equalEvent((Event) entity1, event)){
+                    System.out.println("Found");
                     mergeEntity(entity1, event);
                     found = true;
                     break;
@@ -95,9 +92,9 @@ public class EventList extends EntityList{
 
     public static void main(String[] args) {
         var EventList = new EventList();
-        for (Entity entity: EventList.getEntities()){
-            Event event = (Event) entity;
-            System.out.println(event);
-        }
+//        for (Entity entity: EventList.getEntities()){
+//            Event event = (Event) entity;
+//
+//        }
     }
 }
