@@ -132,6 +132,30 @@ public class Event extends Entity{
         {
             time = properties.get("Thời gian").getAsString();
         }
+        if (properties.size()==0)
+        {
+            Pattern pattern = Pattern.compile("\\d{1,4}-\\d{1,4}");
+            Matcher matcher = pattern.matcher(getName());
+            if (matcher.find()) {
+                time = matcher.group();
+            }
+            else
+            {
+                pattern = Pattern.compile("\\d{1,4} - \\d{1,4}");
+                matcher = pattern.matcher(getName());
+                if (matcher.find()) {
+                    time = matcher.group();
+                }
+                else
+                {
+                    pattern = Pattern.compile("\\d{1,4}");
+                    matcher = pattern.matcher(getName());
+                    if (matcher.find()) {
+                        time = matcher.group();
+                    }
+                }
+            }
+        }
     }
     private void processLocation(JsonObject jsonObject)
     {
