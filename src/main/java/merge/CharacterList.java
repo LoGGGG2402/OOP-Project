@@ -2,7 +2,6 @@ package merge;
 
 import entity.Character;
 import entity.Entity;
-import org.apache.commons.lang3.math.NumberUtils;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -61,7 +60,7 @@ public class CharacterList extends EntityList{
         if(relativesCheck){
             return true;
         }
-        boolean dobCheck = matchYear(oldChar.getDob(), newChar.getDob());
+        boolean dobCheck = matchYear(oldChar.getDob(), newChar.getDob(), 2);
         if (dobCheck && (oldChar.getRelatives() == null || newChar.getRelatives() == null)){
             return true;
         }

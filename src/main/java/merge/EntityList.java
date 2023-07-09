@@ -119,7 +119,7 @@ public abstract class EntityList {
         return null;
     }
 
-    protected boolean matchYear(String year, String year2) {
+    protected boolean matchYear(String year, String year2, int tolerance) {
         if (year == null || year2 == null) {
             return false;
         }
@@ -146,7 +146,7 @@ public abstract class EntityList {
             int oldYearInt = Integer.parseInt(oldYear);
             for (String newYear: newYears){
                 int newYearInt = Integer.parseInt(newYear);
-                if (Math.abs(oldYearInt - newYearInt) <= 2){
+                if (Math.abs(oldYearInt - newYearInt) <= tolerance){
                     return true;
                 }
             }
