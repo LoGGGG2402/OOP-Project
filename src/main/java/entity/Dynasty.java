@@ -88,7 +88,9 @@ public class Dynasty extends Entity{
         {
             JsonObject periods = jsonObject.get("periods").getAsJsonObject();
             if (!jsonObject.get("name").getAsString().equals("Bắc thuộc lần II")
-                    && !jsonObject.get("name").getAsString().equals("Bắc thuộc lần III"))
+                    && !jsonObject.get("name").getAsString().equals("Bắc thuộc lần III")
+                    && !jsonObject.get("name").getAsString().equals("Hồng Bàng & Văn Lang")
+                    && !jsonObject.get("name").getAsString().equals("Âu Lạc & Nam Việt"))
             {
                 for(String kingName : periods.keySet())
                 {
@@ -107,6 +109,9 @@ public class Dynasty extends Entity{
             {
                 founder = "An Dương Vương";
             }
+            if (jsonObject.get("name").getAsString().contains("Việt Nam")) {
+                founder = null;
+            }
         }
         else if (jsonObject.get("source").getAsString().contains("https://vansu.vn"))
         {
@@ -122,6 +127,9 @@ public class Dynasty extends Entity{
                     founder = firstObj.get("name").getAsString();
                     founder = founder.substring(founder.indexOf(".") + 2);
                 }
+            }
+            if (jsonObject.get("name").getAsString().contains("Việt Nam")) {
+                founder = null;
             }
         }
         else if (jsonObject.get("source").getAsString().contains("https://vi.wikipedia.org"))
@@ -139,6 +147,10 @@ public class Dynasty extends Entity{
                     founder = properties.get("Hoàng đế").getAsString();
                     founder = founder.substring(0, founder.indexOf(","));
                 }
+            }
+
+            if (nameAttr.equals("Chiến tranh Đông Dương") || nameAttr.equals("Cộng hòa xã hội chủ nghĩa Việt Nam")) {
+                founder = null;
             }
         }
     }
@@ -166,38 +178,36 @@ public class Dynasty extends Entity{
             {
                 capital = properties.get("Thủ đô").getAsString();
             }
+            if (getName().equals("Chiến tranh Đông Dương") || getName().equals("Cộng hòa xã hội chủ nghĩa Việt Nam")) {
+                capital = "Hà Nội";
+            }
         }
     }
 
-    private void processKings(JsonObject jsonObject)
-    {
+    private void processKings(JsonObject jsonObject) {
         kings = new ArrayList<>();
 
-        if (jsonObject.get("source").getAsString().contains("https://nguoikesu.com"))
-        {
+        if (jsonObject.get("source").getAsString().contains("https://nguoikesu.com")) {
             JsonObject periods = jsonObject.get("periods").getAsJsonObject();
             if (!jsonObject.get("name").getAsString().equals("Bắc thuộc lần II")
                     && !jsonObject.get("name").getAsString().equals("Bắc thuộc lần III")
                     && !jsonObject.get("name").getAsString().equals("Hồng Bàng & Văn Lang")
-                    && !jsonObject.get("name").getAsString().equals("Âu Lạc & Nam Việt"))
-            {
-                for(String kingName : periods.keySet())
-                {
-                    if (!kingName.contains("Thuộc"))
-                    {
+                    && !jsonObject.get("name").getAsString().equals("Âu Lạc & Nam Việt")) {
+                for (String kingName : periods.keySet()) {
+                    if (!kingName.contains("Thuộc")) {
                         kings.add(kingName);
                     }
                 }
-            }
-            else if (jsonObject.get("name").getAsString().equals("Hồng Bàng & Văn Lang"))
-            {
+            } else if (jsonObject.get("name").getAsString().equals("Hồng Bàng & Văn Lang")) {
                 kings.add("Kinh Dương Vương");
                 kings.add("Lạc Long Quân");
                 kings.add("Hùng Vương");
-            }
-            else if (jsonObject.get("name").getAsString().equals("Âu Lạc & Nam Việt"))
-            {
+            } else if (jsonObject.get("name").getAsString().equals("Âu Lạc & Nam Việt")) {
                 kings.add("An Dương Vương");
+            }
+
+            if (jsonObject.get("name").getAsString().contains("Việt Nam")) {
+                kings = new ArrayList<>();
             }
         }
         else if (jsonObject.get("source").getAsString().contains("https://vansu.vn"))
@@ -210,34 +220,37 @@ public class Dynasty extends Entity{
             }
             else if (!jsonObject.get("name").getAsString().contains("Thời tiền sử"))
             {
-                for(int i=0; i<periods.size(); i++)
-                {
+                for (int i = 0; i < periods.size(); i++) {
                     JsonObject obj = periods.get(i).getAsJsonObject();
                     String nameValue = obj.get("name").getAsString();
-                    nameValue= nameValue.substring(nameValue.indexOf(".") + 2);
+                    nameValue = nameValue.substring(nameValue.indexOf(".") + 2);
                     kings.add(nameValue);
                 }
             }
-            else if (jsonObject.get("source").getAsString().contains("https://vi.wikipedia.org"))
-            {
+
+            if (jsonObject.get("name").getAsString().contains("Việt Nam")) {
                 kings = new ArrayList<>();
-                String nameAttr = jsonObject.get("name").getAsString();
-                JsonObject properties = jsonObject.get("properties").getAsJsonObject();
-                if (nameAttr.contains("Trưng Nữ Vương") || nameAttr.contains("An Dương Vương"))
-                {
-                    kings.add(nameAttr);
+            }
+        }
+        else if (jsonObject.get("source").getAsString().contains("https://vi.wikipedia.org"))
+        {
+            kings = new ArrayList<>();
+            String nameAttr = jsonObject.get("name").getAsString();
+            JsonObject properties = jsonObject.get("properties").getAsJsonObject();
+            if (nameAttr.contains("Trưng Nữ Vương") || nameAttr.contains("An Dương Vương")) {
+                kings.add(nameAttr);
+            } else {
+                if (properties.has("Hoàng đế")) {
+                    String kingsListStr = properties.get("Hoàng đế").getAsString();
+                    kings = Arrays.asList(kingsListStr.split(", "));
                 }
-                else
-                {
-                    if (properties.has("Hoàng đế"))
-                    {
-                        String kingsListStr = properties.get("Hoàng đế").getAsString();
-                        kings = Arrays.asList(kingsListStr.split(", "));
-                    }
-                }
+            }
+            if (nameAttr.equals("Chiến tranh Đông Dương") || nameAttr.equals("Cộng hòa xã hội chủ nghĩa Việt Nam")) {
+                kings = new ArrayList<>();
             }
         }
     }
+
 
     private void processTimeLineJson(JsonObject jsonObject)
     {
