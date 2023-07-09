@@ -20,7 +20,7 @@ import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class EventController implements Initializable {
+public class EventController {
     @FXML
     public Label eName;
     @FXML
@@ -50,20 +50,27 @@ public class EventController implements Initializable {
 
     public void setLabel(Event event) {
         eName.setText(event.getName());
-        eDes.setText(event.getDescription().replace("/n", "/n/t"));
 
-        if (event.getTime() == null) {
+        if (event.getDescription() == null || event.getDescription().isEmpty()) {
+            eDes.setText("Không rõ");
+        } else {
+            eDes.setText(event.getDescription().replace("/n", "/n/t"));
+        }
+
+        if (event.getTime() == null || event.getTime().isEmpty()) {
             eTime.setText("Không rõ");
         } else {
             eTime.setText(event.getTime());
         }
 
-        if (event.getCommanders() == null) {
+        if (event.getCommanders() == null || event.getCommanders().isEmpty()) {
             eCommander.setText("Không rõ");
+            eCommander.setStyle("-fx-font-weight: normal;");
         } else {
             eCommander.setText(event.getCommanders().replace("|" ,"\n"));
+            eCommander.setStyle("-fx-font-weight: bold;");
         }
-        if (event.getSource() == null) {
+        if (event.getSource() == null || event.getSource().isEmpty()) {
             eSrc.setText("Không rõ");
         } else {
             String[] webList = event.getSource().split(", ");
@@ -72,7 +79,7 @@ public class EventController implements Initializable {
             for (int i = 0; i < webList.length; i++) {
                 String website = webList[i];
                 Hyperlink hyperlink = new Hyperlink(website);
-                hyperlink.setFont(new Font(14));
+                hyperlink.setFont(new Font(15));
                 String finalWebsite = website.replaceAll("\\s+", "");
                 hyperlink.setOnAction(e -> {
                     try {
@@ -89,37 +96,37 @@ public class EventController implements Initializable {
             eSrc.setGraphic(textFlow);
         }
 
-        if (event.getReason() == null) {
+        if (event.getReason() == null || event.getReason().isEmpty()) {
             eReason.setText("Không rõ");
         } else {
             eReason.setText(event.getReason());
         }
-        if (event.getResult() == null) {
+        if (event.getResult() == null || event.getResult().isEmpty()) {
             eResult.setText("Không rõ");
         } else {
             eResult.setText(event.getResult());
         }
-        if (event.getBelligerents() == null) {
+        if (event.getBelligerents() == null || event.getBelligerents().isEmpty()) {
             eBelli.setText("Không rõ");
         } else {
             eBelli.setText(event.getBelligerents().replace("|" ,"\n"));
         }
-        if (event.getStrength() == null) {
+        if (event.getStrength() == null || event.getStrength().isEmpty()) {
             eStrength.setText("Không rõ");
         } else {
             eStrength.setText(event.getStrength());
         }
-        if (event.getLocation() == null) {
+        if (event.getLocation() == null || event.getLocation().isEmpty()) {
             eLoca.setText("Không rõ");
         } else {
             eLoca.setText(event.getLocation());
         }
-        if (event.getLosses() == null) {
+        if (event.getLosses() == null || event.getLosses().isEmpty()) {
             eLoss.setText("Không rõ");
         } else {
             eLoss.setText(event.getLosses().replace("|" ,"\n"));
         }
-        if (event.getStrength() == null) {
+        if (event.getStrength() == null || event.getStrength().isEmpty()) {
             eStrength.setText("Không rõ");
         } else {
             eStrength.setText(event.getStrength().replace("|" ,"phe ta và phe địch gồm có"));
@@ -136,8 +143,5 @@ public class EventController implements Initializable {
 
     }
 
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
 
-    }
 }

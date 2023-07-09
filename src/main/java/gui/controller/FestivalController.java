@@ -8,6 +8,8 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Font;
+import javafx.scene.text.Text;
+import javafx.scene.text.TextFlow;
 
 import java.awt.*;
 import java.io.FileInputStream;
@@ -28,33 +30,52 @@ public class FestivalController {
     @FXML
     public Label fDes;
     @FXML
-    public Label fPlace;
+    public Label fLoca;
     @FXML
     public ImageView fImage;
     public void setLabel(Festival festival) {
 
         System.out.println(festival);
         fName.setText(festival.getName());
-        fDes.setText(festival.getDescription().replace("/n","/n/t"));
-        fDate.setText(festival.getDate());
-        if (festival.getLocation() == null) {
-            fPlace.setText("Không rõ");
+        if (festival.getDescription() == null || festival.getDescription().isEmpty()) {
+            fDes.setText("Không rõ");
         } else {
-            fPlace.setText(festival.getLocation());
+            fDes.setText(festival.getDescription().replace("/n","/n/t"));
         }
-        if (festival.getSource() == null) {
+        if (festival.getDate() == null || festival.getDate().isEmpty()) {
+            fDate.setText("Không rõ");
+        } else {
+            fDate.setText(festival.getDate());
+        }
+        if (festival.getLocation() == null || festival.getLocation().isEmpty()) {
+            fLoca.setText("Không rõ");
+        } else {
+            fLoca.setText(festival.getLocation());
+        }
+        if (festival.getSource() == null || festival.getSource().isEmpty()) {
             fSrc.setText("Không rõ");
         } else {
-            Hyperlink hyperlink = new Hyperlink(festival.getSource());
-            hyperlink.setOnAction(e -> {
-                try {
-                    Desktop.getDesktop().browse(new URI(festival.getSource()));
-                } catch (IOException | URISyntaxException ex) {
-                    ex.printStackTrace();
+            String[] webList = festival.getSource().split(", ");
+
+            TextFlow textFlow = new TextFlow();
+            for (int i = 0; i < webList.length; i++) {
+                String website = webList[i];
+                Hyperlink hyperlink = new Hyperlink(website);
+                hyperlink.setFont(new Font(15));
+                String finalWebsite = website.replaceAll("\\s+", "");
+                hyperlink.setOnAction(e -> {
+                    try {
+                        Desktop.getDesktop().browse(new URI(finalWebsite));
+                    } catch (IOException | URISyntaxException ex) {
+                        ex.printStackTrace();
+                    }
+                });
+                if (i > 0) {
+                    textFlow.getChildren().add(new Text("; "));
                 }
-            });
-            hyperlink.setFont(new Font(14));
-            fSrc.setGraphic(hyperlink);
+                textFlow.getChildren().add(hyperlink);
+            }
+            fSrc.setGraphic(textFlow);
         }
         if (festival.getImage()!=null) {
             String imagePath = "C:\\Users\\LamPhuss\\IdeaProjects\\OOP-Project\\" + festival.getImage();

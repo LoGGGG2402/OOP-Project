@@ -5,89 +5,110 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
+import javafx.scene.control.Hyperlink;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.text.Font;
+import javafx.scene.text.Text;
+import javafx.scene.text.TextFlow;
 
+import java.awt.*;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class DynastyController implements Initializable {
+public class DynastyController  {
     @FXML
-    public Label gdEnd;
+    public Label dName;
     @FXML
-    public Label gType;
+    public Label dFounder;
     @FXML
-    public Label gFigure;
+    public Label dCapital;
     @FXML
-    public Label gFes;
+    public Label dKings;
     @FXML
-    public Label gPlace;
+    public Label dRel;
     @FXML
-    public Label gEvent;
+    public Label dDes;
     @FXML
-    private Label gName;
+    public Label dSrc;
     @FXML
-    private Label gDes;
+    public Label dLanguage;
     @FXML
-    private Label gdFound;
+    public ImageView dImage;
 
 
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
+    public void setLabel(Dynasty dynasty) throws IOException {
+        dName.setText(dynasty.getName());
+        if (dynasty.getDescription() == null || dynasty.getDescription().isEmpty()) {
+            dDes.setText("Không rõ");
+        } else {
+            dDes.setText(dynasty.getDescription().replace("/n", "/n/t"));
+        }
+        if (dynasty.getFounder() == null || dynasty.getFounder().isEmpty()) {
+            dFounder.setText("Không rõ");
+            dFounder.setStyle("-fx-font-weight: normal;");
+        } else {
+            dFounder.setText(dynasty.getFounder());
+            dFounder.setStyle("-fx-font-weight: bold;");
+        }
+        if (dynasty.getSource() == null || dynasty.getSource().isEmpty()) {
+            dSrc.setText("Không rõ");
+        } else {
+            String[] webList = dynasty.getSource().split(", ");
 
+            TextFlow textFlow = new TextFlow();
+            for (int i = 0; i < webList.length; i++) {
+                String website = webList[i];
+                Hyperlink hyperlink = new Hyperlink(website);
+                hyperlink.setFont(new Font(15));
+                String finalWebsite = website.replaceAll("\\s+", "");
+                hyperlink.setOnAction(e -> {
+                    try {
+                        Desktop.getDesktop().browse(new URI(finalWebsite));
+                    } catch (IOException | URISyntaxException ex) {
+                        ex.printStackTrace();
+                    }
+                });
+                if (i > 0) {
+                    textFlow.getChildren().add(new Text("; "));
+                }
+                textFlow.getChildren().add(hyperlink);
+            }
+            dSrc.setGraphic(textFlow);
+        }
+
+        if (dynasty.getCapital() == null || dynasty.getCapital().isEmpty()) {
+            dCapital.setText("Không rõ");
+        } else {
+            dCapital.setText(dynasty.getCapital());
+        }
+        if (dynasty.getLanguage() == null || dynasty.getLanguage().isEmpty()) {
+            dLanguage.setText("Không rõ");
+        } else {
+            dLanguage.setText(dynasty.getLanguage());
+        }
+        if (dynasty.getKings().size() == 0) {
+            dKings.setText("Không rõ");
+        } else {
+            String kings = String.join(", ", dynasty.getKings());
+            dKings.setText(kings);
+        }
+
+        if (dynasty.getImage()!=null) {
+            String imagePath = "C:\\Users\\LamPhuss\\IdeaProjects\\OOP-Project\\" + dynasty.getImage();
+            try {
+                javafx.scene.image.Image image = new Image(new FileInputStream(imagePath));
+                dImage.setImage(image);
+            } catch (FileNotFoundException e) {
+            }
+        }
     }
-    public void setLabel(Dynasty government) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/gui/mainScene.fxml"));
-        Parent root = loader.load();
-        mainController mainController = loader.getController();
-        gName.setText(government.getName());
-        gDes.setText(government.getDescription());
-    }
 
-    /*public void setHyperLink(Hyperlink itemToHyperlink){
 
-        itemToHyperlink.setOnAction(event -> {
-            ObservableList<Entity> govCheck = FXCollections.observableArrayList(governments);
-            ObservableList<Entity> chrCheck = FXCollections.observableArrayList(characters);
-            ObservableList<Entity> monuCheck = FXCollections.observableArrayList(monument);
-            ObservableList<Entity> fesCheck = FXCollections.observableArrayList(festival);
-            ObservableList<Entity> evnCheck = FXCollections.observableArrayList(events);
-            if (checkEntityInList(itemToHyperlink,chrCheck)) {
-                FxmlLoader object = new FxmlLoader();
-                Pane view = object.getPane("figureScene",itemToHyperlink);
-                mainBorder.setCenter(view);
-                searchBar.setVisible(false);
-                backButton.setVisible(true);
-            }
-            if (checkEntityInList(itemToHyperlink, govCheck)) {
-                FxmlLoader object = new FxmlLoader();
-                Pane view = object.getPane("governmentScene",itemToHyperlink);
-                mainBorder.setCenter(view);
-                searchBar.setVisible(false);
-                backButton.setVisible(true);
-
-            }
-            if (checkEntityInList(itemToHyperlink,monuCheck)) {
-                FxmlLoader object = new FxmlLoader();
-                Pane view = object.getPane("placeScene",itemToHyperlink);
-                mainBorder.setCenter(view);
-                searchBar.setVisible(false);
-                backButton.setVisible(true);
-            }
-            if (checkEntityInList(itemToHyperlink,fesCheck)) {
-                FxmlLoader object = new FxmlLoader();
-                Pane view = object.getPane("festivalScene",itemToHyperlink);
-                mainBorder.setCenter(view);
-                searchBar.setVisible(false);
-                backButton.setVisible(true);
-            }
-            if (checkEntityInList(itemToHyperlink,evnCheck)) {
-                FxmlLoader object = new FxmlLoader();
-                Pane view = object.getPane("eventScene",itemToHyperlink);
-                mainBorder.setCenter(view);
-                searchBar.setVisible(false);
-                backButton.setVisible(true);
-            }
-        });
-    }*/
 }

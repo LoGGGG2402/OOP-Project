@@ -10,6 +10,7 @@ import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
@@ -18,6 +19,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
+import javafx.stage.Screen;
 import process.Process;
 
 import java.io.FileNotFoundException;
@@ -33,6 +35,8 @@ public class mainController implements Initializable {
     public TableColumn<Entity, String> nameCol;
     @FXML
     public TableColumn<Entity, String> desCol;
+    @FXML
+    public AnchorPane mainPane;
     @FXML
     private TableView<Entity> tableView;
 
@@ -149,11 +153,13 @@ public class mainController implements Initializable {
         backButton.setVisible(false);
         search(event);
     }
-    /*
+
     @FXML
     public void showDynastyList(ActionEvent event) {
+        ObservableList<Dynasty> dynasties = process.getDynasties();
         selectedList.clear();
-        selectedList.addAll(governments);
+        selectedList.addAll(dynasties);
+        // Hiển thị danh sách lên ListView
         nameCol.setCellValueFactory(new PropertyValueFactory<Entity, String>("name"));
         desCol.setCellValueFactory(new PropertyValueFactory<Entity, String>("description"));
         tableView.setItems(selectedList);
@@ -163,10 +169,6 @@ public class mainController implements Initializable {
         backButton.setVisible(false);
         search(event);
     }
-
-
-*/
-
 
     public Hyperlink setHyperLink(String keyword ){
         Hyperlink itemToHyperlink = new Hyperlink(keyword);
@@ -238,23 +240,15 @@ public class mainController implements Initializable {
             return "Event";
         } else if (entity instanceof Monument) {
             return "Monument";
+        } else if (entity instanceof Dynasty) {
+            return "Dynasty";
         }
         else {
             System.out.println("entity không thuộc kiểu dữ liệu được định nghĩa");
         }
-        /*
-        return checkList.stream()
-                .map(Entity::getName)
-                .anyMatch(name::equals);*/
         return null;
     };
     public void handleClickedEvent(Entity handleEntity) throws FileNotFoundException {
-        //ObservableList<Entity> govCheck = FXCollections.observableArrayList(governments);
-
-        /*
-        ObservableList<Entity> monuCheck = FXCollections.observableArrayList(monument);
-        ObservableList<Entity> fesCheck = FXCollections.observableArrayList(festival);
-        */
         if (checkEntityInList(handleEntity).equals("Character")) {
             PaneLoader object = new PaneLoader();
             ScrollPane view = object.getPane("characterScene", handleEntity);
@@ -315,26 +309,26 @@ public class mainController implements Initializable {
             backButton.setVisible(true);
             return;
         }
-/*
-        if (checkEntityInList(checkedName, govCheck)) {
-            FxmlLoader object = new FxmlLoader();
-            Pane view = object.getPane("governmentScene",handleEntity);
+
+        if (checkEntityInList(handleEntity).equals("Dynasty")) {
+            PaneLoader object = new PaneLoader();
+            ScrollPane view = object.getPane("dynastyScene",handleEntity);
+            Dynasty handleDynasty = (Dynasty) handleEntity;
+            AnchorPane anchorPane = (AnchorPane) view.getContent();
+            Label dRelLabel = (Label) anchorPane.lookup("#dRel");
+            List<String> dRel = new ArrayList<>(handleDynasty.relatedEntity(process.getCharacterNames()));
+            if (dRel.size() == 0 ) {
+                dRelLabel.setText("Không có");
+            } else {
+                setHyperLinkForList(dRelLabel, dRel);
+            }
             mainBorder.setCenter(view);
             searchBar.setVisible(false);
             backButton.setVisible(true);
-            Government handleGovernment = (Government) handleEntity;
-            Label gFigLabel = (Label) view.lookup("#gFigure");
-            setHyperLinkForList(gFigLabel ,handleGovernment.getGovFigures());
-            Label gFes = (Label) view.lookup("#gFes");
-            setHyperLinkForList(gFes ,handleGovernment.getGovFestivals());
-            Label gPlace = (Label) view.lookup("#gPlace");
-            setHyperLinkForList(gPlace ,handleGovernment.getGovPlaces());
-            Label gEvent = (Label) view.lookup("#gEvent");
-            setHyperLinkForList(gEvent ,handleGovernment.getGovEvents());
         }
 
 
-        */
+
     }
     public void setHyperLinkForList(Label handleLabel ,List<String> handleList){
         TextFlow textFlow = new TextFlow();

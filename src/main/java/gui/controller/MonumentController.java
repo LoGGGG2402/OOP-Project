@@ -7,6 +7,8 @@ import javafx.scene.control.Hyperlink;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Font;
+import javafx.scene.text.Text;
+import javafx.scene.text.TextFlow;
 
 import java.awt.*;
 import java.io.IOException;
@@ -51,19 +53,30 @@ public class MonumentController implements Initializable {
         } else {
             mType.setText(monument.getType());
         }
-        if (monument.getSource() == null || monument.getLocation().isEmpty()) {
+        if (monument.getSource() == null || monument.getSource().isEmpty()) {
             mSrc.setText("Không rõ");
         } else {
-            Hyperlink hyperlink = new Hyperlink(monument.getSource());
-            hyperlink.setOnAction(e -> {
-                try {
-                    Desktop.getDesktop().browse(new URI(monument.getSource()));
-                } catch (IOException | URISyntaxException ex) {
-                    ex.printStackTrace();
+            String[] webList = monument.getSource().split(", ");
+
+            TextFlow textFlow = new TextFlow();
+            for (int i = 0; i < webList.length; i++) {
+                String website = webList[i];
+                Hyperlink hyperlink = new Hyperlink(website);
+                hyperlink.setFont(new Font(15));
+                String finalWebsite = website.replaceAll("\\s+", "");
+                hyperlink.setOnAction(e -> {
+                    try {
+                        Desktop.getDesktop().browse(new URI(finalWebsite));
+                    } catch (IOException | URISyntaxException ex) {
+                        ex.printStackTrace();
+                    }
+                });
+                if (i > 0) {
+                    textFlow.getChildren().add(new Text("; "));
                 }
-            });
-            hyperlink.setFont(new Font(14));
-            mSrc.setGraphic(hyperlink);
+                textFlow.getChildren().add(hyperlink);
+            }
+            mSrc.setGraphic(textFlow);
         }
 
     }

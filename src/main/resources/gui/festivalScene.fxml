@@ -1,66 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.image.Image?>
-
-<?import javafx.scene.control.ScrollPane?>
-<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="655.0" prefWidth="734.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller.FestivalController">
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="885.0" prefWidth="1680.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller.FestivalController">
     <content>
-        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="800.0" prefWidth="719.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="885.0" prefWidth="1665.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
             <children>
-                <ImageView fitHeight="820.0" fitWidth="734.0" layoutX="-3.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="false">
+                <ImageView fitHeight="895.0" fitWidth="1708.0" layoutX="-3.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="false">
                     <image>
                         <Image url="@background4pane.jpg" />
                     </image>
                 </ImageView>
-                <Label fx:id="fName" layoutX="244.0" layoutY="201.0" prefHeight="40.0" prefWidth="470.0" text="Tên lễ hội">
+                <Label fx:id="fName" layoutX="730.0" layoutY="201.0" prefHeight="40.0" prefWidth="470.0" text="Tên lễ hội">
                     <font>
-                        <Font size="19.0" />
+                        <Font name="System Bold" size="19.0" />
                     </font></Label>
-                <Label fx:id="label1" layoutX="72.0" layoutY="443.0" prefHeight="21.0" prefWidth="143.0" text="Ngày diễn ra">
+                <Label fx:id="label1" layoutX="430.0" layoutY="443.0" prefHeight="21.0" prefWidth="143.0" text="Ngày diễn ra">
                     <font>
                         <Font size="15.0" />
                     </font>
                 </Label>
-                <Label fx:id="fDate" alignment="TOP_LEFT" layoutX="326.0" layoutY="443.0" prefHeight="63.0" prefWidth="388.0" text="date">
+                <Label fx:id="fDate" alignment="TOP_LEFT" layoutX="683.0" layoutY="443.0" prefHeight="63.0" prefWidth="648.0" text="date">
                     <font>
                         <Font size="15.0" />
                     </font>
                 </Label>
-                <Label fx:id="label121" layoutX="73.0" layoutY="635.0" prefHeight="13.0" prefWidth="109.0" text="Liên kết với các nhân vật liên quan">
+                <Label fx:id="label121" layoutX="430.0" layoutY="635.0" prefHeight="21.0" prefWidth="235.0" text="Liên kết với các nhân vật liên quan :">
                     <font>
                         <Font size="15.0" />
                     </font>
                 </Label>
-                <Label fx:id="fRel" alignment="TOP_LEFT" layoutX="326.0" layoutY="635.0" prefHeight="77.0" prefWidth="400.0" text="rel">
+                <Label fx:id="fRel" alignment="TOP_LEFT" layoutX="683.0" layoutY="635.0" prefHeight="83.0" prefWidth="988.0">
                     <font>
                         <Font size="15.0" />
                     </font>
                 </Label>
-                <Label fx:id="label1212" layoutX="73.0" layoutY="731.0" prefHeight="13.0" prefWidth="109.0" text="Nguồn">
+                <Label fx:id="label1212" layoutX="430.0" layoutY="750.0" prefHeight="13.0" prefWidth="109.0" text="Nguồn">
                     <font>
                         <Font size="15.0" />
                     </font>
                 </Label>
-                <Label fx:id="fSrc" layoutX="326.0" layoutY="731.0" prefHeight="13.0" prefWidth="390.0" text="src">
+                <Label fx:id="fSrc" layoutX="683.0" layoutY="750.0" prefHeight="13.0" prefWidth="648.0">
                     <font>
                         <Font size="15.0" />
                     </font>
                 </Label>
-                <ScrollPane layoutX="50.0" layoutY="241.0" prefHeight="170.0" prefWidth="650.0" style="-fx-background-color: transparent;">
+                <ScrollPane layoutX="430.0" layoutY="241.0" prefHeight="170.0" prefWidth="900.0" style="-fx-background-color: transparent;">
                     <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="979.0" prefWidth="635.0" style="-fx-background-color: transparent;">
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="979.0" prefWidth="885.0" style="-fx-background-color: transparent;">
                             <children>
-                                <ImageView fitHeight="1200.0" fitWidth="734.0" layoutX="-93.0" layoutY="-99.0" pickOnBounds="true" preserveRatio="false">
+                                <ImageView fitHeight="1257.0" fitWidth="910.0" layoutX="-9.0" layoutY="-275.0" pickOnBounds="true" preserveRatio="false">
                                     <image>
                                         <Image url="@background4pane.jpg" />
                                     </image>
                                 </ImageView>
-                                <Label fx:id="fDes" alignment="TOP_LEFT" layoutX="18.0" prefHeight="1000.0" prefWidth="603.0" text="Label" wrapText="true">
+                                <Label fx:id="fDes" alignment="TOP_LEFT" layoutX="18.0" prefHeight="1000.0" prefWidth="872.0" text="Label" wrapText="true">
                                     <font>
                                         <Font size="15.0" />
                                     </font>
@@ -69,17 +68,17 @@
                         </AnchorPane>
                     </content>
                 </ScrollPane>
-                <Label layoutX="73.0" layoutY="539.0" text="Địa điểm">
+                <Label layoutX="430.0" layoutY="539.0" text="Địa điểm">
                     <font>
                         <Font size="15.0" />
                     </font>
                 </Label>
-                <Label fx:id="fPlace" alignment="TOP_LEFT" layoutX="326.0" layoutY="539.0" prefHeight="77.0" prefWidth="388.0" text="loca" wrapText="true">
+                <Label fx:id="fLoca" alignment="TOP_LEFT" layoutX="683.0" layoutY="539.0" prefHeight="77.0" prefWidth="648.0" text="loca" wrapText="true">
                     <font>
                         <Font size="15.0" />
                     </font>
                 </Label>
-                <ImageView fx:id="fImage" fitHeight="187.0" fitWidth="324.0" layoutX="198.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+                <ImageView fx:id="fImage" fitHeight="187.0" fitWidth="324.0" layoutX="611.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true" />
 
 
             </children>

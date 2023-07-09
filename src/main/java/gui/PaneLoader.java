@@ -1,13 +1,8 @@
 package gui;
 
+import entity.*;
 import entity.Character;
-import entity.Event;
-import entity.Festival;
-import entity.Monument;
-import gui.controller.CharacterController;
-import gui.controller.EventController;
-import gui.controller.FestivalController;
-import gui.controller.MonumentController;
+import gui.controller.*;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.Pane;
@@ -45,13 +40,11 @@ public class PaneLoader {
                 MonumentController controller = loader.getController();
                 controller.setLabel((Monument) entity);
             }
-            /*
-            if (filename.equals("placeScene")) {
-                DynastyController controller = loader.getController();
-                controller.setLabel((Place) entity);
-            }
 
-            */
+            if (filename.equals("dynastyScene")) {
+                DynastyController controller = loader.getController();
+                controller.setLabel((Dynasty) entity);
+            }
         } catch (Exception e) {
             System.out.println(e);
         }

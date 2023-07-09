@@ -7,8 +7,9 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Font;
+import javafx.scene.text.Text;
+import javafx.scene.text.TextFlow;
 
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -36,54 +37,81 @@ public class CharacterController {
     @FXML
     public Label chrPos;
     @FXML
-    public Label chrSource;
+    public Label chrSrc;
     @FXML
     public ImageView chrImage;
 
 
     public void setLabel(Character character) {
         chrName.setText(character.getName());
-        chrDes.setText(character.getDescription().replace("/n","/n/t"));
-        chrDOB.setText(character.getDob());
-        if (character.getPosition() == null) {
+        if (character.getDescription() == null || character.getDescription().isEmpty()) {
+            chrDes.setText("Không rõ");
+        } else {
+            chrDes.setText(character.getDescription().replace("/n","/n/t"));
+        }
+        if (character.getDob() == null || character.getDob().isEmpty()) {
+            chrDOB.setText("Không rõ");
+        } else {
+            chrDOB.setText(character.getDob());
+        }
+        if (character.getPosition() == null || character.getPosition().isEmpty()) {
             chrPos.setText("Không rõ");
         } else {
             chrPos.setText(character.getPosition());
         }
-        if (character.getSource() == null) {
-            chrSource.setText("Không rõ");
+        if (character.getSource() == null || character.getSource().isEmpty()) {
+            chrSrc.setText("Không rõ");
         } else {
-            Hyperlink hyperlink = new Hyperlink(character.getSource());
-            hyperlink.setOnAction(e -> {
-                try {
-                    Desktop.getDesktop().browse(new URI(character.getSource()));
-                } catch (IOException | URISyntaxException ex) {
-                    ex.printStackTrace();
+            String[] webList = character.getSource().split(", ");
+
+            TextFlow textFlow = new TextFlow();
+            for (int i = 0; i < webList.length; i++) {
+                String website = webList[i];
+                Hyperlink hyperlink = new Hyperlink(website);
+                hyperlink.setFont(new Font(15));
+                String finalWebsite = website.replaceAll("\\s+", "");
+                hyperlink.setOnAction(e -> {
+                    try {
+                        Desktop.getDesktop().browse(new URI(finalWebsite));
+                    } catch (IOException | URISyntaxException ex) {
+                        ex.printStackTrace();
+                    }
+                });
+                if (i > 0) {
+                    textFlow.getChildren().add(new Text("; "));
                 }
-            });
-            hyperlink.setFont(new Font(14));
-            chrSource.setGraphic(hyperlink);
+                textFlow.getChildren().add(hyperlink);
+            }
+            chrSrc.setGraphic(textFlow);
         }
 
-        if (character.getPartner() == null) {
+        if (character.getPartner() == null || character.getPartner().isEmpty()) {
             chrWife.setText("Không rõ");
+            chrWife.setStyle("-fx-font-weight: normal;");
         } else {
             chrWife.setText(character.getPartner());
+            chrWife.setStyle("-fx-font-weight: bold;");
         }
-        if (character.getMom() == null) {
+        if (character.getMom() == null || character.getMom().isEmpty()) {
             chrMom.setText("Không rõ");
+            chrMom.setStyle("-fx-font-weight: normal;");
         } else {
             chrMom.setText(character.getMom());
+            chrMom.setStyle("-fx-font-weight: bold;");
         }
-        if (character.getDad() == null) {
+        if (character.getDad() == null || character.getDad().isEmpty()) {
             chrDad.setText("Không rõ");
+            chrDad.setStyle("-fx-font-weight: normal;");
         } else {
             chrDad.setText(character.getDad());
+            chrDad.setStyle("-fx-font-weight: bold;");
         }
-        if (character.getChildren() == null) {
+        if (character.getChildren() == null || character.getChildren().isEmpty()) {
             chrChild.setText("Không rõ");
+            chrChild.setStyle("-fx-font-weight: normal;");
         } else {
             chrChild.setText(character.getChildren());
+            chrChild.setStyle("-fx-font-weight: bold;");
         }
         if (character.getImage()!=null) {
             String imagePath = "C:\\Users\\LamPhuss\\IdeaProjects\\OOP-Project\\" + character.getImage();
@@ -91,7 +119,6 @@ public class CharacterController {
                 Image image = new Image(new FileInputStream(imagePath));
                 chrImage.setImage(image);
             } catch (FileNotFoundException e) {
-                //System.err.println("Image file not found: " + e.getMessage());
             }
         }
     }
