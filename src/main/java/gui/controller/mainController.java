@@ -2,7 +2,7 @@ package gui.controller;
 
 import entity.Character;
 import entity.*;
-import gui.FxmlLoader;
+import gui.PaneLoader;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
@@ -14,16 +14,19 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.Pane;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
 import process.Process;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
+
 
 public class mainController implements Initializable {
     @FXML
@@ -49,14 +52,9 @@ public class mainController implements Initializable {
     ObservableList<Monument> monument = FXCollections.observableArrayList(
 
     );
-    ObservableList<Festival> festival = FXCollections.observableArrayList(
-
-    );
     ObservableList<Dynasty> governments = FXCollections.observableArrayList(
     );
-    ObservableList<Event> events = FXCollections.observableArrayList(
 
-    );
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
     }
@@ -88,7 +86,7 @@ public class mainController implements Initializable {
                 }
                 String searchKeyWord = newValue.toLowerCase();
                 return entity.getName().toLowerCase().contains(searchKeyWord);
-                        //entity.getDescription() != null && entity.getDescription().toLowerCase().contains(searchKeyWord);
+                //entity.getDescription() != null && entity.getDescription().toLowerCase().contains(searchKeyWord);
             });
         });
         SortedList<Entity> sortedList = new SortedList<>(filteredList);
@@ -105,7 +103,36 @@ public class mainController implements Initializable {
         nameCol.setCellValueFactory(new PropertyValueFactory<Entity, String>("name"));
         desCol.setCellValueFactory(new PropertyValueFactory<Entity, String>("description"));
         tableView.setItems(selectedList);
-
+        tableViewAction();
+        searchBar.setVisible(true);
+        mainBorder.setCenter(tableView);
+        backButton.setVisible(false);
+        search(event);
+    }
+    @FXML
+    public void showFestivalList(ActionEvent event) {
+        ObservableList<Festival> festival = process.getFestivals();
+        selectedList.clear();
+        selectedList.addAll(festival);
+        // Hiển thị danh sách lên ListView
+        nameCol.setCellValueFactory(new PropertyValueFactory<Entity, String>("name"));
+        desCol.setCellValueFactory(new PropertyValueFactory<Entity, String>("description"));
+        tableView.setItems(selectedList);
+        tableViewAction();
+        searchBar.setVisible(true);
+        mainBorder.setCenter(tableView);
+        backButton.setVisible(false);
+        search(event);
+    }
+    @FXML
+    public void showEventList(ActionEvent event) {
+        ObservableList<Event> events = process.getEvents();
+        selectedList.clear();
+        selectedList.addAll(events);
+        // Hiển thị danh sách lên ListView
+        nameCol.setCellValueFactory(new PropertyValueFactory<Entity, String>("name"));
+        desCol.setCellValueFactory(new PropertyValueFactory<Entity, String>("description"));
+        tableView.setItems(selectedList);
         tableViewAction();
         searchBar.setVisible(true);
         mainBorder.setCenter(tableView);
@@ -141,38 +168,7 @@ public class mainController implements Initializable {
         backButton.setVisible(false);
         search(event);
     }
-
-    @FXML
-    public void showFestivalList(ActionEvent event) {
-        selectedList.clear();
-        selectedList.addAll(festival);
-        // Hiển thị danh sách lên ListView
-        nameCol.setCellValueFactory(new PropertyValueFactory<Entity, String>("name"));
-        desCol.setCellValueFactory(new PropertyValueFactory<Entity, String>("description"));
-        tableView.setItems(selectedList);
-        tableViewAction();
-        searchBar.setVisible(true);
-        mainBorder.setCenter(tableView);
-        backButton.setVisible(false);
-        search(event);
-    }
-
-    @FXML
-    public void showEventList(ActionEvent event) {
-        selectedList.clear();
-        selectedList.addAll(events);
-        // Hiển thị danh sách lên ListView
-        nameCol.setCellValueFactory(new PropertyValueFactory<Entity, String>("name"));
-        desCol.setCellValueFactory(new PropertyValueFactory<Entity, String>("description"));
-        tableView.setItems(selectedList);
-        tableViewAction();
-        searchBar.setVisible(true);
-        mainBorder.setCenter(tableView);
-        backButton.setVisible(false);
-        search(event);
-    }
-
-     */
+*/
 
 
     public Hyperlink setHyperLink(String keyword ){
@@ -180,6 +176,7 @@ public class mainController implements Initializable {
         itemToHyperlink.setOnAction(event -> {
             //ObservableList<Entity> govCheck = FXCollections.observableArrayList(governments);
             ObservableList<Entity> chrCheck = FXCollections.observableArrayList(process.getCharacters());
+            ObservableList<Entity> fesCheck = FXCollections.observableArrayList(process.getFestivals());
             /*
             ObservableList<Entity> monuCheck = FXCollections.observableArrayList(monument);
             ObservableList<Entity> fesCheck = FXCollections.observableArrayList(festival);
@@ -194,6 +191,13 @@ public class mainController implements Initializable {
                 }
             }
             /*
+            for (Entity entity : fesCheck) {
+                if (entity.getName().equals(keyword)) {
+                    foundEntity = entity;
+                    break;
+                }
+            }*/
+            /*
             for (Entity entity : govCheck) {
                 if (entity.getName().equals(keyword)) {
                     foundEntity = entity;
@@ -206,18 +210,13 @@ public class mainController implements Initializable {
                     break;
                 }
             }
-            for (Entity entity : fesCheck) {
-                if (entity.getName().equals(keyword)) {
-                    foundEntity = entity;
-                    break;
-                }
-            }
             for (Entity entity : evnCheck) {
                 if (entity.getName().equals(keyword)) {
                     foundEntity = entity;
                     break;
                 }
             }*/
+
             try {
                 handleClickedEvent(foundEntity);
             } catch (FileNotFoundException e) {
@@ -233,28 +232,38 @@ public class mainController implements Initializable {
         mainBorder.setCenter(tableView);
         backButton.setVisible(false);
     }
-    public boolean checkEntityInList(String name , ObservableList<Entity> checkList){
+    public String checkEntityInList(Entity entity){
+        if (entity instanceof Character) {
+            return "Character";
+        } else if (entity instanceof Festival) {
+            return "Festival";
+        } else if (entity instanceof Event) {
+            return "Event";
+        } else {
+            System.out.println("entity không thuộc kiểu dữ liệu được định nghĩa");
+        }
+        /*
         return checkList.stream()
                 .map(Entity::getName)
-                .anyMatch(name::equals);
-    }
+                .anyMatch(name::equals);*/
+        return null;
+    };
     public void handleClickedEvent(Entity handleEntity) throws FileNotFoundException {
         //ObservableList<Entity> govCheck = FXCollections.observableArrayList(governments);
-        ObservableList<Entity> chrCheck = FXCollections.observableArrayList(process.getCharacters());
+
         /*
         ObservableList<Entity> monuCheck = FXCollections.observableArrayList(monument);
         ObservableList<Entity> fesCheck = FXCollections.observableArrayList(festival);
-        ObservableList<Entity> evnCheck = FXCollections.observableArrayList(events);*/
-        String checkedName = handleEntity.getName();
-        if (checkEntityInList(checkedName,chrCheck)) {
-            FxmlLoader object = new FxmlLoader();
+        */
+        if (checkEntityInList(handleEntity).equals("Character")) {
+            PaneLoader object = new PaneLoader();
             ScrollPane view = object.getPane("characterScene", handleEntity);
             Character handleCharacter = (Character) handleEntity;
             AnchorPane anchorPane = (AnchorPane) view.getContent();
             Label chrRelLabel = (Label) anchorPane.lookup("#chrRel");
 
             List<String> charRel = new ArrayList<>(handleCharacter.relatedEntity(process.getCharacterNames()));
-            if (charRel.size() == 0 ) {
+            if (charRel.size() == 0) {
                 chrRelLabel.setText("Không có");
             } else {
                 setHyperLinkForList(chrRelLabel, charRel);
@@ -262,6 +271,41 @@ public class mainController implements Initializable {
             mainBorder.setCenter(view);
             searchBar.setVisible(false);
             backButton.setVisible(true);
+            return;
+        }
+        if (checkEntityInList(handleEntity).equals("Festival")) {
+            PaneLoader object = new PaneLoader();
+            ScrollPane view = object.getPane("festivalScene",handleEntity);
+            Festival handleFestival = (Festival) handleEntity;
+            AnchorPane anchorPane = (AnchorPane) view.getContent();
+            Label fRelLabel = (Label) anchorPane.lookup("#fRel");
+            List<String> fRel = new ArrayList<>(handleFestival.relatedEntity(process.getCharacterNames()));
+            if (fRel.size() == 0 ) {
+                fRelLabel.setText("Không có");
+            } else {
+                setHyperLinkForList(fRelLabel, fRel);
+            }
+            mainBorder.setCenter(view);
+            searchBar.setVisible(false);
+            backButton.setVisible(true);
+            return;
+        }
+        if (checkEntityInList(handleEntity).equals("Event")) {
+            PaneLoader object = new PaneLoader();
+            ScrollPane view = object.getPane("eventScene",handleEntity);
+            Event handleEvent = (Event) handleEntity;
+            AnchorPane anchorPane = (AnchorPane) view.getContent();
+            Label eRelLabel = (Label) anchorPane.lookup("#eRel");
+            List<String> eRel = new ArrayList<>(handleEvent.relatedEntity(process.getCharacterNames()));
+            if (eRel.size() == 0 ) {
+                eRelLabel.setText("Không có");
+            } else {
+                setHyperLinkForList(eRelLabel, eRel);
+            }
+            mainBorder.setCenter(view);
+            searchBar.setVisible(false);
+            backButton.setVisible(true);
+            return;
         }
 /*
         if (checkEntityInList(checkedName, govCheck)) {
@@ -297,35 +341,13 @@ public class mainController implements Initializable {
             Label pEventLabel = (Label) view.lookup("#pEvent");
             setHyperLinkForList(pEventLabel ,handlePlace.getPlEvents());
         }
-        if (checkEntityInList(checkedName,fesCheck)) {
-            FxmlLoader object = new FxmlLoader();
-            Pane view = object.getPane("festivalScene",handleEntity);
-            mainBorder.setCenter(view);
-            searchBar.setVisible(false);
-            backButton.setVisible(true);
-            Festival handleFestival = (Festival) handleEntity;
-            Label fFigLabel = (Label) view.lookup("#fFig");
-            setHyperLinkForList(fFigLabel ,handleFestival.getfFigures());
-            Label fPlaceLabel = (Label) view.lookup("#fPlace");
-            setHyperLinkForList(fPlaceLabel ,handleFestival.getfPlaces());
-            Label fGovLabel = (Label) view.lookup("#fGov");
-            setHyperLinkForList(fGovLabel ,handleFestival.getfGovernments());
-            Label fEventLabel = (Label) view.lookup("#fEvent");
-            setHyperLinkForList(fEventLabel ,handleFestival.getfEvents());
-        }
-        if (checkEntityInList(checkedName,evnCheck)) {
-            FxmlLoader object = new FxmlLoader();
-            Pane view = object.getPane("eventScene",handleEntity);
-            mainBorder.setCenter(view);
-            searchBar.setVisible(false);
-            backButton.setVisible(true);
-            Event handleEvent = (Event) handleEntity;
-            Label fPlaceLabel = (Label) view.lookup("#ePlace");
-            setHyperLinkForList(fPlaceLabel ,handleEvent.getEvPlace());
-        }*/
+        */
     }
     public void setHyperLinkForList(Label handleLabel ,List<String> handleList){
         TextFlow textFlow = new TextFlow();
+        textFlow.setPrefWidth(handleLabel.getPrefWidth());
+        textFlow.setPrefHeight(handleLabel.getPrefHeight());
+        textFlow.setPrefWidth(handleLabel.getPrefWidth());
         for (int i = 0; i < handleList.size(); i++) {
             String keyword = handleList.get(i);
             Hyperlink hyperlink = setHyperLink(keyword);
@@ -335,14 +357,17 @@ public class mainController implements Initializable {
             }
             textFlow.getChildren().add(hyperlink);
         }
+
         handleLabel.setWrapText(true);
         handleLabel.setGraphic(textFlow);
     }
     @FXML
-    public void showMenu(ActionEvent actionEvent) {
-        Character clone = new Character(null);
-        FxmlLoader object = new FxmlLoader();
+    public void showMenu(ActionEvent actionEvent) throws IOException {
+        PaneLoader loader = new PaneLoader();
+        Pane menu = loader.getMenu();
+        mainBorder.setCenter(menu);
         searchBar.setVisible(false);
+        backButton.setVisible(true);
 
     }
 }

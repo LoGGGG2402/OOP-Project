@@ -9,6 +9,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.text.Font;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URI;
@@ -33,8 +34,6 @@ public class CharacterController {
     @FXML
     public Label chrMom;
     @FXML
-    public Label chrLocation;
-    @FXML
     public Label chrPos;
     @FXML
     public Label chrSource;
@@ -42,11 +41,9 @@ public class CharacterController {
     public ImageView chrImage;
 
 
-    public void setLabel(Character character) throws FileNotFoundException {
-
-        System.out.println(character);
+    public void setLabel(Character character) {
         chrName.setText(character.getName());
-        chrDes.setText(character.getDescription());
+        chrDes.setText(character.getDescription().replace("/n","/n/t"));
         chrDOB.setText(character.getDob());
         if (character.getPosition() == null) {
             chrPos.setText("Không rõ");
@@ -88,16 +85,14 @@ public class CharacterController {
         } else {
             chrChild.setText(character.getChildren());
         }
-
-        File file = new File(character.getImage());
-        if (!file.exists()) {
-            file = new File("src/main/resources/gui/" + character.getImage());
+        if (character.getImage()!=null) {
+            String imagePath = "C:\\Users\\LamPhuss\\IdeaProjects\\OOP-Project\\" + character.getImage();
+            try {
+                Image image = new Image(new FileInputStream(imagePath));
+                chrImage.setImage(image);
+            } catch (FileNotFoundException e) {
+                //System.err.println("Image file not found: " + e.getMessage());
+            }
         }
-        System.out.println("1"+file);
-        Image image = new Image(file.toURI().toString());
-
-        System.out.println("2"+image);
-        chrImage.setImage(image); // đặt hình ảnh mới
-
     }
 }

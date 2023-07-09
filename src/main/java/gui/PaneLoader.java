@@ -1,12 +1,18 @@
 package gui;
 
 import entity.Character;
+import entity.Event;
+import entity.Festival;
 import gui.controller.CharacterController;
+import gui.controller.EventController;
+import gui.controller.FestivalController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.layout.Pane;
 
-public class FxmlLoader {
+public class PaneLoader {
     private ScrollPane view;
+    private Pane menu;
 
     public ScrollPane getPane(String filename, Object entity) {
         try {
@@ -24,26 +30,40 @@ public class FxmlLoader {
                 //System.out.println(((Character) entity).getRelatives().isBlank());
                 controller.setLabel((Character) entity);
             }
-            /*
             if (filename.equals("festivalScene")) {
-                festivalController controller = loader.getController();
+                FestivalController controller = loader.getController();
                 controller.setLabel((Festival) entity);
-            }
-            if (filename.equals("placeScene")) {
-                DynastyController controller = loader.getController();
-                controller.setLabel((Place) entity);
             }
             if (filename.equals("eventScene")) {
                 EventController controller = loader.getController();
                 controller.setLabel((Event) entity);
             }
+            /*
+            if (filename.equals("placeScene")) {
+                DynastyController controller = loader.getController();
+                controller.setLabel((Place) entity);
+            }*/
+            /*
+            if (filename.equals("placeScene")) {
+                DynastyController controller = loader.getController();
+                controller.setLabel((Place) entity);
+            }
+
             */
         } catch (Exception e) {
             System.out.println(e);
         }
         return view;
     }
+    public Pane getMenu(){
+        try {
 
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("menuScene.fxml"));
+            menu = loader.load();
 
-
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        return menu;
+    }
 }

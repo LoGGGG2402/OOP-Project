@@ -75,7 +75,7 @@
                         <Font name="Arial Bold" size="20.0" />
                      </font>
                   </Button>
-                  <Button fx:id="festivalButton" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="47.0" prefWidth="160.0" style="-fx-background-color: #f7ab54" text="Lễ Hội" textFill="WHITE">
+                  <Button fx:id="festivalButton" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#showFestivalList" prefHeight="47.0" prefWidth="160.0" style="-fx-background-color: #f7ab54" text="Lễ Hội" textFill="WHITE">
                      <graphic>
                         <ImageView>
                            <Image url="@festival.png" />
@@ -101,7 +101,7 @@
                         <Font name="Arial Bold" size="20.0" />
                      </font>
                   </Button>
-                  <Button fx:id="eventButton" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="47.0" prefWidth="160.0" style="-fx-background-color: #f7ab54" text="Sự kiện" textFill="WHITE">
+                  <Button fx:id="eventButton" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#showEventList" prefHeight="47.0" prefWidth="160.0" style="-fx-background-color: #f7ab54" text="Sự kiện" textFill="WHITE">
                      <graphic>
                         <ImageView>
                            <Image url="@event.png" />

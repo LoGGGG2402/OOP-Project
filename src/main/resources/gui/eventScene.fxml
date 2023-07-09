@@ -6,47 +6,173 @@
 
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.image.Image?>
-<AnchorPane prefHeight="649.0" prefWidth="636.0" visible="true" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller.EventController">
-    <children>
-        <ImageView fitHeight="649.0" fitWidth="636.0" pickOnBounds="true" preserveRatio="false">
-            <image>
-                <Image url="@background4pane.jpg" />
-            </image>
-        </ImageView>
-        <Label fx:id="eName" layoutX="247.0" layoutY="187.0" prefHeight="40.0" prefWidth="385.0" text="Tên sự kiện">
-            <font>
-                <Font size="19.0" />
-            </font></Label>
-      <Label fx:id="label1" layoutX="64.0" layoutY="253.0" prefHeight="21.0" prefWidth="149.0" text="Thời gian diễn ra :">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </Label>
-      <Label fx:id="eTime" layoutX="321.0" layoutY="253.0" prefHeight="21.0" prefWidth="316.0" text="time">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </Label>
-      <Label fx:id="label2" layoutX="64.0" layoutY="325.0" prefHeight="21.0" prefWidth="159.0" text="Địa điểm :">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </Label>
-      <Label fx:id="ePlace" layoutX="321.0" layoutY="325.0" prefHeight="64.0" prefWidth="316.0" wrapText="true">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </Label>
-      <Label fx:id="label122" layoutX="64.0" layoutY="397.0" prefHeight="13.0" prefWidth="109.0" text="Mô tả chi tiết :">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </Label>
-      <Label fx:id="eDes" alignment="TOP_LEFT" layoutX="321.0" layoutY="397.0" prefHeight="236.0" prefWidth="316.0" text="description" wrapText="true">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </Label>
 
-    </children>
-</AnchorPane>
+
+<?import javafx.scene.control.ScrollPane?>
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="655.0"
+            prefWidth="734.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="gui.controller.EventController">
+    <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1730.0" prefWidth="719.0"
+                    xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+            <children>
+                <ImageView fitHeight="1739.0" fitWidth="734.0" layoutX="-3.0" layoutY="-6.0" pickOnBounds="true"
+                           preserveRatio="false">
+                    <image>
+                        <Image url="@background4pane.jpg"/>
+                    </image>
+                </ImageView>
+                <Label fx:id="eName" layoutX="244.0" layoutY="201.0" prefHeight="40.0" prefWidth="470.0"
+                       text="Tên sự kiện">
+                    <font>
+                        <Font size="19.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="label1" layoutX="72.0" layoutY="443.0" prefHeight="21.0" prefWidth="143.0"
+                       text="Thời gian">
+                    <font>
+                        <Font size="15.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="eTime" alignment="TOP_LEFT" layoutX="326.0" layoutY="443.0" prefHeight="63.0"
+                       prefWidth="388.0" text="time">
+                    <font>
+                        <Font size="15.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="label12" layoutX="73.0" layoutY="965.0" prefHeight="13.0" prefWidth="109.0"
+                       text="Chỉ huy">
+                    <font>
+                        <Font size="15.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="eCommander" alignment="TOP_LEFT" layoutX="326.0" layoutY="965.0" prefHeight="230.0"
+                       prefWidth="400.0" text="commander" wrapText="true">
+                    <font>
+                        <Font size="14.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="label121" layoutX="73.0" layoutY="635.0" prefHeight="13.0" prefWidth="109.0"
+                       text="Lí do :">
+                    <font>
+                        <Font size="15.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="eReason" alignment="TOP_LEFT" layoutX="326.0" layoutY="635.0" prefHeight="77.0"
+                       prefWidth="400.0" text="reason">
+                    <font>
+                        <Font size="15.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="label1212" layoutX="73.0" layoutY="731.0" prefHeight="13.0" prefWidth="109.0"
+                       text="Kết quả :">
+                    <font>
+                        <Font size="15.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="eResult" alignment="TOP_LEFT" layoutX="326.0" layoutY="731.0" prefHeight="90.0"
+                       prefWidth="390.0" text="result" wrapText="true">
+                    <font>
+                        <Font size="15.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="label14" layoutX="73.0" layoutY="827.0" prefHeight="21.0" prefWidth="125.0"
+                       text="Phe tham chiến">
+                    <font>
+                        <Font size="15.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="eBelli" alignment="TOP_LEFT" layoutX="326.0" layoutY="827.0" prefHeight="140.0"
+                       prefWidth="389.0" text="belli" wrapText="true">
+                    <font>
+                        <Font size="15.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="label1214" layoutX="74.0" layoutY="1200.0" prefHeight="21.0" prefWidth="240.0"
+                       text="Lực lượng :">
+                    <font>
+                        <Font size="15.0"/>
+                    </font>
+                </Label>
+                <ScrollPane layoutX="50.0" layoutY="241.0" prefHeight="170.0" prefWidth="650.0"
+                            style="-fx-background-color: transparent;">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1200.0" prefWidth="635.0"
+                                    style="-fx-background-color: transparent;">
+                            <children>
+                                <ImageView fitHeight="1350.0" fitWidth="734.0" layoutX="-93.0" layoutY="-99.0"
+                                           pickOnBounds="true" preserveRatio="false">
+                                    <image>
+                                        <Image url="@background4pane.jpg"/>
+                                    </image>
+                                </ImageView>
+                                <Label fx:id="eDes" alignment="TOP_LEFT" layoutX="18.0" prefHeight="1200.0"
+                                       prefWidth="603.0" text="Label" wrapText="true">
+                                    <font>
+                                        <Font size="15.0"/>
+                                    </font>
+                                </Label>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </ScrollPane>
+                <Label fx:id="eStrength" alignment="TOP_LEFT" layoutX="326.0" layoutY="1200.0" prefHeight="124.0"
+                       prefWidth="400.0" text="strength" wrapText="true">
+                    <font>
+                        <Font size="15.0"/>
+                    </font>
+                </Label>
+                <Label layoutX="73.0" layoutY="539.0" text="Địa điểm">
+                    <font>
+                        <Font size="15.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="eLoca" alignment="TOP_LEFT" layoutX="326.0" layoutY="539.0" prefHeight="77.0"
+                       prefWidth="388.0" text="location" wrapText="true">
+                    <font>
+                        <Font size="15.0"/>
+                    </font>
+                </Label>
+                <Label layoutX="73.0" layoutY="1330.0" prefHeight="21.0" prefWidth="143.0" text="Thiệt hại :">
+                    <font>
+                        <Font size="15.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="eLoss" alignment="TOP_LEFT" layoutX="326.0" layoutY="1330.0" prefHeight="160.0"
+                       prefWidth="396.0" text="loss" wrapText="true">
+                    <font>
+                        <Font size="15.0"/>
+                    </font>
+                </Label>
+                <ImageView fx:id="eImage" fitHeight="187.0" fitWidth="324.0" layoutX="198.0" layoutY="14.0"
+                           pickOnBounds="true" preserveRatio="true"/>
+                <Label layoutX="73.0" layoutY="1490.0" prefHeight="21.0" prefWidth="247.0"
+                       text="Liên kết đến các nhân vật liên quan :">
+                    <font>
+                        <Font size="15.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="eRel" alignment="TOP_LEFT" layoutX="326.0" layoutY="1490.0" prefHeight="132.0"
+                       prefWidth="395.0" text="rel" wrapText="true">
+                    <font>
+                        <Font size="15.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="eSrc" alignment="TOP_LEFT" layoutX="326.0" layoutY="1630.0" prefHeight="75.0"
+                       prefWidth="396.0" wrapText="true">
+                    <font>
+                        <Font size="15.0"/>
+                    </font>
+                </Label>
+                <Label layoutX="73.0" layoutY="1630.0" prefHeight="21.0" prefWidth="242.0" text="Nguồn :">
+                    <font>
+                        <Font size="15.0"/>
+                    </font>
+                </Label>
+
+
+            </children>
+
+        </AnchorPane>
+    </content>
+</ScrollPane>

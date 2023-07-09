@@ -98,6 +98,7 @@ public class Dynasty extends Entity{
         return this;
     }
 
+
     private void processFounder(JsonObject jsonObject)
     {
         founder = null;
