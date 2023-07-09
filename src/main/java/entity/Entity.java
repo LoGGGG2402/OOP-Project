@@ -10,7 +10,7 @@ public abstract class Entity {
     private String description;
     private String image;
     private String source;
-    private final String allDocument;
+    private String allDocument;
     private final JsonObject properties = new JsonObject();
 
     private final List<String> relatedCharacters = new ArrayList<>();
@@ -134,6 +134,18 @@ public abstract class Entity {
             return true;
         }
         return properties.toString().contains(characterName);
+    }
+
+    public String getAllDocument() {
+        return allDocument;
+    }
+
+    public void appendAllDocument(String allDocument) {
+        if (this.allDocument == null) {
+            this.allDocument = allDocument;
+        } else {
+            this.allDocument += allDocument;
+        }
     }
 
     public abstract Entity merge(Entity entity);

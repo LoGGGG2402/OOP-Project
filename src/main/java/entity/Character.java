@@ -70,15 +70,7 @@ public class Character  extends Entity{
             setImage(character.getImage());
         }
 
-        if ((getAllDocument().isEmpty() || getAllDocument() == null) &&
-                character.getAllDocument() != null && !character.getAllDocument().isEmpty())
-        {
-            setAllDocument(character.getAllDocument());
-        }
-        else if (getAllDocument() != null && character.getAllDocument() != null)
-        {
-            setAllDocument(getAllDocument()+character.getAllDocument());
-        }
+        appendAllDocument(character.getAllDocument());
 
         for (String key: character.getProperties().keySet()){
             if (!getProperties().has(key)){
