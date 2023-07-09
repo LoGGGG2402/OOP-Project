@@ -9,6 +9,7 @@ import entity.Character;
 import entity.Entity;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import org.apache.commons.lang3.math.NumberUtils;
 
 import java.io.File;
 import java.io.FileReader;
@@ -16,10 +17,11 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public abstract class EntityList {
     private final ObservableList<Entity> entities = FXCollections.observableArrayList();
-    private final List<String> listName = new ArrayList<>();
     private final List<Entity> baseEntities = new ArrayList<>();
 
     protected EntityList(String path) {
@@ -80,7 +82,6 @@ public abstract class EntityList {
 
     protected void addEntity(Entity entity) {
         entities.add(entity);
-        listName.add(entity.getName());
     }
 
     protected void mergeEntity(Entity oldEntity, Entity newEntity) {
@@ -90,11 +91,6 @@ public abstract class EntityList {
     public List<Entity> getEntities() {
         return entities;
     }
-
-    public List<String> getListName() {
-        return listName;
-    }
-
     public List<Entity> getBaseEntities() {
         return baseEntities;
     }
@@ -122,4 +118,94 @@ public abstract class EntityList {
         }
         return null;
     }
+
+    protected boolean matchYear(String year, String year2) {
+        if (year == null || year2 == null) {
+            return false;
+        }
+        if (year.equals(year2)) {
+            return true;
+        }
+        Pattern pattern = Pattern.compile("(?<!\\d)\\d{3}(?!\\d)|\\d{4}");
+
+        Matcher matcherOld = pattern.matcher(year);
+        Matcher matcherNew = pattern.matcher(year2);
+
+        List<String> oldYears = new ArrayList<>();
+        List<String> newYears = new ArrayList<>();
+
+        while (matcherOld.find()){
+            oldYears.add(matcherOld.group());
+        }
+
+        while (matcherNew.find()){
+            newYears.add(matcherNew.group());
+        }
+
+        for (String oldYear: oldYears){
+            int oldYearInt = Integer.parseInt(oldYear);
+            for (String newYear: newYears){
+                int newYearInt = Integer.parseInt(newYear);
+                if (Math.abs(oldYearInt - newYearInt) <= 2){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    protected static List<String> getForeName(String name){
+        String pos = name;
+        List<String> listDynasty = new ArrayList<>();
+
+        Pattern pattern2 = Pattern.compile("[AĂÂBCDĐEÊGHIKLMNOÔƠPQRSTUƯVXY][^ ]+", Pattern.CASE_INSENSITIVE);
+
+        int nextSpace = nextIndex(pos);
+
+        StringBuilder dynasty = new StringBuilder();
+
+        boolean found = false;
+
+
+        while (nextSpace != -1){
+            String nextWord = pos.substring(0, nextSpace);
+            if (found){
+                if (pattern2.matcher(nextWord.trim()).matches()){
+                    dynasty.append(nextWord).append(" ");
+                }
+                else {
+                    if (!dynasty.isEmpty())
+                        listDynasty.add(dynasty.toString().trim().replace(")", "").replace("-", ""));
+                    dynasty = new StringBuilder();
+                    found = false;
+                }
+            }
+            if (pattern2.matcher(nextWord).matches()){
+                found = true;
+                dynasty.append(nextWord).append(" ");
+            }
+            pos = pos.substring(nextSpace + 1);
+            nextSpace = nextIndex(pos);
+        }
+        return listDynasty;
+    }
+
+    protected static int nextIndex(String pos){
+        if (pos.contains(",") && pos.contains(".") && pos.contains(" ")){
+            return NumberUtils.min(pos.indexOf(" "), pos.indexOf(","), pos.indexOf("."));
+        } else if (pos.contains(",") && pos.contains(" ")){
+            return NumberUtils.min(pos.indexOf(" "), pos.indexOf(","));
+        } else if (pos.contains(".") && pos.contains(" ")){
+            return NumberUtils.min(pos.indexOf(" "), pos.indexOf("."));
+        } else if (pos.contains(",") && pos.contains(".")){
+            return NumberUtils.min(pos.indexOf(","), pos.indexOf("."));
+        } else if (pos.contains(",")){
+            return pos.indexOf(",");
+        } else if (pos.contains(".")){
+            return pos.indexOf(".");
+        } else {
+            return pos.indexOf(" ");
+        }
+    }
+
 }

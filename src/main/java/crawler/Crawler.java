@@ -92,7 +92,7 @@ public abstract class Crawler {
 
             try (InputStream in = new BufferedInputStream(imageUrl.openStream())) {
                 // Create the destination directory if it doesn't exist
-                Path directoryPath = Path.of("src/main/resources/gui/image");
+                Path directoryPath = Path.of("image");
                 Files.createDirectories(directoryPath);
 
                 // Copy the image to the destination path

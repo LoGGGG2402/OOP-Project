@@ -2,8 +2,6 @@ package merge;
 
 import entity.Character;
 import entity.Entity;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import org.apache.commons.lang3.math.NumberUtils;
 
 import java.util.ArrayList;
@@ -63,52 +61,13 @@ public class CharacterList extends EntityList{
         if(relativesCheck){
             return true;
         }
-        boolean dobCheck = checkDob(oldChar.getDob(), newChar.getDob());
+        boolean dobCheck = matchYear(oldChar.getDob(), newChar.getDob());
         if (dobCheck && (oldChar.getRelatives() == null || newChar.getRelatives() == null)){
             return true;
         }
         return checkPosition(oldChar, newChar);
     }
 
-    private boolean checkDob(String oldDob, String newDob){
-        if (oldDob == null && newDob == null){
-            return false;
-        }
-
-        if (oldDob == null || newDob == null){
-            return true;
-        }
-
-        Pattern pattern = Pattern.compile("(?<!\\d)\\d{3}(?!\\d)|\\d{4}");
-
-        Matcher matcherOld = pattern.matcher(oldDob);
-        Matcher matcherNew = pattern.matcher(newDob);
-
-        List<String> oldYears = new ArrayList<>();
-        List<String> newYears = new ArrayList<>();
-
-        while (matcherOld.find()){
-            oldYears.add(matcherOld.group());
-        }
-
-        while (matcherNew.find()){
-            newYears.add(matcherNew.group());
-        }
-
-        for (String oldYear: oldYears){
-            int oldYearInt = Integer.parseInt(oldYear);
-            for (String newYear: newYears){
-                int newYearInt = Integer.parseInt(newYear);
-                if (Math.abs(oldYearInt - newYearInt) <= 2){
-                    return true;
-                }
-            }
-        }
-
-
-
-        return false;
-    }
 
     private boolean checkRealtion(String oldRelation, String newRelation){
         if (oldRelation == null && newRelation == null){
@@ -217,33 +176,6 @@ public class CharacterList extends EntityList{
         }
         return listDynasty;
     }
-
-    private static int nextIndex(String pos){
-        if (pos.contains(",") && pos.contains(".") && pos.contains(" ")){
-            return NumberUtils.min(pos.indexOf(" "), pos.indexOf(","), pos.indexOf("."));
-        } else if (pos.contains(",") && pos.contains(" ")){
-            return NumberUtils.min(pos.indexOf(" "), pos.indexOf(","));
-        } else if (pos.contains(".") && pos.contains(" ")){
-            return NumberUtils.min(pos.indexOf(" "), pos.indexOf("."));
-        } else if (pos.contains(",") && pos.contains(".")){
-            return NumberUtils.min(pos.indexOf(","), pos.indexOf("."));
-        } else if (pos.contains(",")){
-            return pos.indexOf(",");
-        } else if (pos.contains(".")){
-            return pos.indexOf(".");
-        } else {
-            return pos.indexOf(" ");
-        }
-    }
-
-    public ObservableList<Character> getCharacterList() {
-        ObservableList<Character> list = FXCollections.observableArrayList();
-        for (Entity character : getEntities()) {
-            list.add((Character) character);
-        }
-        return list;
-    }
-
     public static void main(String[] args) {
         new CharacterList().getEntities().forEach(System.out::println);
     }

@@ -19,23 +19,18 @@ public class Event extends Entity{
     public String getReason() {
         return reason;
     }
-
     public String getResult() {
         return result;
     }
-
     public String getBelligerents() {
         return belligerents;
     }
-
     public String getCommanders() {
         return commanders;
     }
-
     public String getStrength() {
         return strength;
     }
-
     public String getLosses() {
         return losses;
     }
@@ -267,13 +262,6 @@ public class Event extends Entity{
     {
         return "Name: " + this.getName() + "\n"
                 + "Time: " + this.time + "\n"
-                + "Location: " + this.location + "\n"
-                + "Reason: " + this.reason + "\n"
-                + "Result: " + this.result + "\n"
-                + "Belligerents: " + this.belligerents + "\n"
-                + "Commanders: " + this.commanders + "\n"
-                + "Strength: " + this.strength + "\n"
-                + "Losses: " + this.losses + "\n"
-                + "Description: " + this.getDescription() + "\n";
+                + "Location: " + this.location + "\n";
     }
 }
