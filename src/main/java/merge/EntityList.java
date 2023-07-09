@@ -94,16 +94,7 @@ public abstract class EntityList {
         return baseEntities;
     }
 
-    protected void merge() {
-        for (Entity entity : getBaseEntities()) {
-            Entity oldEntity = getEntity(entity.getName());
-            if (oldEntity != null) {
-                mergeEntity(oldEntity, entity);
-            } else {
-                addEntity(entity);
-            }
-        }
-    }
+    protected abstract void merge();
     protected abstract void init();
 
     protected Entity getEntity(String name) {
