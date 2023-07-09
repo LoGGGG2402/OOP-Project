@@ -1,12 +1,11 @@
 package entity;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.google.gson.JsonArray;
-import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
 
 import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -28,12 +27,16 @@ public class Dynasty extends Entity{
         return kings;
     }
 
+    public List<JsonObject> getTimeLineJson() {
+        return timeLineJson;
+    }
+
     private String founder;
     private String language;
     private String capital;
     private ArrayList<String> kings = new ArrayList<>();
 
-    private List<JsonObject> timeLineJson;
+    private List<JsonObject> timeLineJson = new ArrayList<>();
 
     public Dynasty(JsonObject jsonObject) {
         super(jsonObject);
@@ -90,6 +93,19 @@ public class Dynasty extends Entity{
                 System.out.println(kings);
                 System.out.println("Add king: " + king);
                 kings.add(king);
+            }
+        }
+
+        for (JsonObject jsonObject : dynasty.getTimeLineJson()) {
+            boolean isExist = false;
+            for (JsonObject jsonObject2 : timeLineJson) {
+                if (jsonObject2.get("name").getAsString().equals(jsonObject.get("name").getAsString())) {
+                    isExist = true;
+                    break;
+                }
+            }
+            if (!isExist) {
+                timeLineJson.add(jsonObject);
             }
         }
 
@@ -275,7 +291,7 @@ public class Dynasty extends Entity{
             } else {
                 if (properties.has("Hoàng đế")) {
                     String kingsListStr = properties.get("Hoàng đế").getAsString();
-                    List kings1 = Arrays.asList(kingsListStr.split(", "));
+                    List<String> kings1 = Arrays.asList(kingsListStr.split(", "));
                     kings.addAll(kings1);
                 }
             }
@@ -291,10 +307,26 @@ public class Dynasty extends Entity{
         timeLineJson = new ArrayList<>();
         if (jsonObject.get("source").getAsString().contains("https://nguoikesu.com"))
         {
+            Gson gson = new GsonBuilder().setPrettyPrinting().create();
             JsonObject periods = jsonObject.get("periods").getAsJsonObject();
             for(String periodName : periods.keySet())
             {
-                JsonObject period = periods.get(periodName).getAsJsonObject();
+                JsonObject period = new JsonObject();
+                String name = periodName.replace("\"", "");
+                period.addProperty("name", name);
+                if (periods.get(periodName).getAsJsonObject().has("description"))
+                {
+                    period.addProperty("description", periods.get(periodName).getAsJsonObject().get("description").getAsString());
+                } else if (periods.get(periodName).getAsJsonObject().has("properties")) {
+                    StringBuilder description = new StringBuilder();
+                    JsonObject properties = periods.get(periodName).getAsJsonObject().get("properties").getAsJsonObject();
+                    for (String property : properties.keySet()) {
+                        String propertyName = property.replace("\"", "");
+                        description.append(propertyName).append(": ").append(properties.get(property).getAsString()).append("\\n");
+                    }
+                    period.addProperty("description", description.toString());
+                }
+                System.out.println(gson.toJson(period));
                 timeLineJson.add(period);
             }
         }
@@ -310,11 +342,7 @@ public class Dynasty extends Entity{
     }
     public String toString()
     {
-        return "Name: " + this.getName() + "\n" +
-                "Founder: " + founder + "\n" +
-                "Language: " + language + "\n" +
-                "Capital: " + capital + "\n" +
-                "Kings: " + kings.toString();
+        return getName()+ "\\n" + timeLineJson.toString();
     }
     public static void main(String[] args) throws FileNotFoundException {
 
