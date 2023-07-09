@@ -101,14 +101,14 @@ public class Character  extends Entity{
         }
 
         //process from Vansu
-        if (jsonObject.get("source").getAsString().equals("https://vansu.vn"))
+        if (jsonObject.get("source").getAsString().contains("https://vansu.vn"))
         {
             if (properties.has("Sinh") || properties.has("Năm sinh")) {
                 dob = properties.get("Năm sinh").getAsString();
             }
         }
         //process from Nguoikesu
-        else if (jsonObject.get("source").getAsString().equals("https://nguoikesu.com"))
+        else if (jsonObject.get("source").getAsString().contains("https://nguoikesu.com"))
         {
             if (properties.has("Sinh") && !properties.get("Sinh").getAsString().matches("\\D+"))
             {
@@ -163,7 +163,7 @@ public class Character  extends Entity{
             }
         }
         //Process from Wikipedia
-        else if (jsonObject.get("source").getAsString().equals("https://vi.wikipedia.org")) {
+        else if (jsonObject.get("source").getAsString().contains("https://vi.wikipedia.org")) {
             //process property "dob"
             if (properties.has("Sinh") && properties.has("Mất") && !properties.get("Sinh").getAsString().matches("\\D+")) {
                 dob = properties.get("Sinh").getAsString() + " - " + properties.get("Mất").getAsString();
@@ -178,7 +178,7 @@ public class Character  extends Entity{
         }
 
         String location = "";
-        if (jsonObject.get("source").getAsString().equals("https://vansu.vn") && (properties.has("Tỉnh thành"))) {
+        if (jsonObject.get("source").getAsString().contains("https://vansu.vn") && (properties.has("Tỉnh thành"))) {
             if (!properties.get("Tỉnh thành").getAsString().equals("Không rõ"))
                 location = properties.get("Tỉnh thành").getAsString();
             dob = location + ", " + dob;
@@ -206,7 +206,7 @@ public class Character  extends Entity{
 
 
         //process from Vansu
-        if (jsonObject.get("source").getAsString().equals("https://vansu.vn"))
+        if (jsonObject.get("source").getAsString().contains("https://vansu.vn"))
         {
             Pattern pattern = Pattern.compile("^(.*?)(?=, (?:con|quê|sinh ngày|sinh quán|sinh|tên|cháu|nguyên quán|không rõ))", Pattern.CANON_EQ);
             Matcher matcher = pattern.matcher(description);
@@ -223,7 +223,7 @@ public class Character  extends Entity{
             }
         }
         //process from Nguoikesu
-        else if (jsonObject.get("source").getAsString().equals("https://nguoikesu.com"))
+        else if (jsonObject.get("source").getAsString().contains("https://nguoikesu.com"))
         {
             if (properties.has("Chức vụ"))
             {
@@ -234,7 +234,7 @@ public class Character  extends Entity{
                         position = key;
                         break;
                     }
-                    if (key.contains("Chức vụ")) {
+                    if (key.equals("Chức vụ")) {
                         found = true;
                     }
                 }
@@ -319,7 +319,7 @@ public class Character  extends Entity{
 
         }
         //process from wikipedia
-        else if (jsonObject.get("source").getAsString().equals("https://vi.wikipedia.org"))
+        else if (jsonObject.get("source").getAsString().contains("https://vi.wikipedia.org"))
         {
             position = "Vua Việt Nam";
         }
@@ -331,8 +331,8 @@ public class Character  extends Entity{
         JsonObject properties = jsonObject.get("properties").getAsJsonObject();
 
         //Process for Nguoikesu and Wikipedia
-        if (jsonObject.get("source").getAsString().equals("https://nguoikesu.com")
-            || jsonObject.get("source").getAsString().equals("https://vi.wikipedia.org"))
+        if (jsonObject.get("source").getAsString().contains("https://nguoikesu.com")
+            || jsonObject.get("source").getAsString().contains("https://vi.wikipedia.org"))
         {
             Pattern pattern_dad = Pattern.compile("Cha|Thân phụ|Bố", Pattern.CANON_EQ);
             Matcher matcher_dad;
@@ -359,8 +359,8 @@ public class Character  extends Entity{
         JsonObject properties = jsonObject.get("properties").getAsJsonObject();
 
         //process for Nguoikesu and Wikipedia
-        if (jsonObject.get("source").getAsString().equals("https://nguoikesu.com")
-            || jsonObject.get("source").getAsString().equals("https://vi.wikipedia.org"))
+        if (jsonObject.get("source").getAsString().contains("https://nguoikesu.com")
+            || jsonObject.get("source").getAsString().contains("https://vi.wikipedia.org"))
         {
             Pattern pattern_mom = Pattern.compile("Mẹ|Thân mẫu|Cha mẹ", Pattern.CANON_EQ);
             Matcher matcher_mom;
@@ -386,7 +386,7 @@ public class Character  extends Entity{
     private void processPartner(JsonObject jsonObject) {
         JsonObject properties = jsonObject.get("properties").getAsJsonObject();
         //process for Nguoikesu and Wikipedia
-        if (jsonObject.get("source").getAsString().equals("https://nguoikesu.com"))
+        if (jsonObject.get("source").getAsString().contains("https://nguoikesu.com"))
         {
             Pattern pattern_partner = Pattern.compile("Vợ|Chồng|Phối ngẫu|Thê thiếp|Phu quân|Hoàng hậu|Hậu phi");
             Matcher matcher;
@@ -412,7 +412,7 @@ public class Character  extends Entity{
 
             }
         }
-        else if (jsonObject.get("source").getAsString().equals("https://vi.wikipedia.org"))
+        else if (jsonObject.get("source").getAsString().contains("https://vi.wikipedia.org"))
         {
             Pattern pattern_partner = Pattern.compile("Vợ|Chồng|Phối ngẫu|Thê thiếp|Phu quân|Hoàng hậu|Hậu phi|Hậu phi Hậu phi");
             Matcher matcher;
@@ -434,7 +434,7 @@ public class Character  extends Entity{
 
     private void processChildren(JsonObject jsonObject) {
         JsonObject properties = jsonObject.get("properties").getAsJsonObject();
-        if (jsonObject.get("source").getAsString().equals("https://nguoikesu.com"))
+        if (jsonObject.get("source").getAsString().contains("https://nguoikesu.com"))
         {
             Pattern pattern_children = Pattern.compile("Con cái|Con|Hậu duệ|Hậu duệ Hậu duệ", Pattern.CANON_EQ);
             Matcher matcher_children;
@@ -460,7 +460,7 @@ public class Character  extends Entity{
 
             }
         }
-        else if (jsonObject.get("source").getAsString().equals("https://vi.wikipedia.org"))
+        else if (jsonObject.get("source").getAsString().contains("https://vi.wikipedia.org"))
         {
             Pattern pattern_children = Pattern.compile("Con cái|Con|Hậu duệ|Hậu duệ Hậu duệ", Pattern.CANON_EQ);
             Matcher matcher_children;
@@ -477,7 +477,7 @@ public class Character  extends Entity{
 
     private void processRelatives(JsonObject jsonObject) {
         JsonObject properties = jsonObject.get("properties").getAsJsonObject();
-        if (jsonObject.get("source").getAsString().equals("https://vi.wikipedia.org") && (StringUtils.isEmpty(dad) && (properties.has("Tiền nhiệm"))))
+        if (jsonObject.get("source").getAsString().contains("https://vi.wikipedia.org") && (StringUtils.isEmpty(dad) && (properties.has("Tiền nhiệm"))))
         {
             dad = properties.get("Tiền nhiệm").getAsString();
 
