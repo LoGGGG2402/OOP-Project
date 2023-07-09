@@ -13,12 +13,6 @@ public abstract class Entity {
     private String allDocument;
     private final JsonObject properties = new JsonObject();
 
-    private final List<String> relatedCharacters = new ArrayList<>();
-    private final List<String> relatedMonument = new ArrayList<>();
-    private final List<String> relatedEvent = new ArrayList<>();
-    private final List<String> relatedDynasty = new ArrayList<>();
-    private final List<String> relatedFestival = new ArrayList<>();
-
     protected Entity(JsonObject jsonObject) {
         this.name = jsonObject.get("name").getAsString();
         this.description = jsonObject.has("description") ? jsonObject.get("description").getAsString() : null;
@@ -81,50 +75,6 @@ public abstract class Entity {
         return relatedCharacters;
     }
 
-    public void addRelatedCharacter(String characterName) {
-        if (!relatedCharacters.contains(characterName))
-            relatedCharacters.add(characterName);
-    }
-
-    public void addRelatedMonument(String monumentName) {
-        if (!relatedMonument.contains(monumentName))
-            relatedMonument.add(monumentName);
-    }
-
-    public void addRelatedEvent(String eventName) {
-        if (!relatedEvent.contains(eventName))
-            relatedEvent.add(eventName);
-    }
-
-    public void addRelatedDynasty(String dynastyName) {
-        if (!relatedDynasty.contains(dynastyName))
-            relatedDynasty.add(dynastyName);
-    }
-
-    public void addRelatedFestival(String festivalName) {
-        if (!relatedFestival.contains(festivalName))
-            relatedFestival.add(festivalName);
-    }
-
-    public List<String> getRelatedCharacters() {
-        return relatedCharacters;
-    }
-
-    public List<String> getRelatedMonument() {
-        return relatedMonument;
-    }
-
-    public List<String> getRelatedEvent() {
-        return relatedEvent;
-    }
-
-    public List<String> getRelatedDynasty() {
-        return relatedDynasty;
-    }
-
-    public List<String> getRelatedFestival() {
-        return relatedFestival;
-    }
 
     public boolean isRelated(String characterName) {
         if (name.equals(characterName)) {

@@ -8,9 +8,6 @@ import merge.*;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.atomic.AtomicInteger;
 
 public class Process {
     private final ObservableList<Character> characters = FXCollections.observableArrayList();
@@ -39,21 +36,20 @@ public class Process {
 
         System.out.println("Characters: " + characters.size());
 
-//        addCharacterRelationships();
         System.out.println("Characters11: " + characters.size());
     }
 
-    private void addCharacterRelationships(){
-        AtomicInteger count = new AtomicInteger();
-        try(ExecutorService executorService = Executors.newFixedThreadPool(200)) {
-            for (Character character : characters) {
-                executorService.execute(() -> {
-                    for (String name : characterNames) {
-                        if (character.isRelated(name)) {
-                            character.addRelatedCharacter(name);
-                        }
-                    }
-                    System.out.println(count.getAndIncrement());
+//    private void addCharacterRelationships(){
+//        AtomicInteger count = new AtomicInteger();
+//        try(ExecutorService executorService = Executors.newFixedThreadPool(200)) {
+//            for (Character character : characters) {
+//                executorService.execute(() -> {
+//                    for (String name : characterNames) {
+//                        if (character.isRelated(name)) {
+//                            character.addRelatedCharacter(name);
+//                        }
+//                    }
+//                    System.out.println(count.getAndIncrement());
 //                    for (Dynasty dynasty : dynasties) {
 //                        if (character.isRelated(dynasty.getName()) || dynasty.isRelated(character.getName())) {
 //                            character.addRelatedDynasty(dynasty.getName());
@@ -81,11 +77,11 @@ public class Process {
 //                            monument.addRelatedCharacter(character.getName());
 //                        }
 //                    }
-                });
-            }
-
-        }
-    }
+//                });
+//            }
+//
+//        }
+//    }
 //
 //    private void addDynastyRelationships(){
 //        for (Dynasty dynasty: dynasties){

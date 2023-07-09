@@ -55,15 +55,16 @@ public class DynastyList extends EntityList{
         List<String> newFounderList = getForeName(newFounder);
         for (String oldFou: oldFounderList) {
             for (String newFou: newFounderList) {
-                if (oldFou.contains(newName) || newFou.contains(oldName)) {
-                    int x = oldName.split(" ").length;
-                    int y = newName.split(" ").length;
+                if (oldFou.contains(newFou) || newFou.contains(oldFou)) {
+                    int x = oldFou.split(" ").length;
+                    int y = newFou.split(" ").length;
                     if (x >= 2 && y >= 2) {
                         return true;
                     }
                 }
             }
         }
+
         return false;
     }
 
@@ -76,7 +77,6 @@ public class DynastyList extends EntityList{
                 continue;
             }
             System.out.println(dynasty.getName() + " |||| " + getForeName(dynasty.getFounder().replace("\"", "")));
-//            System.out.println(dynasty);
         }
     }
 }

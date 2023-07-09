@@ -76,7 +76,23 @@ public class Dynasty extends Entity{
             }
         }
 
-        setSource(getSource() + " , " + dynasty.getSource());
+        setSource(getSource() + ", " + dynasty.getSource());
+
+        for (String king : dynasty.getKings()) {
+            boolean isExist = false;
+            for (String king2 : kings) {
+                if (king2.contains(king) || king.contains(king2)) {
+                    isExist = true;
+                    break;
+                }
+            }
+            if (!isExist) {
+                kings.add(king);
+            }
+        }
+
+
+
         return this;
     }
 
