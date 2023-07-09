@@ -196,7 +196,8 @@ public class Dynasty extends Entity{
             if (!jsonObject.get("name").getAsString().equals("Bắc thuộc lần II")
                     && !jsonObject.get("name").getAsString().equals("Bắc thuộc lần III")
                     && !jsonObject.get("name").getAsString().equals("Hồng Bàng & Văn Lang")
-                    && !jsonObject.get("name").getAsString().equals("Âu Lạc & Nam Việt")) {
+                    && !jsonObject.get("name").getAsString().equals("Âu Lạc & Nam Việt")
+                    && !jsonObject.get("name").getAsString().equals("Nhà Tây Sơn")) {
                 for (String kingName : periods.keySet()) {
                     if (!kingName.contains("Thuộc")) {
                         kings.add(kingName);
@@ -208,6 +209,11 @@ public class Dynasty extends Entity{
                 kings.add("Hùng Vương");
             } else if (jsonObject.get("name").getAsString().equals("Âu Lạc & Nam Việt")) {
                 kings.add("An Dương Vương");
+            }
+
+            if (jsonObject.get("name").getAsString().equals("Nhà Tây Sơn"))
+            {
+                kings.add("Quang Trung - Nguyễn Huệ");
             }
 
             if (jsonObject.get("name").getAsString().contains("Việt Nam")) {
