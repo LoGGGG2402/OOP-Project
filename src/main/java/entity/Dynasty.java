@@ -31,7 +31,7 @@ public class Dynasty extends Entity{
     private String founder;
     private String language;
     private String capital;
-    private List<String> kings;
+    private ArrayList<String> kings = new ArrayList<>();
 
     private List<JsonObject> timeLineJson;
 
@@ -87,6 +87,8 @@ public class Dynasty extends Entity{
                 }
             }
             if (!isExist) {
+                System.out.println(kings);
+                System.out.println("Add king: " + king);
                 kings.add(king);
             }
         }
@@ -272,7 +274,8 @@ public class Dynasty extends Entity{
             } else {
                 if (properties.has("Hoàng đế")) {
                     String kingsListStr = properties.get("Hoàng đế").getAsString();
-                    kings = Arrays.asList(kingsListStr.split(", "));
+                    List kings1 = Arrays.asList(kingsListStr.split(", "));
+                    kings.addAll(kings1);
                 }
             }
             if (nameAttr.equals("Chiến tranh Đông Dương") || nameAttr.equals("Cộng hòa xã hội chủ nghĩa Việt Nam")) {
