@@ -214,9 +214,13 @@ public class Dynasty extends Entity{
         {
             kings = new ArrayList<>();
             JsonArray periods = jsonObject.get("period").getAsJsonArray();
-            if (jsonObject.get("name").getAsString().contains("Trưng Nữ Vương"))
+            if (jsonObject.get("name").getAsString().contains("Trưng Nữ vương"))
             {
                 kings.add("Trưng Nữ Vương");
+            }
+            if (jsonObject.get("name").getAsString().contains("An Dương vương"))
+            {
+                kings.add("An Dương Vương");
             }
             else if (!jsonObject.get("name").getAsString().contains("Thời tiền sử"))
             {
