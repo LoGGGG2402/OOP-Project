@@ -324,7 +324,7 @@ public class Dynasty extends Entity{
             }
             JsonObject jsonObject = jsonElement.getAsJsonObject();
             Dynasty dynasty = new Dynasty(jsonObject);
-            System.out.println(dynasty.toString());
+            System.out.println(dynasty);
             System.out.println("-------------------------------------------------");
         }
 

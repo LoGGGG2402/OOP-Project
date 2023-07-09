@@ -1,5 +1,7 @@
 package merge;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import entity.Dynasty;
 import entity.Entity;
 
@@ -70,13 +72,10 @@ public class DynastyList extends EntityList{
 
     public static void main(String[] args) {
         DynastyList dynastyList = new DynastyList();
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
         for (Entity entity: dynastyList.getEntities()) {
             Dynasty dynasty = (Dynasty) entity;
-            if (dynasty.getFounder() == null) {
-                System.out.println(dynasty.getName() + " |||| " + "null");
-                continue;
-            }
-            System.out.println(dynasty.getName() + " |||| " + getForeName(dynasty.getFounder().replace("\"", "")));
+            System.out.println(gson.toJson(dynasty));
         }
     }
 }

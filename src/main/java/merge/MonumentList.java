@@ -10,13 +10,19 @@ public class MonumentList extends EntityList{
     public MonumentList() {
         super("data/Monument");
     }
-    private final List<String> nameList = new ArrayList<>();
+    private List<String> nameList;
 
     @Override
     protected void merge() {
         for (Entity entity: getBaseEntities()) {
-            if(nameList.contains(entity.getName())){
+            if (entity.getName() == null) continue;
+            if(nameList != null && nameList.contains(entity.getName())){
                 Entity entity1 = getEntities().get(nameList.indexOf(entity.getName()));
+                if (entity1 == null){
+                    addEntity(entity);
+                    nameList.add(entity.getName());
+                    continue;
+                }
                 mergeEntity(entity1, entity);
             }
             addEntity(entity);
@@ -26,6 +32,6 @@ public class MonumentList extends EntityList{
 
     @Override
     protected void init() {
-
+        nameList = new ArrayList<>();
     }
 }
