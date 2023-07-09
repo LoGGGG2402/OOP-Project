@@ -154,58 +154,5 @@ public abstract class EntityList {
         return false;
     }
 
-    protected static List<String> getForeName(String name){
-        String pos = name;
-        List<String> listDynasty = new ArrayList<>();
-
-        Pattern pattern2 = Pattern.compile("[AĂÂBCDĐEÊGHIKLMNOÔƠPQRSTUƯVXY][^ ]+", Pattern.CASE_INSENSITIVE);
-
-        int nextSpace = nextIndex(pos);
-
-        StringBuilder dynasty = new StringBuilder();
-
-        boolean found = false;
-
-
-        while (nextSpace != -1){
-            String nextWord = pos.substring(0, nextSpace);
-            if (found){
-                if (pattern2.matcher(nextWord.trim()).matches()){
-                    dynasty.append(nextWord).append(" ");
-                }
-                else {
-                    if (!dynasty.isEmpty())
-                        listDynasty.add(dynasty.toString().trim().replace(")", "").replace("-", ""));
-                    dynasty = new StringBuilder();
-                    found = false;
-                }
-            }
-            if (pattern2.matcher(nextWord).matches()){
-                found = true;
-                dynasty.append(nextWord).append(" ");
-            }
-            pos = pos.substring(nextSpace + 1);
-            nextSpace = nextIndex(pos);
-        }
-        return listDynasty;
-    }
-
-    protected static int nextIndex(String pos){
-        if (pos.contains(",") && pos.contains(".") && pos.contains(" ")){
-            return NumberUtils.min(pos.indexOf(" "), pos.indexOf(","), pos.indexOf("."));
-        } else if (pos.contains(",") && pos.contains(" ")){
-            return NumberUtils.min(pos.indexOf(" "), pos.indexOf(","));
-        } else if (pos.contains(".") && pos.contains(" ")){
-            return NumberUtils.min(pos.indexOf(" "), pos.indexOf("."));
-        } else if (pos.contains(",") && pos.contains(".")){
-            return NumberUtils.min(pos.indexOf(","), pos.indexOf("."));
-        } else if (pos.contains(",")){
-            return pos.indexOf(",");
-        } else if (pos.contains(".")){
-            return pos.indexOf(".");
-        } else {
-            return pos.indexOf(" ");
-        }
-    }
 
 }

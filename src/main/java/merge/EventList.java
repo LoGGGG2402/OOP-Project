@@ -3,7 +3,10 @@ package merge;
 import entity.Entity;
 import entity.Event;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class EventList extends EntityList{
     public EventList() {
@@ -45,15 +48,47 @@ public class EventList extends EntityList{
         for (String oldName: oldForeNameList) {
             for (String newName: newForeNameList) {
                 if (oldName.contains(newName) || newName.contains(oldName)) {
-                    return true;
+                    int x = oldName.split(" ").length;
+                    int y = newName.split(" ").length;
+                    if (x >= 2 && y >= 2) {
+                        return true;
+                    }
                 }
             }
         }
-        return false;//knknk
+        return false;
+    }
+
+    public static List<String> getForeName(String text) {
+        List<String> foreNames = new ArrayList<>();
+        text = text.trim();
+
+        text = text.replace(", ", " a ").replace(".", "").replace(";", "").replace(":", "").replace("?", "").replace("!", "").replace(" - ", "-").replace("-", " - ");
+
+        String[] words = text.split(" ");
+        StringBuilder stringBuilder = new StringBuilder();
+
+
+        for (int i = 0; i < words.length; i++) {
+            if (Character.isUpperCase(words[i].charAt(0))) {
+                stringBuilder.append(words[i]);
+                stringBuilder.append(" ");
+            } else {
+                if (stringBuilder.length() > 0) {
+                    foreNames.add(stringBuilder.toString().trim());
+                    stringBuilder = new StringBuilder();
+                }
+            }
+            if (i == words.length - 1 && stringBuilder.length() > 0) {
+                foreNames.add(stringBuilder.toString().trim());
+            }
+        }
+
+
+        return foreNames;
     }
 
     public static void main(String[] args) {
-        System.out.println(getForeName("Trận Bạch Đằng lần thứ nhất năm 938"));
-        System.out.println(getForeName("Trận Bạch Đằng, Ngô Quyền đánh bại quân Nam Hán trên sông Bạch Đằng"));
+        new EventList();
     }
 }

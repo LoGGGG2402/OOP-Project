@@ -2,6 +2,7 @@ package merge;
 
 import entity.Character;
 import entity.Entity;
+import org.apache.commons.lang3.math.NumberUtils;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -175,6 +176,24 @@ public class CharacterList extends EntityList{
         }
         return listDynasty;
     }
+    protected static int nextIndex(String pos){
+        if (pos.contains(",") && pos.contains(".") && pos.contains(" ")){
+            return NumberUtils.min(pos.indexOf(" "), pos.indexOf(","), pos.indexOf("."));
+        } else if (pos.contains(",") && pos.contains(" ")){
+            return NumberUtils.min(pos.indexOf(" "), pos.indexOf(","));
+        } else if (pos.contains(".") && pos.contains(" ")){
+            return NumberUtils.min(pos.indexOf(" "), pos.indexOf("."));
+        } else if (pos.contains(",") && pos.contains(".")){
+            return NumberUtils.min(pos.indexOf(","), pos.indexOf("."));
+        } else if (pos.contains(",")){
+            return pos.indexOf(",");
+        } else if (pos.contains(".")){
+            return pos.indexOf(".");
+        } else {
+            return pos.indexOf(" ");
+        }
+    }
+
     public static void main(String[] args) {
         new CharacterList().getEntities().forEach(System.out::println);
     }
