@@ -1,5 +1,7 @@
 package merge;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import entity.Entity;
 import entity.Event;
 
@@ -11,6 +13,10 @@ import java.util.regex.Pattern;
 public class EventList extends EntityList{
     public EventList() {
         super("data/Event");
+        for (Entity entity: getEntities()){
+            Event event = (Event) entity;
+            System.out.println(event);
+        }
     }
 
     @Override
@@ -24,7 +30,6 @@ public class EventList extends EntityList{
             boolean found = false;
             for (Entity entity1: getEntities()){
                 if (equalEvent((Event) entity1, event)){
-                    System.out.println("equal: " + entity1.getName() + "||" + event.getName());
                     mergeEntity(entity1, event);
                     found = true;
                     break;
@@ -89,6 +94,10 @@ public class EventList extends EntityList{
     }
 
     public static void main(String[] args) {
-        new EventList();
+        var EventList = new EventList();
+        for (Entity entity: EventList.getEntities()){
+            Event event = (Event) entity;
+            System.out.println(event);
+        }
     }
 }

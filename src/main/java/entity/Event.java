@@ -1,9 +1,6 @@
 package entity;
 
-import com.google.gson.JsonArray;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
+import com.google.gson.*;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -263,8 +260,18 @@ public class Event extends Entity{
     @Override
     public String toString()
     {
-        return "Name: " + this.getName() + "\n"
-                + "Time: " + this.time + "\n"
-                + "Location: " + this.location + "\n";
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        String s1 = "name='" + getName() + '\'' +
+                ", time='" + time + '\'' +
+                ", location='" + location + '\'' +
+                ", reason='" + reason + '\'' +
+                ", result='" + result + '\'' +
+                ", belligerents='" + belligerents + '\'' +
+                ", commanders='" + commanders + '\'' +
+                ", strength='" + strength + '\'' +
+                ", losses='" + losses + '\'' +
+                '}';
+
+        return gson.toJson(s1);
     }
 }
