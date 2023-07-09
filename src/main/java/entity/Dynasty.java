@@ -109,6 +109,10 @@ public class Dynasty extends Entity{
             {
                 founder = "An Dương Vương";
             }
+            else if (jsonObject.get("name").getAsString().equals("Nhà Tây Sơn"))
+            {
+                founder = "Quang Trung - Nguyễn Huệ";
+            }
             if (jsonObject.get("name").getAsString().contains("Việt Nam")) {
                 founder = null;
             }
