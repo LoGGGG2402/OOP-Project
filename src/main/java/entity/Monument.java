@@ -1,12 +1,8 @@
 package entity;
 
-import com.google.gson.JsonArray;
-import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
 
 import java.io.FileNotFoundException;
-import java.io.FileReader;
 
 public class Monument extends Entity{
     private String location;
@@ -24,7 +20,23 @@ public class Monument extends Entity{
 
     @Override
     public Entity merge(Entity entity) {
-        return null;
+        this.appendAllDocument(entity.getAllDocument());
+        if (this.getDescription() == null && entity.getDescription() != null) this.setDescription(entity.getDescription());
+        if (this.getImage() == null && entity.getImage() != null) this.setImage(entity.getImage());
+        setSource(getSource() + ", " + entity.getSource());
+        JsonObject properties = entity.getProperties();
+        properties.entrySet().forEach(entry -> this.addProperty(entry.getKey(), entry.getValue().getAsString()));
+        if (this.type == null && ((Monument) entity).type != null) this.type = ((Monument) entity).type;
+        else if (this.type != null && ((Monument) entity).type != null && this.type.length() < ((Monument) entity).type.length())
+        {
+            this.type = ((Monument) entity).type;
+        }
+        if (this.location == null && ((Monument) entity).location != null) this.location = ((Monument) entity).location;
+        else if (this.location != null && ((Monument) entity).location != null && this.location.length() < ((Monument) entity).location.length())
+        {
+            this.location = ((Monument) entity).location;
+        }
+        return this;
     }
 
     private void processLocation(JsonObject jsonObject)

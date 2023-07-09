@@ -21,7 +21,6 @@ public class EventList extends EntityList{
             boolean found = false;
             for (Entity entity1: getEntities()){
                 if (equalEvent((Event) entity1, event)){
-                    System.out.println("Found");
                     mergeEntity(entity1, event);
                     found = true;
                     break;
@@ -59,8 +58,8 @@ public class EventList extends EntityList{
 
 
     public static void main(String[] args) {
-        var EventList = new EventList();
-//        for (Entity entity: EventList.getEntities()){
+//        var EventList = new EventList();
+//        for (Entity entity: EventList.ge/tEntities()){
 //            Event event = (Event) entity;
 //
 //        }

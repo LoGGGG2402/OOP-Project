@@ -145,7 +145,7 @@ public class Character  extends Entity{
                     {
                         //pattern = Pattern.compile("[\\d?]{0,2} ?tháng [\\d?]{1,2} năm [\\d?]{0,4} ?[-–] [\\d?]{0,2} ?tháng [\\d?]{1,2} năm [\\d?]{0,4} ?");
                         //pattern = Pattern.compile("[\\d?]{0,4}[ ]?[-–][ ]?[\\d?]{0,2}[ ]?tháng[ ][\\d?]{1,2}[ ]?năm[ ][\\d?]{0,4}[ ]?");
-                        pattern = Pattern.compile("[\\d?]{0,4}[ ]?[-–][ ]?[\\d?]{0,2}[ ]?tháng[ ]?[\\d?]{1,2}[ ]?[năm, ]{0,3}[ ][\\d?]{0,4}[ ]?");
+                        pattern = Pattern.compile("[\\d?]{0,4} ?[-–] ?[\\d?]{0,2} ?tháng ?[\\d?]{1,2} ?[năm, ]{0,3} [\\d?]{0,4} ?");
                         matcher = pattern.matcher(description);
                         if (matcher.find() && !matcher.group().matches("\\D+"))
                         {

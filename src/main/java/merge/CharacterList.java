@@ -35,13 +35,10 @@ public class CharacterList extends EntityList{
                 for (Character ch: listHashMap.get(name)){
                     if (equalCharacter(ch, character) && !ch.getSource().contains(character.getSource())){
                         equal = true;
-                        System.out.println("equal : " + character.getName());
                         mergeEntity(ch, character);
                         break;}
                 }
                 if (!equal){
-                    // add new
-                    System.out.println("not equal : " + character.getName());
                     listHashMap.get(name).add(character);
                     addEntity(character);
                 }

@@ -14,24 +14,31 @@ public class MonumentList extends EntityList{
 
     @Override
     protected void merge() {
+        int i = 0;
         for (Entity entity: getBaseEntities()) {
-            if (entity.getName() == null || entity.getName().isEmpty()) continue;
+            boolean found = false;
             if(nameList != null && nameList.contains(entity.getName())){
                 Entity entity1 = getEntities().get(nameList.indexOf(entity.getName()));
-                if (entity1 == null){
-                    addEntity(entity);
-                    nameList.add(entity.getName());
-                    continue;
+                if (entity1 != null && !entity1.getSource().contains(entity.getSource())){
+                    System.out.println(i++ + " " + entity.getName());
+                    mergeEntity(entity1, entity);
+                    found = true;
                 }
-                mergeEntity(entity1, entity);
             }
-            addEntity(entity);
-            nameList.add(entity.getName());
+            if (!found){
+                addEntity(entity);
+                nameList.add(entity.getName());
+            }
         }
+        System.out.println(nameList.size());
     }
 
     @Override
     protected void init() {
         nameList = new ArrayList<>();
+    }
+
+    public static void main(String[] args) {
+        new MonumentList();
     }
 }
