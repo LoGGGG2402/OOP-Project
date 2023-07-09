@@ -114,6 +114,16 @@ public class Event extends Entity{
             setImage(event.getImage());
         }
 
+        if ((getAllDocument().isEmpty() || getAllDocument() == null) &&
+        event.getAllDocument() != null && !event.getAllDocument().isEmpty())
+        {
+            setAllDocument(event.getAllDocument());
+        }
+        else if (getAllDocument() != null && event.getAllDocument() != null)
+        {
+            setAllDocument(getAllDocument()+event.getAllDocument());
+        }
+
         for (String key: event.getProperties().keySet()){
             if (!getProperties().has(key)){
                 addProperty(key, event.getProperties().get(key).getAsString());
