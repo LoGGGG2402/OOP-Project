@@ -101,6 +101,7 @@ public class Dynasty extends NguoiKeSu{
 
 
             dynasty.add("periods", periods);
+            dynasty.addProperty("source", url);
 
         } catch (IOException | URISyntaxException | NullPointerException e) {
             e.printStackTrace();

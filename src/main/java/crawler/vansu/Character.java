@@ -37,7 +37,7 @@ public class Character extends VanSu{
                 }
                 urlConnect = nextPageUrl;
             } catch (IOException | URISyntaxException e) {
-                e.printStackTrace();
+                System.out.println("Error: " + urlConnect);
             }
         }
         return characterUrl;
@@ -77,12 +77,12 @@ public class Character extends VanSu{
             String description = Objects.requireNonNull(tBody.select("> tr > td").last()).text();
             entity.addProperty("description", description);
 
-
+            entity.addProperty("source", url);
 
 
 
         } catch (IOException | URISyntaxException e) {
-            e.printStackTrace();
+            return null;
         }
         return entity;
     }

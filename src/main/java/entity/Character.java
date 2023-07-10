@@ -78,7 +78,7 @@ public class Character  extends Entity{
             }
         }
 
-        setSource(getSource() + " , " + character.getSource());
+        setSource(getSource() + ", " + character.getSource());
         return this;
     }
 

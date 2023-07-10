@@ -103,9 +103,11 @@ public class Event extends NguoiKeSu{
             String allDocument = document.select("#content > div.com-content-article.item-page.page-list-items > div.com-content-article__body").text();
             entity.addProperty("allDocument", allDocument);
 
+            // get source
+            entity.addProperty("source", url);
 
         } catch (IOException | URISyntaxException | NullPointerException e) {
-            e.printStackTrace();
+
             return null;
         }
 
@@ -133,7 +135,7 @@ public class Event extends NguoiKeSu{
                 }
                 urlConnect = getBaseUrl() + nextPage;
             } catch (IOException | URISyntaxException e) {
-                e.printStackTrace();
+                System.out.println("Error: " + urlConnect);
             }
         }
         return urls;

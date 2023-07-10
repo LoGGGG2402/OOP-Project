@@ -22,7 +22,7 @@ public class Monument extends DiSanVanHoa{
             document.select("#main-page > div.page-content > table > tbody > tr > td:nth-child(2) > p > a").forEach(element -> list.add(element.attr("href")));
             System.out.print("\rCrawling: " + url + " - " + list.size() + " monuments");
         } catch (IOException | URISyntaxException e) {
-            e.printStackTrace();
+            System.out.println("Error: " + getBaseUrl() + url);
         }
         return list;
     }
@@ -53,7 +53,7 @@ public class Monument extends DiSanVanHoa{
 
                 urlConnect = getBaseUrl() + "/" + nextPageUrl;
             } catch (IOException | URISyntaxException e) {
-                e.printStackTrace();
+                System.out.println("Error: " + urlConnect);
             }
         }
 
@@ -97,6 +97,8 @@ public class Monument extends DiSanVanHoa{
             // get allDocuments
             String allDocument = document.select("#main-page > div.page-content").text();
             entity.addProperty("allDocument", allDocument);
+
+            entity.addProperty("source", url);
 
         } catch (IOException | URISyntaxException e) {
             return null;

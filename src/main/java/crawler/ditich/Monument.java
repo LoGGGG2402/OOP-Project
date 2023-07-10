@@ -18,6 +18,14 @@ public class Monument extends Ditich{
     protected Vector<String> getUrl() {
         Vector<String> figureUrl = new Vector<>();
         String urlConnect = getBaseUrl() + "/FrontEnd/DiTich?cpage=*/*&rpage=&corder=&torder=&tpage=*/*&TEN=&LA_CDT=&LOAI_HINH_XEP_HANG=&XEP_HANG=&DIA_DANH=&TEN_HANG_MUC=&HM_LOAI_HINH_XEP_HANG=&HM_XEP_HANG=&TEN_HIEN_VAT=&HV_LOAI=&namtubo=";
+        try {
+            HttpURLConnection connect = (HttpURLConnection) new URI(urlConnect.replace("*/*", String.valueOf(1))).toURL().openConnection();
+            connect.setRequestMethod("GET");
+            connect.setReadTimeout(5);
+        } catch (IOException | URISyntaxException e) {
+            throw new RuntimeException(e);
+        }
+
         int page = 1;
         while (true) {
             try {
@@ -41,7 +49,6 @@ public class Monument extends Ditich{
                 page++;
             } catch (IOException | URISyntaxException e) {
                 System.out.println("Error: " + urlConnect.replace("*/*", String.valueOf(page)));
-                e.printStackTrace();
             }
         }
         return figureUrl;
@@ -83,6 +90,7 @@ public class Monument extends Ditich{
             }
 
             entity.add("properties", properties);
+            entity.addProperty("source", url);
         } catch (IOException | URISyntaxException e) {
             return null;
         }

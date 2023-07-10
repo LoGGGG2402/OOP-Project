@@ -48,16 +48,23 @@ public class Festival extends Wikipedia {
                 entity2.addProperty("name", entity1.get("Lễ hội truyền thống").getAsString());
                 entity1.remove("Lễ hội truyền thống");
                 entity2.add("properties", entity1);
-                if (getMoreInfo(url1).has("description")) {
+
+                JsonObject moreInfo = getMoreInfo(url1);
+                if (moreInfo.has("description")) {
 
 
                     entity2.addProperty("description", getMoreInfo(url1).get("description").getAsString());
                 }
-                if (getMoreInfo(url1).has("image"))
+                if (moreInfo.has("image"))
                     entity2.addProperty("image", getMoreInfo(url1).get("image").getAsString());
 
-                if (getMoreInfo(url1).has("allDocument"))
+                if (moreInfo.has("allDocument"))
                     entity2.addProperty("allDocument", getMoreInfo(url1).get("allDocument").getAsString());
+
+                if (moreInfo.has("url"))
+                    entity2.addProperty("source", moreInfo.get("url").getAsString());
+                else
+                    entity2.addProperty("source", getBaseUrl());
                 entity.add(entity2);
             }
 
@@ -86,8 +93,12 @@ public class Festival extends Wikipedia {
             // get allDocuments
             String allDocuments = document.select("#content").text();
             moreInfo.addProperty("allDocument", allDocuments);
+
+            // get url
+            moreInfo.addProperty("url", getBaseUrl() + url);
         } catch(IOException | URISyntaxException | NullPointerException e){
-            System.out.println("Can't find :"+e.getMessage());
+            System.out.println("Can't find :"+url);
+            return null;
         }
         return moreInfo;
     }

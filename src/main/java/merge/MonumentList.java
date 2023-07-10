@@ -19,7 +19,7 @@ public class MonumentList extends EntityList{
             boolean found = false;
             if(nameList != null && nameList.contains(entity.getName())){
                 Entity entity1 = getEntities().get(nameList.indexOf(entity.getName()));
-                if (entity1 != null && !entity1.getSource().contains(entity.getSource())){
+                if (entity1 != null && !containSource(entity1.getSource(), entity.getSource())){
                     System.out.println(i++ + " " + entity.getName());
                     mergeEntity(entity1, entity);
                     found = true;

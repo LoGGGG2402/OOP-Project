@@ -97,6 +97,9 @@ public class Dynasty extends Wikipedia {
             // get allDocuments
             String allDocuments = document.select("#content").text();
             entity.addProperty("allDocument", allDocuments);
+
+            // get url
+            entity.addProperty("source", url);
         } catch(IOException | URISyntaxException | NullPointerException e){
             e.printStackTrace();
             return null;
@@ -120,7 +123,6 @@ public class Dynasty extends Wikipedia {
                 entity = getEntity(url.charAt(0)=='/'?getBaseUrl()+url:getBaseUrl()+"/" +url);
             }
             if (entity != null){
-                entity.addProperty("source", getBaseUrl());
                 character.add(entity);}
         });
         return character;

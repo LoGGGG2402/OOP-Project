@@ -33,7 +33,7 @@ public class CharacterList extends EntityList{
             if(listHashMap.containsKey(name)){
                 boolean equal = false;
                 for (Character ch: listHashMap.get(name)){
-                    if (equalCharacter(ch, character) && !ch.getSource().contains(character.getSource())){
+                    if (equalCharacter(ch, character) && !containSource(ch.getSource(), character.getSource())){
                         equal = true;
                         mergeEntity(ch, character);
                         break;}

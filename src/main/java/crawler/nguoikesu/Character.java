@@ -39,7 +39,7 @@ public class Character extends NguoiKeSu{
 
 
             } catch (IOException | URISyntaxException e) {
-                e.printStackTrace();
+                System.out.println("Error: " + urlConnect);
             }
         }
         return figureUrl;
@@ -119,6 +119,8 @@ public class Character extends NguoiKeSu{
             String allDocument = document.select("#content > div.com-content-article.item-page.page-list-items > div.com-content-article__body").text();
             entity.addProperty("allDocument", allDocument);
 
+            entity.addProperty("source", url);
+
             System.out.print("\rCrawling " + url + " done has name " + name);
 
             //
@@ -126,7 +128,7 @@ public class Character extends NguoiKeSu{
                 return null;
             }
         } catch (IOException | URISyntaxException | NullPointerException e) {
-            e.printStackTrace();
+            
             return null;
         }
         return entity;

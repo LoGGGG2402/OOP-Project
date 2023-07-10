@@ -42,7 +42,10 @@ public class Event extends Wikipedia {
 
                         if (moreInfo.has("allDocument"))
                             entity.addProperty("allDocument", moreInfo.get("allDocument").getAsString());
-                        entity.addProperty("source", getBaseUrl());
+                        if (moreInfo.has("url"))
+                            entity.addProperty("source", moreInfo.get("url").getAsString());
+                        else
+                            entity.addProperty("source", getBaseUrl());
                         entities.add(entity);
                     }
                     else {
@@ -64,7 +67,11 @@ public class Event extends Wikipedia {
 
                             if (moreInfo.has("allDocument"))
                                 entity.addProperty("allDocument", moreInfo.get("allDocument").getAsString());
-                            entity.addProperty("source", getBaseUrl());
+
+                            if (moreInfo.has("url"))
+                                entity.addProperty("source", moreInfo.get("url").getAsString());
+                            else
+                                entity.addProperty("source", getBaseUrl());
                             entities.add(entity);
 
                         }
@@ -94,6 +101,9 @@ public class Event extends Wikipedia {
             // get allDocuments
             String allDocuments = document.select("#content").text();
             moreInfo.addProperty("allDocument", allDocuments);
+
+            // get url
+            moreInfo.addProperty("url", getBaseUrl()+"/wiki/" + name.replace(" ","_"));
         } catch(IOException | URISyntaxException | NullPointerException e){
             System.out.println("Can't find :"+e.getMessage());
         }

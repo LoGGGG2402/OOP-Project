@@ -97,10 +97,13 @@ public class Monument extends NguoiKeSu{
             String allDocument = document.select("#content > div.com-content-article.item-page.page-list-items > div.com-content-article__body").text();
             entity.addProperty("allDocument", allDocument);
 
+            // Get source
+            entity.addProperty("source", url);
+
             System.out.print("\rCrawling " + name + " done");
 
         } catch (IOException | URISyntaxException | NullPointerException e) {
-            e.printStackTrace();
+
             return null;
         }
         return entity;
@@ -130,7 +133,7 @@ public class Monument extends NguoiKeSu{
 
 
             } catch (IOException | URISyntaxException e) {
-                e.printStackTrace();
+                System.out.println("Error: " + urlConnect);
             }
         }
         return figureUrl;

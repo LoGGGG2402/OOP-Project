@@ -21,8 +21,6 @@ public class CrawlController {
         new crawler.wikipedia.Dynasty();
         new crawler.wikipedia.Event();
         new crawler.wikipedia.Festival();
-
-
     }
 
     public static void main(String[] args) {

@@ -50,8 +50,9 @@ public class Character extends Wikipedia {
             String allDocuments = document.select("#content").text();
             entity.addProperty("allDocument", allDocuments);
 
+            // add url
+            entity.addProperty("url", url);
         } catch(IOException | URISyntaxException | NullPointerException e){
-            System.out.println(url);
             return entity;
         }
         return entity;
@@ -99,12 +100,20 @@ public class Character extends Wikipedia {
                     if (more.has("image") && !more.get("image").isJsonNull()) {
                         entity.addProperty("image", more.get("image").getAsString());
                     }
+                    if (more.has("allDocument")) {
+                        entity.addProperty("allDocument", more.get("allDocument").getAsString());
+                    }
+                    if (more.has("url")) {
+                        entity.addProperty("source", more.get("url").getAsString());
+                    }else {
+                        entity.addProperty("source", getBaseUrl());
+                    }
                     entities.add(entity);
 
                 }
             }
         } catch (IOException | URISyntaxException | NullPointerException e) {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         }
 
 

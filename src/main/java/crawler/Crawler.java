@@ -38,9 +38,6 @@ public abstract class Crawler {
                     } else {
                         entity = getEntity(url.charAt(0) == '/' ? baseUrl + url : baseUrl + "/" + url);
                     }
-                    if (entity != null) {
-                        entity.addProperty("source", getBaseUrl());
-                    }
                     return entity;
                 };
                 futures.add(executorService.submit(callable));
@@ -106,7 +103,7 @@ public abstract class Crawler {
             return "image/" + uniqueFileName;
 
         } catch (IOException | URISyntaxException e) {
-            e.printStackTrace();
+            System.out.println("Error: " + url);
             return null;
         }
 
