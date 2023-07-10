@@ -70,11 +70,5 @@ public class DynastyList extends EntityList{
         return false;
     }
 
-    public static void main(String[] args) {
-        DynastyList dynastyList = new DynastyList();
-//        for (Entity entity: dynastyList.getEntities()) {
-//            Dynasty dynasty = (Dynasty) entity;
-//            System.out.println(dynasty);
-//        }
-    }
+
 }

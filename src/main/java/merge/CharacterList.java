@@ -191,7 +191,5 @@ public class CharacterList extends EntityList{
         }
     }
 
-    public static void main(String[] args) {
-        new CharacterList().getEntities().forEach(System.out::println);
-    }
+
 }

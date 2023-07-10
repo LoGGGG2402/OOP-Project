@@ -34,8 +34,6 @@ public class FestivalController {
     @FXML
     public ImageView fImage;
     public void setLabel(Festival festival) {
-
-        System.out.println(festival);
         fName.setText(festival.getName());
         if (festival.getDescription() == null || festival.getDescription().isEmpty()) {
             fDes.setText("Không rõ");

@@ -121,7 +121,7 @@ public abstract class EntityList {
 
 
         for (int i = 0; i < words.length; i++) {
-            if (words[i].isEmpty()) {
+            if (words[i].isEmpty()){
                 continue;
             }
             if (java.lang.Character.isUpperCase(words[i].charAt(0))) {
@@ -176,13 +176,11 @@ public abstract class EntityList {
         }
         return false;
     }
-
     protected boolean containSource(String oldSource, String newSource) {
         if (oldSource == null || newSource == null) {
             return false;
         }
         return oldSource.contains(newSource.substring(0, 10));
     }
-
 
 }

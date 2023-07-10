@@ -1,5 +1,7 @@
 package gui.controller;
 
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
 import entity.Dynasty;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -20,9 +22,10 @@ import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URL;
+import java.util.Map;
 import java.util.ResourceBundle;
 
-public class DynastyController  {
+public class DynastyController {
     @FXML
     public Label dName;
     @FXML
@@ -41,6 +44,8 @@ public class DynastyController  {
     public Label dLanguage;
     @FXML
     public ImageView dImage;
+    @FXML
+    public Label dTimeLine;
 
 
     public void setLabel(Dynasty dynasty) throws IOException {
@@ -100,7 +105,7 @@ public class DynastyController  {
             dKings.setText(kings);
         }
 
-        if (dynasty.getImage()!=null) {
+        if (dynasty.getImage() != null) {
             String imagePath = "C:\\Users\\LamPhuss\\IdeaProjects\\OOP-Project\\" + dynasty.getImage();
             try {
                 javafx.scene.image.Image image = new Image(new FileInputStream(imagePath));
@@ -108,7 +113,27 @@ public class DynastyController  {
             } catch (FileNotFoundException e) {
             }
         }
+        if (dynasty.getTimeLineJson().size() == 0) {
+            dTimeLine.setText("Không rõ");
+        } else {
+            String tlString = "";
+            for (JsonObject json : dynasty.getTimeLineJson()) {
+                for (Map.Entry<String, JsonElement> entry : json.entrySet()) {
+                    if (entry.getKey().equals("name")) {
+                        tlString += "Thời kì" + ": " + entry.getValue() + "\n\t";
+                    } else if (entry.getKey().equals("description")) {
+                        tlString += "Chi tiết" + ": " + entry.getValue() + "\n\t";
+                    } else {
+                        tlString += entry.getKey() + ": " + entry.getValue() + "\n\t";
+                    }
+                }
+                tlString += "\n";
+            }
+            dTimeLine.setText(tlString);
+        }
+
     }
+
 
 
 }

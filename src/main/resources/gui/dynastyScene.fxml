@@ -9,9 +9,9 @@
 
 <ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="885.0" prefWidth="1680.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controller.DynastyController">
     <content>
-        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1322.0" prefWidth="1665.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1789.0" prefWidth="1665.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
             <children>
-                <ImageView fitHeight="1329.0" fitWidth="1708.0" layoutX="-3.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="false">
+                <ImageView fitHeight="1792.0" fitWidth="1708.0" layoutX="-3.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="false">
                     <image>
                         <Image url="@background4pane.jpg" />
                     </image>
@@ -45,22 +45,22 @@
                         <Font size="15.0" />
                     </font>
                 </Label>
-                <Label fx:id="dKings" layoutX="683.0" layoutY="731.0" prefHeight="13.0" prefWidth="648.0" text="kings">
+                <Label fx:id="dKings" alignment="TOP_LEFT" layoutX="683.0" layoutY="731.0" prefHeight="82.0" prefWidth="648.0" text="kings" wrapText="true">
                     <font>
                         <Font size="15.0" />
                     </font>
                 </Label>
-                <Label fx:id="label14" layoutX="430.0" layoutY="827.0" prefHeight="20.0" prefWidth="239.0" text="Liên kết với các nhân vật liên quan :">
+                <Label fx:id="label14" layoutX="430.0" layoutY="1300.0" prefHeight="20.0" prefWidth="239.0" text="Liên kết với các nhân vật liên quan :">
                     <font>
                         <Font size="15.0" />
                     </font>
                 </Label>
-                <Label fx:id="dRel" alignment="TOP_LEFT" layoutX="683.0" layoutY="825.0" prefHeight="364.0" prefWidth="870.0" wrapText="true">
+                <Label fx:id="dRel" alignment="TOP_LEFT" layoutX="683.0" layoutY="1300.0" prefHeight="364.0" prefWidth="870.0" wrapText="true">
                     <font>
                         <Font size="15.0" />
                     </font>
                 </Label>
-                <Label fx:id="label1214" layoutX="430.0" layoutY="1189.0" prefHeight="21.0" prefWidth="240.0" text="Nguồn :">
+                <Label fx:id="label1214" layoutX="430.0" layoutY="1722.0" prefHeight="21.0" prefWidth="240.0" text="Nguồn :">
                     <font>
                         <Font size="15.0" />
                     </font>
@@ -83,7 +83,7 @@
                         </AnchorPane>
                     </content>
                 </ScrollPane>
-                <Label fx:id="dSrc" alignment="TOP_LEFT" layoutX="683.0" layoutY="1189.0" prefHeight="64.0" prefWidth="648.0" wrapText="true">
+                <Label fx:id="dSrc" alignment="TOP_LEFT" layoutX="683.0" layoutY="1722.0" prefHeight="64.0" prefWidth="648.0" wrapText="true">
                     <font>
                         <Font size="15.0" />
                     </font>
@@ -99,6 +99,29 @@
                     </font>
                 </Label>
                 <ImageView fx:id="dImage" fitHeight="187.0" fitWidth="324.0" layoutX="635.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+            <ScrollPane layoutX="484.0" layoutY="900.0" prefHeight="338.0" prefWidth="733.0" style="-fx-background-color: transparent;">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="15000.0" prefWidth="724.0" style="-fx-background-color: transparent;">
+                     <children>
+                        <ImageView fitHeight="15282.0" fitWidth="910.0" layoutX="-50.0" layoutY="-275.0" pickOnBounds="true" preserveRatio="false">
+                           <image>
+                              <Image url="@background4pane.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="dTimeLine" alignment="TOP_LEFT" layoutX="18.0" layoutY="2.0" prefHeight="15000.0" prefWidth="697.0" text="timeline" wrapText="true">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </ScrollPane>
+            <Label layoutX="800.0" layoutY="835.0" text="Thời kì :">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
 
 
             </children>
